@@ -1,0 +1,13 @@
+# Shared defaults; individual configs override.
+project: hw2-task1
+data_root: ./data
+ckpt_root: ./checkpoints
+seed: 42
+batch_size: 64
+num_workers: 8
+img_size: 224
+val_ratio: 0.1
+weight_decay: 0.0005
+optimizer: sgd
+warmup_epochs: 1
+label_smoothing: 0.0

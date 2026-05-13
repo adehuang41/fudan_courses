@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+checkpoints/
+logs/
+swanlog/
+.swanlab/
+*.pt
+.idea/
+.vscode/
+release/hw2_task1_weights.tar.gz
