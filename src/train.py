@@ -96,6 +96,7 @@ def main():
         raise ValueError(optim_name)
 
     epochs = cfg["epochs"]
+    freeze_backbone_epochs = cfg.get("freeze_backbone_epochs", 0)
     steps_per_epoch = len(train_loader)
     total_steps = steps_per_epoch * epochs
     warmup_steps = steps_per_epoch * cfg.get("warmup_epochs", 1)
@@ -120,6 +121,9 @@ def main():
     global_step = 0
     t0 = time.time()
     for epoch in range(epochs):
+        backbone_frozen = epoch < freeze_backbone_epochs
+        for p in bb_params:
+            p.requires_grad = not backbone_frozen
         model.train()
         loss_m, top1_m = AverageMeter(), AverageMeter()
         for x, y in train_loader:
@@ -154,6 +158,7 @@ def main():
         msg = (f"[{run_name}] epoch {epoch+1}/{epochs} "
                f"train_loss {loss_m.avg:.4f} train_acc {top1_m.avg:.4f} "
                f"val_loss {val_loss:.4f} val_acc {val_acc:.4f} "
+               f"freeze_backbone {int(backbone_frozen)} "
                f"({elapsed:.0f}s)")
         print(msg, flush=True)
         if use_log:
@@ -163,6 +168,7 @@ def main():
                 "train/acc_epoch": top1_m.avg,
                 "val/loss": val_loss,
                 "val/acc": val_acc,
+                "train/freeze_backbone": int(backbone_frozen),
                 "epoch": epoch + 1,
             }, step=global_step)
         if val_acc > best_acc:
