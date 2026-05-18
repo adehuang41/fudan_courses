@@ -2,8 +2,9 @@
 
 - 姓名：黄德超
 - 学号：23300660009
-- GitHub repo：[https://github.com/adehuang41/cv_hw2_task1](https://github.com/adehuang41/cv_hw2_task1)
+- GitHub repo：https://github.com/adehuang41/cv_hw2_task1
 - 模型权重：[Google Drive](https://drive.google.com/file/d/10FoC4MzjHDtPe9WaibzMaE00VgXoNHHN/view?usp=sharing)
+- swanlab：https://swanlab.cn/@ade/hw2-task1/overview
 
 ## 1. 任务概述
 
