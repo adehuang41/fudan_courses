@@ -1,0 +1,8 @@
+# Add-ons on top of the cv-hw2 env (already provides torch 2.5.1+cu124,
+# torchvision 0.20.1, swanlab, numpy, pyyaml, tqdm, pillow, scipy).
+ultralytics>=8.3,<8.4
+lap>=0.4
+opencv-python>=4.10
+yt-dlp
+filterpy
+# ffmpeg installed via `conda install -c conda-forge ffmpeg`.

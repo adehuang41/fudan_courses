@@ -1,0 +1,21 @@
+# YOLOv8m @ 640 fine-tune on VisDrone-DET, single GPU (physical GPU 7 only).
+run_name: yolov8m_visdrone_640
+model: yolov8m.pt
+data: configs/visdrone.yaml
+epochs: 150
+imgsz: 640
+batch: 96
+device: 7
+workers: 16
+cache: ram
+optimizer: auto
+cos_lr: true
+patience: 30
+close_mosaic: 15
+mosaic: 0.5
+mixup: 0.0
+amp: true
+seed: 42
+deterministic: false
+project: checkpoints
+exist_ok: true
