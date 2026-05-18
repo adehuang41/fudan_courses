@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+data/
+checkpoints/
+logs/
+swanlog/
+*.pt
+.swanlab/
+AGENTS.md
+docs/
+presentation/
+release/*.tar.gz
+release/*.zip
+report/report2.md
+report/error_analysis.csv

@@ -1,0 +1,20 @@
+project: hw2-task3
+data_root: ./data
+ckpt_root: ./checkpoints
+seed: 42
+val_ratio: 0.1
+img_size: 256
+batch_size: 64
+num_workers: 4
+base_ch: 64
+optimizer: adamw
+lr: 2.0e-3
+weight_decay: 1.0e-4
+epochs: 60
+warmup_epochs: 2
+
+run_name: E4_weighted_ce
+loss: ce
+# Inverse-frequency weights from the observed trainval pixel ratios:
+# foreground 29.17%, background 59.88%, boundary 10.95%.
+class_weights: [1.1428, 0.5567, 3.0445]
