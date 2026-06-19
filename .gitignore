@@ -27,11 +27,15 @@ notes/
 plan/
 docs/handoff/
 docs/agents/
+docs/adr/
 .scratch/
 要求文件/
 repo_structure.md
 hw3_report.pdf
 黄德超_23300660009_Project2.pdf.pdf
+reports/.gitkeep
+reports/task2_final_report.*
+reports/task2_results_brief.md
 
 # Experiment tracking logs
 wandb/
@@ -61,6 +65,7 @@ outputs/**
 !outputs/**/.gitkeep
 
 # Large media generated during evaluation
+results/failure_cases/
 results/failure_cases/**/*.mp4
 results/failure_cases/**/*.avi
 results/failure_cases/**/*.mov
