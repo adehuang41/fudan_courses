@@ -1,0 +1,102 @@
+{
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "zip_path": "/data/dechao/cv_final_pj2/datasets/task_D_D.zip",
+  "root_name_in_zip": "task_D_D",
+  "validation_dir": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation",
+  "validation_dir_exists": true,
+  "training_dir_exists_after_extraction": false,
+  "validation_size_bytes_du": 28796352473,
+  "episode_count": 99022,
+  "sample_episode_files": [
+    "episode_0000000.npz",
+    "episode_0000001.npz",
+    "episode_0000002.npz",
+    "episode_0000003.npz",
+    "episode_0000004.npz"
+  ],
+  "checks": [
+    {
+      "check": "validation/.hydra/merged_config.yaml",
+      "required": "true",
+      "status": "present",
+      "path": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation/.hydra/merged_config.yaml",
+      "size_bytes_or_count": 7287
+    },
+    {
+      "check": "validation/scene_info.npy",
+      "required": "true",
+      "status": "missing",
+      "path": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation/scene_info.npy",
+      "size_bytes_or_count": 0
+    },
+    {
+      "check": "validation/lang_annotations/auto_lang_ann.npy",
+      "required": "true",
+      "status": "present",
+      "path": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation/lang_annotations/auto_lang_ann.npy",
+      "size_bytes_or_count": 1617294
+    },
+    {
+      "check": "validation/episode_*.npz",
+      "required": "true",
+      "status": "present",
+      "path": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation",
+      "size_bytes_or_count": 99022
+    },
+    {
+      "check": "validation/ep_lens.npy",
+      "required": "false",
+      "status": "present",
+      "path": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation/ep_lens.npy",
+      "size_bytes_or_count": 160
+    },
+    {
+      "check": "validation/ep_start_end_ids.npy",
+      "required": "false",
+      "status": "present",
+      "path": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation/ep_start_end_ids.npy",
+      "size_bytes_or_count": 192
+    }
+  ],
+  "missing_required_files": [
+    "validation/scene_info.npy"
+  ],
+  "structure_status": "failed",
+  "note": "validation-only extraction; training was not extracted; validation/scene_info.npy is absent from the official task_D_D.zip validation subtree inspected here.",
+  "ep_lens_shape": [
+    4
+  ],
+  "ep_lens_dtype": "int64",
+  "ep_lens_sum": 99022,
+  "ep_start_end_ids_shape": [
+    4,
+    2
+  ],
+  "ep_start_end_ids_dtype": "int64",
+  "ep_start_end_ids_first5": [
+    [
+      0,
+      37682
+    ],
+    [
+      219635,
+      244284
+    ],
+    [
+      37683,
+      53818
+    ],
+    [
+      399946,
+      420498
+    ]
+  ],
+  "lang_annotation_keys": [
+    "info",
+    "language"
+  ],
+  "lang_annotation_info_keys": [
+    "episodes",
+    "indx"
+  ]
+}

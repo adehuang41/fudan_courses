@@ -1,0 +1,7 @@
+item,type,has_env_field,splits,total_episodes,total_frames,note
+calvin_task_ABC_D_lerobot_0_4,lerobot_upload_shard,False,"{""train"": ""0:4468""}",4468,267682,contains mixed A/B/C episodes; not an A/B/C/D environment directory
+calvin_task_ABC_D_lerobot_1_4,lerobot_upload_shard,False,"{""train"": ""0:4468""}",4468,268201,contains mixed A/B/C episodes; not an A/B/C/D environment directory
+calvin_task_ABC_D_lerobot_2_4,lerobot_upload_shard,False,"{""train"": ""0:4467""}",4467,268487,contains mixed A/B/C episodes; not an A/B/C/D environment directory
+calvin_task_ABC_D_lerobot_3_4,lerobot_upload_shard,False,"{""train"": ""0:4467""}",4467,267373,contains mixed A/B/C episodes; not an A/B/C/D environment directory
+environment_mapping,recovered_from_original_frame_idx,False,train only,17870,1071743,"official CALVIN task_ABC_D training/scene_info.npy ranges aligned with LeRobot original_frame_idx; 0_4..3_4 are upload shards, not environments"
+held_out_environment_D,absent_from_current_local_repo,False,not available,0,0,"D is the original CALVIN validation/evaluation environment, not included in this LeRobot train-only download"

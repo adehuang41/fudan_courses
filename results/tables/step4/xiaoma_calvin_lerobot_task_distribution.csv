@@ -1,0 +1,1557 @@
+split,task,canonical_task,task_desc,episodes,frames
+splitA,close_drawer: close the cabinet drawer,close_drawer,close the cabinet drawer,22,1411
+splitA,close_drawer: close the drawer,close_drawer,close the drawer,25,1578
+splitA,close_drawer: go close the drawer,close_drawer,go close the drawer,20,1300
+splitA,close_drawer: grasp the drawer handle and close it,close_drawer,grasp the drawer handle and close it,23,1442
+splitA,"close_drawer: grasp the drawer handle, then close it",close_drawer,"grasp the drawer handle, then close it",26,1614
+splitA,close_drawer: grasp the handle of the drawer and close it,close_drawer,grasp the handle of the drawer and close it,15,947
+splitA,"close_drawer: grasp the handle of the drawer, then close it",close_drawer,"grasp the handle of the drawer, then close it",21,1325
+splitA,close_drawer: push the drawer,close_drawer,push the drawer,18,1154
+splitA,close_drawer: push the handle of the drawer,close_drawer,push the handle of the drawer,29,1833
+splitA,lift_blue_block_drawer: go towards the blue block in the drawer and grasp it,lift_blue_block_drawer,go towards the blue block in the drawer and grasp it,10,628
+splitA,lift_blue_block_drawer: go towards the blue block in the drawer and lift it,lift_blue_block_drawer,go towards the blue block in the drawer and lift it,19,1142
+splitA,lift_blue_block_drawer: go towards the blue block in the drawer and pick it up,lift_blue_block_drawer,go towards the blue block in the drawer and pick it up,15,855
+splitA,lift_blue_block_drawer: grasp the blue block from the drawer,lift_blue_block_drawer,grasp the blue block from the drawer,24,1440
+splitA,lift_blue_block_drawer: grasp the blue block in the drawer,lift_blue_block_drawer,grasp the blue block in the drawer,19,1172
+splitA,lift_blue_block_drawer: grasp the blue block lying in the drawer,lift_blue_block_drawer,grasp the blue block lying in the drawer,15,952
+splitA,lift_blue_block_drawer: lift the blue block in the drawer,lift_blue_block_drawer,lift the blue block in the drawer,22,1343
+splitA,lift_blue_block_drawer: lift the blue block lying in the drawer,lift_blue_block_drawer,lift the blue block lying in the drawer,9,585
+splitA,lift_blue_block_drawer: pick up the blue block from the drawer,lift_blue_block_drawer,pick up the blue block from the drawer,10,606
+splitA,lift_blue_block_drawer: pick up the blue block in the drawer,lift_blue_block_drawer,pick up the blue block in the drawer,7,455
+splitA,lift_blue_block_drawer: pick up the blue block lying in the drawer,lift_blue_block_drawer,pick up the blue block lying in the drawer,15,946
+splitA,lift_blue_block_slider: grasp the blue block lying in the cabinet,lift_blue_block_slider,grasp the blue block lying in the cabinet,10,631
+splitA,lift_blue_block_slider: grasp the blue block lying in the slider,lift_blue_block_slider,grasp the blue block lying in the slider,8,499
+splitA,lift_blue_block_slider: grasp the blue block lying in the sliding cabinet,lift_blue_block_slider,grasp the blue block lying in the sliding cabinet,8,520
+splitA,lift_blue_block_slider: grasp the blue block lying on the shelf,lift_blue_block_slider,grasp the blue block lying on the shelf,5,301
+splitA,lift_blue_block_slider: in the cabinet grasp the blue block,lift_blue_block_slider,in the cabinet grasp the blue block,10,631
+splitA,lift_blue_block_slider: in the cabinet pick up the blue block,lift_blue_block_slider,in the cabinet pick up the blue block,9,585
+splitA,lift_blue_block_slider: in the slider grasp the blue block,lift_blue_block_slider,in the slider grasp the blue block,4,260
+splitA,lift_blue_block_slider: in the slider pick up the blue block,lift_blue_block_slider,in the slider pick up the blue block,8,497
+splitA,lift_blue_block_slider: in the sliding cabinet grasp the blue block,lift_blue_block_slider,in the sliding cabinet grasp the blue block,7,455
+splitA,lift_blue_block_slider: lift the blue block lying in the cabinet,lift_blue_block_slider,lift the blue block lying in the cabinet,5,325
+splitA,lift_blue_block_slider: lift the blue block lying in the slider,lift_blue_block_slider,lift the blue block lying in the slider,7,455
+splitA,lift_blue_block_slider: lift the blue block lying in the sliding cabinet,lift_blue_block_slider,lift the blue block lying in the sliding cabinet,8,520
+splitA,lift_blue_block_slider: lift the blue block lying on the shelf,lift_blue_block_slider,lift the blue block lying on the shelf,7,455
+splitA,lift_blue_block_slider: lift the blue block on the shelf,lift_blue_block_slider,lift the blue block on the shelf,11,670
+splitA,lift_blue_block_slider: pick up the blue block from the shelf,lift_blue_block_slider,pick up the blue block from the shelf,7,455
+splitA,lift_blue_block_slider: pick up the blue block from the sliding cabinet,lift_blue_block_slider,pick up the blue block from the sliding cabinet,6,390
+splitA,lift_blue_block_slider: pick up the blue block in the sliding cabinet,lift_blue_block_slider,pick up the blue block in the sliding cabinet,10,627
+splitA,lift_blue_block_table: grasp the blue block and lift it up,lift_blue_block_table,grasp the blue block and lift it up,11,699
+splitA,lift_blue_block_table: grasp the blue block on the table and lift it up,lift_blue_block_table,grasp the blue block on the table and lift it up,12,762
+splitA,"lift_blue_block_table: grasp the blue block on the table, then lift it up",lift_blue_block_table,"grasp the blue block on the table, then lift it up",9,568
+splitA,"lift_blue_block_table: grasp the blue block, then lift it up",lift_blue_block_table,"grasp the blue block, then lift it up",14,877
+splitA,lift_blue_block_table: lift the blue block,lift_blue_block_table,lift the blue block,14,910
+splitA,lift_blue_block_table: lift the blue block from the table,lift_blue_block_table,lift the blue block from the table,15,939
+splitA,lift_blue_block_table: lift the blue block up,lift_blue_block_table,lift the blue block up,10,630
+splitA,lift_blue_block_table: pick up the blue block,lift_blue_block_table,pick up the blue block,10,599
+splitA,lift_blue_block_table: pick up the blue block from the table,lift_blue_block_table,pick up the blue block from the table,13,764
+splitA,lift_blue_block_table: pick up the blue block on the table,lift_blue_block_table,pick up the blue block on the table,16,971
+splitA,lift_pink_block_drawer: go towards the pink block in the drawer and grasp it,lift_pink_block_drawer,go towards the pink block in the drawer and grasp it,18,1139
+splitA,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,lift_pink_block_drawer,go towards the pink block in the drawer and lift it,19,1192
+splitA,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,lift_pink_block_drawer,go towards the pink block in the drawer and pick it up,21,1342
+splitA,lift_pink_block_drawer: grasp the pink block from the drawer,lift_pink_block_drawer,grasp the pink block from the drawer,21,1338
+splitA,lift_pink_block_drawer: grasp the pink block in the drawer,lift_pink_block_drawer,grasp the pink block in the drawer,7,455
+splitA,lift_pink_block_drawer: grasp the pink block lying in the drawer,lift_pink_block_drawer,grasp the pink block lying in the drawer,17,1075
+splitA,lift_pink_block_drawer: lift the pink block in the drawer,lift_pink_block_drawer,lift the pink block in the drawer,13,822
+splitA,lift_pink_block_drawer: lift the pink block lying in the drawer,lift_pink_block_drawer,lift the pink block lying in the drawer,15,934
+splitA,lift_pink_block_drawer: pick up the pink block from the drawer,lift_pink_block_drawer,pick up the pink block from the drawer,21,1347
+splitA,lift_pink_block_drawer: pick up the pink block in the drawer,lift_pink_block_drawer,pick up the pink block in the drawer,18,1118
+splitA,lift_pink_block_drawer: pick up the pink block lying in the drawer,lift_pink_block_drawer,pick up the pink block lying in the drawer,9,585
+splitA,lift_pink_block_slider: grasp the pink block lying in the cabinet,lift_pink_block_slider,grasp the pink block lying in the cabinet,6,390
+splitA,lift_pink_block_slider: grasp the pink block lying in the slider,lift_pink_block_slider,grasp the pink block lying in the slider,7,455
+splitA,lift_pink_block_slider: grasp the pink block lying in the sliding cabinet,lift_pink_block_slider,grasp the pink block lying in the sliding cabinet,8,520
+splitA,lift_pink_block_slider: grasp the pink block lying on the shelf,lift_pink_block_slider,grasp the pink block lying on the shelf,8,520
+splitA,lift_pink_block_slider: in the cabinet grasp the pink block,lift_pink_block_slider,in the cabinet grasp the pink block,9,585
+splitA,lift_pink_block_slider: in the cabinet pick up the pink block,lift_pink_block_slider,in the cabinet pick up the pink block,5,325
+splitA,lift_pink_block_slider: in the slider grasp the pink block,lift_pink_block_slider,in the slider grasp the pink block,10,650
+splitA,lift_pink_block_slider: in the slider pick up the pink block,lift_pink_block_slider,in the slider pick up the pink block,16,1014
+splitA,lift_pink_block_slider: in the sliding cabinet grasp the pink block,lift_pink_block_slider,in the sliding cabinet grasp the pink block,10,619
+splitA,lift_pink_block_slider: lift the pink block lying in the cabinet,lift_pink_block_slider,lift the pink block lying in the cabinet,9,585
+splitA,lift_pink_block_slider: lift the pink block lying in the slider,lift_pink_block_slider,lift the pink block lying in the slider,10,650
+splitA,lift_pink_block_slider: lift the pink block lying in the sliding cabinet,lift_pink_block_slider,lift the pink block lying in the sliding cabinet,10,620
+splitA,lift_pink_block_slider: lift the pink block lying on the shelf,lift_pink_block_slider,lift the pink block lying on the shelf,8,495
+splitA,lift_pink_block_slider: lift the pink block on the shelf,lift_pink_block_slider,lift the pink block on the shelf,8,520
+splitA,lift_pink_block_slider: pick up the pink block from the shelf,lift_pink_block_slider,pick up the pink block from the shelf,14,910
+splitA,lift_pink_block_slider: pick up the pink block from the sliding cabinet,lift_pink_block_slider,pick up the pink block from the sliding cabinet,8,499
+splitA,lift_pink_block_slider: pick up the pink block in the sliding cabinet,lift_pink_block_slider,pick up the pink block in the sliding cabinet,5,307
+splitA,lift_pink_block_table: grasp the pink block and lift it up,lift_pink_block_table,grasp the pink block and lift it up,15,948
+splitA,lift_pink_block_table: grasp the pink block on the table and lift it up,lift_pink_block_table,grasp the pink block on the table and lift it up,14,861
+splitA,"lift_pink_block_table: grasp the pink block on the table, then lift it up",lift_pink_block_table,"grasp the pink block on the table, then lift it up",17,1059
+splitA,"lift_pink_block_table: grasp the pink block, then lift it up",lift_pink_block_table,"grasp the pink block, then lift it up",18,1116
+splitA,lift_pink_block_table: lift the pink block,lift_pink_block_table,lift the pink block,14,887
+splitA,lift_pink_block_table: lift the pink block from the table,lift_pink_block_table,lift the pink block from the table,21,1365
+splitA,lift_pink_block_table: lift the pink block up,lift_pink_block_table,lift the pink block up,20,1170
+splitA,lift_pink_block_table: pick up the pink block,lift_pink_block_table,pick up the pink block,15,931
+splitA,lift_pink_block_table: pick up the pink block from the table,lift_pink_block_table,pick up the pink block from the table,19,1163
+splitA,lift_pink_block_table: pick up the pink block on the table,lift_pink_block_table,pick up the pink block on the table,14,910
+splitA,lift_red_block_drawer: go towards the red block in the drawer and grasp it,lift_red_block_drawer,go towards the red block in the drawer and grasp it,11,715
+splitA,lift_red_block_drawer: go towards the red block in the drawer and lift it,lift_red_block_drawer,go towards the red block in the drawer and lift it,21,1284
+splitA,lift_red_block_drawer: go towards the red block in the drawer and pick it up,lift_red_block_drawer,go towards the red block in the drawer and pick it up,19,1163
+splitA,lift_red_block_drawer: grasp the red block from the drawer,lift_red_block_drawer,grasp the red block from the drawer,16,932
+splitA,lift_red_block_drawer: grasp the red block in the drawer,lift_red_block_drawer,grasp the red block in the drawer,17,1105
+splitA,lift_red_block_drawer: grasp the red block lying in the drawer,lift_red_block_drawer,grasp the red block lying in the drawer,18,1139
+splitA,lift_red_block_drawer: lift the red block in the drawer,lift_red_block_drawer,lift the red block in the drawer,15,914
+splitA,lift_red_block_drawer: lift the red block lying in the drawer,lift_red_block_drawer,lift the red block lying in the drawer,9,543
+splitA,lift_red_block_drawer: pick up the red block from the drawer,lift_red_block_drawer,pick up the red block from the drawer,15,975
+splitA,lift_red_block_drawer: pick up the red block in the drawer,lift_red_block_drawer,pick up the red block in the drawer,18,1134
+splitA,lift_red_block_drawer: pick up the red block lying in the drawer,lift_red_block_drawer,pick up the red block lying in the drawer,21,1304
+splitA,lift_red_block_slider: grasp the red block lying in the cabinet,lift_red_block_slider,grasp the red block lying in the cabinet,7,434
+splitA,lift_red_block_slider: grasp the red block lying in the slider,lift_red_block_slider,grasp the red block lying in the slider,10,628
+splitA,lift_red_block_slider: grasp the red block lying in the sliding cabinet,lift_red_block_slider,grasp the red block lying in the sliding cabinet,12,750
+splitA,lift_red_block_slider: grasp the red block lying on the shelf,lift_red_block_slider,grasp the red block lying on the shelf,7,438
+splitA,lift_red_block_slider: in the cabinet grasp the red block,lift_red_block_slider,in the cabinet grasp the red block,9,563
+splitA,lift_red_block_slider: in the cabinet pick up the red block,lift_red_block_slider,in the cabinet pick up the red block,13,822
+splitA,lift_red_block_slider: in the slider grasp the red block,lift_red_block_slider,in the slider grasp the red block,8,499
+splitA,lift_red_block_slider: in the slider pick up the red block,lift_red_block_slider,in the slider pick up the red block,15,975
+splitA,lift_red_block_slider: in the sliding cabinet grasp the red block,lift_red_block_slider,in the sliding cabinet grasp the red block,6,390
+splitA,lift_red_block_slider: lift the red block lying in the cabinet,lift_red_block_slider,lift the red block lying in the cabinet,8,472
+splitA,lift_red_block_slider: lift the red block lying in the slider,lift_red_block_slider,lift the red block lying in the slider,5,325
+splitA,lift_red_block_slider: lift the red block lying in the sliding cabinet,lift_red_block_slider,lift the red block lying in the sliding cabinet,8,502
+splitA,lift_red_block_slider: lift the red block lying on the shelf,lift_red_block_slider,lift the red block lying on the shelf,6,390
+splitA,lift_red_block_slider: lift the red block on the shelf,lift_red_block_slider,lift the red block on the shelf,6,367
+splitA,lift_red_block_slider: pick up the red block from the shelf,lift_red_block_slider,pick up the red block from the shelf,7,435
+splitA,lift_red_block_slider: pick up the red block from the sliding cabinet,lift_red_block_slider,pick up the red block from the sliding cabinet,10,650
+splitA,lift_red_block_slider: pick up the red block in the sliding cabinet,lift_red_block_slider,pick up the red block in the sliding cabinet,7,437
+splitA,lift_red_block_table: grasp the red block and lift it up,lift_red_block_table,grasp the red block and lift it up,8,471
+splitA,lift_red_block_table: grasp the red block on the table and lift it up,lift_red_block_table,grasp the red block on the table and lift it up,18,1170
+splitA,"lift_red_block_table: grasp the red block on the table, then lift it up",lift_red_block_table,"grasp the red block on the table, then lift it up",16,967
+splitA,"lift_red_block_table: grasp the red block, then lift it up",lift_red_block_table,"grasp the red block, then lift it up",19,1209
+splitA,lift_red_block_table: lift the red block,lift_red_block_table,lift the red block,12,780
+splitA,lift_red_block_table: lift the red block from the table,lift_red_block_table,lift the red block from the table,11,637
+splitA,lift_red_block_table: lift the red block up,lift_red_block_table,lift the red block up,12,725
+splitA,lift_red_block_table: pick up the red block,lift_red_block_table,pick up the red block,14,874
+splitA,lift_red_block_table: pick up the red block from the table,lift_red_block_table,pick up the red block from the table,16,971
+splitA,lift_red_block_table: pick up the red block on the table,lift_red_block_table,pick up the red block on the table,17,1083
+splitA,move_slider_left: grasp the door handle and move the door to the left,move_slider_left,grasp the door handle and move the door to the left,11,715
+splitA,move_slider_left: grasp the door handle and slide the door to the left,move_slider_left,grasp the door handle and slide the door to the left,9,585
+splitA,"move_slider_left: grasp the door handle, then move the door to the left",move_slider_left,"grasp the door handle, then move the door to the left",14,881
+splitA,"move_slider_left: grasp the door handle, then slide the door to the left",move_slider_left,"grasp the door handle, then slide the door to the left",9,555
+splitA,move_slider_left: move the door all the way to the left,move_slider_left,move the door all the way to the left,14,910
+splitA,move_slider_left: move the door all the way to the left and let go,move_slider_left,move the door all the way to the left and let go,9,585
+splitA,move_slider_left: move the door to the left,move_slider_left,move the door to the left,13,845
+splitA,move_slider_left: move the door to the left side,move_slider_left,move the door to the left side,8,520
+splitA,move_slider_left: move the sliding door to the left,move_slider_left,move the sliding door to the left,11,715
+splitA,move_slider_left: push the door to the left,move_slider_left,push the door to the left,13,845
+splitA,move_slider_left: push the door to the left side,move_slider_left,push the door to the left side,9,585
+splitA,move_slider_left: push the sliding door to the left,move_slider_left,push the sliding door to the left,13,826
+splitA,move_slider_left: slide the door all the way to the left,move_slider_left,slide the door all the way to the left,9,558
+splitA,move_slider_left: slide the door to the left,move_slider_left,slide the door to the left,12,764
+splitA,move_slider_left: slide the door to the left side,move_slider_left,slide the door to the left side,11,715
+splitA,"move_slider_left: slide the door to the left, then let it go",move_slider_left,"slide the door to the left, then let it go",6,390
+splitA,move_slider_right: grasp the door handle and move the door to the right,move_slider_right,grasp the door handle and move the door to the right,7,455
+splitA,move_slider_right: grasp the door handle and slide the door to the right,move_slider_right,grasp the door handle and slide the door to the right,14,889
+splitA,"move_slider_right: grasp the door handle, then move the door to the right",move_slider_right,"grasp the door handle, then move the door to the right",14,910
+splitA,"move_slider_right: grasp the door handle, then slide the door to the right",move_slider_right,"grasp the door handle, then slide the door to the right",12,757
+splitA,move_slider_right: move the door all the way to the right,move_slider_right,move the door all the way to the right,10,650
+splitA,move_slider_right: move the door all the way to the right and let go,move_slider_right,move the door all the way to the right and let go,12,780
+splitA,move_slider_right: move the door to the right,move_slider_right,move the door to the right,11,715
+splitA,move_slider_right: move the door to the right side,move_slider_right,move the door to the right side,13,845
+splitA,move_slider_right: move the sliding door to the right,move_slider_right,move the sliding door to the right,6,364
+splitA,move_slider_right: push the door to the right,move_slider_right,push the door to the right,9,585
+splitA,move_slider_right: push the door to the right side,move_slider_right,push the door to the right side,11,715
+splitA,move_slider_right: push the sliding door to the right,move_slider_right,push the sliding door to the right,12,780
+splitA,move_slider_right: slide the door all the way to the right,move_slider_right,slide the door all the way to the right,14,852
+splitA,move_slider_right: slide the door to the right,move_slider_right,slide the door to the right,14,886
+splitA,move_slider_right: slide the door to the right side,move_slider_right,slide the door to the right side,10,650
+splitA,"move_slider_right: slide the door to the right, then let it go",move_slider_right,"slide the door to the right, then let it go",12,780
+splitA,open_drawer: go open the drawer,open_drawer,go open the drawer,18,1170
+splitA,open_drawer: grasp the drawer handle and open it,open_drawer,grasp the drawer handle and open it,24,1560
+splitA,"open_drawer: grasp the drawer handle, then open it",open_drawer,"grasp the drawer handle, then open it",29,1885
+splitA,open_drawer: grasp the handle of the drawer and open it,open_drawer,grasp the handle of the drawer and open it,16,1040
+splitA,"open_drawer: grasp the handle of the drawer, then open it",open_drawer,"grasp the handle of the drawer, then open it",28,1820
+splitA,open_drawer: open the cabinet drawer,open_drawer,open the cabinet drawer,18,1170
+splitA,open_drawer: open the drawer,open_drawer,open the drawer,17,1105
+splitA,open_drawer: pull the drawer,open_drawer,pull the drawer,32,2080
+splitA,open_drawer: pull the handle of the drawer,open_drawer,pull the handle of the drawer,17,1105
+splitA,place_in_drawer: go towards the drawer and place the object,place_in_drawer,go towards the drawer and place the object,8,312
+splitA,place_in_drawer: go towards the drawer and store the object,place_in_drawer,go towards the drawer and store the object,12,545
+splitA,place_in_drawer: move to the drawer and place the object,place_in_drawer,move to the drawer and place the object,7,307
+splitA,place_in_drawer: move to the drawer and store the object,place_in_drawer,move to the drawer and store the object,14,614
+splitA,"place_in_drawer: move to the drawer, then place the object",place_in_drawer,"move to the drawer, then place the object",7,300
+splitA,"place_in_drawer: move to the drawer, then store the object",place_in_drawer,"move to the drawer, then store the object",7,300
+splitA,place_in_drawer: place the block in the drawer,place_in_drawer,place the block in the drawer,11,474
+splitA,place_in_drawer: place the grasped object in the drawer,place_in_drawer,place the grasped object in the drawer,14,646
+splitA,place_in_drawer: place the object in the drawer,place_in_drawer,place the object in the drawer,12,517
+splitA,place_in_drawer: put the block in the drawer,place_in_drawer,put the block in the drawer,11,521
+splitA,place_in_drawer: put the grasped object in the drawer,place_in_drawer,put the grasped object in the drawer,16,708
+splitA,place_in_drawer: put the object in the drawer,place_in_drawer,put the object in the drawer,15,686
+splitA,place_in_drawer: store the block in the drawer,place_in_drawer,store the block in the drawer,14,572
+splitA,place_in_drawer: store the grasped object in the drawer,place_in_drawer,store the grasped object in the drawer,10,457
+splitA,place_in_drawer: store the object in the drawer,place_in_drawer,store the object in the drawer,7,313
+splitA,place_in_slider: place in slider,place_in_slider,place in slider,4,175
+splitA,place_in_slider: place the block in the cabinet,place_in_slider,place the block in the cabinet,11,486
+splitA,place_in_slider: place the block in the slider,place_in_slider,place the block in the slider,7,331
+splitA,place_in_slider: place the block in the sliding cabinet,place_in_slider,place the block in the sliding cabinet,7,279
+splitA,place_in_slider: place the grasped object in the cabinet,place_in_slider,place the grasped object in the cabinet,5,219
+splitA,place_in_slider: place the grasped object in the slider,place_in_slider,place the grasped object in the slider,9,446
+splitA,place_in_slider: place the grasped object in the sliding cabinet,place_in_slider,place the grasped object in the sliding cabinet,6,278
+splitA,place_in_slider: place the object in the cabinet,place_in_slider,place the object in the cabinet,5,197
+splitA,place_in_slider: place the object in the slider,place_in_slider,place the object in the slider,11,523
+splitA,place_in_slider: place the object in the sliding cabinet,place_in_slider,place the object in the sliding cabinet,8,337
+splitA,place_in_slider: put it in the slider,place_in_slider,put it in the slider,7,296
+splitA,place_in_slider: put the block in the cabinet,place_in_slider,put the block in the cabinet,10,417
+splitA,place_in_slider: put the block in the slider,place_in_slider,put the block in the slider,9,444
+splitA,place_in_slider: put the block in the sliding cabinet,place_in_slider,put the block in the sliding cabinet,8,366
+splitA,place_in_slider: put the grasped object in the cabinet,place_in_slider,put the grasped object in the cabinet,5,218
+splitA,place_in_slider: put the grasped object in the slider,place_in_slider,put the grasped object in the slider,10,458
+splitA,place_in_slider: put the grasped object in the sliding cabinet,place_in_slider,put the grasped object in the sliding cabinet,3,140
+splitA,place_in_slider: put the object in the cabinet,place_in_slider,put the object in the cabinet,8,384
+splitA,place_in_slider: put the object in the slider,place_in_slider,put the object in the slider,8,298
+splitA,place_in_slider: put the object in the sliding cabinet,place_in_slider,put the object in the sliding cabinet,8,313
+splitA,push_blue_block_left: go push the blue block to the left,push_blue_block_left,go push the blue block to the left,25,1505
+splitA,push_blue_block_left: go slide the blue block to the left,push_blue_block_left,go slide the blue block to the left,20,1222
+splitA,push_blue_block_left: push left the blue block,push_blue_block_left,push left the blue block,22,1320
+splitA,push_blue_block_left: push the blue block to the left,push_blue_block_left,push the blue block to the left,26,1476
+splitA,push_blue_block_left: push the blue block towards the left,push_blue_block_left,push the blue block towards the left,24,1496
+splitA,push_blue_block_left: slide left the blue block,push_blue_block_left,slide left the blue block,27,1654
+splitA,push_blue_block_left: slide the blue block to the left,push_blue_block_left,slide the blue block to the left,16,977
+splitA,push_blue_block_left: slide the blue block towards the left,push_blue_block_left,slide the blue block towards the left,24,1428
+splitA,push_blue_block_left: sweep the blue block to the left,push_blue_block_left,sweep the blue block to the left,22,1404
+splitA,push_blue_block_right: go push the blue block to the right,push_blue_block_right,go push the blue block to the right,28,1544
+splitA,push_blue_block_right: go slide the blue block to the right,push_blue_block_right,go slide the blue block to the right,22,1289
+splitA,push_blue_block_right: push right the blue block,push_blue_block_right,push right the blue block,23,1285
+splitA,push_blue_block_right: push the blue block to the right,push_blue_block_right,push the blue block to the right,28,1498
+splitA,push_blue_block_right: push the blue block towards the right,push_blue_block_right,push the blue block towards the right,20,1170
+splitA,push_blue_block_right: slide right the blue block,push_blue_block_right,slide right the blue block,19,1120
+splitA,push_blue_block_right: slide the blue block to the right,push_blue_block_right,slide the blue block to the right,24,1290
+splitA,push_blue_block_right: slide the blue block towards the right,push_blue_block_right,slide the blue block towards the right,28,1558
+splitA,push_blue_block_right: sweep the blue block to the right,push_blue_block_right,sweep the blue block to the right,27,1487
+splitA,push_into_drawer: push the block into the drawer,push_into_drawer,push the block into the drawer,19,1152
+splitA,push_into_drawer: push the object into the drawer,push_into_drawer,push the object into the drawer,22,1331
+splitA,push_into_drawer: push the object that it falls into the drawer,push_into_drawer,push the object that it falls into the drawer,22,1316
+splitA,push_into_drawer: slide the block into the drawer,push_into_drawer,slide the block into the drawer,27,1560
+splitA,push_into_drawer: slide the object into the drawer,push_into_drawer,slide the object into the drawer,21,1321
+splitA,push_into_drawer: sweep the block into the drawer,push_into_drawer,sweep the block into the drawer,21,1300
+splitA,push_into_drawer: sweep the object into the drawer,push_into_drawer,sweep the object into the drawer,20,1244
+splitA,push_pink_block_left: go push the pink block to the left,push_pink_block_left,go push the pink block to the left,18,1148
+splitA,push_pink_block_left: go slide the pink block to the left,push_pink_block_left,go slide the pink block to the left,19,1235
+splitA,push_pink_block_left: push left the pink block,push_pink_block_left,push left the pink block,14,851
+splitA,push_pink_block_left: push the pink block to the left,push_pink_block_left,push the pink block to the left,26,1577
+splitA,push_pink_block_left: push the pink block towards the left,push_pink_block_left,push the pink block towards the left,17,1017
+splitA,push_pink_block_left: slide left the pink block,push_pink_block_left,slide left the pink block,12,751
+splitA,push_pink_block_left: slide the pink block to the left,push_pink_block_left,slide the pink block to the left,18,1143
+splitA,push_pink_block_left: slide the pink block towards the left,push_pink_block_left,slide the pink block towards the left,12,733
+splitA,push_pink_block_left: sweep the pink block to the left,push_pink_block_left,sweep the pink block to the left,20,1243
+splitA,push_pink_block_right: go push the pink block to the right,push_pink_block_right,go push the pink block to the right,24,1393
+splitA,push_pink_block_right: go slide the pink block to the right,push_pink_block_right,go slide the pink block to the right,26,1511
+splitA,push_pink_block_right: push right the pink block,push_pink_block_right,push right the pink block,26,1472
+splitA,push_pink_block_right: push the pink block to the right,push_pink_block_right,push the pink block to the right,13,816
+splitA,push_pink_block_right: push the pink block towards the right,push_pink_block_right,push the pink block towards the right,15,900
+splitA,push_pink_block_right: slide right the pink block,push_pink_block_right,slide right the pink block,23,1407
+splitA,push_pink_block_right: slide the pink block to the right,push_pink_block_right,slide the pink block to the right,18,1047
+splitA,push_pink_block_right: slide the pink block towards the right,push_pink_block_right,slide the pink block towards the right,15,925
+splitA,push_pink_block_right: sweep the pink block to the right,push_pink_block_right,sweep the pink block to the right,15,901
+splitA,push_red_block_left: go push the red block to the left,push_red_block_left,go push the red block to the left,24,1477
+splitA,push_red_block_left: go slide the red block to the left,push_red_block_left,go slide the red block to the left,24,1357
+splitA,push_red_block_left: push left the red block,push_red_block_left,push left the red block,15,975
+splitA,push_red_block_left: push the red block to the left,push_red_block_left,push the red block to the left,13,809
+splitA,push_red_block_left: push the red block towards the left,push_red_block_left,push the red block towards the left,25,1442
+splitA,push_red_block_left: slide left the red block,push_red_block_left,slide left the red block,27,1628
+splitA,push_red_block_left: slide the red block to the left,push_red_block_left,slide the red block to the left,16,1023
+splitA,push_red_block_left: slide the red block towards the left,push_red_block_left,slide the red block towards the left,18,1154
+splitA,push_red_block_left: sweep the red block to the left,push_red_block_left,sweep the red block to the left,20,1274
+splitA,push_red_block_right: go push the red block to the right,push_red_block_right,go push the red block to the right,23,1347
+splitA,push_red_block_right: go slide the red block to the right,push_red_block_right,go slide the red block to the right,31,1899
+splitA,push_red_block_right: push right the red block,push_red_block_right,push right the red block,28,1698
+splitA,push_red_block_right: push the red block to the right,push_red_block_right,push the red block to the right,20,1224
+splitA,push_red_block_right: push the red block towards the right,push_red_block_right,push the red block towards the right,12,634
+splitA,push_red_block_right: slide right the red block,push_red_block_right,slide right the red block,19,1187
+splitA,push_red_block_right: slide the red block to the right,push_red_block_right,slide the red block to the right,23,1439
+splitA,push_red_block_right: slide the red block towards the right,push_red_block_right,slide the red block towards the right,28,1667
+splitA,push_red_block_right: sweep the red block to the right,push_red_block_right,sweep the red block to the right,31,1847
+splitA,rotate_blue_block_left: grasp the blue block and rotate it left,rotate_blue_block_left,grasp the blue block and rotate it left,13,814
+splitA,rotate_blue_block_left: grasp the blue block and turn it left,rotate_blue_block_left,grasp the blue block and turn it left,16,1040
+splitA,"rotate_blue_block_left: grasp the blue block, then rotate it left",rotate_blue_block_left,"grasp the blue block, then rotate it left",21,1365
+splitA,"rotate_blue_block_left: grasp the blue block, then turn it left",rotate_blue_block_left,"grasp the blue block, then turn it left",19,1219
+splitA,rotate_blue_block_left: rotate left the blue block,rotate_blue_block_left,rotate left the blue block,13,803
+splitA,rotate_blue_block_left: rotate the blue block 90 degrees to the left,rotate_blue_block_left,rotate the blue block 90 degrees to the left,19,1218
+splitA,rotate_blue_block_left: rotate the blue block to the left,rotate_blue_block_left,rotate the blue block to the left,18,1151
+splitA,rotate_blue_block_left: rotate the blue block towards the left,rotate_blue_block_left,rotate the blue block towards the left,21,1329
+splitA,rotate_blue_block_left: take the blue block and rotate it left,rotate_blue_block_left,take the blue block and rotate it left,16,1021
+splitA,rotate_blue_block_left: take the blue block and turn it left,rotate_blue_block_left,take the blue block and turn it left,16,1013
+splitA,rotate_blue_block_left: turn the blue block left,rotate_blue_block_left,turn the blue block left,14,910
+splitA,rotate_blue_block_right: grasp the blue block and rotate it right,rotate_blue_block_right,grasp the blue block and rotate it right,22,1343
+splitA,rotate_blue_block_right: grasp the blue block and turn it right,rotate_blue_block_right,grasp the blue block and turn it right,21,1365
+splitA,"rotate_blue_block_right: grasp the blue block, then rotate it right",rotate_blue_block_right,"grasp the blue block, then rotate it right",29,1849
+splitA,"rotate_blue_block_right: grasp the blue block, then turn it right",rotate_blue_block_right,"grasp the blue block, then turn it right",25,1518
+splitA,rotate_blue_block_right: rotate right the blue block,rotate_blue_block_right,rotate right the blue block,16,966
+splitA,rotate_blue_block_right: rotate the blue block 90 degrees to the right,rotate_blue_block_right,rotate the blue block 90 degrees to the right,20,1216
+splitA,rotate_blue_block_right: rotate the blue block to the right,rotate_blue_block_right,rotate the blue block to the right,20,1211
+splitA,rotate_blue_block_right: rotate the blue block towards the right,rotate_blue_block_right,rotate the blue block towards the right,21,1335
+splitA,rotate_blue_block_right: take the blue block and rotate it right,rotate_blue_block_right,take the blue block and rotate it right,17,1047
+splitA,rotate_blue_block_right: take the blue block and turn it right,rotate_blue_block_right,take the blue block and turn it right,13,845
+splitA,rotate_blue_block_right: turn the blue block right,rotate_blue_block_right,turn the blue block right,25,1545
+splitA,rotate_pink_block_left: grasp the pink block and rotate it left,rotate_pink_block_left,grasp the pink block and rotate it left,15,975
+splitA,rotate_pink_block_left: grasp the pink block and turn it left,rotate_pink_block_left,grasp the pink block and turn it left,19,1206
+splitA,"rotate_pink_block_left: grasp the pink block, then rotate it left",rotate_pink_block_left,"grasp the pink block, then rotate it left",24,1469
+splitA,"rotate_pink_block_left: grasp the pink block, then turn it left",rotate_pink_block_left,"grasp the pink block, then turn it left",11,715
+splitA,rotate_pink_block_left: rotate left the pink block,rotate_pink_block_left,rotate left the pink block,23,1468
+splitA,rotate_pink_block_left: rotate the pink block 90 degrees to the left,rotate_pink_block_left,rotate the pink block 90 degrees to the left,14,910
+splitA,rotate_pink_block_left: rotate the pink block to the left,rotate_pink_block_left,rotate the pink block to the left,18,1170
+splitA,rotate_pink_block_left: rotate the pink block towards the left,rotate_pink_block_left,rotate the pink block towards the left,16,1018
+splitA,rotate_pink_block_left: take the pink block and rotate it left,rotate_pink_block_left,take the pink block and rotate it left,15,975
+splitA,rotate_pink_block_left: take the pink block and turn it left,rotate_pink_block_left,take the pink block and turn it left,16,983
+splitA,rotate_pink_block_left: turn the pink block left,rotate_pink_block_left,turn the pink block left,14,910
+splitA,rotate_pink_block_right: grasp the pink block and rotate it right,rotate_pink_block_right,grasp the pink block and rotate it right,11,715
+splitA,rotate_pink_block_right: grasp the pink block and turn it right,rotate_pink_block_right,grasp the pink block and turn it right,13,810
+splitA,"rotate_pink_block_right: grasp the pink block, then rotate it right",rotate_pink_block_right,"grasp the pink block, then rotate it right",20,1278
+splitA,"rotate_pink_block_right: grasp the pink block, then turn it right",rotate_pink_block_right,"grasp the pink block, then turn it right",20,1194
+splitA,rotate_pink_block_right: rotate right the pink block,rotate_pink_block_right,rotate right the pink block,12,780
+splitA,rotate_pink_block_right: rotate the pink block 90 degrees to the right,rotate_pink_block_right,rotate the pink block 90 degrees to the right,14,891
+splitA,rotate_pink_block_right: rotate the pink block to the right,rotate_pink_block_right,rotate the pink block to the right,17,1105
+splitA,rotate_pink_block_right: rotate the pink block towards the right,rotate_pink_block_right,rotate the pink block towards the right,20,1214
+splitA,rotate_pink_block_right: take the pink block and rotate it right,rotate_pink_block_right,take the pink block and rotate it right,14,853
+splitA,rotate_pink_block_right: take the pink block and turn it right,rotate_pink_block_right,take the pink block and turn it right,17,1105
+splitA,rotate_pink_block_right: turn the pink block right,rotate_pink_block_right,turn the pink block right,19,1218
+splitA,rotate_red_block_left: grasp the red block and rotate it left,rotate_red_block_left,grasp the red block and rotate it left,18,1153
+splitA,rotate_red_block_left: grasp the red block and turn it left,rotate_red_block_left,grasp the red block and turn it left,19,1218
+splitA,"rotate_red_block_left: grasp the red block, then rotate it left",rotate_red_block_left,"grasp the red block, then rotate it left",21,1325
+splitA,"rotate_red_block_left: grasp the red block, then turn it left",rotate_red_block_left,"grasp the red block, then turn it left",26,1671
+splitA,rotate_red_block_left: rotate left the red block,rotate_red_block_left,rotate left the red block,16,1022
+splitA,rotate_red_block_left: rotate the red block 90 degrees to the left,rotate_red_block_left,rotate the red block 90 degrees to the left,23,1447
+splitA,rotate_red_block_left: rotate the red block to the left,rotate_red_block_left,rotate the red block to the left,24,1534
+splitA,rotate_red_block_left: rotate the red block towards the left,rotate_red_block_left,rotate the red block towards the left,18,1129
+splitA,rotate_red_block_left: take the red block and rotate it left,rotate_red_block_left,take the red block and rotate it left,20,1256
+splitA,rotate_red_block_left: take the red block and turn it left,rotate_red_block_left,take the red block and turn it left,27,1715
+splitA,rotate_red_block_left: turn the red block left,rotate_red_block_left,turn the red block left,18,1147
+splitA,rotate_red_block_right: grasp the red block and rotate it right,rotate_red_block_right,grasp the red block and rotate it right,14,865
+splitA,rotate_red_block_right: grasp the red block and turn it right,rotate_red_block_right,grasp the red block and turn it right,16,1024
+splitA,"rotate_red_block_right: grasp the red block, then rotate it right",rotate_red_block_right,"grasp the red block, then rotate it right",7,410
+splitA,"rotate_red_block_right: grasp the red block, then turn it right",rotate_red_block_right,"grasp the red block, then turn it right",14,829
+splitA,rotate_red_block_right: rotate right the red block,rotate_red_block_right,rotate right the red block,21,1284
+splitA,rotate_red_block_right: rotate the red block 90 degrees to the right,rotate_red_block_right,rotate the red block 90 degrees to the right,18,1116
+splitA,rotate_red_block_right: rotate the red block to the right,rotate_red_block_right,rotate the red block to the right,13,759
+splitA,rotate_red_block_right: rotate the red block towards the right,rotate_red_block_right,rotate the red block towards the right,20,1244
+splitA,rotate_red_block_right: take the red block and rotate it right,rotate_red_block_right,take the red block and rotate it right,11,674
+splitA,rotate_red_block_right: take the red block and turn it right,rotate_red_block_right,take the red block and turn it right,17,1041
+splitA,rotate_red_block_right: turn the red block right,rotate_red_block_right,turn the red block right,20,1245
+splitA,stack_block: place the block on top of another block,stack_block,place the block on top of another block,31,1557
+splitA,stack_block: place the grasped block on top of another block,stack_block,place the grasped block on top of another block,18,897
+splitA,stack_block: put the block on top of another block,stack_block,put the block on top of another block,25,1342
+splitA,stack_block: put the grasped block on top of a block,stack_block,put the grasped block on top of a block,24,1191
+splitA,stack_block: stack blocks on top of each other,stack_block,stack blocks on top of each other,25,1227
+splitA,stack_block: stack the block on top of another block,stack_block,stack the block on top of another block,26,1460
+splitA,stack_block: stack the blocks,stack_block,stack the blocks,24,1182
+splitA,stack_block: stack the object on top of another object,stack_block,stack the object on top of another object,22,1138
+splitA,turn_off_led: push down the button to turn off the green light,turn_off_led,push down the button to turn off the green light,10,571
+splitA,turn_off_led: push down the button to turn off the led,turn_off_led,push down the button to turn off the led,13,719
+splitA,turn_off_led: push down the button to turn off the led light,turn_off_led,push down the button to turn off the led light,17,1006
+splitA,turn_off_led: push the button to turn off the green light,turn_off_led,push the button to turn off the green light,10,549
+splitA,turn_off_led: push the button to turn off the led,turn_off_led,push the button to turn off the led,15,865
+splitA,turn_off_led: push the button to turn off the led light,turn_off_led,push the button to turn off the led light,10,527
+splitA,turn_off_led: toggle the button to turn off the green light,turn_off_led,toggle the button to turn off the green light,18,1031
+splitA,turn_off_led: toggle the button to turn off the led,turn_off_led,toggle the button to turn off the led,14,823
+splitA,turn_off_led: toggle the button to turn off the led light,turn_off_led,toggle the button to turn off the led light,14,842
+splitA,turn_off_led: turn off the green lamp,turn_off_led,turn off the green lamp,12,661
+splitA,turn_off_led: turn off the green light,turn_off_led,turn off the green light,16,879
+splitA,turn_off_led: turn off the led,turn_off_led,turn off the led,14,780
+splitA,turn_off_led: turn off the led lamp,turn_off_led,turn off the led lamp,11,677
+splitA,turn_off_led: turn off the led light,turn_off_led,turn off the led light,8,414
+splitA,turn_off_lightbulb: move down the switch,turn_off_lightbulb,move down the switch,16,996
+splitA,turn_off_lightbulb: move the light switch to turn off the light bulb,turn_off_lightbulb,move the light switch to turn off the light bulb,28,1743
+splitA,turn_off_lightbulb: move the light switch to turn off the yellow light,turn_off_lightbulb,move the light switch to turn off the yellow light,22,1430
+splitA,turn_off_lightbulb: push the switch downwards,turn_off_lightbulb,push the switch downwards,18,1147
+splitA,turn_off_lightbulb: slide down the switch,turn_off_lightbulb,slide down the switch,21,1241
+splitA,turn_off_lightbulb: toggle the light switch to turn off the light bulb,turn_off_lightbulb,toggle the light switch to turn off the light bulb,22,1385
+splitA,turn_off_lightbulb: toggle the light switch to turn off the yellow light,turn_off_lightbulb,toggle the light switch to turn off the yellow light,29,1843
+splitA,turn_off_lightbulb: turn off the light bulb,turn_off_lightbulb,turn off the light bulb,18,1170
+splitA,turn_off_lightbulb: turn off the yellow lamp,turn_off_lightbulb,turn off the yellow lamp,19,1235
+splitA,turn_off_lightbulb: turn off the yellow light,turn_off_lightbulb,turn off the yellow light,20,1273
+splitA,turn_on_led: push down the button to turn on the green light,turn_on_led,push down the button to turn on the green light,10,586
+splitA,turn_on_led: push down the button to turn on the led,turn_on_led,push down the button to turn on the led,18,925
+splitA,turn_on_led: push down the button to turn on the led light,turn_on_led,push down the button to turn on the led light,12,646
+splitA,turn_on_led: push the button to turn on the green light,turn_on_led,push the button to turn on the green light,10,539
+splitA,turn_on_led: push the button to turn on the led,turn_on_led,push the button to turn on the led,17,988
+splitA,turn_on_led: push the button to turn on the led light,turn_on_led,push the button to turn on the led light,7,350
+splitA,turn_on_led: toggle the button to turn on the green light,turn_on_led,toggle the button to turn on the green light,14,786
+splitA,turn_on_led: toggle the button to turn on the led,turn_on_led,toggle the button to turn on the led,18,905
+splitA,turn_on_led: toggle the button to turn on the led light,turn_on_led,toggle the button to turn on the led light,14,792
+splitA,turn_on_led: turn on the green lamp,turn_on_led,turn on the green lamp,8,422
+splitA,turn_on_led: turn on the green light,turn_on_led,turn on the green light,6,290
+splitA,turn_on_led: turn on the led,turn_on_led,turn on the led,12,585
+splitA,turn_on_led: turn on the led lamp,turn_on_led,turn on the led lamp,14,791
+splitA,turn_on_led: turn on the led light,turn_on_led,turn on the led light,16,906
+splitA,turn_on_lightbulb: move the light switch to turn on the light bulb,turn_on_lightbulb,move the light switch to turn on the light bulb,11,650
+splitA,turn_on_lightbulb: move the light switch to turn on the yellow light,turn_on_lightbulb,move the light switch to turn on the yellow light,24,1489
+splitA,turn_on_lightbulb: move up the switch,turn_on_lightbulb,move up the switch,28,1631
+splitA,turn_on_lightbulb: push the switch upwards,turn_on_lightbulb,push the switch upwards,20,1157
+splitA,turn_on_lightbulb: slide up the switch,turn_on_lightbulb,slide up the switch,14,844
+splitA,turn_on_lightbulb: toggle the light switch to turn on the light bulb,turn_on_lightbulb,toggle the light switch to turn on the light bulb,25,1455
+splitA,turn_on_lightbulb: toggle the light switch to turn on the yellow light,turn_on_lightbulb,toggle the light switch to turn on the yellow light,13,813
+splitA,turn_on_lightbulb: turn on the light bulb,turn_on_lightbulb,turn on the light bulb,27,1725
+splitA,turn_on_lightbulb: turn on the yellow lamp,turn_on_lightbulb,turn on the yellow lamp,23,1454
+splitA,turn_on_lightbulb: turn on the yellow light,turn_on_lightbulb,turn on the yellow light,23,1407
+splitA,unstack_block: collapse the stacked blocks,unstack_block,collapse the stacked blocks,20,1121
+splitA,unstack_block: go to the tower of blocks and take off the top one,unstack_block,go to the tower of blocks and take off the top one,30,1575
+splitA,unstack_block: remove a block from the stack,unstack_block,remove a block from the stack,23,1171
+splitA,unstack_block: remove the top block,unstack_block,remove the top block,29,1623
+splitA,unstack_block: take off the block that is on top of the other one,unstack_block,take off the block that is on top of the other one,20,997
+splitA,unstack_block: take off the stacked block,unstack_block,take off the stacked block,36,1839
+splitA,unstack_block: unstack the blocks,unstack_block,unstack the blocks,27,1404
+splitB,close_drawer: close the cabinet drawer,close_drawer,close the cabinet drawer,19,1178
+splitB,close_drawer: close the drawer,close_drawer,close the drawer,11,695
+splitB,close_drawer: go close the drawer,close_drawer,go close the drawer,15,890
+splitB,close_drawer: grasp the drawer handle and close it,close_drawer,grasp the drawer handle and close it,23,1476
+splitB,"close_drawer: grasp the drawer handle, then close it",close_drawer,"grasp the drawer handle, then close it",16,1040
+splitB,close_drawer: grasp the handle of the drawer and close it,close_drawer,grasp the handle of the drawer and close it,20,1276
+splitB,"close_drawer: grasp the handle of the drawer, then close it",close_drawer,"grasp the handle of the drawer, then close it",19,1194
+splitB,close_drawer: push the drawer,close_drawer,push the drawer,31,1889
+splitB,close_drawer: push the handle of the drawer,close_drawer,push the handle of the drawer,16,1016
+splitB,lift_blue_block_drawer: go towards the blue block in the drawer and grasp it,lift_blue_block_drawer,go towards the blue block in the drawer and grasp it,12,711
+splitB,lift_blue_block_drawer: go towards the blue block in the drawer and lift it,lift_blue_block_drawer,go towards the blue block in the drawer and lift it,14,839
+splitB,lift_blue_block_drawer: go towards the blue block in the drawer and pick it up,lift_blue_block_drawer,go towards the blue block in the drawer and pick it up,17,1055
+splitB,lift_blue_block_drawer: grasp the blue block from the drawer,lift_blue_block_drawer,grasp the blue block from the drawer,16,966
+splitB,lift_blue_block_drawer: grasp the blue block in the drawer,lift_blue_block_drawer,grasp the blue block in the drawer,13,820
+splitB,lift_blue_block_drawer: grasp the blue block lying in the drawer,lift_blue_block_drawer,grasp the blue block lying in the drawer,13,802
+splitB,lift_blue_block_drawer: lift the blue block in the drawer,lift_blue_block_drawer,lift the blue block in the drawer,17,1105
+splitB,lift_blue_block_drawer: lift the blue block lying in the drawer,lift_blue_block_drawer,lift the blue block lying in the drawer,16,983
+splitB,lift_blue_block_drawer: pick up the blue block from the drawer,lift_blue_block_drawer,pick up the blue block from the drawer,11,696
+splitB,lift_blue_block_drawer: pick up the blue block in the drawer,lift_blue_block_drawer,pick up the blue block in the drawer,20,1200
+splitB,lift_blue_block_drawer: pick up the blue block lying in the drawer,lift_blue_block_drawer,pick up the blue block lying in the drawer,17,1079
+splitB,lift_blue_block_slider: grasp the blue block lying in the cabinet,lift_blue_block_slider,grasp the blue block lying in the cabinet,14,910
+splitB,lift_blue_block_slider: grasp the blue block lying in the slider,lift_blue_block_slider,grasp the blue block lying in the slider,12,780
+splitB,lift_blue_block_slider: grasp the blue block lying in the sliding cabinet,lift_blue_block_slider,grasp the blue block lying in the sliding cabinet,11,654
+splitB,lift_blue_block_slider: grasp the blue block lying on the shelf,lift_blue_block_slider,grasp the blue block lying on the shelf,9,565
+splitB,lift_blue_block_slider: in the cabinet grasp the blue block,lift_blue_block_slider,in the cabinet grasp the blue block,14,831
+splitB,lift_blue_block_slider: in the cabinet pick up the blue block,lift_blue_block_slider,in the cabinet pick up the blue block,14,841
+splitB,lift_blue_block_slider: in the slider grasp the blue block,lift_blue_block_slider,in the slider grasp the blue block,5,325
+splitB,lift_blue_block_slider: in the slider pick up the blue block,lift_blue_block_slider,in the slider pick up the blue block,17,1105
+splitB,lift_blue_block_slider: in the sliding cabinet grasp the blue block,lift_blue_block_slider,in the sliding cabinet grasp the blue block,8,483
+splitB,lift_blue_block_slider: lift the blue block lying in the cabinet,lift_blue_block_slider,lift the blue block lying in the cabinet,8,500
+splitB,lift_blue_block_slider: lift the blue block lying in the slider,lift_blue_block_slider,lift the blue block lying in the slider,15,894
+splitB,lift_blue_block_slider: lift the blue block lying in the sliding cabinet,lift_blue_block_slider,lift the blue block lying in the sliding cabinet,13,786
+splitB,lift_blue_block_slider: lift the blue block lying on the shelf,lift_blue_block_slider,lift the blue block lying on the shelf,11,646
+splitB,lift_blue_block_slider: lift the blue block on the shelf,lift_blue_block_slider,lift the blue block on the shelf,13,819
+splitB,lift_blue_block_slider: pick up the blue block from the shelf,lift_blue_block_slider,pick up the blue block from the shelf,18,1099
+splitB,lift_blue_block_slider: pick up the blue block from the sliding cabinet,lift_blue_block_slider,pick up the blue block from the sliding cabinet,11,715
+splitB,lift_blue_block_slider: pick up the blue block in the sliding cabinet,lift_blue_block_slider,pick up the blue block in the sliding cabinet,17,1045
+splitB,lift_blue_block_table: grasp the blue block and lift it up,lift_blue_block_table,grasp the blue block and lift it up,19,1118
+splitB,lift_blue_block_table: grasp the blue block on the table and lift it up,lift_blue_block_table,grasp the blue block on the table and lift it up,14,815
+splitB,"lift_blue_block_table: grasp the blue block on the table, then lift it up",lift_blue_block_table,"grasp the blue block on the table, then lift it up",26,1546
+splitB,"lift_blue_block_table: grasp the blue block, then lift it up",lift_blue_block_table,"grasp the blue block, then lift it up",22,1376
+splitB,lift_blue_block_table: lift the blue block,lift_blue_block_table,lift the blue block,17,1025
+splitB,lift_blue_block_table: lift the blue block from the table,lift_blue_block_table,lift the blue block from the table,25,1466
+splitB,lift_blue_block_table: lift the blue block up,lift_blue_block_table,lift the blue block up,13,779
+splitB,lift_blue_block_table: pick up the blue block,lift_blue_block_table,pick up the blue block,21,1308
+splitB,lift_blue_block_table: pick up the blue block from the table,lift_blue_block_table,pick up the blue block from the table,21,1336
+splitB,lift_blue_block_table: pick up the blue block on the table,lift_blue_block_table,pick up the blue block on the table,20,1178
+splitB,lift_pink_block_drawer: go towards the pink block in the drawer and grasp it,lift_pink_block_drawer,go towards the pink block in the drawer and grasp it,15,905
+splitB,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,lift_pink_block_drawer,go towards the pink block in the drawer and lift it,9,529
+splitB,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,lift_pink_block_drawer,go towards the pink block in the drawer and pick it up,12,780
+splitB,lift_pink_block_drawer: grasp the pink block from the drawer,lift_pink_block_drawer,grasp the pink block from the drawer,15,928
+splitB,lift_pink_block_drawer: grasp the pink block in the drawer,lift_pink_block_drawer,grasp the pink block in the drawer,10,599
+splitB,lift_pink_block_drawer: grasp the pink block lying in the drawer,lift_pink_block_drawer,grasp the pink block lying in the drawer,15,846
+splitB,lift_pink_block_drawer: lift the pink block in the drawer,lift_pink_block_drawer,lift the pink block in the drawer,7,416
+splitB,lift_pink_block_drawer: lift the pink block lying in the drawer,lift_pink_block_drawer,lift the pink block lying in the drawer,13,776
+splitB,lift_pink_block_drawer: pick up the pink block from the drawer,lift_pink_block_drawer,pick up the pink block from the drawer,9,510
+splitB,lift_pink_block_drawer: pick up the pink block in the drawer,lift_pink_block_drawer,pick up the pink block in the drawer,20,1200
+splitB,lift_pink_block_drawer: pick up the pink block lying in the drawer,lift_pink_block_drawer,pick up the pink block lying in the drawer,13,808
+splitB,lift_pink_block_slider: grasp the pink block lying in the cabinet,lift_pink_block_slider,grasp the pink block lying in the cabinet,11,688
+splitB,lift_pink_block_slider: grasp the pink block lying in the slider,lift_pink_block_slider,grasp the pink block lying in the slider,8,520
+splitB,lift_pink_block_slider: grasp the pink block lying in the sliding cabinet,lift_pink_block_slider,grasp the pink block lying in the sliding cabinet,8,520
+splitB,lift_pink_block_slider: grasp the pink block lying on the shelf,lift_pink_block_slider,grasp the pink block lying on the shelf,8,499
+splitB,lift_pink_block_slider: in the cabinet grasp the pink block,lift_pink_block_slider,in the cabinet grasp the pink block,7,455
+splitB,lift_pink_block_slider: in the cabinet pick up the pink block,lift_pink_block_slider,in the cabinet pick up the pink block,7,433
+splitB,lift_pink_block_slider: in the slider grasp the pink block,lift_pink_block_slider,in the slider grasp the pink block,16,1015
+splitB,lift_pink_block_slider: in the slider pick up the pink block,lift_pink_block_slider,in the slider pick up the pink block,9,560
+splitB,lift_pink_block_slider: in the sliding cabinet grasp the pink block,lift_pink_block_slider,in the sliding cabinet grasp the pink block,13,829
+splitB,lift_pink_block_slider: lift the pink block lying in the cabinet,lift_pink_block_slider,lift the pink block lying in the cabinet,9,567
+splitB,lift_pink_block_slider: lift the pink block lying in the slider,lift_pink_block_slider,lift the pink block lying in the slider,11,715
+splitB,lift_pink_block_slider: lift the pink block lying in the sliding cabinet,lift_pink_block_slider,lift the pink block lying in the sliding cabinet,9,585
+splitB,lift_pink_block_slider: lift the pink block lying on the shelf,lift_pink_block_slider,lift the pink block lying on the shelf,13,822
+splitB,lift_pink_block_slider: lift the pink block on the shelf,lift_pink_block_slider,lift the pink block on the shelf,7,455
+splitB,lift_pink_block_slider: pick up the pink block from the shelf,lift_pink_block_slider,pick up the pink block from the shelf,12,701
+splitB,lift_pink_block_slider: pick up the pink block from the sliding cabinet,lift_pink_block_slider,pick up the pink block from the sliding cabinet,8,501
+splitB,lift_pink_block_slider: pick up the pink block in the sliding cabinet,lift_pink_block_slider,pick up the pink block in the sliding cabinet,14,880
+splitB,lift_pink_block_table: grasp the pink block and lift it up,lift_pink_block_table,grasp the pink block and lift it up,13,827
+splitB,lift_pink_block_table: grasp the pink block on the table and lift it up,lift_pink_block_table,grasp the pink block on the table and lift it up,18,1055
+splitB,"lift_pink_block_table: grasp the pink block on the table, then lift it up",lift_pink_block_table,"grasp the pink block on the table, then lift it up",20,1275
+splitB,"lift_pink_block_table: grasp the pink block, then lift it up",lift_pink_block_table,"grasp the pink block, then lift it up",16,911
+splitB,lift_pink_block_table: lift the pink block,lift_pink_block_table,lift the pink block,13,735
+splitB,lift_pink_block_table: lift the pink block from the table,lift_pink_block_table,lift the pink block from the table,13,814
+splitB,lift_pink_block_table: lift the pink block up,lift_pink_block_table,lift the pink block up,16,996
+splitB,lift_pink_block_table: pick up the pink block,lift_pink_block_table,pick up the pink block,12,737
+splitB,lift_pink_block_table: pick up the pink block from the table,lift_pink_block_table,pick up the pink block from the table,18,1124
+splitB,lift_pink_block_table: pick up the pink block on the table,lift_pink_block_table,pick up the pink block on the table,18,1069
+splitB,lift_red_block_drawer: go towards the red block in the drawer and grasp it,lift_red_block_drawer,go towards the red block in the drawer and grasp it,15,952
+splitB,lift_red_block_drawer: go towards the red block in the drawer and lift it,lift_red_block_drawer,go towards the red block in the drawer and lift it,16,985
+splitB,lift_red_block_drawer: go towards the red block in the drawer and pick it up,lift_red_block_drawer,go towards the red block in the drawer and pick it up,15,975
+splitB,lift_red_block_drawer: grasp the red block from the drawer,lift_red_block_drawer,grasp the red block from the drawer,12,729
+splitB,lift_red_block_drawer: grasp the red block in the drawer,lift_red_block_drawer,grasp the red block in the drawer,16,972
+splitB,lift_red_block_drawer: grasp the red block lying in the drawer,lift_red_block_drawer,grasp the red block lying in the drawer,20,1187
+splitB,lift_red_block_drawer: lift the red block in the drawer,lift_red_block_drawer,lift the red block in the drawer,13,747
+splitB,lift_red_block_drawer: lift the red block lying in the drawer,lift_red_block_drawer,lift the red block lying in the drawer,20,1170
+splitB,lift_red_block_drawer: pick up the red block from the drawer,lift_red_block_drawer,pick up the red block from the drawer,24,1508
+splitB,lift_red_block_drawer: pick up the red block in the drawer,lift_red_block_drawer,pick up the red block in the drawer,20,1166
+splitB,lift_red_block_drawer: pick up the red block lying in the drawer,lift_red_block_drawer,pick up the red block lying in the drawer,11,675
+splitB,lift_red_block_slider: grasp the red block lying in the cabinet,lift_red_block_slider,grasp the red block lying in the cabinet,10,650
+splitB,lift_red_block_slider: grasp the red block lying in the slider,lift_red_block_slider,grasp the red block lying in the slider,6,390
+splitB,lift_red_block_slider: grasp the red block lying in the sliding cabinet,lift_red_block_slider,grasp the red block lying in the sliding cabinet,15,950
+splitB,lift_red_block_slider: grasp the red block lying on the shelf,lift_red_block_slider,grasp the red block lying on the shelf,16,1040
+splitB,lift_red_block_slider: in the cabinet grasp the red block,lift_red_block_slider,in the cabinet grasp the red block,13,790
+splitB,lift_red_block_slider: in the cabinet pick up the red block,lift_red_block_slider,in the cabinet pick up the red block,8,492
+splitB,lift_red_block_slider: in the slider grasp the red block,lift_red_block_slider,in the slider grasp the red block,13,845
+splitB,lift_red_block_slider: in the slider pick up the red block,lift_red_block_slider,in the slider pick up the red block,14,893
+splitB,lift_red_block_slider: in the sliding cabinet grasp the red block,lift_red_block_slider,in the sliding cabinet grasp the red block,14,894
+splitB,lift_red_block_slider: lift the red block lying in the cabinet,lift_red_block_slider,lift the red block lying in the cabinet,11,664
+splitB,lift_red_block_slider: lift the red block lying in the slider,lift_red_block_slider,lift the red block lying in the slider,5,278
+splitB,lift_red_block_slider: lift the red block lying in the sliding cabinet,lift_red_block_slider,lift the red block lying in the sliding cabinet,3,195
+splitB,lift_red_block_slider: lift the red block lying on the shelf,lift_red_block_slider,lift the red block lying on the shelf,13,845
+splitB,lift_red_block_slider: lift the red block on the shelf,lift_red_block_slider,lift the red block on the shelf,10,615
+splitB,lift_red_block_slider: pick up the red block from the shelf,lift_red_block_slider,pick up the red block from the shelf,11,715
+splitB,lift_red_block_slider: pick up the red block from the sliding cabinet,lift_red_block_slider,pick up the red block from the sliding cabinet,8,493
+splitB,lift_red_block_slider: pick up the red block in the sliding cabinet,lift_red_block_slider,pick up the red block in the sliding cabinet,7,427
+splitB,lift_red_block_table: grasp the red block and lift it up,lift_red_block_table,grasp the red block and lift it up,20,1217
+splitB,lift_red_block_table: grasp the red block on the table and lift it up,lift_red_block_table,grasp the red block on the table and lift it up,23,1429
+splitB,"lift_red_block_table: grasp the red block on the table, then lift it up",lift_red_block_table,"grasp the red block on the table, then lift it up",23,1393
+splitB,"lift_red_block_table: grasp the red block, then lift it up",lift_red_block_table,"grasp the red block, then lift it up",28,1757
+splitB,lift_red_block_table: lift the red block,lift_red_block_table,lift the red block,20,1130
+splitB,lift_red_block_table: lift the red block from the table,lift_red_block_table,lift the red block from the table,23,1416
+splitB,lift_red_block_table: lift the red block up,lift_red_block_table,lift the red block up,16,1001
+splitB,lift_red_block_table: pick up the red block,lift_red_block_table,pick up the red block,17,1042
+splitB,lift_red_block_table: pick up the red block from the table,lift_red_block_table,pick up the red block from the table,17,1021
+splitB,lift_red_block_table: pick up the red block on the table,lift_red_block_table,pick up the red block on the table,19,1211
+splitB,move_slider_left: grasp the door handle and move the door to the left,move_slider_left,grasp the door handle and move the door to the left,11,692
+splitB,move_slider_left: grasp the door handle and slide the door to the left,move_slider_left,grasp the door handle and slide the door to the left,9,562
+splitB,"move_slider_left: grasp the door handle, then move the door to the left",move_slider_left,"grasp the door handle, then move the door to the left",11,665
+splitB,"move_slider_left: grasp the door handle, then slide the door to the left",move_slider_left,"grasp the door handle, then slide the door to the left",13,796
+splitB,move_slider_left: move the door all the way to the left,move_slider_left,move the door all the way to the left,10,633
+splitB,move_slider_left: move the door all the way to the left and let go,move_slider_left,move the door all the way to the left and let go,10,631
+splitB,move_slider_left: move the door to the left,move_slider_left,move the door to the left,7,455
+splitB,move_slider_left: move the door to the left side,move_slider_left,move the door to the left side,14,754
+splitB,move_slider_left: move the sliding door to the left,move_slider_left,move the sliding door to the left,14,872
+splitB,move_slider_left: push the door to the left,move_slider_left,push the door to the left,5,303
+splitB,move_slider_left: push the door to the left side,move_slider_left,push the door to the left side,14,847
+splitB,move_slider_left: push the sliding door to the left,move_slider_left,push the sliding door to the left,14,887
+splitB,move_slider_left: slide the door all the way to the left,move_slider_left,slide the door all the way to the left,8,497
+splitB,move_slider_left: slide the door to the left,move_slider_left,slide the door to the left,18,1115
+splitB,move_slider_left: slide the door to the left side,move_slider_left,slide the door to the left side,8,500
+splitB,"move_slider_left: slide the door to the left, then let it go",move_slider_left,"slide the door to the left, then let it go",14,891
+splitB,move_slider_right: grasp the door handle and move the door to the right,move_slider_right,grasp the door handle and move the door to the right,9,585
+splitB,move_slider_right: grasp the door handle and slide the door to the right,move_slider_right,grasp the door handle and slide the door to the right,8,491
+splitB,"move_slider_right: grasp the door handle, then move the door to the right",move_slider_right,"grasp the door handle, then move the door to the right",8,503
+splitB,"move_slider_right: grasp the door handle, then slide the door to the right",move_slider_right,"grasp the door handle, then slide the door to the right",15,930
+splitB,move_slider_right: move the door all the way to the right,move_slider_right,move the door all the way to the right,7,455
+splitB,move_slider_right: move the door all the way to the right and let go,move_slider_right,move the door all the way to the right and let go,6,390
+splitB,move_slider_right: move the door to the right,move_slider_right,move the door to the right,11,715
+splitB,move_slider_right: move the door to the right side,move_slider_right,move the door to the right side,8,493
+splitB,move_slider_right: move the sliding door to the right,move_slider_right,move the sliding door to the right,6,363
+splitB,move_slider_right: push the door to the right,move_slider_right,push the door to the right,13,824
+splitB,move_slider_right: push the door to the right side,move_slider_right,push the door to the right side,10,650
+splitB,move_slider_right: push the sliding door to the right,move_slider_right,push the sliding door to the right,4,260
+splitB,move_slider_right: slide the door all the way to the right,move_slider_right,slide the door all the way to the right,9,585
+splitB,move_slider_right: slide the door to the right,move_slider_right,slide the door to the right,9,568
+splitB,move_slider_right: slide the door to the right side,move_slider_right,slide the door to the right side,6,390
+splitB,"move_slider_right: slide the door to the right, then let it go",move_slider_right,"slide the door to the right, then let it go",14,893
+splitB,open_drawer: go open the drawer,open_drawer,go open the drawer,10,650
+splitB,open_drawer: grasp the drawer handle and open it,open_drawer,grasp the drawer handle and open it,15,949
+splitB,"open_drawer: grasp the drawer handle, then open it",open_drawer,"grasp the drawer handle, then open it",24,1530
+splitB,open_drawer: grasp the handle of the drawer and open it,open_drawer,grasp the handle of the drawer and open it,13,845
+splitB,"open_drawer: grasp the handle of the drawer, then open it",open_drawer,"grasp the handle of the drawer, then open it",24,1560
+splitB,open_drawer: open the cabinet drawer,open_drawer,open the cabinet drawer,15,975
+splitB,open_drawer: open the drawer,open_drawer,open the drawer,25,1608
+splitB,open_drawer: pull the drawer,open_drawer,pull the drawer,16,1018
+splitB,open_drawer: pull the handle of the drawer,open_drawer,pull the handle of the drawer,16,1040
+splitB,place_in_drawer: go towards the drawer and place the object,place_in_drawer,go towards the drawer and place the object,14,645
+splitB,place_in_drawer: go towards the drawer and store the object,place_in_drawer,go towards the drawer and store the object,7,343
+splitB,place_in_drawer: move to the drawer and place the object,place_in_drawer,move to the drawer and place the object,13,554
+splitB,place_in_drawer: move to the drawer and store the object,place_in_drawer,move to the drawer and store the object,7,349
+splitB,"place_in_drawer: move to the drawer, then place the object",place_in_drawer,"move to the drawer, then place the object",13,619
+splitB,"place_in_drawer: move to the drawer, then store the object",place_in_drawer,"move to the drawer, then store the object",9,377
+splitB,place_in_drawer: place the block in the drawer,place_in_drawer,place the block in the drawer,9,413
+splitB,place_in_drawer: place the grasped object in the drawer,place_in_drawer,place the grasped object in the drawer,14,643
+splitB,place_in_drawer: place the object in the drawer,place_in_drawer,place the object in the drawer,8,399
+splitB,place_in_drawer: put the block in the drawer,place_in_drawer,put the block in the drawer,10,459
+splitB,place_in_drawer: put the grasped object in the drawer,place_in_drawer,put the grasped object in the drawer,11,498
+splitB,place_in_drawer: put the object in the drawer,place_in_drawer,put the object in the drawer,9,440
+splitB,place_in_drawer: store the block in the drawer,place_in_drawer,store the block in the drawer,12,567
+splitB,place_in_drawer: store the grasped object in the drawer,place_in_drawer,store the grasped object in the drawer,11,498
+splitB,place_in_drawer: store the object in the drawer,place_in_drawer,store the object in the drawer,11,518
+splitB,place_in_slider: place in slider,place_in_slider,place in slider,8,343
+splitB,place_in_slider: place the block in the cabinet,place_in_slider,place the block in the cabinet,11,422
+splitB,place_in_slider: place the block in the slider,place_in_slider,place the block in the slider,3,110
+splitB,place_in_slider: place the block in the sliding cabinet,place_in_slider,place the block in the sliding cabinet,13,617
+splitB,place_in_slider: place the grasped object in the cabinet,place_in_slider,place the grasped object in the cabinet,9,394
+splitB,place_in_slider: place the grasped object in the slider,place_in_slider,place the grasped object in the slider,11,519
+splitB,place_in_slider: place the grasped object in the sliding cabinet,place_in_slider,place the grasped object in the sliding cabinet,11,478
+splitB,place_in_slider: place the object in the cabinet,place_in_slider,place the object in the cabinet,5,256
+splitB,place_in_slider: place the object in the slider,place_in_slider,place the object in the slider,4,168
+splitB,place_in_slider: place the object in the sliding cabinet,place_in_slider,place the object in the sliding cabinet,9,466
+splitB,place_in_slider: put it in the slider,place_in_slider,put it in the slider,9,403
+splitB,place_in_slider: put the block in the cabinet,place_in_slider,put the block in the cabinet,10,505
+splitB,place_in_slider: put the block in the slider,place_in_slider,put the block in the slider,8,353
+splitB,place_in_slider: put the block in the sliding cabinet,place_in_slider,put the block in the sliding cabinet,10,439
+splitB,place_in_slider: put the grasped object in the cabinet,place_in_slider,put the grasped object in the cabinet,11,587
+splitB,place_in_slider: put the grasped object in the slider,place_in_slider,put the grasped object in the slider,9,442
+splitB,place_in_slider: put the grasped object in the sliding cabinet,place_in_slider,put the grasped object in the sliding cabinet,11,552
+splitB,place_in_slider: put the object in the cabinet,place_in_slider,put the object in the cabinet,11,489
+splitB,place_in_slider: put the object in the slider,place_in_slider,put the object in the slider,9,423
+splitB,place_in_slider: put the object in the sliding cabinet,place_in_slider,put the object in the sliding cabinet,8,344
+splitB,push_blue_block_left: go push the blue block to the left,push_blue_block_left,go push the blue block to the left,22,1197
+splitB,push_blue_block_left: go slide the blue block to the left,push_blue_block_left,go slide the blue block to the left,26,1547
+splitB,push_blue_block_left: push left the blue block,push_blue_block_left,push left the blue block,27,1598
+splitB,push_blue_block_left: push the blue block to the left,push_blue_block_left,push the blue block to the left,31,1913
+splitB,push_blue_block_left: push the blue block towards the left,push_blue_block_left,push the blue block towards the left,24,1423
+splitB,push_blue_block_left: slide left the blue block,push_blue_block_left,slide left the blue block,31,1660
+splitB,push_blue_block_left: slide the blue block to the left,push_blue_block_left,slide the blue block to the left,28,1647
+splitB,push_blue_block_left: slide the blue block towards the left,push_blue_block_left,slide the blue block towards the left,27,1419
+splitB,push_blue_block_left: sweep the blue block to the left,push_blue_block_left,sweep the blue block to the left,31,1759
+splitB,push_blue_block_right: go push the blue block to the right,push_blue_block_right,go push the blue block to the right,23,1443
+splitB,push_blue_block_right: go slide the blue block to the right,push_blue_block_right,go slide the blue block to the right,24,1436
+splitB,push_blue_block_right: push right the blue block,push_blue_block_right,push right the blue block,32,1882
+splitB,push_blue_block_right: push the blue block to the right,push_blue_block_right,push the blue block to the right,29,1773
+splitB,push_blue_block_right: push the blue block towards the right,push_blue_block_right,push the blue block towards the right,18,1100
+splitB,push_blue_block_right: slide right the blue block,push_blue_block_right,slide right the blue block,23,1391
+splitB,push_blue_block_right: slide the blue block to the right,push_blue_block_right,slide the blue block to the right,17,1030
+splitB,push_blue_block_right: slide the blue block towards the right,push_blue_block_right,slide the blue block towards the right,28,1570
+splitB,push_blue_block_right: sweep the blue block to the right,push_blue_block_right,sweep the blue block to the right,27,1685
+splitB,push_into_drawer: push the block into the drawer,push_into_drawer,push the block into the drawer,38,2189
+splitB,push_into_drawer: push the object into the drawer,push_into_drawer,push the object into the drawer,43,2628
+splitB,push_into_drawer: push the object that it falls into the drawer,push_into_drawer,push the object that it falls into the drawer,24,1449
+splitB,push_into_drawer: slide the block into the drawer,push_into_drawer,slide the block into the drawer,27,1560
+splitB,push_into_drawer: slide the object into the drawer,push_into_drawer,slide the object into the drawer,25,1483
+splitB,push_into_drawer: sweep the block into the drawer,push_into_drawer,sweep the block into the drawer,27,1547
+splitB,push_into_drawer: sweep the object into the drawer,push_into_drawer,sweep the object into the drawer,31,1819
+splitB,push_pink_block_left: go push the pink block to the left,push_pink_block_left,go push the pink block to the left,22,1339
+splitB,push_pink_block_left: go slide the pink block to the left,push_pink_block_left,go slide the pink block to the left,26,1505
+splitB,push_pink_block_left: push left the pink block,push_pink_block_left,push left the pink block,33,2019
+splitB,push_pink_block_left: push the pink block to the left,push_pink_block_left,push the pink block to the left,32,1931
+splitB,push_pink_block_left: push the pink block towards the left,push_pink_block_left,push the pink block towards the left,25,1474
+splitB,push_pink_block_left: slide left the pink block,push_pink_block_left,slide left the pink block,31,1874
+splitB,push_pink_block_left: slide the pink block to the left,push_pink_block_left,slide the pink block to the left,32,1921
+splitB,push_pink_block_left: slide the pink block towards the left,push_pink_block_left,slide the pink block towards the left,22,1341
+splitB,push_pink_block_left: sweep the pink block to the left,push_pink_block_left,sweep the pink block to the left,23,1304
+splitB,push_pink_block_right: go push the pink block to the right,push_pink_block_right,go push the pink block to the right,28,1722
+splitB,push_pink_block_right: go slide the pink block to the right,push_pink_block_right,go slide the pink block to the right,30,1771
+splitB,push_pink_block_right: push right the pink block,push_pink_block_right,push right the pink block,19,1199
+splitB,push_pink_block_right: push the pink block to the right,push_pink_block_right,push the pink block to the right,34,2170
+splitB,push_pink_block_right: push the pink block towards the right,push_pink_block_right,push the pink block towards the right,19,1129
+splitB,push_pink_block_right: slide right the pink block,push_pink_block_right,slide right the pink block,34,2131
+splitB,push_pink_block_right: slide the pink block to the right,push_pink_block_right,slide the pink block to the right,18,1099
+splitB,push_pink_block_right: slide the pink block towards the right,push_pink_block_right,slide the pink block towards the right,19,1122
+splitB,push_pink_block_right: sweep the pink block to the right,push_pink_block_right,sweep the pink block to the right,16,994
+splitB,push_red_block_left: go push the red block to the left,push_red_block_left,go push the red block to the left,23,1276
+splitB,push_red_block_left: go slide the red block to the left,push_red_block_left,go slide the red block to the left,23,1381
+splitB,push_red_block_left: push left the red block,push_red_block_left,push left the red block,18,1103
+splitB,push_red_block_left: push the red block to the left,push_red_block_left,push the red block to the left,23,1417
+splitB,push_red_block_left: push the red block towards the left,push_red_block_left,push the red block towards the left,28,1727
+splitB,push_red_block_left: slide left the red block,push_red_block_left,slide left the red block,20,1215
+splitB,push_red_block_left: slide the red block to the left,push_red_block_left,slide the red block to the left,23,1310
+splitB,push_red_block_left: slide the red block towards the left,push_red_block_left,slide the red block towards the left,28,1688
+splitB,push_red_block_left: sweep the red block to the left,push_red_block_left,sweep the red block to the left,16,999
+splitB,push_red_block_right: go push the red block to the right,push_red_block_right,go push the red block to the right,13,759
+splitB,push_red_block_right: go slide the red block to the right,push_red_block_right,go slide the red block to the right,19,1136
+splitB,push_red_block_right: push right the red block,push_red_block_right,push right the red block,17,1045
+splitB,push_red_block_right: push the red block to the right,push_red_block_right,push the red block to the right,15,872
+splitB,push_red_block_right: push the red block towards the right,push_red_block_right,push the red block towards the right,17,1011
+splitB,push_red_block_right: slide right the red block,push_red_block_right,slide right the red block,18,1124
+splitB,push_red_block_right: slide the red block to the right,push_red_block_right,slide the red block to the right,13,772
+splitB,push_red_block_right: slide the red block towards the right,push_red_block_right,slide the red block towards the right,23,1418
+splitB,push_red_block_right: sweep the red block to the right,push_red_block_right,sweep the red block to the right,15,824
+splitB,rotate_blue_block_left: grasp the blue block and rotate it left,rotate_blue_block_left,grasp the blue block and rotate it left,24,1479
+splitB,rotate_blue_block_left: grasp the blue block and turn it left,rotate_blue_block_left,grasp the blue block and turn it left,23,1474
+splitB,"rotate_blue_block_left: grasp the blue block, then rotate it left",rotate_blue_block_left,"grasp the blue block, then rotate it left",17,1041
+splitB,"rotate_blue_block_left: grasp the blue block, then turn it left",rotate_blue_block_left,"grasp the blue block, then turn it left",19,1235
+splitB,rotate_blue_block_left: rotate left the blue block,rotate_blue_block_left,rotate left the blue block,14,761
+splitB,rotate_blue_block_left: rotate the blue block 90 degrees to the left,rotate_blue_block_left,rotate the blue block 90 degrees to the left,22,1387
+splitB,rotate_blue_block_left: rotate the blue block to the left,rotate_blue_block_left,rotate the blue block to the left,15,954
+splitB,rotate_blue_block_left: rotate the blue block towards the left,rotate_blue_block_left,rotate the blue block towards the left,17,1083
+splitB,rotate_blue_block_left: take the blue block and rotate it left,rotate_blue_block_left,take the blue block and rotate it left,22,1387
+splitB,rotate_blue_block_left: take the blue block and turn it left,rotate_blue_block_left,take the blue block and turn it left,14,891
+splitB,rotate_blue_block_left: turn the blue block left,rotate_blue_block_left,turn the blue block left,20,1284
+splitB,rotate_blue_block_right: grasp the blue block and rotate it right,rotate_blue_block_right,grasp the blue block and rotate it right,22,1404
+splitB,rotate_blue_block_right: grasp the blue block and turn it right,rotate_blue_block_right,grasp the blue block and turn it right,23,1452
+splitB,"rotate_blue_block_right: grasp the blue block, then rotate it right",rotate_blue_block_right,"grasp the blue block, then rotate it right",21,1284
+splitB,"rotate_blue_block_right: grasp the blue block, then turn it right",rotate_blue_block_right,"grasp the blue block, then turn it right",18,1129
+splitB,rotate_blue_block_right: rotate right the blue block,rotate_blue_block_right,rotate right the blue block,26,1549
+splitB,rotate_blue_block_right: rotate the blue block 90 degrees to the right,rotate_blue_block_right,rotate the blue block 90 degrees to the right,20,1300
+splitB,rotate_blue_block_right: rotate the blue block to the right,rotate_blue_block_right,rotate the blue block to the right,18,1170
+splitB,rotate_blue_block_right: rotate the blue block towards the right,rotate_blue_block_right,rotate the blue block towards the right,27,1755
+splitB,rotate_blue_block_right: take the blue block and rotate it right,rotate_blue_block_right,take the blue block and rotate it right,22,1338
+splitB,rotate_blue_block_right: take the blue block and turn it right,rotate_blue_block_right,take the blue block and turn it right,19,1217
+splitB,rotate_blue_block_right: turn the blue block right,rotate_blue_block_right,turn the blue block right,19,1213
+splitB,rotate_pink_block_left: grasp the pink block and rotate it left,rotate_pink_block_left,grasp the pink block and rotate it left,9,533
+splitB,rotate_pink_block_left: grasp the pink block and turn it left,rotate_pink_block_left,grasp the pink block and turn it left,17,1059
+splitB,"rotate_pink_block_left: grasp the pink block, then rotate it left",rotate_pink_block_left,"grasp the pink block, then rotate it left",30,1925
+splitB,"rotate_pink_block_left: grasp the pink block, then turn it left",rotate_pink_block_left,"grasp the pink block, then turn it left",14,893
+splitB,rotate_pink_block_left: rotate left the pink block,rotate_pink_block_left,rotate left the pink block,13,845
+splitB,rotate_pink_block_left: rotate the pink block 90 degrees to the left,rotate_pink_block_left,rotate the pink block 90 degrees to the left,18,1126
+splitB,rotate_pink_block_left: rotate the pink block to the left,rotate_pink_block_left,rotate the pink block to the left,25,1574
+splitB,rotate_pink_block_left: rotate the pink block towards the left,rotate_pink_block_left,rotate the pink block towards the left,14,894
+splitB,rotate_pink_block_left: take the pink block and rotate it left,rotate_pink_block_left,take the pink block and rotate it left,14,861
+splitB,rotate_pink_block_left: take the pink block and turn it left,rotate_pink_block_left,take the pink block and turn it left,16,1015
+splitB,rotate_pink_block_left: turn the pink block left,rotate_pink_block_left,turn the pink block left,17,1084
+splitB,rotate_pink_block_right: grasp the pink block and rotate it right,rotate_pink_block_right,grasp the pink block and rotate it right,17,1105
+splitB,rotate_pink_block_right: grasp the pink block and turn it right,rotate_pink_block_right,grasp the pink block and turn it right,13,845
+splitB,"rotate_pink_block_right: grasp the pink block, then rotate it right",rotate_pink_block_right,"grasp the pink block, then rotate it right",19,1183
+splitB,"rotate_pink_block_right: grasp the pink block, then turn it right",rotate_pink_block_right,"grasp the pink block, then turn it right",18,1170
+splitB,rotate_pink_block_right: rotate right the pink block,rotate_pink_block_right,rotate right the pink block,11,673
+splitB,rotate_pink_block_right: rotate the pink block 90 degrees to the right,rotate_pink_block_right,rotate the pink block 90 degrees to the right,15,948
+splitB,rotate_pink_block_right: rotate the pink block to the right,rotate_pink_block_right,rotate the pink block to the right,18,1097
+splitB,rotate_pink_block_right: rotate the pink block towards the right,rotate_pink_block_right,rotate the pink block towards the right,20,1300
+splitB,rotate_pink_block_right: take the pink block and rotate it right,rotate_pink_block_right,take the pink block and rotate it right,18,1122
+splitB,rotate_pink_block_right: take the pink block and turn it right,rotate_pink_block_right,take the pink block and turn it right,17,978
+splitB,rotate_pink_block_right: turn the pink block right,rotate_pink_block_right,turn the pink block right,20,1254
+splitB,rotate_red_block_left: grasp the red block and rotate it left,rotate_red_block_left,grasp the red block and rotate it left,13,808
+splitB,rotate_red_block_left: grasp the red block and turn it left,rotate_red_block_left,grasp the red block and turn it left,14,864
+splitB,"rotate_red_block_left: grasp the red block, then rotate it left",rotate_red_block_left,"grasp the red block, then rotate it left",13,825
+splitB,"rotate_red_block_left: grasp the red block, then turn it left",rotate_red_block_left,"grasp the red block, then turn it left",14,910
+splitB,rotate_red_block_left: rotate left the red block,rotate_red_block_left,rotate left the red block,9,566
+splitB,rotate_red_block_left: rotate the red block 90 degrees to the left,rotate_red_block_left,rotate the red block 90 degrees to the left,14,910
+splitB,rotate_red_block_left: rotate the red block to the left,rotate_red_block_left,rotate the red block to the left,12,755
+splitB,rotate_red_block_left: rotate the red block towards the left,rotate_red_block_left,rotate the red block towards the left,14,887
+splitB,rotate_red_block_left: take the red block and rotate it left,rotate_red_block_left,take the red block and rotate it left,10,650
+splitB,rotate_red_block_left: take the red block and turn it left,rotate_red_block_left,take the red block and turn it left,18,1170
+splitB,rotate_red_block_left: turn the red block left,rotate_red_block_left,turn the red block left,9,558
+splitB,rotate_red_block_right: grasp the red block and rotate it right,rotate_red_block_right,grasp the red block and rotate it right,6,390
+splitB,rotate_red_block_right: grasp the red block and turn it right,rotate_red_block_right,grasp the red block and turn it right,6,374
+splitB,"rotate_red_block_right: grasp the red block, then rotate it right",rotate_red_block_right,"grasp the red block, then rotate it right",6,360
+splitB,"rotate_red_block_right: grasp the red block, then turn it right",rotate_red_block_right,"grasp the red block, then turn it right",5,278
+splitB,rotate_red_block_right: rotate right the red block,rotate_red_block_right,rotate right the red block,7,455
+splitB,rotate_red_block_right: rotate the red block 90 degrees to the right,rotate_red_block_right,rotate the red block 90 degrees to the right,5,263
+splitB,rotate_red_block_right: rotate the red block to the right,rotate_red_block_right,rotate the red block to the right,9,567
+splitB,rotate_red_block_right: rotate the red block towards the right,rotate_red_block_right,rotate the red block towards the right,12,706
+splitB,rotate_red_block_right: take the red block and rotate it right,rotate_red_block_right,take the red block and rotate it right,5,325
+splitB,rotate_red_block_right: take the red block and turn it right,rotate_red_block_right,take the red block and turn it right,3,179
+splitB,rotate_red_block_right: turn the red block right,rotate_red_block_right,turn the red block right,9,549
+splitB,stack_block: place the block on top of another block,stack_block,place the block on top of another block,11,619
+splitB,stack_block: place the grasped block on top of another block,stack_block,place the grasped block on top of another block,27,1350
+splitB,stack_block: put the block on top of another block,stack_block,put the block on top of another block,25,1241
+splitB,stack_block: put the grasped block on top of a block,stack_block,put the grasped block on top of a block,22,1210
+splitB,stack_block: stack blocks on top of each other,stack_block,stack blocks on top of each other,25,1193
+splitB,stack_block: stack the block on top of another block,stack_block,stack the block on top of another block,22,1178
+splitB,stack_block: stack the blocks,stack_block,stack the blocks,19,1022
+splitB,stack_block: stack the object on top of another object,stack_block,stack the object on top of another object,19,1030
+splitB,turn_off_led: push down the button to turn off the green light,turn_off_led,push down the button to turn off the green light,12,624
+splitB,turn_off_led: push down the button to turn off the led,turn_off_led,push down the button to turn off the led,7,403
+splitB,turn_off_led: push down the button to turn off the led light,turn_off_led,push down the button to turn off the led light,12,679
+splitB,turn_off_led: push the button to turn off the green light,turn_off_led,push the button to turn off the green light,17,894
+splitB,turn_off_led: push the button to turn off the led,turn_off_led,push the button to turn off the led,8,493
+splitB,turn_off_led: push the button to turn off the led light,turn_off_led,push the button to turn off the led light,7,416
+splitB,turn_off_led: toggle the button to turn off the green light,turn_off_led,toggle the button to turn off the green light,14,812
+splitB,turn_off_led: toggle the button to turn off the led,turn_off_led,toggle the button to turn off the led,16,907
+splitB,turn_off_led: toggle the button to turn off the led light,turn_off_led,toggle the button to turn off the led light,22,1242
+splitB,turn_off_led: turn off the green lamp,turn_off_led,turn off the green lamp,9,529
+splitB,turn_off_led: turn off the green light,turn_off_led,turn off the green light,12,656
+splitB,turn_off_led: turn off the led,turn_off_led,turn off the led,17,1016
+splitB,turn_off_led: turn off the led lamp,turn_off_led,turn off the led lamp,14,836
+splitB,turn_off_led: turn off the led light,turn_off_led,turn off the led light,16,1000
+splitB,turn_off_lightbulb: move down the switch,turn_off_lightbulb,move down the switch,12,780
+splitB,turn_off_lightbulb: move the light switch to turn off the light bulb,turn_off_lightbulb,move the light switch to turn off the light bulb,17,1105
+splitB,turn_off_lightbulb: move the light switch to turn off the yellow light,turn_off_lightbulb,move the light switch to turn off the yellow light,12,780
+splitB,turn_off_lightbulb: push the switch downwards,turn_off_lightbulb,push the switch downwards,16,996
+splitB,turn_off_lightbulb: slide down the switch,turn_off_lightbulb,slide down the switch,20,1300
+splitB,turn_off_lightbulb: toggle the light switch to turn off the light bulb,turn_off_lightbulb,toggle the light switch to turn off the light bulb,13,807
+splitB,turn_off_lightbulb: toggle the light switch to turn off the yellow light,turn_off_lightbulb,toggle the light switch to turn off the yellow light,10,604
+splitB,turn_off_lightbulb: turn off the light bulb,turn_off_lightbulb,turn off the light bulb,9,585
+splitB,turn_off_lightbulb: turn off the yellow lamp,turn_off_lightbulb,turn off the yellow lamp,12,780
+splitB,turn_off_lightbulb: turn off the yellow light,turn_off_lightbulb,turn off the yellow light,6,369
+splitB,turn_on_led: push down the button to turn on the green light,turn_on_led,push down the button to turn on the green light,20,1170
+splitB,turn_on_led: push down the button to turn on the led,turn_on_led,push down the button to turn on the led,15,855
+splitB,turn_on_led: push down the button to turn on the led light,turn_on_led,push down the button to turn on the led light,13,781
+splitB,turn_on_led: push the button to turn on the green light,turn_on_led,push the button to turn on the green light,11,699
+splitB,turn_on_led: push the button to turn on the led,turn_on_led,push the button to turn on the led,12,739
+splitB,turn_on_led: push the button to turn on the led light,turn_on_led,push the button to turn on the led light,17,1063
+splitB,turn_on_led: toggle the button to turn on the green light,turn_on_led,toggle the button to turn on the green light,12,698
+splitB,turn_on_led: toggle the button to turn on the led,turn_on_led,toggle the button to turn on the led,13,777
+splitB,turn_on_led: toggle the button to turn on the led light,turn_on_led,toggle the button to turn on the led light,13,734
+splitB,turn_on_led: turn on the green lamp,turn_on_led,turn on the green lamp,15,883
+splitB,turn_on_led: turn on the green light,turn_on_led,turn on the green light,7,395
+splitB,turn_on_led: turn on the led,turn_on_led,turn on the led,13,778
+splitB,turn_on_led: turn on the led lamp,turn_on_led,turn on the led lamp,11,626
+splitB,turn_on_led: turn on the led light,turn_on_led,turn on the led light,10,580
+splitB,turn_on_lightbulb: move the light switch to turn on the light bulb,turn_on_lightbulb,move the light switch to turn on the light bulb,15,975
+splitB,turn_on_lightbulb: move the light switch to turn on the yellow light,turn_on_lightbulb,move the light switch to turn on the yellow light,22,1399
+splitB,turn_on_lightbulb: move up the switch,turn_on_lightbulb,move up the switch,10,650
+splitB,turn_on_lightbulb: push the switch upwards,turn_on_lightbulb,push the switch upwards,19,1212
+splitB,turn_on_lightbulb: slide up the switch,turn_on_lightbulb,slide up the switch,14,860
+splitB,turn_on_lightbulb: toggle the light switch to turn on the light bulb,turn_on_lightbulb,toggle the light switch to turn on the light bulb,7,455
+splitB,turn_on_lightbulb: toggle the light switch to turn on the yellow light,turn_on_lightbulb,toggle the light switch to turn on the yellow light,14,887
+splitB,turn_on_lightbulb: turn on the light bulb,turn_on_lightbulb,turn on the light bulb,17,1105
+splitB,turn_on_lightbulb: turn on the yellow lamp,turn_on_lightbulb,turn on the yellow lamp,10,625
+splitB,turn_on_lightbulb: turn on the yellow light,turn_on_lightbulb,turn on the yellow light,9,585
+splitB,unstack_block: collapse the stacked blocks,unstack_block,collapse the stacked blocks,28,1490
+splitB,unstack_block: go to the tower of blocks and take off the top one,unstack_block,go to the tower of blocks and take off the top one,24,1283
+splitB,unstack_block: remove a block from the stack,unstack_block,remove a block from the stack,32,1784
+splitB,unstack_block: remove the top block,unstack_block,remove the top block,33,1809
+splitB,unstack_block: take off the block that is on top of the other one,unstack_block,take off the block that is on top of the other one,24,1309
+splitB,unstack_block: take off the stacked block,unstack_block,take off the stacked block,28,1717
+splitB,unstack_block: unstack the blocks,unstack_block,unstack the blocks,28,1526
+splitC,close_drawer: close the cabinet drawer,close_drawer,close the cabinet drawer,15,934
+splitC,close_drawer: close the drawer,close_drawer,close the drawer,23,1459
+splitC,close_drawer: go close the drawer,close_drawer,go close the drawer,14,892
+splitC,close_drawer: grasp the drawer handle and close it,close_drawer,grasp the drawer handle and close it,12,727
+splitC,"close_drawer: grasp the drawer handle, then close it",close_drawer,"grasp the drawer handle, then close it",21,1365
+splitC,close_drawer: grasp the handle of the drawer and close it,close_drawer,grasp the handle of the drawer and close it,19,1201
+splitC,"close_drawer: grasp the handle of the drawer, then close it",close_drawer,"grasp the handle of the drawer, then close it",16,1011
+splitC,close_drawer: push the drawer,close_drawer,push the drawer,23,1464
+splitC,close_drawer: push the handle of the drawer,close_drawer,push the handle of the drawer,15,975
+splitC,lift_blue_block_drawer: go towards the blue block in the drawer and grasp it,lift_blue_block_drawer,go towards the blue block in the drawer and grasp it,11,684
+splitC,lift_blue_block_drawer: go towards the blue block in the drawer and lift it,lift_blue_block_drawer,go towards the blue block in the drawer and lift it,16,1040
+splitC,lift_blue_block_drawer: go towards the blue block in the drawer and pick it up,lift_blue_block_drawer,go towards the blue block in the drawer and pick it up,22,1406
+splitC,lift_blue_block_drawer: grasp the blue block from the drawer,lift_blue_block_drawer,grasp the blue block from the drawer,25,1565
+splitC,lift_blue_block_drawer: grasp the blue block in the drawer,lift_blue_block_drawer,grasp the blue block in the drawer,14,880
+splitC,lift_blue_block_drawer: grasp the blue block lying in the drawer,lift_blue_block_drawer,grasp the blue block lying in the drawer,20,1220
+splitC,lift_blue_block_drawer: lift the blue block in the drawer,lift_blue_block_drawer,lift the blue block in the drawer,28,1775
+splitC,lift_blue_block_drawer: lift the blue block lying in the drawer,lift_blue_block_drawer,lift the blue block lying in the drawer,17,1075
+splitC,lift_blue_block_drawer: pick up the blue block from the drawer,lift_blue_block_drawer,pick up the blue block from the drawer,14,882
+splitC,lift_blue_block_drawer: pick up the blue block in the drawer,lift_blue_block_drawer,pick up the blue block in the drawer,15,975
+splitC,lift_blue_block_drawer: pick up the blue block lying in the drawer,lift_blue_block_drawer,pick up the blue block lying in the drawer,14,854
+splitC,lift_blue_block_slider: grasp the blue block lying in the cabinet,lift_blue_block_slider,grasp the blue block lying in the cabinet,11,691
+splitC,lift_blue_block_slider: grasp the blue block lying in the slider,lift_blue_block_slider,grasp the blue block lying in the slider,11,715
+splitC,lift_blue_block_slider: grasp the blue block lying in the sliding cabinet,lift_blue_block_slider,grasp the blue block lying in the sliding cabinet,10,619
+splitC,lift_blue_block_slider: grasp the blue block lying on the shelf,lift_blue_block_slider,grasp the blue block lying on the shelf,8,496
+splitC,lift_blue_block_slider: in the cabinet grasp the blue block,lift_blue_block_slider,in the cabinet grasp the blue block,13,819
+splitC,lift_blue_block_slider: in the cabinet pick up the blue block,lift_blue_block_slider,in the cabinet pick up the blue block,7,406
+splitC,lift_blue_block_slider: in the slider grasp the blue block,lift_blue_block_slider,in the slider grasp the blue block,14,857
+splitC,lift_blue_block_slider: in the slider pick up the blue block,lift_blue_block_slider,in the slider pick up the blue block,17,1062
+splitC,lift_blue_block_slider: in the sliding cabinet grasp the blue block,lift_blue_block_slider,in the sliding cabinet grasp the blue block,15,944
+splitC,lift_blue_block_slider: lift the blue block lying in the cabinet,lift_blue_block_slider,lift the blue block lying in the cabinet,10,627
+splitC,lift_blue_block_slider: lift the blue block lying in the slider,lift_blue_block_slider,lift the blue block lying in the slider,16,1040
+splitC,lift_blue_block_slider: lift the blue block lying in the sliding cabinet,lift_blue_block_slider,lift the blue block lying in the sliding cabinet,7,455
+splitC,lift_blue_block_slider: lift the blue block lying on the shelf,lift_blue_block_slider,lift the blue block lying on the shelf,10,634
+splitC,lift_blue_block_slider: lift the blue block on the shelf,lift_blue_block_slider,lift the blue block on the shelf,11,715
+splitC,lift_blue_block_slider: pick up the blue block from the shelf,lift_blue_block_slider,pick up the blue block from the shelf,7,455
+splitC,lift_blue_block_slider: pick up the blue block from the sliding cabinet,lift_blue_block_slider,pick up the blue block from the sliding cabinet,10,650
+splitC,lift_blue_block_slider: pick up the blue block in the sliding cabinet,lift_blue_block_slider,pick up the blue block in the sliding cabinet,8,520
+splitC,lift_blue_block_table: grasp the blue block and lift it up,lift_blue_block_table,grasp the blue block and lift it up,19,1151
+splitC,lift_blue_block_table: grasp the blue block on the table and lift it up,lift_blue_block_table,grasp the blue block on the table and lift it up,22,1286
+splitC,"lift_blue_block_table: grasp the blue block on the table, then lift it up",lift_blue_block_table,"grasp the blue block on the table, then lift it up",19,1159
+splitC,"lift_blue_block_table: grasp the blue block, then lift it up",lift_blue_block_table,"grasp the blue block, then lift it up",19,1036
+splitC,lift_blue_block_table: lift the blue block,lift_blue_block_table,lift the blue block,18,1115
+splitC,lift_blue_block_table: lift the blue block from the table,lift_blue_block_table,lift the blue block from the table,18,1103
+splitC,lift_blue_block_table: lift the blue block up,lift_blue_block_table,lift the blue block up,16,935
+splitC,lift_blue_block_table: pick up the blue block,lift_blue_block_table,pick up the blue block,18,1030
+splitC,lift_blue_block_table: pick up the blue block from the table,lift_blue_block_table,pick up the blue block from the table,28,1748
+splitC,lift_blue_block_table: pick up the blue block on the table,lift_blue_block_table,pick up the blue block on the table,26,1564
+splitC,lift_pink_block_drawer: go towards the pink block in the drawer and grasp it,lift_pink_block_drawer,go towards the pink block in the drawer and grasp it,15,975
+splitC,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,lift_pink_block_drawer,go towards the pink block in the drawer and lift it,21,1365
+splitC,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,lift_pink_block_drawer,go towards the pink block in the drawer and pick it up,13,828
+splitC,lift_pink_block_drawer: grasp the pink block from the drawer,lift_pink_block_drawer,grasp the pink block from the drawer,13,845
+splitC,lift_pink_block_drawer: grasp the pink block in the drawer,lift_pink_block_drawer,grasp the pink block in the drawer,23,1398
+splitC,lift_pink_block_drawer: grasp the pink block lying in the drawer,lift_pink_block_drawer,grasp the pink block lying in the drawer,22,1360
+splitC,lift_pink_block_drawer: lift the pink block in the drawer,lift_pink_block_drawer,lift the pink block in the drawer,26,1646
+splitC,lift_pink_block_drawer: lift the pink block lying in the drawer,lift_pink_block_drawer,lift the pink block lying in the drawer,15,946
+splitC,lift_pink_block_drawer: pick up the pink block from the drawer,lift_pink_block_drawer,pick up the pink block from the drawer,20,1254
+splitC,lift_pink_block_drawer: pick up the pink block in the drawer,lift_pink_block_drawer,pick up the pink block in the drawer,21,1319
+splitC,lift_pink_block_drawer: pick up the pink block lying in the drawer,lift_pink_block_drawer,pick up the pink block lying in the drawer,19,1179
+splitC,lift_pink_block_slider: grasp the pink block lying in the cabinet,lift_pink_block_slider,grasp the pink block lying in the cabinet,20,1203
+splitC,lift_pink_block_slider: grasp the pink block lying in the slider,lift_pink_block_slider,grasp the pink block lying in the slider,12,763
+splitC,lift_pink_block_slider: grasp the pink block lying in the sliding cabinet,lift_pink_block_slider,grasp the pink block lying in the sliding cabinet,6,370
+splitC,lift_pink_block_slider: grasp the pink block lying on the shelf,lift_pink_block_slider,grasp the pink block lying on the shelf,11,715
+splitC,lift_pink_block_slider: in the cabinet grasp the pink block,lift_pink_block_slider,in the cabinet grasp the pink block,13,815
+splitC,lift_pink_block_slider: in the cabinet pick up the pink block,lift_pink_block_slider,in the cabinet pick up the pink block,13,816
+splitC,lift_pink_block_slider: in the slider grasp the pink block,lift_pink_block_slider,in the slider grasp the pink block,9,559
+splitC,lift_pink_block_slider: in the slider pick up the pink block,lift_pink_block_slider,in the slider pick up the pink block,13,827
+splitC,lift_pink_block_slider: in the sliding cabinet grasp the pink block,lift_pink_block_slider,in the sliding cabinet grasp the pink block,14,910
+splitC,lift_pink_block_slider: lift the pink block lying in the cabinet,lift_pink_block_slider,lift the pink block lying in the cabinet,14,910
+splitC,lift_pink_block_slider: lift the pink block lying in the slider,lift_pink_block_slider,lift the pink block lying in the slider,11,688
+splitC,lift_pink_block_slider: lift the pink block lying in the sliding cabinet,lift_pink_block_slider,lift the pink block lying in the sliding cabinet,14,892
+splitC,lift_pink_block_slider: lift the pink block lying on the shelf,lift_pink_block_slider,lift the pink block lying on the shelf,7,439
+splitC,lift_pink_block_slider: lift the pink block on the shelf,lift_pink_block_slider,lift the pink block on the shelf,10,610
+splitC,lift_pink_block_slider: pick up the pink block from the shelf,lift_pink_block_slider,pick up the pink block from the shelf,17,1082
+splitC,lift_pink_block_slider: pick up the pink block from the sliding cabinet,lift_pink_block_slider,pick up the pink block from the sliding cabinet,13,845
+splitC,lift_pink_block_slider: pick up the pink block in the sliding cabinet,lift_pink_block_slider,pick up the pink block in the sliding cabinet,11,715
+splitC,lift_pink_block_table: grasp the pink block and lift it up,lift_pink_block_table,grasp the pink block and lift it up,15,901
+splitC,lift_pink_block_table: grasp the pink block on the table and lift it up,lift_pink_block_table,grasp the pink block on the table and lift it up,23,1429
+splitC,"lift_pink_block_table: grasp the pink block on the table, then lift it up",lift_pink_block_table,"grasp the pink block on the table, then lift it up",20,1180
+splitC,"lift_pink_block_table: grasp the pink block, then lift it up",lift_pink_block_table,"grasp the pink block, then lift it up",18,1121
+splitC,lift_pink_block_table: lift the pink block,lift_pink_block_table,lift the pink block,14,854
+splitC,lift_pink_block_table: lift the pink block from the table,lift_pink_block_table,lift the pink block from the table,28,1664
+splitC,lift_pink_block_table: lift the pink block up,lift_pink_block_table,lift the pink block up,20,1231
+splitC,lift_pink_block_table: pick up the pink block,lift_pink_block_table,pick up the pink block,21,1221
+splitC,lift_pink_block_table: pick up the pink block from the table,lift_pink_block_table,pick up the pink block from the table,20,1156
+splitC,lift_pink_block_table: pick up the pink block on the table,lift_pink_block_table,pick up the pink block on the table,23,1369
+splitC,lift_red_block_drawer: go towards the red block in the drawer and grasp it,lift_red_block_drawer,go towards the red block in the drawer and grasp it,18,1100
+splitC,lift_red_block_drawer: go towards the red block in the drawer and lift it,lift_red_block_drawer,go towards the red block in the drawer and lift it,12,780
+splitC,lift_red_block_drawer: go towards the red block in the drawer and pick it up,lift_red_block_drawer,go towards the red block in the drawer and pick it up,13,768
+splitC,lift_red_block_drawer: grasp the red block from the drawer,lift_red_block_drawer,grasp the red block from the drawer,15,975
+splitC,lift_red_block_drawer: grasp the red block in the drawer,lift_red_block_drawer,grasp the red block in the drawer,15,926
+splitC,lift_red_block_drawer: grasp the red block lying in the drawer,lift_red_block_drawer,grasp the red block lying in the drawer,20,1212
+splitC,lift_red_block_drawer: lift the red block in the drawer,lift_red_block_drawer,lift the red block in the drawer,17,993
+splitC,lift_red_block_drawer: lift the red block lying in the drawer,lift_red_block_drawer,lift the red block lying in the drawer,16,976
+splitC,lift_red_block_drawer: pick up the red block from the drawer,lift_red_block_drawer,pick up the red block from the drawer,16,999
+splitC,lift_red_block_drawer: pick up the red block in the drawer,lift_red_block_drawer,pick up the red block in the drawer,12,747
+splitC,lift_red_block_drawer: pick up the red block lying in the drawer,lift_red_block_drawer,pick up the red block lying in the drawer,9,556
+splitC,lift_red_block_slider: grasp the red block lying in the cabinet,lift_red_block_slider,grasp the red block lying in the cabinet,9,537
+splitC,lift_red_block_slider: grasp the red block lying in the slider,lift_red_block_slider,grasp the red block lying in the slider,13,845
+splitC,lift_red_block_slider: grasp the red block lying in the sliding cabinet,lift_red_block_slider,grasp the red block lying in the sliding cabinet,11,698
+splitC,lift_red_block_slider: grasp the red block lying on the shelf,lift_red_block_slider,grasp the red block lying on the shelf,12,764
+splitC,lift_red_block_slider: in the cabinet grasp the red block,lift_red_block_slider,in the cabinet grasp the red block,14,879
+splitC,lift_red_block_slider: in the cabinet pick up the red block,lift_red_block_slider,in the cabinet pick up the red block,9,542
+splitC,lift_red_block_slider: in the slider grasp the red block,lift_red_block_slider,in the slider grasp the red block,16,1013
+splitC,lift_red_block_slider: in the slider pick up the red block,lift_red_block_slider,in the slider pick up the red block,7,455
+splitC,lift_red_block_slider: in the sliding cabinet grasp the red block,lift_red_block_slider,in the sliding cabinet grasp the red block,11,715
+splitC,lift_red_block_slider: lift the red block lying in the cabinet,lift_red_block_slider,lift the red block lying in the cabinet,16,1040
+splitC,lift_red_block_slider: lift the red block lying in the slider,lift_red_block_slider,lift the red block lying in the slider,14,862
+splitC,lift_red_block_slider: lift the red block lying in the sliding cabinet,lift_red_block_slider,lift the red block lying in the sliding cabinet,9,585
+splitC,lift_red_block_slider: lift the red block lying on the shelf,lift_red_block_slider,lift the red block lying on the shelf,12,780
+splitC,lift_red_block_slider: lift the red block on the shelf,lift_red_block_slider,lift the red block on the shelf,13,793
+splitC,lift_red_block_slider: pick up the red block from the shelf,lift_red_block_slider,pick up the red block from the shelf,16,995
+splitC,lift_red_block_slider: pick up the red block from the sliding cabinet,lift_red_block_slider,pick up the red block from the sliding cabinet,9,560
+splitC,lift_red_block_slider: pick up the red block in the sliding cabinet,lift_red_block_slider,pick up the red block in the sliding cabinet,13,845
+splitC,lift_red_block_table: grasp the red block and lift it up,lift_red_block_table,grasp the red block and lift it up,14,835
+splitC,lift_red_block_table: grasp the red block on the table and lift it up,lift_red_block_table,grasp the red block on the table and lift it up,14,868
+splitC,"lift_red_block_table: grasp the red block on the table, then lift it up",lift_red_block_table,"grasp the red block on the table, then lift it up",17,942
+splitC,"lift_red_block_table: grasp the red block, then lift it up",lift_red_block_table,"grasp the red block, then lift it up",18,1142
+splitC,lift_red_block_table: lift the red block,lift_red_block_table,lift the red block,27,1634
+splitC,lift_red_block_table: lift the red block from the table,lift_red_block_table,lift the red block from the table,13,798
+splitC,lift_red_block_table: lift the red block up,lift_red_block_table,lift the red block up,14,821
+splitC,lift_red_block_table: pick up the red block,lift_red_block_table,pick up the red block,17,1061
+splitC,lift_red_block_table: pick up the red block from the table,lift_red_block_table,pick up the red block from the table,15,897
+splitC,lift_red_block_table: pick up the red block on the table,lift_red_block_table,pick up the red block on the table,28,1642
+splitC,move_slider_left: grasp the door handle and move the door to the left,move_slider_left,grasp the door handle and move the door to the left,12,780
+splitC,move_slider_left: grasp the door handle and slide the door to the left,move_slider_left,grasp the door handle and slide the door to the left,14,880
+splitC,"move_slider_left: grasp the door handle, then move the door to the left",move_slider_left,"grasp the door handle, then move the door to the left",7,438
+splitC,"move_slider_left: grasp the door handle, then slide the door to the left",move_slider_left,"grasp the door handle, then slide the door to the left",15,975
+splitC,move_slider_left: move the door all the way to the left,move_slider_left,move the door all the way to the left,9,585
+splitC,move_slider_left: move the door all the way to the left and let go,move_slider_left,move the door all the way to the left and let go,7,455
+splitC,move_slider_left: move the door to the left,move_slider_left,move the door to the left,10,630
+splitC,move_slider_left: move the door to the left side,move_slider_left,move the door to the left side,20,1300
+splitC,move_slider_left: move the sliding door to the left,move_slider_left,move the sliding door to the left,6,390
+splitC,move_slider_left: push the door to the left,move_slider_left,push the door to the left,8,520
+splitC,move_slider_left: push the door to the left side,move_slider_left,push the door to the left side,6,390
+splitC,move_slider_left: push the sliding door to the left,move_slider_left,push the sliding door to the left,12,780
+splitC,move_slider_left: slide the door all the way to the left,move_slider_left,slide the door all the way to the left,11,715
+splitC,move_slider_left: slide the door to the left,move_slider_left,slide the door to the left,15,930
+splitC,move_slider_left: slide the door to the left side,move_slider_left,slide the door to the left side,9,585
+splitC,"move_slider_left: slide the door to the left, then let it go",move_slider_left,"slide the door to the left, then let it go",18,1170
+splitC,move_slider_right: grasp the door handle and move the door to the right,move_slider_right,grasp the door handle and move the door to the right,17,1076
+splitC,move_slider_right: grasp the door handle and slide the door to the right,move_slider_right,grasp the door handle and slide the door to the right,21,1316
+splitC,"move_slider_right: grasp the door handle, then move the door to the right",move_slider_right,"grasp the door handle, then move the door to the right",16,970
+splitC,"move_slider_right: grasp the door handle, then slide the door to the right",move_slider_right,"grasp the door handle, then slide the door to the right",14,910
+splitC,move_slider_right: move the door all the way to the right,move_slider_right,move the door all the way to the right,10,650
+splitC,move_slider_right: move the door all the way to the right and let go,move_slider_right,move the door all the way to the right and let go,8,500
+splitC,move_slider_right: move the door to the right,move_slider_right,move the door to the right,11,715
+splitC,move_slider_right: move the door to the right side,move_slider_right,move the door to the right side,8,520
+splitC,move_slider_right: move the sliding door to the right,move_slider_right,move the sliding door to the right,8,520
+splitC,move_slider_right: push the door to the right,move_slider_right,push the door to the right,10,650
+splitC,move_slider_right: push the door to the right side,move_slider_right,push the door to the right side,15,945
+splitC,move_slider_right: push the sliding door to the right,move_slider_right,push the sliding door to the right,16,993
+splitC,move_slider_right: slide the door all the way to the right,move_slider_right,slide the door all the way to the right,14,910
+splitC,move_slider_right: slide the door to the right,move_slider_right,slide the door to the right,8,520
+splitC,move_slider_right: slide the door to the right side,move_slider_right,slide the door to the right side,15,975
+splitC,"move_slider_right: slide the door to the right, then let it go",move_slider_right,"slide the door to the right, then let it go",10,619
+splitC,open_drawer: go open the drawer,open_drawer,go open the drawer,24,1560
+splitC,open_drawer: grasp the drawer handle and open it,open_drawer,grasp the drawer handle and open it,18,1170
+splitC,"open_drawer: grasp the drawer handle, then open it",open_drawer,"grasp the drawer handle, then open it",14,910
+splitC,open_drawer: grasp the handle of the drawer and open it,open_drawer,grasp the handle of the drawer and open it,28,1820
+splitC,"open_drawer: grasp the handle of the drawer, then open it",open_drawer,"grasp the handle of the drawer, then open it",23,1465
+splitC,open_drawer: open the cabinet drawer,open_drawer,open the cabinet drawer,21,1365
+splitC,open_drawer: open the drawer,open_drawer,open the drawer,12,780
+splitC,open_drawer: pull the drawer,open_drawer,pull the drawer,14,910
+splitC,open_drawer: pull the handle of the drawer,open_drawer,pull the handle of the drawer,15,975
+splitC,place_in_drawer: go towards the drawer and place the object,place_in_drawer,go towards the drawer and place the object,11,483
+splitC,place_in_drawer: go towards the drawer and store the object,place_in_drawer,go towards the drawer and store the object,19,808
+splitC,place_in_drawer: move to the drawer and place the object,place_in_drawer,move to the drawer and place the object,10,504
+splitC,place_in_drawer: move to the drawer and store the object,place_in_drawer,move to the drawer and store the object,14,596
+splitC,"place_in_drawer: move to the drawer, then place the object",place_in_drawer,"move to the drawer, then place the object",8,339
+splitC,"place_in_drawer: move to the drawer, then store the object",place_in_drawer,"move to the drawer, then store the object",17,778
+splitC,place_in_drawer: place the block in the drawer,place_in_drawer,place the block in the drawer,14,592
+splitC,place_in_drawer: place the grasped object in the drawer,place_in_drawer,place the grasped object in the drawer,15,659
+splitC,place_in_drawer: place the object in the drawer,place_in_drawer,place the object in the drawer,11,457
+splitC,place_in_drawer: put the block in the drawer,place_in_drawer,put the block in the drawer,16,681
+splitC,place_in_drawer: put the grasped object in the drawer,place_in_drawer,put the grasped object in the drawer,11,503
+splitC,place_in_drawer: put the object in the drawer,place_in_drawer,put the object in the drawer,13,540
+splitC,place_in_drawer: store the block in the drawer,place_in_drawer,store the block in the drawer,10,402
+splitC,place_in_drawer: store the grasped object in the drawer,place_in_drawer,store the grasped object in the drawer,13,534
+splitC,place_in_drawer: store the object in the drawer,place_in_drawer,store the object in the drawer,20,957
+splitC,place_in_slider: place in slider,place_in_slider,place in slider,9,438
+splitC,place_in_slider: place the block in the cabinet,place_in_slider,place the block in the cabinet,9,411
+splitC,place_in_slider: place the block in the slider,place_in_slider,place the block in the slider,12,487
+splitC,place_in_slider: place the block in the sliding cabinet,place_in_slider,place the block in the sliding cabinet,14,626
+splitC,place_in_slider: place the grasped object in the cabinet,place_in_slider,place the grasped object in the cabinet,7,314
+splitC,place_in_slider: place the grasped object in the slider,place_in_slider,place the grasped object in the slider,20,898
+splitC,place_in_slider: place the grasped object in the sliding cabinet,place_in_slider,place the grasped object in the sliding cabinet,11,463
+splitC,place_in_slider: place the object in the cabinet,place_in_slider,place the object in the cabinet,12,514
+splitC,place_in_slider: place the object in the slider,place_in_slider,place the object in the slider,12,540
+splitC,place_in_slider: place the object in the sliding cabinet,place_in_slider,place the object in the sliding cabinet,9,411
+splitC,place_in_slider: put it in the slider,place_in_slider,put it in the slider,8,310
+splitC,place_in_slider: put the block in the cabinet,place_in_slider,put the block in the cabinet,7,289
+splitC,place_in_slider: put the block in the slider,place_in_slider,put the block in the slider,3,172
+splitC,place_in_slider: put the block in the sliding cabinet,place_in_slider,put the block in the sliding cabinet,11,526
+splitC,place_in_slider: put the grasped object in the cabinet,place_in_slider,put the grasped object in the cabinet,9,385
+splitC,place_in_slider: put the grasped object in the slider,place_in_slider,put the grasped object in the slider,8,338
+splitC,place_in_slider: put the grasped object in the sliding cabinet,place_in_slider,put the grasped object in the sliding cabinet,8,303
+splitC,place_in_slider: put the object in the cabinet,place_in_slider,put the object in the cabinet,11,462
+splitC,place_in_slider: put the object in the slider,place_in_slider,put the object in the slider,8,362
+splitC,place_in_slider: put the object in the sliding cabinet,place_in_slider,put the object in the sliding cabinet,9,405
+splitC,push_blue_block_left: go push the blue block to the left,push_blue_block_left,go push the blue block to the left,6,361
+splitC,push_blue_block_left: go slide the blue block to the left,push_blue_block_left,go slide the blue block to the left,13,701
+splitC,push_blue_block_left: push left the blue block,push_blue_block_left,push left the blue block,13,743
+splitC,push_blue_block_left: push the blue block to the left,push_blue_block_left,push the blue block to the left,10,623
+splitC,push_blue_block_left: push the blue block towards the left,push_blue_block_left,push the blue block towards the left,5,281
+splitC,push_blue_block_left: slide left the blue block,push_blue_block_left,slide left the blue block,10,590
+splitC,push_blue_block_left: slide the blue block to the left,push_blue_block_left,slide the blue block to the left,4,260
+splitC,push_blue_block_left: slide the blue block towards the left,push_blue_block_left,slide the blue block towards the left,7,455
+splitC,push_blue_block_left: sweep the blue block to the left,push_blue_block_left,sweep the blue block to the left,4,260
+splitC,push_blue_block_right: go push the blue block to the right,push_blue_block_right,go push the blue block to the right,6,336
+splitC,push_blue_block_right: go slide the blue block to the right,push_blue_block_right,go slide the blue block to the right,10,567
+splitC,push_blue_block_right: push right the blue block,push_blue_block_right,push right the blue block,8,492
+splitC,push_blue_block_right: push the blue block to the right,push_blue_block_right,push the blue block to the right,11,715
+splitC,push_blue_block_right: push the blue block towards the right,push_blue_block_right,push the blue block towards the right,10,573
+splitC,push_blue_block_right: slide right the blue block,push_blue_block_right,slide right the blue block,9,565
+splitC,push_blue_block_right: slide the blue block to the right,push_blue_block_right,slide the blue block to the right,11,611
+splitC,push_blue_block_right: slide the blue block towards the right,push_blue_block_right,slide the blue block towards the right,12,686
+splitC,push_blue_block_right: sweep the blue block to the right,push_blue_block_right,sweep the blue block to the right,9,546
+splitC,push_into_drawer: push the block into the drawer,push_into_drawer,push the block into the drawer,26,1529
+splitC,push_into_drawer: push the object into the drawer,push_into_drawer,push the object into the drawer,20,1216
+splitC,push_into_drawer: push the object that it falls into the drawer,push_into_drawer,push the object that it falls into the drawer,19,1170
+splitC,push_into_drawer: slide the block into the drawer,push_into_drawer,slide the block into the drawer,22,1355
+splitC,push_into_drawer: slide the object into the drawer,push_into_drawer,slide the object into the drawer,22,1346
+splitC,push_into_drawer: sweep the block into the drawer,push_into_drawer,sweep the block into the drawer,26,1587
+splitC,push_into_drawer: sweep the object into the drawer,push_into_drawer,sweep the object into the drawer,23,1399
+splitC,push_pink_block_left: go push the pink block to the left,push_pink_block_left,go push the pink block to the left,12,750
+splitC,push_pink_block_left: go slide the pink block to the left,push_pink_block_left,go slide the pink block to the left,20,1131
+splitC,push_pink_block_left: push left the pink block,push_pink_block_left,push left the pink block,13,747
+splitC,push_pink_block_left: push the pink block to the left,push_pink_block_left,push the pink block to the left,12,714
+splitC,push_pink_block_left: push the pink block towards the left,push_pink_block_left,push the pink block towards the left,13,802
+splitC,push_pink_block_left: slide left the pink block,push_pink_block_left,slide left the pink block,18,1113
+splitC,push_pink_block_left: slide the pink block to the left,push_pink_block_left,slide the pink block to the left,16,927
+splitC,push_pink_block_left: slide the pink block towards the left,push_pink_block_left,slide the pink block towards the left,8,441
+splitC,push_pink_block_left: sweep the pink block to the left,push_pink_block_left,sweep the pink block to the left,11,715
+splitC,push_pink_block_right: go push the pink block to the right,push_pink_block_right,go push the pink block to the right,14,838
+splitC,push_pink_block_right: go slide the pink block to the right,push_pink_block_right,go slide the pink block to the right,10,587
+splitC,push_pink_block_right: push right the pink block,push_pink_block_right,push right the pink block,19,1156
+splitC,push_pink_block_right: push the pink block to the right,push_pink_block_right,push the pink block to the right,21,1185
+splitC,push_pink_block_right: push the pink block towards the right,push_pink_block_right,push the pink block towards the right,10,570
+splitC,push_pink_block_right: slide right the pink block,push_pink_block_right,slide right the pink block,13,707
+splitC,push_pink_block_right: slide the pink block to the right,push_pink_block_right,slide the pink block to the right,16,962
+splitC,push_pink_block_right: slide the pink block towards the right,push_pink_block_right,slide the pink block towards the right,17,1052
+splitC,push_pink_block_right: sweep the pink block to the right,push_pink_block_right,sweep the pink block to the right,13,668
+splitC,push_red_block_left: go push the red block to the left,push_red_block_left,go push the red block to the left,16,928
+splitC,push_red_block_left: go slide the red block to the left,push_red_block_left,go slide the red block to the left,12,780
+splitC,push_red_block_left: push left the red block,push_red_block_left,push left the red block,14,815
+splitC,push_red_block_left: push the red block to the left,push_red_block_left,push the red block to the left,20,1175
+splitC,push_red_block_left: push the red block towards the left,push_red_block_left,push the red block towards the left,10,619
+splitC,push_red_block_left: slide left the red block,push_red_block_left,slide left the red block,20,1124
+splitC,push_red_block_left: slide the red block to the left,push_red_block_left,slide the red block to the left,20,1163
+splitC,push_red_block_left: slide the red block towards the left,push_red_block_left,slide the red block towards the left,16,966
+splitC,push_red_block_left: sweep the red block to the left,push_red_block_left,sweep the red block to the left,13,807
+splitC,push_red_block_right: go push the red block to the right,push_red_block_right,go push the red block to the right,13,712
+splitC,push_red_block_right: go slide the red block to the right,push_red_block_right,go slide the red block to the right,14,806
+splitC,push_red_block_right: push right the red block,push_red_block_right,push right the red block,21,1236
+splitC,push_red_block_right: push the red block to the right,push_red_block_right,push the red block to the right,15,881
+splitC,push_red_block_right: push the red block towards the right,push_red_block_right,push the red block towards the right,18,1062
+splitC,push_red_block_right: slide right the red block,push_red_block_right,slide right the red block,16,782
+splitC,push_red_block_right: slide the red block to the right,push_red_block_right,slide the red block to the right,20,1106
+splitC,push_red_block_right: slide the red block towards the right,push_red_block_right,slide the red block towards the right,27,1505
+splitC,push_red_block_right: sweep the red block to the right,push_red_block_right,sweep the red block to the right,16,899
+splitC,rotate_blue_block_left: grasp the blue block and rotate it left,rotate_blue_block_left,grasp the blue block and rotate it left,14,910
+splitC,rotate_blue_block_left: grasp the blue block and turn it left,rotate_blue_block_left,grasp the blue block and turn it left,8,495
+splitC,"rotate_blue_block_left: grasp the blue block, then rotate it left",rotate_blue_block_left,"grasp the blue block, then rotate it left",12,699
+splitC,"rotate_blue_block_left: grasp the blue block, then turn it left",rotate_blue_block_left,"grasp the blue block, then turn it left",9,518
+splitC,rotate_blue_block_left: rotate left the blue block,rotate_blue_block_left,rotate left the blue block,12,738
+splitC,rotate_blue_block_left: rotate the blue block 90 degrees to the left,rotate_blue_block_left,rotate the blue block 90 degrees to the left,4,242
+splitC,rotate_blue_block_left: rotate the blue block to the left,rotate_blue_block_left,rotate the blue block to the left,17,1105
+splitC,rotate_blue_block_left: rotate the blue block towards the left,rotate_blue_block_left,rotate the blue block towards the left,13,761
+splitC,rotate_blue_block_left: take the blue block and rotate it left,rotate_blue_block_left,take the blue block and rotate it left,14,910
+splitC,rotate_blue_block_left: take the blue block and turn it left,rotate_blue_block_left,take the blue block and turn it left,16,997
+splitC,rotate_blue_block_left: turn the blue block left,rotate_blue_block_left,turn the blue block left,13,807
+splitC,rotate_blue_block_right: grasp the blue block and rotate it right,rotate_blue_block_right,grasp the blue block and rotate it right,9,548
+splitC,rotate_blue_block_right: grasp the blue block and turn it right,rotate_blue_block_right,grasp the blue block and turn it right,6,340
+splitC,"rotate_blue_block_right: grasp the blue block, then rotate it right",rotate_blue_block_right,"grasp the blue block, then rotate it right",6,390
+splitC,"rotate_blue_block_right: grasp the blue block, then turn it right",rotate_blue_block_right,"grasp the blue block, then turn it right",5,325
+splitC,rotate_blue_block_right: rotate right the blue block,rotate_blue_block_right,rotate right the blue block,8,476
+splitC,rotate_blue_block_right: rotate the blue block 90 degrees to the right,rotate_blue_block_right,rotate the blue block 90 degrees to the right,5,325
+splitC,rotate_blue_block_right: rotate the blue block to the right,rotate_blue_block_right,rotate the blue block to the right,1,65
+splitC,rotate_blue_block_right: rotate the blue block towards the right,rotate_blue_block_right,rotate the blue block towards the right,10,626
+splitC,rotate_blue_block_right: take the blue block and rotate it right,rotate_blue_block_right,take the blue block and rotate it right,3,195
+splitC,rotate_blue_block_right: take the blue block and turn it right,rotate_blue_block_right,take the blue block and turn it right,4,237
+splitC,rotate_blue_block_right: turn the blue block right,rotate_blue_block_right,turn the blue block right,4,260
+splitC,rotate_pink_block_left: grasp the pink block and rotate it left,rotate_pink_block_left,grasp the pink block and rotate it left,15,928
+splitC,rotate_pink_block_left: grasp the pink block and turn it left,rotate_pink_block_left,grasp the pink block and turn it left,15,951
+splitC,"rotate_pink_block_left: grasp the pink block, then rotate it left",rotate_pink_block_left,"grasp the pink block, then rotate it left",17,1023
+splitC,"rotate_pink_block_left: grasp the pink block, then turn it left",rotate_pink_block_left,"grasp the pink block, then turn it left",13,817
+splitC,rotate_pink_block_left: rotate left the pink block,rotate_pink_block_left,rotate left the pink block,15,945
+splitC,rotate_pink_block_left: rotate the pink block 90 degrees to the left,rotate_pink_block_left,rotate the pink block 90 degrees to the left,13,782
+splitC,rotate_pink_block_left: rotate the pink block to the left,rotate_pink_block_left,rotate the pink block to the left,10,633
+splitC,rotate_pink_block_left: rotate the pink block towards the left,rotate_pink_block_left,rotate the pink block towards the left,9,585
+splitC,rotate_pink_block_left: take the pink block and rotate it left,rotate_pink_block_left,take the pink block and rotate it left,19,1191
+splitC,rotate_pink_block_left: take the pink block and turn it left,rotate_pink_block_left,take the pink block and turn it left,14,865
+splitC,rotate_pink_block_left: turn the pink block left,rotate_pink_block_left,turn the pink block left,13,828
+splitC,rotate_pink_block_right: grasp the pink block and rotate it right,rotate_pink_block_right,grasp the pink block and rotate it right,10,602
+splitC,rotate_pink_block_right: grasp the pink block and turn it right,rotate_pink_block_right,grasp the pink block and turn it right,17,1041
+splitC,"rotate_pink_block_right: grasp the pink block, then rotate it right",rotate_pink_block_right,"grasp the pink block, then rotate it right",10,612
+splitC,"rotate_pink_block_right: grasp the pink block, then turn it right",rotate_pink_block_right,"grasp the pink block, then turn it right",17,1028
+splitC,rotate_pink_block_right: rotate right the pink block,rotate_pink_block_right,rotate right the pink block,18,1063
+splitC,rotate_pink_block_right: rotate the pink block 90 degrees to the right,rotate_pink_block_right,rotate the pink block 90 degrees to the right,15,936
+splitC,rotate_pink_block_right: rotate the pink block to the right,rotate_pink_block_right,rotate the pink block to the right,18,1132
+splitC,rotate_pink_block_right: rotate the pink block towards the right,rotate_pink_block_right,rotate the pink block towards the right,12,760
+splitC,rotate_pink_block_right: take the pink block and rotate it right,rotate_pink_block_right,take the pink block and rotate it right,12,676
+splitC,rotate_pink_block_right: take the pink block and turn it right,rotate_pink_block_right,take the pink block and turn it right,17,1008
+splitC,rotate_pink_block_right: turn the pink block right,rotate_pink_block_right,turn the pink block right,16,972
+splitC,rotate_red_block_left: grasp the red block and rotate it left,rotate_red_block_left,grasp the red block and rotate it left,15,948
+splitC,rotate_red_block_left: grasp the red block and turn it left,rotate_red_block_left,grasp the red block and turn it left,16,995
+splitC,"rotate_red_block_left: grasp the red block, then rotate it left",rotate_red_block_left,"grasp the red block, then rotate it left",9,585
+splitC,"rotate_red_block_left: grasp the red block, then turn it left",rotate_red_block_left,"grasp the red block, then turn it left",14,854
+splitC,rotate_red_block_left: rotate left the red block,rotate_red_block_left,rotate left the red block,10,630
+splitC,rotate_red_block_left: rotate the red block 90 degrees to the left,rotate_red_block_left,rotate the red block 90 degrees to the left,10,588
+splitC,rotate_red_block_left: rotate the red block to the left,rotate_red_block_left,rotate the red block to the left,14,910
+splitC,rotate_red_block_left: rotate the red block towards the left,rotate_red_block_left,rotate the red block towards the left,15,954
+splitC,rotate_red_block_left: take the red block and rotate it left,rotate_red_block_left,take the red block and rotate it left,21,1322
+splitC,rotate_red_block_left: take the red block and turn it left,rotate_red_block_left,take the red block and turn it left,14,910
+splitC,rotate_red_block_left: turn the red block left,rotate_red_block_left,turn the red block left,17,1078
+splitC,rotate_red_block_right: grasp the red block and rotate it right,rotate_red_block_right,grasp the red block and rotate it right,23,1414
+splitC,rotate_red_block_right: grasp the red block and turn it right,rotate_red_block_right,grasp the red block and turn it right,30,1821
+splitC,"rotate_red_block_right: grasp the red block, then rotate it right",rotate_red_block_right,"grasp the red block, then rotate it right",26,1617
+splitC,"rotate_red_block_right: grasp the red block, then turn it right",rotate_red_block_right,"grasp the red block, then turn it right",31,1889
+splitC,rotate_red_block_right: rotate right the red block,rotate_red_block_right,rotate right the red block,26,1620
+splitC,rotate_red_block_right: rotate the red block 90 degrees to the right,rotate_red_block_right,rotate the red block 90 degrees to the right,22,1393
+splitC,rotate_red_block_right: rotate the red block to the right,rotate_red_block_right,rotate the red block to the right,24,1436
+splitC,rotate_red_block_right: rotate the red block towards the right,rotate_red_block_right,rotate the red block towards the right,24,1495
+splitC,rotate_red_block_right: take the red block and rotate it right,rotate_red_block_right,take the red block and rotate it right,31,1879
+splitC,rotate_red_block_right: take the red block and turn it right,rotate_red_block_right,take the red block and turn it right,26,1611
+splitC,rotate_red_block_right: turn the red block right,rotate_red_block_right,turn the red block right,18,1106
+splitC,stack_block: place the block on top of another block,stack_block,place the block on top of another block,12,533
+splitC,stack_block: place the grasped block on top of another block,stack_block,place the grasped block on top of another block,21,1115
+splitC,stack_block: put the block on top of another block,stack_block,put the block on top of another block,22,1163
+splitC,stack_block: put the grasped block on top of a block,stack_block,put the grasped block on top of a block,21,1010
+splitC,stack_block: stack blocks on top of each other,stack_block,stack blocks on top of each other,22,1151
+splitC,stack_block: stack the block on top of another block,stack_block,stack the block on top of another block,21,1116
+splitC,stack_block: stack the blocks,stack_block,stack the blocks,19,949
+splitC,stack_block: stack the object on top of another object,stack_block,stack the object on top of another object,22,1063
+splitC,turn_off_led: push down the button to turn off the green light,turn_off_led,push down the button to turn off the green light,6,359
+splitC,turn_off_led: push down the button to turn off the led,turn_off_led,push down the button to turn off the led,14,761
+splitC,turn_off_led: push down the button to turn off the led light,turn_off_led,push down the button to turn off the led light,19,1069
+splitC,turn_off_led: push the button to turn off the green light,turn_off_led,push the button to turn off the green light,17,993
+splitC,turn_off_led: push the button to turn off the led,turn_off_led,push the button to turn off the led,10,574
+splitC,turn_off_led: push the button to turn off the led light,turn_off_led,push the button to turn off the led light,7,428
+splitC,turn_off_led: toggle the button to turn off the green light,turn_off_led,toggle the button to turn off the green light,10,547
+splitC,turn_off_led: toggle the button to turn off the led,turn_off_led,toggle the button to turn off the led,10,576
+splitC,turn_off_led: toggle the button to turn off the led light,turn_off_led,toggle the button to turn off the led light,13,705
+splitC,turn_off_led: turn off the green lamp,turn_off_led,turn off the green lamp,10,576
+splitC,turn_off_led: turn off the green light,turn_off_led,turn off the green light,11,625
+splitC,turn_off_led: turn off the led,turn_off_led,turn off the led,14,811
+splitC,turn_off_led: turn off the led lamp,turn_off_led,turn off the led lamp,12,721
+splitC,turn_off_led: turn off the led light,turn_off_led,turn off the led light,8,429
+splitC,turn_off_lightbulb: move down the switch,turn_off_lightbulb,move down the switch,14,888
+splitC,turn_off_lightbulb: move the light switch to turn off the light bulb,turn_off_lightbulb,move the light switch to turn off the light bulb,21,1365
+splitC,turn_off_lightbulb: move the light switch to turn off the yellow light,turn_off_lightbulb,move the light switch to turn off the yellow light,17,1056
+splitC,turn_off_lightbulb: push the switch downwards,turn_off_lightbulb,push the switch downwards,20,1275
+splitC,turn_off_lightbulb: slide down the switch,turn_off_lightbulb,slide down the switch,19,1235
+splitC,turn_off_lightbulb: toggle the light switch to turn off the light bulb,turn_off_lightbulb,toggle the light switch to turn off the light bulb,21,1335
+splitC,turn_off_lightbulb: toggle the light switch to turn off the yellow light,turn_off_lightbulb,toggle the light switch to turn off the yellow light,20,1263
+splitC,turn_off_lightbulb: turn off the light bulb,turn_off_lightbulb,turn off the light bulb,17,1078
+splitC,turn_off_lightbulb: turn off the yellow lamp,turn_off_lightbulb,turn off the yellow lamp,17,1077
+splitC,turn_off_lightbulb: turn off the yellow light,turn_off_lightbulb,turn off the yellow light,19,1235
+splitC,turn_on_led: push down the button to turn on the green light,turn_on_led,push down the button to turn on the green light,11,632
+splitC,turn_on_led: push down the button to turn on the led,turn_on_led,push down the button to turn on the led,12,685
+splitC,turn_on_led: push down the button to turn on the led light,turn_on_led,push down the button to turn on the led light,15,892
+splitC,turn_on_led: push the button to turn on the green light,turn_on_led,push the button to turn on the green light,12,666
+splitC,turn_on_led: push the button to turn on the led,turn_on_led,push the button to turn on the led,11,633
+splitC,turn_on_led: push the button to turn on the led light,turn_on_led,push the button to turn on the led light,7,364
+splitC,turn_on_led: toggle the button to turn on the green light,turn_on_led,toggle the button to turn on the green light,8,421
+splitC,turn_on_led: toggle the button to turn on the led,turn_on_led,toggle the button to turn on the led,13,726
+splitC,turn_on_led: toggle the button to turn on the led light,turn_on_led,toggle the button to turn on the led light,11,684
+splitC,turn_on_led: turn on the green lamp,turn_on_led,turn on the green lamp,17,978
+splitC,turn_on_led: turn on the green light,turn_on_led,turn on the green light,11,605
+splitC,turn_on_led: turn on the led,turn_on_led,turn on the led,14,688
+splitC,turn_on_led: turn on the led lamp,turn_on_led,turn on the led lamp,15,882
+splitC,turn_on_led: turn on the led light,turn_on_led,turn on the led light,10,619
+splitC,turn_on_lightbulb: move the light switch to turn on the light bulb,turn_on_lightbulb,move the light switch to turn on the light bulb,23,1450
+splitC,turn_on_lightbulb: move the light switch to turn on the yellow light,turn_on_lightbulb,move the light switch to turn on the yellow light,18,1170
+splitC,turn_on_lightbulb: move up the switch,turn_on_lightbulb,move up the switch,18,1170
+splitC,turn_on_lightbulb: push the switch upwards,turn_on_lightbulb,push the switch upwards,7,455
+splitC,turn_on_lightbulb: slide up the switch,turn_on_lightbulb,slide up the switch,15,929
+splitC,turn_on_lightbulb: toggle the light switch to turn on the light bulb,turn_on_lightbulb,toggle the light switch to turn on the light bulb,16,997
+splitC,turn_on_lightbulb: toggle the light switch to turn on the yellow light,turn_on_lightbulb,toggle the light switch to turn on the yellow light,28,1803
+splitC,turn_on_lightbulb: turn on the light bulb,turn_on_lightbulb,turn on the light bulb,14,883
+splitC,turn_on_lightbulb: turn on the yellow lamp,turn_on_lightbulb,turn on the yellow lamp,20,1300
+splitC,turn_on_lightbulb: turn on the yellow light,turn_on_lightbulb,turn on the yellow light,21,1365
+splitC,unstack_block: collapse the stacked blocks,unstack_block,collapse the stacked blocks,24,1191
+splitC,unstack_block: go to the tower of blocks and take off the top one,unstack_block,go to the tower of blocks and take off the top one,18,866
+splitC,unstack_block: remove a block from the stack,unstack_block,remove a block from the stack,16,786
+splitC,unstack_block: remove the top block,unstack_block,remove the top block,20,1029
+splitC,unstack_block: take off the block that is on top of the other one,unstack_block,take off the block that is on top of the other one,13,604
+splitC,unstack_block: take off the stacked block,unstack_block,take off the stacked block,27,1367
+splitC,unstack_block: unstack the blocks,unstack_block,unstack the blocks,26,1283
+splitD,close_drawer: close the cabinet drawer,close_drawer,close the cabinet drawer,18,1142
+splitD,close_drawer: close the drawer,close_drawer,close the drawer,14,883
+splitD,close_drawer: go close the drawer,close_drawer,go close the drawer,18,1170
+splitD,close_drawer: grasp the drawer handle and close it,close_drawer,grasp the drawer handle and close it,16,1040
+splitD,"close_drawer: grasp the drawer handle, then close it",close_drawer,"grasp the drawer handle, then close it",14,861
+splitD,close_drawer: grasp the handle of the drawer and close it,close_drawer,grasp the handle of the drawer and close it,10,650
+splitD,"close_drawer: grasp the handle of the drawer, then close it",close_drawer,"grasp the handle of the drawer, then close it",20,1300
+splitD,close_drawer: push the drawer,close_drawer,push the drawer,22,1402
+splitD,close_drawer: push the handle of the drawer,close_drawer,push the handle of the drawer,19,1192
+splitD,lift_blue_block_drawer: go towards the blue block in the drawer and grasp it,lift_blue_block_drawer,go towards the blue block in the drawer and grasp it,17,1105
+splitD,lift_blue_block_drawer: go towards the blue block in the drawer and lift it,lift_blue_block_drawer,go towards the blue block in the drawer and lift it,18,1086
+splitD,lift_blue_block_drawer: go towards the blue block in the drawer and pick it up,lift_blue_block_drawer,go towards the blue block in the drawer and pick it up,13,845
+splitD,lift_blue_block_drawer: grasp the blue block from the drawer,lift_blue_block_drawer,grasp the blue block from the drawer,10,650
+splitD,lift_blue_block_drawer: grasp the blue block in the drawer,lift_blue_block_drawer,grasp the blue block in the drawer,18,1152
+splitD,lift_blue_block_drawer: grasp the blue block lying in the drawer,lift_blue_block_drawer,grasp the blue block lying in the drawer,14,864
+splitD,lift_blue_block_drawer: lift the blue block in the drawer,lift_blue_block_drawer,lift the blue block in the drawer,10,625
+splitD,lift_blue_block_drawer: lift the blue block lying in the drawer,lift_blue_block_drawer,lift the blue block lying in the drawer,18,1142
+splitD,lift_blue_block_drawer: pick up the blue block from the drawer,lift_blue_block_drawer,pick up the blue block from the drawer,10,650
+splitD,lift_blue_block_drawer: pick up the blue block in the drawer,lift_blue_block_drawer,pick up the blue block in the drawer,7,455
+splitD,lift_blue_block_drawer: pick up the blue block lying in the drawer,lift_blue_block_drawer,pick up the blue block lying in the drawer,15,889
+splitD,lift_blue_block_slider: grasp the blue block lying in the cabinet,lift_blue_block_slider,grasp the blue block lying in the cabinet,15,946
+splitD,lift_blue_block_slider: grasp the blue block lying in the slider,lift_blue_block_slider,grasp the blue block lying in the slider,5,295
+splitD,lift_blue_block_slider: grasp the blue block lying in the sliding cabinet,lift_blue_block_slider,grasp the blue block lying in the sliding cabinet,6,390
+splitD,lift_blue_block_slider: grasp the blue block lying on the shelf,lift_blue_block_slider,grasp the blue block lying on the shelf,9,585
+splitD,lift_blue_block_slider: in the cabinet grasp the blue block,lift_blue_block_slider,in the cabinet grasp the blue block,7,429
+splitD,lift_blue_block_slider: in the cabinet pick up the blue block,lift_blue_block_slider,in the cabinet pick up the blue block,9,585
+splitD,lift_blue_block_slider: in the slider grasp the blue block,lift_blue_block_slider,in the slider grasp the blue block,8,520
+splitD,lift_blue_block_slider: in the slider pick up the blue block,lift_blue_block_slider,in the slider pick up the blue block,5,325
+splitD,lift_blue_block_slider: in the sliding cabinet grasp the blue block,lift_blue_block_slider,in the sliding cabinet grasp the blue block,7,455
+splitD,lift_blue_block_slider: lift the blue block lying in the cabinet,lift_blue_block_slider,lift the blue block lying in the cabinet,8,504
+splitD,lift_blue_block_slider: lift the blue block lying in the slider,lift_blue_block_slider,lift the blue block lying in the slider,15,975
+splitD,lift_blue_block_slider: lift the blue block lying in the sliding cabinet,lift_blue_block_slider,lift the blue block lying in the sliding cabinet,12,780
+splitD,lift_blue_block_slider: lift the blue block lying on the shelf,lift_blue_block_slider,lift the blue block lying on the shelf,11,692
+splitD,lift_blue_block_slider: lift the blue block on the shelf,lift_blue_block_slider,lift the blue block on the shelf,14,880
+splitD,lift_blue_block_slider: pick up the blue block from the shelf,lift_blue_block_slider,pick up the blue block from the shelf,7,455
+splitD,lift_blue_block_slider: pick up the blue block from the sliding cabinet,lift_blue_block_slider,pick up the blue block from the sliding cabinet,10,628
+splitD,lift_blue_block_slider: pick up the blue block in the sliding cabinet,lift_blue_block_slider,pick up the blue block in the sliding cabinet,6,390
+splitD,lift_blue_block_table: grasp the blue block and lift it up,lift_blue_block_table,grasp the blue block and lift it up,18,1106
+splitD,lift_blue_block_table: grasp the blue block on the table and lift it up,lift_blue_block_table,grasp the blue block on the table and lift it up,12,696
+splitD,"lift_blue_block_table: grasp the blue block on the table, then lift it up",lift_blue_block_table,"grasp the blue block on the table, then lift it up",10,650
+splitD,"lift_blue_block_table: grasp the blue block, then lift it up",lift_blue_block_table,"grasp the blue block, then lift it up",14,838
+splitD,lift_blue_block_table: lift the blue block,lift_blue_block_table,lift the blue block,15,875
+splitD,lift_blue_block_table: lift the blue block from the table,lift_blue_block_table,lift the blue block from the table,15,920
+splitD,lift_blue_block_table: lift the blue block up,lift_blue_block_table,lift the blue block up,15,927
+splitD,lift_blue_block_table: pick up the blue block,lift_blue_block_table,pick up the blue block,16,949
+splitD,lift_blue_block_table: pick up the blue block from the table,lift_blue_block_table,pick up the blue block from the table,12,758
+splitD,lift_blue_block_table: pick up the blue block on the table,lift_blue_block_table,pick up the blue block on the table,25,1486
+splitD,lift_pink_block_drawer: go towards the pink block in the drawer and grasp it,lift_pink_block_drawer,go towards the pink block in the drawer and grasp it,13,814
+splitD,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,lift_pink_block_drawer,go towards the pink block in the drawer and lift it,11,715
+splitD,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,lift_pink_block_drawer,go towards the pink block in the drawer and pick it up,9,585
+splitD,lift_pink_block_drawer: grasp the pink block from the drawer,lift_pink_block_drawer,grasp the pink block from the drawer,13,845
+splitD,lift_pink_block_drawer: grasp the pink block in the drawer,lift_pink_block_drawer,grasp the pink block in the drawer,17,1087
+splitD,lift_pink_block_drawer: grasp the pink block lying in the drawer,lift_pink_block_drawer,grasp the pink block lying in the drawer,20,1254
+splitD,lift_pink_block_drawer: lift the pink block in the drawer,lift_pink_block_drawer,lift the pink block in the drawer,13,777
+splitD,lift_pink_block_drawer: lift the pink block lying in the drawer,lift_pink_block_drawer,lift the pink block lying in the drawer,15,860
+splitD,lift_pink_block_drawer: pick up the pink block from the drawer,lift_pink_block_drawer,pick up the pink block from the drawer,16,1014
+splitD,lift_pink_block_drawer: pick up the pink block in the drawer,lift_pink_block_drawer,pick up the pink block in the drawer,12,749
+splitD,lift_pink_block_drawer: pick up the pink block lying in the drawer,lift_pink_block_drawer,pick up the pink block lying in the drawer,11,691
+splitD,lift_pink_block_slider: grasp the pink block lying in the cabinet,lift_pink_block_slider,grasp the pink block lying in the cabinet,10,622
+splitD,lift_pink_block_slider: grasp the pink block lying in the slider,lift_pink_block_slider,grasp the pink block lying in the slider,8,520
+splitD,lift_pink_block_slider: grasp the pink block lying in the sliding cabinet,lift_pink_block_slider,grasp the pink block lying in the sliding cabinet,10,650
+splitD,lift_pink_block_slider: grasp the pink block lying on the shelf,lift_pink_block_slider,grasp the pink block lying on the shelf,12,780
+splitD,lift_pink_block_slider: in the cabinet grasp the pink block,lift_pink_block_slider,in the cabinet grasp the pink block,7,431
+splitD,lift_pink_block_slider: in the cabinet pick up the pink block,lift_pink_block_slider,in the cabinet pick up the pink block,10,650
+splitD,lift_pink_block_slider: in the slider grasp the pink block,lift_pink_block_slider,in the slider grasp the pink block,14,864
+splitD,lift_pink_block_slider: in the slider pick up the pink block,lift_pink_block_slider,in the slider pick up the pink block,11,715
+splitD,lift_pink_block_slider: in the sliding cabinet grasp the pink block,lift_pink_block_slider,in the sliding cabinet grasp the pink block,8,520
+splitD,lift_pink_block_slider: lift the pink block lying in the cabinet,lift_pink_block_slider,lift the pink block lying in the cabinet,11,715
+splitD,lift_pink_block_slider: lift the pink block lying in the slider,lift_pink_block_slider,lift the pink block lying in the slider,4,260
+splitD,lift_pink_block_slider: lift the pink block lying in the sliding cabinet,lift_pink_block_slider,lift the pink block lying in the sliding cabinet,4,260
+splitD,lift_pink_block_slider: lift the pink block lying on the shelf,lift_pink_block_slider,lift the pink block lying on the shelf,8,520
+splitD,lift_pink_block_slider: lift the pink block on the shelf,lift_pink_block_slider,lift the pink block on the shelf,12,720
+splitD,lift_pink_block_slider: pick up the pink block from the shelf,lift_pink_block_slider,pick up the pink block from the shelf,7,455
+splitD,lift_pink_block_slider: pick up the pink block from the sliding cabinet,lift_pink_block_slider,pick up the pink block from the sliding cabinet,8,520
+splitD,lift_pink_block_slider: pick up the pink block in the sliding cabinet,lift_pink_block_slider,pick up the pink block in the sliding cabinet,7,455
+splitD,lift_pink_block_table: grasp the pink block and lift it up,lift_pink_block_table,grasp the pink block and lift it up,15,842
+splitD,lift_pink_block_table: grasp the pink block on the table and lift it up,lift_pink_block_table,grasp the pink block on the table and lift it up,11,673
+splitD,"lift_pink_block_table: grasp the pink block on the table, then lift it up",lift_pink_block_table,"grasp the pink block on the table, then lift it up",18,1066
+splitD,"lift_pink_block_table: grasp the pink block, then lift it up",lift_pink_block_table,"grasp the pink block, then lift it up",10,603
+splitD,lift_pink_block_table: lift the pink block,lift_pink_block_table,lift the pink block,22,1317
+splitD,lift_pink_block_table: lift the pink block from the table,lift_pink_block_table,lift the pink block from the table,15,908
+splitD,lift_pink_block_table: lift the pink block up,lift_pink_block_table,lift the pink block up,14,821
+splitD,lift_pink_block_table: pick up the pink block,lift_pink_block_table,pick up the pink block,20,1203
+splitD,lift_pink_block_table: pick up the pink block from the table,lift_pink_block_table,pick up the pink block from the table,14,869
+splitD,lift_pink_block_table: pick up the pink block on the table,lift_pink_block_table,pick up the pink block on the table,12,690
+splitD,lift_red_block_drawer: go towards the red block in the drawer and grasp it,lift_red_block_drawer,go towards the red block in the drawer and grasp it,11,640
+splitD,lift_red_block_drawer: go towards the red block in the drawer and lift it,lift_red_block_drawer,go towards the red block in the drawer and lift it,11,686
+splitD,lift_red_block_drawer: go towards the red block in the drawer and pick it up,lift_red_block_drawer,go towards the red block in the drawer and pick it up,13,759
+splitD,lift_red_block_drawer: grasp the red block from the drawer,lift_red_block_drawer,grasp the red block from the drawer,16,973
+splitD,lift_red_block_drawer: grasp the red block in the drawer,lift_red_block_drawer,grasp the red block in the drawer,11,684
+splitD,lift_red_block_drawer: grasp the red block lying in the drawer,lift_red_block_drawer,grasp the red block lying in the drawer,9,585
+splitD,lift_red_block_drawer: lift the red block in the drawer,lift_red_block_drawer,lift the red block in the drawer,13,845
+splitD,lift_red_block_drawer: lift the red block lying in the drawer,lift_red_block_drawer,lift the red block lying in the drawer,17,1027
+splitD,lift_red_block_drawer: pick up the red block from the drawer,lift_red_block_drawer,pick up the red block from the drawer,19,1168
+splitD,lift_red_block_drawer: pick up the red block in the drawer,lift_red_block_drawer,pick up the red block in the drawer,14,852
+splitD,lift_red_block_drawer: pick up the red block lying in the drawer,lift_red_block_drawer,pick up the red block lying in the drawer,17,1054
+splitD,lift_red_block_slider: grasp the red block lying in the cabinet,lift_red_block_slider,grasp the red block lying in the cabinet,14,894
+splitD,lift_red_block_slider: grasp the red block lying in the slider,lift_red_block_slider,grasp the red block lying in the slider,7,455
+splitD,lift_red_block_slider: grasp the red block lying in the sliding cabinet,lift_red_block_slider,grasp the red block lying in the sliding cabinet,7,455
+splitD,lift_red_block_slider: grasp the red block lying on the shelf,lift_red_block_slider,grasp the red block lying on the shelf,10,650
+splitD,lift_red_block_slider: in the cabinet grasp the red block,lift_red_block_slider,in the cabinet grasp the red block,7,455
+splitD,lift_red_block_slider: in the cabinet pick up the red block,lift_red_block_slider,in the cabinet pick up the red block,11,697
+splitD,lift_red_block_slider: in the slider grasp the red block,lift_red_block_slider,in the slider grasp the red block,6,390
+splitD,lift_red_block_slider: in the slider pick up the red block,lift_red_block_slider,in the slider pick up the red block,10,622
+splitD,lift_red_block_slider: in the sliding cabinet grasp the red block,lift_red_block_slider,in the sliding cabinet grasp the red block,8,520
+splitD,lift_red_block_slider: lift the red block lying in the cabinet,lift_red_block_slider,lift the red block lying in the cabinet,7,455
+splitD,lift_red_block_slider: lift the red block lying in the slider,lift_red_block_slider,lift the red block lying in the slider,8,520
+splitD,lift_red_block_slider: lift the red block lying in the sliding cabinet,lift_red_block_slider,lift the red block lying in the sliding cabinet,7,455
+splitD,lift_red_block_slider: lift the red block lying on the shelf,lift_red_block_slider,lift the red block lying on the shelf,7,455
+splitD,lift_red_block_slider: lift the red block on the shelf,lift_red_block_slider,lift the red block on the shelf,11,715
+splitD,lift_red_block_slider: pick up the red block from the shelf,lift_red_block_slider,pick up the red block from the shelf,9,567
+splitD,lift_red_block_slider: pick up the red block from the sliding cabinet,lift_red_block_slider,pick up the red block from the sliding cabinet,12,758
+splitD,lift_red_block_slider: pick up the red block in the sliding cabinet,lift_red_block_slider,pick up the red block in the sliding cabinet,10,650
+splitD,lift_red_block_table: grasp the red block and lift it up,lift_red_block_table,grasp the red block and lift it up,16,1014
+splitD,lift_red_block_table: grasp the red block on the table and lift it up,lift_red_block_table,grasp the red block on the table and lift it up,14,865
+splitD,"lift_red_block_table: grasp the red block on the table, then lift it up",lift_red_block_table,"grasp the red block on the table, then lift it up",15,873
+splitD,"lift_red_block_table: grasp the red block, then lift it up",lift_red_block_table,"grasp the red block, then lift it up",13,826
+splitD,lift_red_block_table: lift the red block,lift_red_block_table,lift the red block,13,740
+splitD,lift_red_block_table: lift the red block from the table,lift_red_block_table,lift the red block from the table,16,954
+splitD,lift_red_block_table: lift the red block up,lift_red_block_table,lift the red block up,11,697
+splitD,lift_red_block_table: pick up the red block,lift_red_block_table,pick up the red block,21,1315
+splitD,lift_red_block_table: pick up the red block from the table,lift_red_block_table,pick up the red block from the table,17,1057
+splitD,lift_red_block_table: pick up the red block on the table,lift_red_block_table,pick up the red block on the table,14,886
+splitD,move_slider_left: grasp the door handle and move the door to the left,move_slider_left,grasp the door handle and move the door to the left,8,520
+splitD,move_slider_left: grasp the door handle and slide the door to the left,move_slider_left,grasp the door handle and slide the door to the left,6,390
+splitD,"move_slider_left: grasp the door handle, then move the door to the left",move_slider_left,"grasp the door handle, then move the door to the left",7,455
+splitD,"move_slider_left: grasp the door handle, then slide the door to the left",move_slider_left,"grasp the door handle, then slide the door to the left",13,818
+splitD,move_slider_left: move the door all the way to the left,move_slider_left,move the door all the way to the left,6,390
+splitD,move_slider_left: move the door all the way to the left and let go,move_slider_left,move the door all the way to the left and let go,13,845
+splitD,move_slider_left: move the door to the left,move_slider_left,move the door to the left,8,520
+splitD,move_slider_left: move the door to the left side,move_slider_left,move the door to the left side,15,975
+splitD,move_slider_left: move the sliding door to the left,move_slider_left,move the sliding door to the left,10,650
+splitD,move_slider_left: push the door to the left,move_slider_left,push the door to the left,14,880
+splitD,move_slider_left: push the door to the left side,move_slider_left,push the door to the left side,8,502
+splitD,move_slider_left: push the sliding door to the left,move_slider_left,push the sliding door to the left,11,715
+splitD,move_slider_left: slide the door all the way to the left,move_slider_left,slide the door all the way to the left,5,325
+splitD,move_slider_left: slide the door to the left,move_slider_left,slide the door to the left,9,585
+splitD,move_slider_left: slide the door to the left side,move_slider_left,slide the door to the left side,9,534
+splitD,"move_slider_left: slide the door to the left, then let it go",move_slider_left,"slide the door to the left, then let it go",9,562
+splitD,move_slider_right: grasp the door handle and move the door to the right,move_slider_right,grasp the door handle and move the door to the right,10,650
+splitD,move_slider_right: grasp the door handle and slide the door to the right,move_slider_right,grasp the door handle and slide the door to the right,13,845
+splitD,"move_slider_right: grasp the door handle, then move the door to the right",move_slider_right,"grasp the door handle, then move the door to the right",7,455
+splitD,"move_slider_right: grasp the door handle, then slide the door to the right",move_slider_right,"grasp the door handle, then slide the door to the right",15,975
+splitD,move_slider_right: move the door all the way to the right,move_slider_right,move the door all the way to the right,9,585
+splitD,move_slider_right: move the door all the way to the right and let go,move_slider_right,move the door all the way to the right and let go,6,390
+splitD,move_slider_right: move the door to the right,move_slider_right,move the door to the right,10,621
+splitD,move_slider_right: move the door to the right side,move_slider_right,move the door to the right side,8,520
+splitD,move_slider_right: move the sliding door to the right,move_slider_right,move the sliding door to the right,8,520
+splitD,move_slider_right: push the door to the right,move_slider_right,push the door to the right,3,195
+splitD,move_slider_right: push the door to the right side,move_slider_right,push the door to the right side,8,520
+splitD,move_slider_right: push the sliding door to the right,move_slider_right,push the sliding door to the right,16,1040
+splitD,move_slider_right: slide the door all the way to the right,move_slider_right,slide the door all the way to the right,10,650
+splitD,move_slider_right: slide the door to the right,move_slider_right,slide the door to the right,12,780
+splitD,move_slider_right: slide the door to the right side,move_slider_right,slide the door to the right side,6,390
+splitD,"move_slider_right: slide the door to the right, then let it go",move_slider_right,"slide the door to the right, then let it go",11,715
+splitD,open_drawer: go open the drawer,open_drawer,go open the drawer,13,845
+splitD,open_drawer: grasp the drawer handle and open it,open_drawer,grasp the drawer handle and open it,16,1040
+splitD,"open_drawer: grasp the drawer handle, then open it",open_drawer,"grasp the drawer handle, then open it",14,910
+splitD,open_drawer: grasp the handle of the drawer and open it,open_drawer,grasp the handle of the drawer and open it,23,1495
+splitD,"open_drawer: grasp the handle of the drawer, then open it",open_drawer,"grasp the handle of the drawer, then open it",21,1365
+splitD,open_drawer: open the cabinet drawer,open_drawer,open the cabinet drawer,16,1040
+splitD,open_drawer: open the drawer,open_drawer,open the drawer,14,910
+splitD,open_drawer: pull the drawer,open_drawer,pull the drawer,21,1365
+splitD,open_drawer: pull the handle of the drawer,open_drawer,pull the handle of the drawer,14,910
+splitD,place_in_drawer: go towards the drawer and place the object,place_in_drawer,go towards the drawer and place the object,10,417
+splitD,place_in_drawer: go towards the drawer and store the object,place_in_drawer,go towards the drawer and store the object,8,345
+splitD,place_in_drawer: move to the drawer and place the object,place_in_drawer,move to the drawer and place the object,8,337
+splitD,place_in_drawer: move to the drawer and store the object,place_in_drawer,move to the drawer and store the object,8,379
+splitD,"place_in_drawer: move to the drawer, then place the object",place_in_drawer,"move to the drawer, then place the object",9,372
+splitD,"place_in_drawer: move to the drawer, then store the object",place_in_drawer,"move to the drawer, then store the object",13,581
+splitD,place_in_drawer: place the block in the drawer,place_in_drawer,place the block in the drawer,16,749
+splitD,place_in_drawer: place the grasped object in the drawer,place_in_drawer,place the grasped object in the drawer,8,393
+splitD,place_in_drawer: place the object in the drawer,place_in_drawer,place the object in the drawer,13,540
+splitD,place_in_drawer: put the block in the drawer,place_in_drawer,put the block in the drawer,8,377
+splitD,place_in_drawer: put the grasped object in the drawer,place_in_drawer,put the grasped object in the drawer,11,495
+splitD,place_in_drawer: put the object in the drawer,place_in_drawer,put the object in the drawer,6,291
+splitD,place_in_drawer: store the block in the drawer,place_in_drawer,store the block in the drawer,12,531
+splitD,place_in_drawer: store the grasped object in the drawer,place_in_drawer,store the grasped object in the drawer,11,457
+splitD,place_in_drawer: store the object in the drawer,place_in_drawer,store the object in the drawer,11,504
+splitD,place_in_slider: place in slider,place_in_slider,place in slider,10,470
+splitD,place_in_slider: place the block in the cabinet,place_in_slider,place the block in the cabinet,8,454
+splitD,place_in_slider: place the block in the slider,place_in_slider,place the block in the slider,11,467
+splitD,place_in_slider: place the block in the sliding cabinet,place_in_slider,place the block in the sliding cabinet,6,265
+splitD,place_in_slider: place the grasped object in the cabinet,place_in_slider,place the grasped object in the cabinet,6,276
+splitD,place_in_slider: place the grasped object in the slider,place_in_slider,place the grasped object in the slider,9,444
+splitD,place_in_slider: place the grasped object in the sliding cabinet,place_in_slider,place the grasped object in the sliding cabinet,12,652
+splitD,place_in_slider: place the object in the cabinet,place_in_slider,place the object in the cabinet,12,564
+splitD,place_in_slider: place the object in the slider,place_in_slider,place the object in the slider,6,292
+splitD,place_in_slider: place the object in the sliding cabinet,place_in_slider,place the object in the sliding cabinet,6,258
+splitD,place_in_slider: put it in the slider,place_in_slider,put it in the slider,8,338
+splitD,place_in_slider: put the block in the cabinet,place_in_slider,put the block in the cabinet,9,407
+splitD,place_in_slider: put the block in the slider,place_in_slider,put the block in the slider,9,401
+splitD,place_in_slider: put the block in the sliding cabinet,place_in_slider,put the block in the sliding cabinet,7,290
+splitD,place_in_slider: put the grasped object in the cabinet,place_in_slider,put the grasped object in the cabinet,10,418
+splitD,place_in_slider: put the grasped object in the slider,place_in_slider,put the grasped object in the slider,4,197
+splitD,place_in_slider: put the grasped object in the sliding cabinet,place_in_slider,put the grasped object in the sliding cabinet,8,328
+splitD,place_in_slider: put the object in the cabinet,place_in_slider,put the object in the cabinet,6,268
+splitD,place_in_slider: put the object in the slider,place_in_slider,put the object in the slider,2,72
+splitD,place_in_slider: put the object in the sliding cabinet,place_in_slider,put the object in the sliding cabinet,2,100
+splitD,push_blue_block_left: go push the blue block to the left,push_blue_block_left,go push the blue block to the left,16,905
+splitD,push_blue_block_left: go slide the blue block to the left,push_blue_block_left,go slide the blue block to the left,28,1673
+splitD,push_blue_block_left: push left the blue block,push_blue_block_left,push left the blue block,19,1219
+splitD,push_blue_block_left: push the blue block to the left,push_blue_block_left,push the blue block to the left,13,765
+splitD,push_blue_block_left: push the blue block towards the left,push_blue_block_left,push the blue block towards the left,9,534
+splitD,push_blue_block_left: slide left the blue block,push_blue_block_left,slide left the blue block,16,954
+splitD,push_blue_block_left: slide the blue block to the left,push_blue_block_left,slide the blue block to the left,17,964
+splitD,push_blue_block_left: slide the blue block towards the left,push_blue_block_left,slide the blue block towards the left,15,850
+splitD,push_blue_block_left: sweep the blue block to the left,push_blue_block_left,sweep the blue block to the left,17,1068
+splitD,push_blue_block_right: go push the blue block to the right,push_blue_block_right,go push the blue block to the right,13,704
+splitD,push_blue_block_right: go slide the blue block to the right,push_blue_block_right,go slide the blue block to the right,17,971
+splitD,push_blue_block_right: push right the blue block,push_blue_block_right,push right the blue block,24,1478
+splitD,push_blue_block_right: push the blue block to the right,push_blue_block_right,push the blue block to the right,19,1102
+splitD,push_blue_block_right: push the blue block towards the right,push_blue_block_right,push the blue block towards the right,17,930
+splitD,push_blue_block_right: slide right the blue block,push_blue_block_right,slide right the blue block,19,1074
+splitD,push_blue_block_right: slide the blue block to the right,push_blue_block_right,slide the blue block to the right,12,677
+splitD,push_blue_block_right: slide the blue block towards the right,push_blue_block_right,slide the blue block towards the right,9,515
+splitD,push_blue_block_right: sweep the blue block to the right,push_blue_block_right,sweep the blue block to the right,20,1047
+splitD,push_into_drawer: push the block into the drawer,push_into_drawer,push the block into the drawer,20,1158
+splitD,push_into_drawer: push the object into the drawer,push_into_drawer,push the object into the drawer,27,1657
+splitD,push_into_drawer: push the object that it falls into the drawer,push_into_drawer,push the object that it falls into the drawer,22,1255
+splitD,push_into_drawer: slide the block into the drawer,push_into_drawer,slide the block into the drawer,12,663
+splitD,push_into_drawer: slide the object into the drawer,push_into_drawer,slide the object into the drawer,31,1776
+splitD,push_into_drawer: sweep the block into the drawer,push_into_drawer,sweep the block into the drawer,20,1197
+splitD,push_into_drawer: sweep the object into the drawer,push_into_drawer,sweep the object into the drawer,18,1143
+splitD,push_pink_block_left: go push the pink block to the left,push_pink_block_left,go push the pink block to the left,15,879
+splitD,push_pink_block_left: go slide the pink block to the left,push_pink_block_left,go slide the pink block to the left,17,1060
+splitD,push_pink_block_left: push left the pink block,push_pink_block_left,push left the pink block,18,1062
+splitD,push_pink_block_left: push the pink block to the left,push_pink_block_left,push the pink block to the left,17,978
+splitD,push_pink_block_left: push the pink block towards the left,push_pink_block_left,push the pink block towards the left,19,1016
+splitD,push_pink_block_left: slide left the pink block,push_pink_block_left,slide left the pink block,20,1084
+splitD,push_pink_block_left: slide the pink block to the left,push_pink_block_left,slide the pink block to the left,18,1135
+splitD,push_pink_block_left: slide the pink block towards the left,push_pink_block_left,slide the pink block towards the left,10,536
+splitD,push_pink_block_left: sweep the pink block to the left,push_pink_block_left,sweep the pink block to the left,16,932
+splitD,push_pink_block_right: go push the pink block to the right,push_pink_block_right,go push the pink block to the right,16,915
+splitD,push_pink_block_right: go slide the pink block to the right,push_pink_block_right,go slide the pink block to the right,23,1279
+splitD,push_pink_block_right: push right the pink block,push_pink_block_right,push right the pink block,13,704
+splitD,push_pink_block_right: push the pink block to the right,push_pink_block_right,push the pink block to the right,17,965
+splitD,push_pink_block_right: push the pink block towards the right,push_pink_block_right,push the pink block towards the right,11,597
+splitD,push_pink_block_right: slide right the pink block,push_pink_block_right,slide right the pink block,21,1202
+splitD,push_pink_block_right: slide the pink block to the right,push_pink_block_right,slide the pink block to the right,14,780
+splitD,push_pink_block_right: slide the pink block towards the right,push_pink_block_right,slide the pink block towards the right,22,1287
+splitD,push_pink_block_right: sweep the pink block to the right,push_pink_block_right,sweep the pink block to the right,13,775
+splitD,push_red_block_left: go push the red block to the left,push_red_block_left,go push the red block to the left,12,727
+splitD,push_red_block_left: go slide the red block to the left,push_red_block_left,go slide the red block to the left,20,1244
+splitD,push_red_block_left: push left the red block,push_red_block_left,push left the red block,17,1062
+splitD,push_red_block_left: push the red block to the left,push_red_block_left,push the red block to the left,12,756
+splitD,push_red_block_left: push the red block towards the left,push_red_block_left,push the red block towards the left,19,1155
+splitD,push_red_block_left: slide left the red block,push_red_block_left,slide left the red block,18,1095
+splitD,push_red_block_left: slide the red block to the left,push_red_block_left,slide the red block to the left,23,1382
+splitD,push_red_block_left: slide the red block towards the left,push_red_block_left,slide the red block towards the left,10,650
+splitD,push_red_block_left: sweep the red block to the left,push_red_block_left,sweep the red block to the left,19,1201
+splitD,push_red_block_right: go push the red block to the right,push_red_block_right,go push the red block to the right,11,648
+splitD,push_red_block_right: go slide the red block to the right,push_red_block_right,go slide the red block to the right,12,665
+splitD,push_red_block_right: push right the red block,push_red_block_right,push right the red block,21,1267
+splitD,push_red_block_right: push the red block to the right,push_red_block_right,push the red block to the right,17,1105
+splitD,push_red_block_right: push the red block towards the right,push_red_block_right,push the red block towards the right,15,938
+splitD,push_red_block_right: slide right the red block,push_red_block_right,slide right the red block,20,1162
+splitD,push_red_block_right: slide the red block to the right,push_red_block_right,slide the red block to the right,20,1217
+splitD,push_red_block_right: slide the red block towards the right,push_red_block_right,slide the red block towards the right,18,1105
+splitD,push_red_block_right: sweep the red block to the right,push_red_block_right,sweep the red block to the right,16,977
+splitD,rotate_blue_block_left: grasp the blue block and rotate it left,rotate_blue_block_left,grasp the blue block and rotate it left,15,948
+splitD,rotate_blue_block_left: grasp the blue block and turn it left,rotate_blue_block_left,grasp the blue block and turn it left,14,910
+splitD,"rotate_blue_block_left: grasp the blue block, then rotate it left",rotate_blue_block_left,"grasp the blue block, then rotate it left",17,1036
+splitD,"rotate_blue_block_left: grasp the blue block, then turn it left",rotate_blue_block_left,"grasp the blue block, then turn it left",13,773
+splitD,rotate_blue_block_left: rotate left the blue block,rotate_blue_block_left,rotate left the blue block,10,630
+splitD,rotate_blue_block_left: rotate the blue block 90 degrees to the left,rotate_blue_block_left,rotate the blue block 90 degrees to the left,12,780
+splitD,rotate_blue_block_left: rotate the blue block to the left,rotate_blue_block_left,rotate the blue block to the left,10,650
+splitD,rotate_blue_block_left: rotate the blue block towards the left,rotate_blue_block_left,rotate the blue block towards the left,13,845
+splitD,rotate_blue_block_left: take the blue block and rotate it left,rotate_blue_block_left,take the blue block and rotate it left,12,732
+splitD,rotate_blue_block_left: take the blue block and turn it left,rotate_blue_block_left,take the blue block and turn it left,14,910
+splitD,rotate_blue_block_left: turn the blue block left,rotate_blue_block_left,turn the blue block left,20,1270
+splitD,rotate_blue_block_right: grasp the blue block and rotate it right,rotate_blue_block_right,grasp the blue block and rotate it right,11,696
+splitD,rotate_blue_block_right: grasp the blue block and turn it right,rotate_blue_block_right,grasp the blue block and turn it right,16,1040
+splitD,"rotate_blue_block_right: grasp the blue block, then rotate it right",rotate_blue_block_right,"grasp the blue block, then rotate it right",12,731
+splitD,"rotate_blue_block_right: grasp the blue block, then turn it right",rotate_blue_block_right,"grasp the blue block, then turn it right",16,986
+splitD,rotate_blue_block_right: rotate right the blue block,rotate_blue_block_right,rotate right the blue block,13,798
+splitD,rotate_blue_block_right: rotate the blue block 90 degrees to the right,rotate_blue_block_right,rotate the blue block 90 degrees to the right,14,833
+splitD,rotate_blue_block_right: rotate the blue block to the right,rotate_blue_block_right,rotate the blue block to the right,14,885
+splitD,rotate_blue_block_right: rotate the blue block towards the right,rotate_blue_block_right,rotate the blue block towards the right,14,910
+splitD,rotate_blue_block_right: take the blue block and rotate it right,rotate_blue_block_right,take the blue block and rotate it right,12,678
+splitD,rotate_blue_block_right: take the blue block and turn it right,rotate_blue_block_right,take the blue block and turn it right,17,1074
+splitD,rotate_blue_block_right: turn the blue block right,rotate_blue_block_right,turn the blue block right,11,715
+splitD,rotate_pink_block_left: grasp the pink block and rotate it left,rotate_pink_block_left,grasp the pink block and rotate it left,16,1040
+splitD,rotate_pink_block_left: grasp the pink block and turn it left,rotate_pink_block_left,grasp the pink block and turn it left,19,1235
+splitD,"rotate_pink_block_left: grasp the pink block, then rotate it left",rotate_pink_block_left,"grasp the pink block, then rotate it left",16,1040
+splitD,"rotate_pink_block_left: grasp the pink block, then turn it left",rotate_pink_block_left,"grasp the pink block, then turn it left",7,455
+splitD,rotate_pink_block_left: rotate left the pink block,rotate_pink_block_left,rotate left the pink block,13,845
+splitD,rotate_pink_block_left: rotate the pink block 90 degrees to the left,rotate_pink_block_left,rotate the pink block 90 degrees to the left,14,910
+splitD,rotate_pink_block_left: rotate the pink block to the left,rotate_pink_block_left,rotate the pink block to the left,11,715
+splitD,rotate_pink_block_left: rotate the pink block towards the left,rotate_pink_block_left,rotate the pink block towards the left,15,975
+splitD,rotate_pink_block_left: take the pink block and rotate it left,rotate_pink_block_left,take the pink block and rotate it left,12,780
+splitD,rotate_pink_block_left: take the pink block and turn it left,rotate_pink_block_left,take the pink block and turn it left,19,1235
+splitD,rotate_pink_block_left: turn the pink block left,rotate_pink_block_left,turn the pink block left,9,585
+splitD,rotate_pink_block_right: grasp the pink block and rotate it right,rotate_pink_block_right,grasp the pink block and rotate it right,12,780
+splitD,rotate_pink_block_right: grasp the pink block and turn it right,rotate_pink_block_right,grasp the pink block and turn it right,14,891
+splitD,"rotate_pink_block_right: grasp the pink block, then rotate it right",rotate_pink_block_right,"grasp the pink block, then rotate it right",17,1087
+splitD,"rotate_pink_block_right: grasp the pink block, then turn it right",rotate_pink_block_right,"grasp the pink block, then turn it right",13,845
+splitD,rotate_pink_block_right: rotate right the pink block,rotate_pink_block_right,rotate right the pink block,17,1105
+splitD,rotate_pink_block_right: rotate the pink block 90 degrees to the right,rotate_pink_block_right,rotate the pink block 90 degrees to the right,17,1074
+splitD,rotate_pink_block_right: rotate the pink block to the right,rotate_pink_block_right,rotate the pink block to the right,9,585
+splitD,rotate_pink_block_right: rotate the pink block towards the right,rotate_pink_block_right,rotate the pink block towards the right,11,715
+splitD,rotate_pink_block_right: take the pink block and rotate it right,rotate_pink_block_right,take the pink block and rotate it right,20,1274
+splitD,rotate_pink_block_right: take the pink block and turn it right,rotate_pink_block_right,take the pink block and turn it right,13,791
+splitD,rotate_pink_block_right: turn the pink block right,rotate_pink_block_right,turn the pink block right,7,455
+splitD,rotate_red_block_left: grasp the red block and rotate it left,rotate_red_block_left,grasp the red block and rotate it left,13,821
+splitD,rotate_red_block_left: grasp the red block and turn it left,rotate_red_block_left,grasp the red block and turn it left,13,845
+splitD,"rotate_red_block_left: grasp the red block, then rotate it left",rotate_red_block_left,"grasp the red block, then rotate it left",20,1284
+splitD,"rotate_red_block_left: grasp the red block, then turn it left",rotate_red_block_left,"grasp the red block, then turn it left",10,620
+splitD,rotate_red_block_left: rotate left the red block,rotate_red_block_left,rotate left the red block,11,715
+splitD,rotate_red_block_left: rotate the red block 90 degrees to the left,rotate_red_block_left,rotate the red block 90 degrees to the left,10,623
+splitD,rotate_red_block_left: rotate the red block to the left,rotate_red_block_left,rotate the red block to the left,21,1365
+splitD,rotate_red_block_left: rotate the red block towards the left,rotate_red_block_left,rotate the red block towards the left,12,780
+splitD,rotate_red_block_left: take the red block and rotate it left,rotate_red_block_left,take the red block and rotate it left,18,1170
+splitD,rotate_red_block_left: take the red block and turn it left,rotate_red_block_left,take the red block and turn it left,12,762
+splitD,rotate_red_block_left: turn the red block left,rotate_red_block_left,turn the red block left,10,598
+splitD,rotate_red_block_right: grasp the red block and rotate it right,rotate_red_block_right,grasp the red block and rotate it right,15,951
+splitD,rotate_red_block_right: grasp the red block and turn it right,rotate_red_block_right,grasp the red block and turn it right,12,731
+splitD,"rotate_red_block_right: grasp the red block, then rotate it right",rotate_red_block_right,"grasp the red block, then rotate it right",10,621
+splitD,"rotate_red_block_right: grasp the red block, then turn it right",rotate_red_block_right,"grasp the red block, then turn it right",16,1021
+splitD,rotate_red_block_right: rotate right the red block,rotate_red_block_right,rotate right the red block,16,1011
+splitD,rotate_red_block_right: rotate the red block 90 degrees to the right,rotate_red_block_right,rotate the red block 90 degrees to the right,14,882
+splitD,rotate_red_block_right: rotate the red block to the right,rotate_red_block_right,rotate the red block to the right,19,1214
+splitD,rotate_red_block_right: rotate the red block towards the right,rotate_red_block_right,rotate the red block towards the right,14,890
+splitD,rotate_red_block_right: take the red block and rotate it right,rotate_red_block_right,take the red block and rotate it right,11,685
+splitD,rotate_red_block_right: take the red block and turn it right,rotate_red_block_right,take the red block and turn it right,14,890
+splitD,rotate_red_block_right: turn the red block right,rotate_red_block_right,turn the red block right,9,564
+splitD,stack_block: place the block on top of another block,stack_block,place the block on top of another block,16,770
+splitD,stack_block: place the grasped block on top of another block,stack_block,place the grasped block on top of another block,18,932
+splitD,stack_block: put the block on top of another block,stack_block,put the block on top of another block,15,851
+splitD,stack_block: put the grasped block on top of a block,stack_block,put the grasped block on top of a block,29,1621
+splitD,stack_block: stack blocks on top of each other,stack_block,stack blocks on top of each other,20,1018
+splitD,stack_block: stack the block on top of another block,stack_block,stack the block on top of another block,19,970
+splitD,stack_block: stack the blocks,stack_block,stack the blocks,17,887
+splitD,stack_block: stack the object on top of another object,stack_block,stack the object on top of another object,17,904
+splitD,turn_off_led: push down the button to turn off the green light,turn_off_led,push down the button to turn off the green light,15,853
+splitD,turn_off_led: push down the button to turn off the led,turn_off_led,push down the button to turn off the led,4,236
+splitD,turn_off_led: push down the button to turn off the led light,turn_off_led,push down the button to turn off the led light,9,481
+splitD,turn_off_led: push the button to turn off the green light,turn_off_led,push the button to turn off the green light,7,425
+splitD,turn_off_led: push the button to turn off the led,turn_off_led,push the button to turn off the led,11,602
+splitD,turn_off_led: push the button to turn off the led light,turn_off_led,push the button to turn off the led light,13,705
+splitD,turn_off_led: toggle the button to turn off the green light,turn_off_led,toggle the button to turn off the green light,13,710
+splitD,turn_off_led: toggle the button to turn off the led,turn_off_led,toggle the button to turn off the led,11,627
+splitD,turn_off_led: toggle the button to turn off the led light,turn_off_led,toggle the button to turn off the led light,17,949
+splitD,turn_off_led: turn off the green lamp,turn_off_led,turn off the green lamp,9,485
+splitD,turn_off_led: turn off the green light,turn_off_led,turn off the green light,9,502
+splitD,turn_off_led: turn off the led,turn_off_led,turn off the led,9,555
+splitD,turn_off_led: turn off the led lamp,turn_off_led,turn off the led lamp,8,495
+splitD,turn_off_led: turn off the led light,turn_off_led,turn off the led light,15,876
+splitD,turn_off_lightbulb: move down the switch,turn_off_lightbulb,move down the switch,10,650
+splitD,turn_off_lightbulb: move the light switch to turn off the light bulb,turn_off_lightbulb,move the light switch to turn off the light bulb,14,910
+splitD,turn_off_lightbulb: move the light switch to turn off the yellow light,turn_off_lightbulb,move the light switch to turn off the yellow light,12,780
+splitD,turn_off_lightbulb: push the switch downwards,turn_off_lightbulb,push the switch downwards,17,1080
+splitD,turn_off_lightbulb: slide down the switch,turn_off_lightbulb,slide down the switch,13,845
+splitD,turn_off_lightbulb: toggle the light switch to turn off the light bulb,turn_off_lightbulb,toggle the light switch to turn off the light bulb,13,807
+splitD,turn_off_lightbulb: toggle the light switch to turn off the yellow light,turn_off_lightbulb,toggle the light switch to turn off the yellow light,23,1434
+splitD,turn_off_lightbulb: turn off the light bulb,turn_off_lightbulb,turn off the light bulb,20,1300
+splitD,turn_off_lightbulb: turn off the yellow lamp,turn_off_lightbulb,turn off the yellow lamp,17,1088
+splitD,turn_off_lightbulb: turn off the yellow light,turn_off_lightbulb,turn off the yellow light,13,771
+splitD,turn_on_led: push down the button to turn on the green light,turn_on_led,push down the button to turn on the green light,13,748
+splitD,turn_on_led: push down the button to turn on the led,turn_on_led,push down the button to turn on the led,7,431
+splitD,turn_on_led: push down the button to turn on the led light,turn_on_led,push down the button to turn on the led light,15,912
+splitD,turn_on_led: push the button to turn on the green light,turn_on_led,push the button to turn on the green light,4,237
+splitD,turn_on_led: push the button to turn on the led,turn_on_led,push the button to turn on the led,6,374
+splitD,turn_on_led: push the button to turn on the led light,turn_on_led,push the button to turn on the led light,17,1027
+splitD,turn_on_led: toggle the button to turn on the green light,turn_on_led,toggle the button to turn on the green light,11,613
+splitD,turn_on_led: toggle the button to turn on the led,turn_on_led,toggle the button to turn on the led,12,713
+splitD,turn_on_led: toggle the button to turn on the led light,turn_on_led,toggle the button to turn on the led light,14,749
+splitD,turn_on_led: turn on the green lamp,turn_on_led,turn on the green lamp,7,435
+splitD,turn_on_led: turn on the green light,turn_on_led,turn on the green light,3,146
+splitD,turn_on_led: turn on the led,turn_on_led,turn on the led,7,417
+splitD,turn_on_led: turn on the led lamp,turn_on_led,turn on the led lamp,16,919
+splitD,turn_on_led: turn on the led light,turn_on_led,turn on the led light,18,1088
+splitD,turn_on_lightbulb: move the light switch to turn on the light bulb,turn_on_lightbulb,move the light switch to turn on the light bulb,18,1084
+splitD,turn_on_lightbulb: move the light switch to turn on the yellow light,turn_on_lightbulb,move the light switch to turn on the yellow light,17,1024
+splitD,turn_on_lightbulb: move up the switch,turn_on_lightbulb,move up the switch,13,845
+splitD,turn_on_lightbulb: push the switch upwards,turn_on_lightbulb,push the switch upwards,15,938
+splitD,turn_on_lightbulb: slide up the switch,turn_on_lightbulb,slide up the switch,9,585
+splitD,turn_on_lightbulb: toggle the light switch to turn on the light bulb,turn_on_lightbulb,toggle the light switch to turn on the light bulb,14,893
+splitD,turn_on_lightbulb: toggle the light switch to turn on the yellow light,turn_on_lightbulb,toggle the light switch to turn on the yellow light,10,650
+splitD,turn_on_lightbulb: turn on the light bulb,turn_on_lightbulb,turn on the light bulb,16,1019
+splitD,turn_on_lightbulb: turn on the yellow lamp,turn_on_lightbulb,turn on the yellow lamp,23,1318
+splitD,turn_on_lightbulb: turn on the yellow light,turn_on_lightbulb,turn on the yellow light,15,975
+splitD,unstack_block: collapse the stacked blocks,unstack_block,collapse the stacked blocks,18,971
+splitD,unstack_block: go to the tower of blocks and take off the top one,unstack_block,go to the tower of blocks and take off the top one,25,1283
+splitD,unstack_block: remove a block from the stack,unstack_block,remove a block from the stack,20,1174
+splitD,unstack_block: remove the top block,unstack_block,remove the top block,18,926
+splitD,unstack_block: take off the block that is on top of the other one,unstack_block,take off the block that is on top of the other one,31,1628
+splitD,unstack_block: take off the stacked block,unstack_block,take off the stacked block,15,762
+splitD,unstack_block: unstack the blocks,unstack_block,unstack the blocks,24,1283

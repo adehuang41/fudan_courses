@@ -1,0 +1,15 @@
+status: ok
+device: cuda
+tables:
+  experiment_settings: /home/dechao/cv_final_pj2/results/tables/experiment_settings.csv
+  training_summary: /home/dechao/cv_final_pj2/results/tables/training_summary.csv
+  checkpoint_summary: /home/dechao/cv_final_pj2/results/tables/checkpoint_summary.csv
+  per_env_validation_action_l1: /home/dechao/cv_final_pj2/results/tables/per_env_validation_action_l1.csv
+  training_verification_checks: /home/dechao/cv_final_pj2/results/tables/training_verification_checks.csv
+figures:
+  action_l1_train: /home/dechao/cv_final_pj2/results/figures/action_l1_train_B_only_vs_ABC.png
+  action_l1_val: /home/dechao/cv_final_pj2/results/figures/action_l1_val_B_only_vs_ABC.png
+  total_loss: /home/dechao/cv_final_pj2/results/figures/total_loss_B_only_vs_ABC.png
+  best_val_bar: /home/dechao/cv_final_pj2/results/figures/best_val_action_l1_bar.png
+  per_env: /home/dechao/cv_final_pj2/results/figures/per_env_validation_action_l1.png
+qualitative_count: 9

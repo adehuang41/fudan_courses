@@ -1,0 +1,104 @@
+dataset:
+  repo_id: huiwon/calvin_task_ABC_D
+  repo_type: dataset
+  local_root: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D
+  project_path: data/datasets/calvin_task_ABC_D
+  download_mode: full_repo_after_manifest_validation
+  max_download_gib: 50
+  required_top_level_dirs:
+    - calvin_task_ABC_D_lerobot_0_4
+    - calvin_task_ABC_D_lerobot_1_4
+    - calvin_task_ABC_D_lerobot_2_4
+    - calvin_task_ABC_D_lerobot_3_4
+  semantics:
+    current_hf_repo_split: train_only
+    top_level_dirs_are: lerobot_upload_shards
+    top_level_dirs_are_not: calvin_environments
+    held_out_environment_d_present: false
+    held_out_environment_d_note: D is the original CALVIN validation/evaluation environment and is not present in the current huiwon/calvin_task_ABC_D LeRobot train-only download.
+  environment_mapping:
+    status: confirmed_for_A_B_C
+    basis: official CALVIN task_ABC_D training/scene_info.npy ranges aligned with LeRobot original_frame_idx
+    official_scene_info_url: http://calvin.cs.uni-freiburg.de/scene_info_fix/task_ABC_D_scene_info.zip
+    local_scene_info_path: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/scene_info/task_ABC_D/training/scene_info.npy
+    logical_scene_info_path: task_ABC_D/training/scene_info.npy
+    source_archive_sha256: 3c13651947dc4927b1df3b700143e1d47605db0958f296a0a691b911876d2a64
+    scene_info_sha256: cd254dd8c94abe8c9c360b079f8839eac1811c306a35248d8a5afe7a5820be67
+    corrected_scene_info_check: passed
+    not_old_scene_info_reason: downloaded from the official scene_info_fix archive and hash/ranges match expected task_ABC_D/training corrected ranges
+    ranges_by_original_frame_idx:
+      B:
+        scene: calvin_scene_B
+        min: 0
+        max: 598909
+      C:
+        scene: calvin_scene_C
+        min: 598910
+        max: 1191338
+      A:
+        scene: calvin_scene_A
+        min: 1191339
+        max: 1795044
+    audit_script: scripts/data/audit_calvin_environment_splits.py
+    summary_table: results/tables/environment_split_summary.csv
+    semantics_table: results/tables/dataset_semantics_summary.csv
+    scene_info_source_table: results/tables/scene_info_source.csv
+    sanity_check_table: results/tables/environment_split_sanity_check.csv
+    episode_map: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/environment_episode_map.csv
+  train_splits:
+    b_only:
+      environments:
+        - B
+      selection_rule: select episodes whose original_frame_idx range is fully inside calvin_scene_B range
+      num_episodes: 6115
+      num_frames: 367096
+    abc_mixed:
+      environments:
+        - A
+        - B
+        - C
+      selection_rule: select episodes whose original_frame_idx range is fully inside any A/B/C scene range
+      num_episodes: 17870
+      num_frames: 1071743
+      environment_counts:
+        A:
+          num_episodes: 6089
+          num_frames: 366693
+        B:
+          num_episodes: 6115
+          num_frames: 367096
+        C:
+          num_episodes: 5666
+          num_frames: 337954
+  filtered_dataset:
+    authority: environment_episode_map.csv
+    authority_path: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/environment_episode_map.csv
+    filtering_level: episode
+    implementation: src/data/calvin_filtered_dataset.py
+    verification_script: scripts/data/verify_calvin_filtered_splits.py
+    verification_summary: results/tables/filtered_split_verification.csv
+    verification_report: results/tables/filtered_split_verification.json
+    parquet_video_copy_policy: do_not_copy
+    b_only_rule: environment == B
+    abc_mixed_rule: environment in {A, B, C}
+    dataloader_verification:
+      status: passed
+      batch_size: 32
+      max_batches_per_split: 16
+      b_only_sampled_environment_counts:
+        B: 512
+      abc_mixed_sampled_environment_counts:
+        A: 192
+        B: 160
+        C: 160
+  compatibility:
+    current_lerobot_version: 0.5.1
+    local_dataset_format_observed: LeRobot v2.1
+    pyPI_lerobot_direct_dataset_read: blocked_by_v2_1_to_v3_0_compatibility
+    note: Filtered dataset verification uses a project-side parquet reader without copying large data; ACT training entry still needs a compatible LeRobot loading path.
+storage:
+  code_root: /home/dechao/cv_final_pj2
+  real_data_root: /data/dechao/cv_final_pj2
+  project_data_symlink: /home/dechao/cv_final_pj2/data
+  shared_huggingface_cache: /data/huggingface
+  use_shared_huggingface_cache: false

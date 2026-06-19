@@ -1,0 +1,29 @@
+{
+  "status": "running",
+  "start_time": "2026-06-17T15:49:31+00:00",
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_D_D_lerobot",
+  "runs": {
+    "B_only_task_id_finetune": "/data/dechao/cv_final_pj2/outputs/task_conditioned/B_only_task_id_finetune_from_visual50k_extra50k_seed20260531_retry1",
+    "ABC_mixed_task_id_finetune": "/data/dechao/cv_final_pj2/outputs/task_conditioned/ABC_mixed_task_id_finetune_from_visual50k_extra50k_seed20260531_retry1"
+  },
+  "variants": [
+    "correct",
+    "zero",
+    "random",
+    "same_family_wrong",
+    "different_family_wrong"
+  ],
+  "max_episodes": 1024,
+  "batch_size": 8,
+  "num_workers": 8,
+  "table_cache": {
+    "enabled": true,
+    "maxsize": 8,
+    "cache_info": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": 8,
+      "currsize": 0
+    }
+  }
+}

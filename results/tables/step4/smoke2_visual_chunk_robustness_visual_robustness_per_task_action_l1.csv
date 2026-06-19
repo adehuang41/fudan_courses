@@ -1,0 +1,25 @@
+condition,episode_count,experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task,valid_action_steps
+clean,1,B_only_act_baseline,0.6108253000102518,0.19655251094908308,65,move_slider_left: move the door to the left side,2145
+brightness_dark,1,B_only_act_baseline,0.6466322249267406,0.17835280706276704,65,move_slider_left: move the door to the left side,2145
+brightness_bright,1,B_only_act_baseline,0.6418058713435968,0.226300454655767,65,move_slider_left: move the door to the left side,2145
+gaussian_blur,1,B_only_act_baseline,0.614414182457176,0.1968734180375492,65,move_slider_left: move the door to the left side,2145
+gaussian_noise,1,B_only_act_baseline,0.6035659414190393,0.19351319888810734,65,move_slider_left: move the door to the left side,2145
+wrist_grayout,1,B_only_act_baseline,0.6087152399145045,0.19093416731158297,65,move_slider_left: move the door to the left side,2145
+clean,1,B_only_act_baseline,0.6230889499485195,0.23176596602161367,65,move_slider_left: slide the door to the left side,2145
+brightness_dark,1,B_only_act_baseline,0.5760343817762641,0.19952422707945436,65,move_slider_left: slide the door to the left side,2145
+brightness_bright,1,B_only_act_baseline,0.6229370684850783,0.24252417853304914,65,move_slider_left: slide the door to the left side,2145
+gaussian_blur,1,B_only_act_baseline,0.6457810473688197,0.24469350153630548,65,move_slider_left: slide the door to the left side,2145
+gaussian_noise,1,B_only_act_baseline,0.5902626401219732,0.21370258269371925,65,move_slider_left: slide the door to the left side,2145
+wrist_grayout,1,B_only_act_baseline,0.6313709902120279,0.2434263255728748,65,move_slider_left: slide the door to the left side,2145
+clean,1,ABC_mixed_act_baseline,0.5671584951691019,0.18180335355606866,65,move_slider_left: move the door to the left side,2145
+brightness_dark,1,ABC_mixed_act_baseline,0.5639504629732806,0.1831767319521426,65,move_slider_left: move the door to the left side,2145
+brightness_bright,1,ABC_mixed_act_baseline,0.5917439565712557,0.18383018720400082,65,move_slider_left: move the door to the left side,2145
+gaussian_blur,1,ABC_mixed_act_baseline,0.5777867914238574,0.18621706460818743,65,move_slider_left: move the door to the left side,2145
+gaussian_noise,1,ABC_mixed_act_baseline,0.6480196153486406,0.2158063374715291,65,move_slider_left: move the door to the left side,2145
+wrist_grayout,1,ABC_mixed_act_baseline,0.597973398220686,0.19598691958091755,65,move_slider_left: move the door to the left side,2145
+clean,1,ABC_mixed_act_baseline,0.476457133850494,0.1452002896732225,65,move_slider_left: slide the door to the left side,2145
+brightness_dark,1,ABC_mixed_act_baseline,0.5152960080208081,0.16550701713307953,65,move_slider_left: slide the door to the left side,2145
+brightness_bright,1,ABC_mixed_act_baseline,0.5054494080367264,0.15285781750153432,65,move_slider_left: slide the door to the left side,2145
+gaussian_blur,1,ABC_mixed_act_baseline,0.5052211446600122,0.1625477121863173,65,move_slider_left: slide the door to the left side,2145
+gaussian_noise,1,ABC_mixed_act_baseline,0.6309186070353596,0.21225638672228142,65,move_slider_left: slide the door to the left side,2145
+wrist_grayout,1,ABC_mixed_act_baseline,0.5456724156072605,0.18625052403974962,65,move_slider_left: slide the door to the left side,2145

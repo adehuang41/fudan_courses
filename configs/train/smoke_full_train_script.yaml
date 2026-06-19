@@ -1,0 +1,30 @@
+experiment:
+  name: smoke_full_train_script
+  stage: debug
+  output_dir: /data/dechao/cv_final_pj2/outputs/debug/smoke_full_train_script
+dataset:
+  split_name: B_only
+  split_manifest: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/environment_episode_map.csv
+  dataset_root: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D
+  image_keys:
+    - observation.images.image
+    - observation.images.wrist_image
+  validation_fraction: 0.0002
+train:
+  steps: 2
+  batch_size: 2
+  num_workers: 2
+  seed: 20260531
+  log_interval: 1
+  checkpoint_interval: 2
+  validation_interval: 2
+  grad_clip_norm: 10.0
+  device: cuda
+  physical_gpu: 5
+  amp: "off"
+  prefetch_factor: 2
+  persistent_workers: true
+logging:
+  local_only: true
+  wandb: false
+  swanlab: false

@@ -1,0 +1,3 @@
+regime,visual_config,task_id_config,visual_seed,task_id_seed,visual_validation_fraction,task_id_validation_fraction,split_name,task_id_output_dir,task_id_output_dir_exists,init_checkpoint_exists,audit_passed
+B_only,configs/train/full_B_only.yaml,configs/train/full_B_only_task_id_seed20260531.yaml,20260531,20260531,0.05,0.05,B_only,/data/dechao/cv_final_pj2/outputs/task_conditioned/B_only_task_id_act_full_seed20260531,false,true,true
+ABC_mixed,configs/train/full_ABC_mixed.yaml,configs/train/full_ABC_mixed_task_id_seed20260531.yaml,20260531,20260531,0.05,0.05,ABC_mixed,/data/dechao/cv_final_pj2/outputs/task_conditioned/ABC_mixed_task_id_act_full_seed20260531,false,true,true

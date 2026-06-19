@@ -1,0 +1,33 @@
+policy:
+  type: act
+  input_features:
+    observation.state:
+      type: STATE
+      shape: [15]
+    observation.images.image:
+      type: VISUAL
+      shape: [3, 256, 256]
+    observation.images.wrist_image:
+      type: VISUAL
+      shape: [3, 256, 256]
+  output_features:
+    action:
+      type: ACTION
+      shape: [7]
+  vision_backbone: resnet18
+  pretrained_backbone_weights: ResNet18_Weights.IMAGENET1K_V1
+  use_vae: true
+  chunk_size: 100
+  n_action_steps: 100
+  dim_model: 512
+  n_heads: 8
+  dim_feedforward: 3200
+  n_encoder_layers: 4
+  n_decoder_layers: 1
+  n_vae_encoder_layers: 4
+  kl_weight: 10.0
+  dropout: 0.1
+  optimizer_lr: 0.00001
+  optimizer_weight_decay: 0.0001
+  optimizer_lr_backbone: 0.00001
+

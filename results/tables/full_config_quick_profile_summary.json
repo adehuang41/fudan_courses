@@ -1,0 +1,518 @@
+{
+  "completed_at": "2026-05-31T17:46:29+00:00",
+  "recommended": {
+    "num_workers": 48,
+    "batch_size": 16,
+    "amp": "off",
+    "samples_per_second": 128.2546438031276,
+    "seconds_per_step_mean": 0.12400206819875166,
+    "gpu_utilization_mean_percent": 30.0,
+    "gpu_memory_used_max_mb": 2887.0,
+    "data_loading_seconds_mean": 0.0002888720715418458,
+    "forward_backward_seconds_mean": 0.12098476705141366,
+    "loss_final": 6.89097785949707,
+    "action_l1_loss_final": 0.17061851918697357
+  },
+  "stage_winners": {
+    "num_workers": {
+      "stage": "num_workers",
+      "num_workers": 48,
+      "batch_size": 4,
+      "amp": "off",
+      "warmup_steps": 10,
+      "measured_steps": 20,
+      "split": "B_only",
+      "physical_gpu": "5",
+      "cuda_visible_devices": "5",
+      "start_time": "2026-05-31T17:44:08+00:00",
+      "status": "ok",
+      "end_time": "2026-05-31T17:44:18+00:00",
+      "policy_actual": {
+        "type": "act",
+        "input_features": {
+          "observation.state": {
+            "type": "STATE",
+            "shape": [
+              15
+            ]
+          },
+          "observation.images.image": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              256,
+              256
+            ]
+          },
+          "observation.images.wrist_image": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              256,
+              256
+            ]
+          }
+        },
+        "output_features": {
+          "action": {
+            "type": "ACTION",
+            "shape": [
+              7
+            ]
+          }
+        },
+        "vision_backbone": "resnet18",
+        "pretrained_backbone_weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "use_vae": true,
+        "chunk_size": 100,
+        "n_action_steps": 100,
+        "dim_model": 512,
+        "n_heads": 8,
+        "dim_feedforward": 3200,
+        "n_encoder_layers": 4,
+        "n_decoder_layers": 1,
+        "n_vae_encoder_layers": 4,
+        "kl_weight": 10.0,
+        "dropout": 0.1,
+        "optimizer_lr": 1e-05,
+        "optimizer_weight_decay": 0.0001,
+        "optimizer_lr_backbone": 1e-05,
+        "device": "cuda"
+      },
+      "dataset_summary": {
+        "num_episodes": 6115,
+        "num_frames": 367096,
+        "by_environment": {
+          "B": {
+            "num_episodes": 6115,
+            "num_frames": 367096
+          }
+        },
+        "by_shard": {
+          "calvin_task_ABC_D_lerobot_0_4": {
+            "num_episodes": 1482,
+            "num_frames": 89314
+          },
+          "calvin_task_ABC_D_lerobot_1_4": {
+            "num_episodes": 1579,
+            "num_frames": 94901
+          },
+          "calvin_task_ABC_D_lerobot_2_4": {
+            "num_episodes": 1523,
+            "num_frames": 91073
+          },
+          "calvin_task_ABC_D_lerobot_3_4": {
+            "num_episodes": 1531,
+            "num_frames": 91808
+          }
+        }
+      },
+      "first_batch_environments": [
+        "B"
+      ],
+      "first_batch_shapes": {
+        "observation.state": [
+          4,
+          15
+        ],
+        "action": [
+          4,
+          100,
+          7
+        ],
+        "action_is_pad": [
+          4,
+          100
+        ],
+        "episode_index": [
+          4
+        ],
+        "frame_index": [
+          4
+        ],
+        "index": [
+          4
+        ],
+        "task_index": [
+          4
+        ],
+        "original_frame_idx": [
+          4
+        ],
+        "environment": "list[4]",
+        "shard": "list[4]",
+        "task": "list[4]",
+        "observation.images.image": [
+          4,
+          3,
+          256,
+          256
+        ],
+        "observation.images.wrist_image": [
+          4,
+          3,
+          256,
+          256
+        ]
+      },
+      "measured_wall_seconds": 1.7562026651576161,
+      "samples_per_second": 45.552829173516905,
+      "seconds_per_step_mean": 0.08746131523512304,
+      "seconds_per_step_std": 0.10501488499328664,
+      "seconds_per_step_p50": 0.05941898457240313,
+      "seconds_per_step_p95": 0.16468435673741652,
+      "data_loading_seconds_mean": 0.0002988521475344896,
+      "host_to_device_seconds_mean": 0.0012809910345822572,
+      "forward_backward_seconds_mean": 0.0858795385574922,
+      "loss_final": 7.305500030517578,
+      "loss_mean": 10.509801363945007,
+      "action_l1_loss_final": 0.30834171175956726,
+      "action_l1_loss_mean": 0.2440226621925831,
+      "loss_finite": true,
+      "action_l1_loss_finite": true,
+      "torch_peak_memory_allocated_mb": 1468.19970703125,
+      "torch_peak_memory_reserved_mb": 1502.0,
+      "measured_steps_jsonl": "/data/dechao/cv_final_pj2/outputs/profiling/full_config_quick_profile/nw48_bs04_ampoff/measured_steps.jsonl",
+      "gpu_utilization_mean_percent": 17.666666666666668,
+      "gpu_utilization_max_percent": 34.0,
+      "gpu_memory_used_mean_mb": 1634.3333333333333,
+      "gpu_memory_used_max_mb": 1635.0,
+      "gpu_samples": 3,
+      "child_return_code": 0
+    },
+    "batch_size": {
+      "stage": "batch_size",
+      "num_workers": 48,
+      "batch_size": 16,
+      "amp": "off",
+      "warmup_steps": 10,
+      "measured_steps": 20,
+      "split": "B_only",
+      "physical_gpu": "5",
+      "cuda_visible_devices": "5",
+      "start_time": "2026-05-31T17:45:17+00:00",
+      "status": "ok",
+      "end_time": "2026-05-31T17:45:32+00:00",
+      "policy_actual": {
+        "type": "act",
+        "input_features": {
+          "observation.state": {
+            "type": "STATE",
+            "shape": [
+              15
+            ]
+          },
+          "observation.images.image": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              256,
+              256
+            ]
+          },
+          "observation.images.wrist_image": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              256,
+              256
+            ]
+          }
+        },
+        "output_features": {
+          "action": {
+            "type": "ACTION",
+            "shape": [
+              7
+            ]
+          }
+        },
+        "vision_backbone": "resnet18",
+        "pretrained_backbone_weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "use_vae": true,
+        "chunk_size": 100,
+        "n_action_steps": 100,
+        "dim_model": 512,
+        "n_heads": 8,
+        "dim_feedforward": 3200,
+        "n_encoder_layers": 4,
+        "n_decoder_layers": 1,
+        "n_vae_encoder_layers": 4,
+        "kl_weight": 10.0,
+        "dropout": 0.1,
+        "optimizer_lr": 1e-05,
+        "optimizer_weight_decay": 0.0001,
+        "optimizer_lr_backbone": 1e-05,
+        "device": "cuda"
+      },
+      "dataset_summary": {
+        "num_episodes": 6115,
+        "num_frames": 367096,
+        "by_environment": {
+          "B": {
+            "num_episodes": 6115,
+            "num_frames": 367096
+          }
+        },
+        "by_shard": {
+          "calvin_task_ABC_D_lerobot_0_4": {
+            "num_episodes": 1482,
+            "num_frames": 89314
+          },
+          "calvin_task_ABC_D_lerobot_1_4": {
+            "num_episodes": 1579,
+            "num_frames": 94901
+          },
+          "calvin_task_ABC_D_lerobot_2_4": {
+            "num_episodes": 1523,
+            "num_frames": 91073
+          },
+          "calvin_task_ABC_D_lerobot_3_4": {
+            "num_episodes": 1531,
+            "num_frames": 91808
+          }
+        }
+      },
+      "first_batch_environments": [
+        "B"
+      ],
+      "first_batch_shapes": {
+        "observation.state": [
+          16,
+          15
+        ],
+        "action": [
+          16,
+          100,
+          7
+        ],
+        "action_is_pad": [
+          16,
+          100
+        ],
+        "episode_index": [
+          16
+        ],
+        "frame_index": [
+          16
+        ],
+        "index": [
+          16
+        ],
+        "task_index": [
+          16
+        ],
+        "original_frame_idx": [
+          16
+        ],
+        "environment": "list[16]",
+        "shard": "list[16]",
+        "task": "list[16]",
+        "observation.images.image": [
+          16,
+          3,
+          256,
+          256
+        ],
+        "observation.images.wrist_image": [
+          16,
+          3,
+          256,
+          256
+        ]
+      },
+      "measured_wall_seconds": 2.558724944945425,
+      "samples_per_second": 125.06228957205296,
+      "seconds_per_step_mean": 0.12764337301487103,
+      "seconds_per_step_std": 0.13242978690462623,
+      "seconds_per_step_p50": 0.0755119975656271,
+      "seconds_per_step_p95": 0.348483703855891,
+      "data_loading_seconds_mean": 0.00034285575384274125,
+      "host_to_device_seconds_mean": 0.0021737848408520223,
+      "forward_backward_seconds_mean": 0.12512446329928933,
+      "loss_final": 6.891504764556885,
+      "loss_mean": 8.55876703262329,
+      "action_l1_loss_final": 0.17048557102680206,
+      "action_l1_loss_mean": 0.2276206597685814,
+      "loss_finite": true,
+      "action_l1_loss_finite": true,
+      "torch_peak_memory_allocated_mb": 2089.33544921875,
+      "torch_peak_memory_reserved_mb": 2428.0,
+      "measured_steps_jsonl": "/data/dechao/cv_final_pj2/outputs/profiling/full_config_quick_profile/nw48_bs16_ampoff/measured_steps.jsonl",
+      "gpu_utilization_mean_percent": 32.333333333333336,
+      "gpu_utilization_max_percent": 59.0,
+      "gpu_memory_used_mean_mb": 2957.0,
+      "gpu_memory_used_max_mb": 2957.0,
+      "gpu_samples": 3,
+      "child_return_code": 0
+    },
+    "amp": {
+      "stage": "amp",
+      "num_workers": 48,
+      "batch_size": 16,
+      "amp": "off",
+      "warmup_steps": 10,
+      "measured_steps": 20,
+      "split": "B_only",
+      "physical_gpu": "5",
+      "cuda_visible_devices": "5",
+      "start_time": "2026-05-31T17:45:39+00:00",
+      "status": "ok",
+      "end_time": "2026-05-31T17:45:54+00:00",
+      "policy_actual": {
+        "type": "act",
+        "input_features": {
+          "observation.state": {
+            "type": "STATE",
+            "shape": [
+              15
+            ]
+          },
+          "observation.images.image": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              256,
+              256
+            ]
+          },
+          "observation.images.wrist_image": {
+            "type": "VISUAL",
+            "shape": [
+              3,
+              256,
+              256
+            ]
+          }
+        },
+        "output_features": {
+          "action": {
+            "type": "ACTION",
+            "shape": [
+              7
+            ]
+          }
+        },
+        "vision_backbone": "resnet18",
+        "pretrained_backbone_weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "use_vae": true,
+        "chunk_size": 100,
+        "n_action_steps": 100,
+        "dim_model": 512,
+        "n_heads": 8,
+        "dim_feedforward": 3200,
+        "n_encoder_layers": 4,
+        "n_decoder_layers": 1,
+        "n_vae_encoder_layers": 4,
+        "kl_weight": 10.0,
+        "dropout": 0.1,
+        "optimizer_lr": 1e-05,
+        "optimizer_weight_decay": 0.0001,
+        "optimizer_lr_backbone": 1e-05,
+        "device": "cuda"
+      },
+      "dataset_summary": {
+        "num_episodes": 6115,
+        "num_frames": 367096,
+        "by_environment": {
+          "B": {
+            "num_episodes": 6115,
+            "num_frames": 367096
+          }
+        },
+        "by_shard": {
+          "calvin_task_ABC_D_lerobot_0_4": {
+            "num_episodes": 1482,
+            "num_frames": 89314
+          },
+          "calvin_task_ABC_D_lerobot_1_4": {
+            "num_episodes": 1579,
+            "num_frames": 94901
+          },
+          "calvin_task_ABC_D_lerobot_2_4": {
+            "num_episodes": 1523,
+            "num_frames": 91073
+          },
+          "calvin_task_ABC_D_lerobot_3_4": {
+            "num_episodes": 1531,
+            "num_frames": 91808
+          }
+        }
+      },
+      "first_batch_environments": [
+        "B"
+      ],
+      "first_batch_shapes": {
+        "observation.state": [
+          16,
+          15
+        ],
+        "action": [
+          16,
+          100,
+          7
+        ],
+        "action_is_pad": [
+          16,
+          100
+        ],
+        "episode_index": [
+          16
+        ],
+        "frame_index": [
+          16
+        ],
+        "index": [
+          16
+        ],
+        "task_index": [
+          16
+        ],
+        "original_frame_idx": [
+          16
+        ],
+        "environment": "list[16]",
+        "shard": "list[16]",
+        "task": "list[16]",
+        "observation.images.image": [
+          16,
+          3,
+          256,
+          256
+        ],
+        "observation.images.wrist_image": [
+          16,
+          3,
+          256,
+          256
+        ]
+      },
+      "measured_wall_seconds": 2.4950363629031926,
+      "samples_per_second": 128.2546438031276,
+      "seconds_per_step_mean": 0.12400206819875166,
+      "seconds_per_step_std": 0.1157951921102017,
+      "seconds_per_step_p50": 0.08574699552264065,
+      "seconds_per_step_p95": 0.29507548968540526,
+      "data_loading_seconds_mean": 0.0002888720715418458,
+      "host_to_device_seconds_mean": 0.0027263468597084283,
+      "forward_backward_seconds_mean": 0.12098476705141366,
+      "loss_final": 6.89097785949707,
+      "loss_mean": 8.558955216407776,
+      "action_l1_loss_final": 0.17061851918697357,
+      "action_l1_loss_mean": 0.22765451595187186,
+      "loss_finite": true,
+      "action_l1_loss_finite": true,
+      "torch_peak_memory_allocated_mb": 2096.71240234375,
+      "torch_peak_memory_reserved_mb": 2358.0,
+      "measured_steps_jsonl": "/data/dechao/cv_final_pj2/outputs/profiling/full_config_quick_profile/nw48_bs16_ampoff/measured_steps.jsonl",
+      "gpu_utilization_mean_percent": 30.0,
+      "gpu_utilization_max_percent": 61.0,
+      "gpu_memory_used_mean_mb": 2887.0,
+      "gpu_memory_used_max_mb": 2887.0,
+      "gpu_samples": 3,
+      "child_return_code": 0
+    }
+  },
+  "all_results_csv": "/data/dechao/cv_final_pj2/outputs/profiling/full_config_quick_profile/profile_results.csv",
+  "all_results_jsonl": "/data/dechao/cv_final_pj2/outputs/profiling/full_config_quick_profile/profile_results.jsonl"
+}

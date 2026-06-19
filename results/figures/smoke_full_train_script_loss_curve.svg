@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420">
+  <rect width="980" height="420" fill="white" />
+  <text x="70" y="26" font-size="20" font-family="Arial, sans-serif" fill="#111">smoke_full_train_script: total loss</text>
+  <line x1="70" y1="370" x2="940" y2="370" stroke="#333" />
+  <line x1="70" y1="40" x2="70" y2="370" stroke="#333" />
+  <text x="70" y="398" font-size="13" font-family="Arial, sans-serif" fill="#333">step 1 to 2</text>
+  <text x="8" y="48" font-size="13" font-family="Arial, sans-serif" fill="#333">62.1252</text>
+  <text x="8" y="370" font-size="13" font-family="Arial, sans-serif" fill="#333">31.5309</text>
+  <polyline fill="none" stroke="#1f77b4" stroke-width="2.2" points="70.00,62.76 940.00,241.52" /><polyline fill="none" stroke="#d62728" stroke-width="2.2" points="940.00,347.24" />
+  <g transform="translate(720,58)"><rect width="14" height="14" fill="#1f77b4" /><text x="22" y="12" font-size="14" fill="#222">train loss</text></g><g transform="translate(720,82)"><rect width="14" height="14" fill="#d62728" /><text x="22" y="12" font-size="14" fill="#222">validation loss</text></g>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "dataset_path": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "validation_folder": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation",
+  "data_source_note": "task_D_D validation ACT wrapper tiny smoke; not formal Success Rate",
+  "policy": "remote",
+  "ep_len": 10,
+  "num_tasks": 2,
+  "success_count": 0,
+  "success_rate": 0.0,
+  "results": [
+    {
+      "task": "turn_on_led",
+      "success": false,
+      "steps": 10,
+      "language": "press the button to turn on the led light"
+    },
+    {
+      "task": "turn_on_lightbulb",
+      "success": false,
+      "steps": 10,
+      "language": "use the switch to turn on the light bulb"
+    }
+  ]
+}

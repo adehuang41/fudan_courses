@@ -1,0 +1,213 @@
+{
+  "dataset_path": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "validation_folder": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation",
+  "policy": "remote_act",
+  "checkpoint_label": "ABC_mixed",
+  "source_note": "task_D_D validation small-scale closed-loop evaluation; not official 1000-sequence benchmark; validation_scene_info_missing_warning_not_rollout_dependency",
+  "num_sequences": 5,
+  "ep_len": 120,
+  "official_benchmark_num_sequences": 1000,
+  "is_official_benchmark": false,
+  "avg_successful_subtasks": 0.0,
+  "chain_success_rate": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0
+  },
+  "sequence_success_lengths": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "task_frequency_in_selected_sequences": {
+    "lift_blue_block_table": 1,
+    "lift_pink_block_slider": 1,
+    "lift_pink_block_table": 2,
+    "lift_red_block_table": 2,
+    "move_slider_left": 3,
+    "open_drawer": 4,
+    "place_in_drawer": 2,
+    "push_blue_block_right": 1,
+    "push_pink_block_left": 1,
+    "push_red_block_left": 1,
+    "rotate_red_block_left": 1,
+    "rotate_red_block_right": 1,
+    "stack_block": 1,
+    "turn_on_led": 2,
+    "turn_on_lightbulb": 2
+  },
+  "task_success": {
+    "move_slider_left": {
+      "success": 0,
+      "attempted": 1,
+      "success_rate": 0.0
+    },
+    "open_drawer": {
+      "success": 0,
+      "attempted": 1,
+      "success_rate": 0.0
+    },
+    "push_blue_block_right": {
+      "success": 0,
+      "attempted": 1,
+      "success_rate": 0.0
+    },
+    "push_red_block_left": {
+      "success": 0,
+      "attempted": 1,
+      "success_rate": 0.0
+    },
+    "turn_on_led": {
+      "success": 0,
+      "attempted": 1,
+      "success_rate": 0.0
+    }
+  },
+  "elapsed_sec": 11.21798300743103,
+  "results": [
+    {
+      "initial_state": {
+        "led": 0,
+        "lightbulb": 0,
+        "slider": "right",
+        "drawer": "closed",
+        "red_block": "table",
+        "blue_block": "slider_right",
+        "pink_block": "table",
+        "grasped": 0
+      },
+      "eval_sequence": [
+        "turn_on_led",
+        "push_pink_block_left",
+        "lift_pink_block_table",
+        "stack_block",
+        "move_slider_left"
+      ],
+      "successful_subtasks": 0,
+      "subtasks": [
+        {
+          "task": "turn_on_led",
+          "language": "press the button to turn on the led light",
+          "success": false,
+          "steps": 120
+        }
+      ]
+    },
+    {
+      "initial_state": {
+        "led": 0,
+        "lightbulb": 0,
+        "slider": "right",
+        "drawer": "closed",
+        "red_block": "table",
+        "blue_block": "table",
+        "pink_block": "slider_right",
+        "grasped": 0
+      },
+      "eval_sequence": [
+        "open_drawer",
+        "turn_on_lightbulb",
+        "move_slider_left",
+        "rotate_red_block_left",
+        "lift_red_block_table"
+      ],
+      "successful_subtasks": 0,
+      "subtasks": [
+        {
+          "task": "open_drawer",
+          "language": "pull the handle to open the drawer",
+          "success": false,
+          "steps": 120
+        }
+      ]
+    },
+    {
+      "initial_state": {
+        "led": 0,
+        "lightbulb": 0,
+        "slider": "right",
+        "drawer": "closed",
+        "red_block": "table",
+        "blue_block": "table",
+        "pink_block": "slider_left",
+        "grasped": 0
+      },
+      "eval_sequence": [
+        "push_blue_block_right",
+        "open_drawer",
+        "turn_on_led",
+        "lift_blue_block_table",
+        "place_in_drawer"
+      ],
+      "successful_subtasks": 0,
+      "subtasks": [
+        {
+          "task": "push_blue_block_right",
+          "language": "go push the blue block right",
+          "success": false,
+          "steps": 120
+        }
+      ]
+    },
+    {
+      "initial_state": {
+        "led": 0,
+        "lightbulb": 0,
+        "slider": "right",
+        "drawer": "closed",
+        "red_block": "table",
+        "blue_block": "slider_right",
+        "pink_block": "slider_left",
+        "grasped": 0
+      },
+      "eval_sequence": [
+        "push_red_block_left",
+        "open_drawer",
+        "lift_pink_block_slider",
+        "place_in_drawer",
+        "lift_red_block_table"
+      ],
+      "successful_subtasks": 0,
+      "subtasks": [
+        {
+          "task": "push_red_block_left",
+          "language": "go push the red block left",
+          "success": false,
+          "steps": 120
+        }
+      ]
+    },
+    {
+      "initial_state": {
+        "led": 0,
+        "lightbulb": 0,
+        "slider": "right",
+        "drawer": "closed",
+        "red_block": "table",
+        "blue_block": "slider_left",
+        "pink_block": "table",
+        "grasped": 0
+      },
+      "eval_sequence": [
+        "move_slider_left",
+        "open_drawer",
+        "turn_on_lightbulb",
+        "rotate_red_block_right",
+        "lift_pink_block_table"
+      ],
+      "successful_subtasks": 0,
+      "subtasks": [
+        {
+          "task": "move_slider_left",
+          "language": "push the sliding door to the left side",
+          "success": false,
+          "steps": 120
+        }
+      ]
+    }
+  ]
+}

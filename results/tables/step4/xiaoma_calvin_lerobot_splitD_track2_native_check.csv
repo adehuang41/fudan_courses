@@ -1,0 +1,6 @@
+repo_id,repo_sha,split,check,present_in_remote_listing,evidence
+xiaoma26/calvin-lerobot,02968bdb6d8aba141f7e277e06d2a172e93a10b5,splitD,validation/.hydra/merged_config.yaml,False,official HF file listing sha 02968bdb6d8aba141f7e277e06d2a172e93a10b5; no native CALVIN files matched
+xiaoma26/calvin-lerobot,02968bdb6d8aba141f7e277e06d2a172e93a10b5,splitD,validation/scene_info.npy,False,official HF file listing sha 02968bdb6d8aba141f7e277e06d2a172e93a10b5; no native CALVIN files matched
+xiaoma26/calvin-lerobot,02968bdb6d8aba141f7e277e06d2a172e93a10b5,splitD,validation/lang_annotations/auto_lang_ann.npy,False,official HF file listing sha 02968bdb6d8aba141f7e277e06d2a172e93a10b5; no native CALVIN files matched
+xiaoma26/calvin-lerobot,02968bdb6d8aba141f7e277e06d2a172e93a10b5,splitD,validation/episode_*.npz,False,official HF file listing sha 02968bdb6d8aba141f7e277e06d2a172e93a10b5; no native CALVIN files matched
+xiaoma26/calvin-lerobot,02968bdb6d8aba141f7e277e06d2a172e93a10b5,splitD,native_candidate_matches_count,False,0

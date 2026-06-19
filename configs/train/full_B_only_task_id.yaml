@@ -1,0 +1,34 @@
+experiment:
+  name: B_only_task_id_act_full
+  stage: task_conditioned
+  output_dir: /data/dechao/cv_final_pj2/outputs/task_conditioned/B_only_task_id_act_full
+dataset:
+  split_name: B_only
+  split_manifest: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/environment_episode_map.csv
+  dataset_root: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D
+  image_keys:
+    - observation.images.image
+    - observation.images.wrist_image
+  validation_fraction: 0.05
+task_conditioning:
+  init_from_visual_checkpoint: /data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt
+train:
+  steps: 50000
+  batch_size: 16
+  num_workers: 48
+  validation_num_workers: 8
+  seed: 20260610
+  log_interval: 50
+  checkpoint_interval: 5000
+  validation_interval: 5000
+  grad_clip_norm: 10.0
+  device: cuda
+  physical_gpu: 4
+  amp: "off"
+  prefetch_factor: 2
+  persistent_workers: true
+  validation_persistent_workers: false
+logging:
+  local_only: true
+  wandb: false
+  swanlab: false

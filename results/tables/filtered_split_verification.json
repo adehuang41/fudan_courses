@@ -1,0 +1,170 @@
+[
+  {
+    "split_name": "B_only",
+    "allowed_environments": [
+      "B"
+    ],
+    "status": "ok",
+    "problems": [],
+    "expected_summary": {
+      "num_episodes": 6115,
+      "num_frames": 367096,
+      "by_environment": {
+        "B": {
+          "num_episodes": 6115,
+          "num_frames": 367096
+        }
+      },
+      "by_shard": {
+        "calvin_task_ABC_D_lerobot_0_4": {
+          "num_episodes": 1482,
+          "num_frames": 89314
+        },
+        "calvin_task_ABC_D_lerobot_1_4": {
+          "num_episodes": 1579,
+          "num_frames": 94901
+        },
+        "calvin_task_ABC_D_lerobot_2_4": {
+          "num_episodes": 1523,
+          "num_frames": 91073
+        },
+        "calvin_task_ABC_D_lerobot_3_4": {
+          "num_episodes": 1531,
+          "num_frames": 91808
+        }
+      }
+    },
+    "dataset_summary": {
+      "num_episodes": 6115,
+      "num_frames": 367096,
+      "by_environment": {
+        "B": {
+          "num_episodes": 6115,
+          "num_frames": 367096
+        }
+      },
+      "by_shard": {
+        "calvin_task_ABC_D_lerobot_0_4": {
+          "num_episodes": 1482,
+          "num_frames": 89314
+        },
+        "calvin_task_ABC_D_lerobot_1_4": {
+          "num_episodes": 1579,
+          "num_frames": 94901
+        },
+        "calvin_task_ABC_D_lerobot_2_4": {
+          "num_episodes": 1523,
+          "num_frames": 91073
+        },
+        "calvin_task_ABC_D_lerobot_3_4": {
+          "num_episodes": 1531,
+          "num_frames": 91808
+        }
+      }
+    },
+    "dataloader_sample": {
+      "batch_size": 32,
+      "max_batches": 16,
+      "seed": 20260531,
+      "sampled_frames": 512,
+      "sampled_environment_counts": {
+        "B": 512
+      },
+      "sampled_unique_episodes": 494
+    }
+  },
+  {
+    "split_name": "ABC_mixed",
+    "allowed_environments": [
+      "A",
+      "B",
+      "C"
+    ],
+    "status": "ok",
+    "problems": [],
+    "expected_summary": {
+      "num_episodes": 17870,
+      "num_frames": 1071743,
+      "by_environment": {
+        "A": {
+          "num_episodes": 6089,
+          "num_frames": 366693
+        },
+        "B": {
+          "num_episodes": 6115,
+          "num_frames": 367096
+        },
+        "C": {
+          "num_episodes": 5666,
+          "num_frames": 337954
+        }
+      },
+      "by_shard": {
+        "calvin_task_ABC_D_lerobot_0_4": {
+          "num_episodes": 4468,
+          "num_frames": 267682
+        },
+        "calvin_task_ABC_D_lerobot_1_4": {
+          "num_episodes": 4468,
+          "num_frames": 268201
+        },
+        "calvin_task_ABC_D_lerobot_2_4": {
+          "num_episodes": 4467,
+          "num_frames": 268487
+        },
+        "calvin_task_ABC_D_lerobot_3_4": {
+          "num_episodes": 4467,
+          "num_frames": 267373
+        }
+      }
+    },
+    "dataset_summary": {
+      "num_episodes": 17870,
+      "num_frames": 1071743,
+      "by_environment": {
+        "A": {
+          "num_episodes": 6089,
+          "num_frames": 366693
+        },
+        "B": {
+          "num_episodes": 6115,
+          "num_frames": 367096
+        },
+        "C": {
+          "num_episodes": 5666,
+          "num_frames": 337954
+        }
+      },
+      "by_shard": {
+        "calvin_task_ABC_D_lerobot_0_4": {
+          "num_episodes": 4468,
+          "num_frames": 267682
+        },
+        "calvin_task_ABC_D_lerobot_1_4": {
+          "num_episodes": 4468,
+          "num_frames": 268201
+        },
+        "calvin_task_ABC_D_lerobot_2_4": {
+          "num_episodes": 4467,
+          "num_frames": 268487
+        },
+        "calvin_task_ABC_D_lerobot_3_4": {
+          "num_episodes": 4467,
+          "num_frames": 267373
+        }
+      }
+    },
+    "dataloader_sample": {
+      "batch_size": 32,
+      "max_batches": 16,
+      "seed": 20260531,
+      "sampled_frames": 512,
+      "sampled_environment_counts": {
+        "A": 192,
+        "B": 160,
+        "C": 160
+      },
+      "sampled_unique_episodes": 506
+    }
+  }
+]

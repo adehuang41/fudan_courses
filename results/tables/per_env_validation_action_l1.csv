@@ -1,0 +1,5 @@
+checkpoint,environment,experiment,runtime_seconds,split,val_action_l1_loss,val_batches,val_episodes,val_frames,val_loss,val_samples
+best_val_action_l1.pt,B,B_only_act_baseline,104.21700725000119,B_only,0.1485578652295052,1155,306,18473,0.14875378512446613,18473
+best_val_action_l1.pt,A,ABC_mixed_act_baseline,96.31450776499696,ABC_mixed,0.1448495958844919,1137,304,18192,0.14501358566333916,18192
+best_val_action_l1.pt,B,ABC_mixed_act_baseline,101.23531613199157,ABC_mixed,0.15814746161366638,1142,306,18269,0.15831306669590894,18269
+best_val_action_l1.pt,C,ABC_mixed_act_baseline,91.50494953298767,ABC_mixed,0.14813653008786562,1067,283,17069,0.14830279987654818,17069

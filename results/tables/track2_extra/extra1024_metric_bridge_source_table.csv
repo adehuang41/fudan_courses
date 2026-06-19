@@ -1,0 +1,5 @@
+experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,d_episodes,d_frames,avg_successful_subtasks,SR@1,model_label
+B_only_act_baseline,0.6497833514311768,0.2096832675442156,6135,369493,0.02,0.02,B-only visual
+ABC_mixed_act_baseline,0.5657362542924328,0.1681750211807068,6135,369493,0.02,0.02,ABC-mixed visual
+B_only_task_id_finetune,0.6052228279528521,0.1887679085743204,6135,369493,0.28,0.2,B-only task-id
+ABC_mixed_task_id_finetune,0.5015655940462002,0.1445857701878824,6135,369493,0.68,0.42,ABC-mixed task-id

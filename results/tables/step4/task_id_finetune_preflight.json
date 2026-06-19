@@ -1,0 +1,230 @@
+{
+  "runs": [
+    {
+      "name": "B_only",
+      "train_config": "/home/dechao/cv_final_pj2/configs/train/finetune_B_only_task_id_from_visual50k_extra50k_seed20260531.yaml",
+      "output_dir": "/data/dechao/cv_final_pj2/outputs/task_conditioned/B_only_task_id_finetune_from_visual50k_extra50k_seed20260531",
+      "output_dir_exists": false,
+      "split_name": "B_only",
+      "validation_fraction": 0.05,
+      "steps": 50000,
+      "batch_size": 16,
+      "num_workers": 48,
+      "validation_num_workers": 8,
+      "seed": 20260531,
+      "log_interval": 50,
+      "checkpoint_interval": 5000,
+      "validation_interval": 5000,
+      "grad_clip_norm": 10.0,
+      "amp": "off",
+      "optimizer_lr": 1e-05,
+      "optimizer_lr_backbone": 1e-05,
+      "optimizer_weight_decay": 0.0001,
+      "scheduler": "none_fixed_lr",
+      "task_embedding_dim": 32,
+      "num_tasks": 34,
+      "task_vocab_num_tasks": 34,
+      "visual_checkpoint": {
+        "checkpoint_path": "/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt",
+        "checkpoint_exists": true,
+        "checkpoint_step": 50000,
+        "strict_load_missing": 0,
+        "strict_load_unexpected": 0,
+        "strict_load_ok": true,
+        "visual_best_val_action_l1_loss": null
+      },
+      "task_id_visual_init_report": {
+        "checkpoint_path": "/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt",
+        "checkpoint_exists": true,
+        "checkpoint_step": 50000,
+        "attempted": true,
+        "used_for_initialization": true,
+        "clean": true,
+        "exact_loaded": 232,
+        "expanded_loaded": 2,
+        "skipped": 0,
+        "missing_after_load": 1,
+        "unexpected_after_load": 0,
+        "expanded_keys": [
+          "act.model.vae_encoder_robot_state_input_proj.weight",
+          "act.model.encoder_robot_state_input_proj.weight"
+        ],
+        "skipped_examples": [],
+        "missing_examples": [
+          "task_embedding.weight"
+        ],
+        "unexpected_examples": [],
+        "note": "clean partial load"
+      },
+      "state_projection_checks": {
+        "act.model.encoder_robot_state_input_proj.weight": {
+          "old_shape": [
+            512,
+            15
+          ],
+          "new_shape": [
+            512,
+            47
+          ],
+          "old_columns_equal": true,
+          "added_columns_shape": [
+            512,
+            32
+          ],
+          "added_columns_std": 0.08377233147621155,
+          "added_columns_abs_sum": 1187.5438232421875,
+          "added_columns_nonzero": true
+        },
+        "act.model.vae_encoder_robot_state_input_proj.weight": {
+          "old_shape": [
+            512,
+            15
+          ],
+          "new_shape": [
+            512,
+            47
+          ],
+          "old_columns_equal": true,
+          "added_columns_shape": [
+            512,
+            32
+          ],
+          "added_columns_std": 0.08401480317115784,
+          "added_columns_abs_sum": 1189.5916748046875,
+          "added_columns_nonzero": true
+        }
+      },
+      "optimizer_param_count": 154,
+      "task_embedding_in_optimizer": true,
+      "expanded_projection_in_optimizer": true,
+      "task_embedding_grad_exists": true,
+      "task_embedding_grad_abs_sum": 0.02810727432370186,
+      "state_projection_grad_checks": {
+        "act.model.encoder_robot_state_input_proj.weight": {
+          "grad_exists": true,
+          "grad_abs_sum": 7.771475791931152
+        },
+        "act.model.vae_encoder_robot_state_input_proj.weight": {
+          "grad_exists": true,
+          "grad_abs_sum": 0.00013510408462025225
+        }
+      },
+      "dry_forward_loss": 0.8463200926780701,
+      "dry_forward_action_l1": 0.8461523056030273,
+      "audit_passed": true
+    },
+    {
+      "name": "ABC_mixed",
+      "train_config": "/home/dechao/cv_final_pj2/configs/train/finetune_ABC_mixed_task_id_from_visual50k_extra50k_seed20260531.yaml",
+      "output_dir": "/data/dechao/cv_final_pj2/outputs/task_conditioned/ABC_mixed_task_id_finetune_from_visual50k_extra50k_seed20260531",
+      "output_dir_exists": false,
+      "split_name": "ABC_mixed",
+      "validation_fraction": 0.05,
+      "steps": 50000,
+      "batch_size": 16,
+      "num_workers": 48,
+      "validation_num_workers": 8,
+      "seed": 20260531,
+      "log_interval": 50,
+      "checkpoint_interval": 5000,
+      "validation_interval": 5000,
+      "grad_clip_norm": 10.0,
+      "amp": "off",
+      "optimizer_lr": 1e-05,
+      "optimizer_lr_backbone": 1e-05,
+      "optimizer_weight_decay": 0.0001,
+      "scheduler": "none_fixed_lr",
+      "task_embedding_dim": 32,
+      "num_tasks": 34,
+      "task_vocab_num_tasks": 34,
+      "visual_checkpoint": {
+        "checkpoint_path": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/best_val_action_l1.pt",
+        "checkpoint_exists": true,
+        "checkpoint_step": 50000,
+        "strict_load_missing": 0,
+        "strict_load_unexpected": 0,
+        "strict_load_ok": true,
+        "visual_best_val_action_l1_loss": null
+      },
+      "task_id_visual_init_report": {
+        "checkpoint_path": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/best_val_action_l1.pt",
+        "checkpoint_exists": true,
+        "checkpoint_step": 50000,
+        "attempted": true,
+        "used_for_initialization": true,
+        "clean": true,
+        "exact_loaded": 232,
+        "expanded_loaded": 2,
+        "skipped": 0,
+        "missing_after_load": 1,
+        "unexpected_after_load": 0,
+        "expanded_keys": [
+          "act.model.vae_encoder_robot_state_input_proj.weight",
+          "act.model.encoder_robot_state_input_proj.weight"
+        ],
+        "skipped_examples": [],
+        "missing_examples": [
+          "task_embedding.weight"
+        ],
+        "unexpected_examples": [],
+        "note": "clean partial load"
+      },
+      "state_projection_checks": {
+        "act.model.encoder_robot_state_input_proj.weight": {
+          "old_shape": [
+            512,
+            15
+          ],
+          "new_shape": [
+            512,
+            47
+          ],
+          "old_columns_equal": true,
+          "added_columns_shape": [
+            512,
+            32
+          ],
+          "added_columns_std": 0.08433994650840759,
+          "added_columns_abs_sum": 1198.745849609375,
+          "added_columns_nonzero": true
+        },
+        "act.model.vae_encoder_robot_state_input_proj.weight": {
+          "old_shape": [
+            512,
+            15
+          ],
+          "new_shape": [
+            512,
+            47
+          ],
+          "old_columns_equal": true,
+          "added_columns_shape": [
+            512,
+            32
+          ],
+          "added_columns_std": 0.08404361456632614,
+          "added_columns_abs_sum": 1193.7232666015625,
+          "added_columns_nonzero": true
+        }
+      },
+      "optimizer_param_count": 154,
+      "task_embedding_in_optimizer": true,
+      "expanded_projection_in_optimizer": true,
+      "task_embedding_grad_exists": true,
+      "task_embedding_grad_abs_sum": 0.04970811307430267,
+      "state_projection_grad_checks": {
+        "act.model.encoder_robot_state_input_proj.weight": {
+          "grad_exists": true,
+          "grad_abs_sum": 12.52174186706543
+        },
+        "act.model.vae_encoder_robot_state_input_proj.weight": {
+          "grad_exists": true,
+          "grad_abs_sum": 8.279160829260945e-05
+        }
+      },
+      "dry_forward_loss": 0.8716375827789307,
+      "dry_forward_action_l1": 0.8714874982833862,
+      "audit_passed": true
+    }
+  ]
+}

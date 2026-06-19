@@ -1,0 +1,631 @@
+condition,episode_count,experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task,valid_action_steps
+clean,2,B_only_act_baseline,0.6822776341890836,0.23541171100986746,130,move_slider_left: move the door to the left side,4290
+brightness_dark,2,B_only_act_baseline,0.6810288569072148,0.21551325738807142,130,move_slider_left: move the door to the left side,4290
+brightness_bright,2,B_only_act_baseline,0.688239896976269,0.2480135244645161,130,move_slider_left: move the door to the left side,4290
+gaussian_blur,2,B_only_act_baseline,0.678039332520672,0.23478473653167714,130,move_slider_left: move the door to the left side,4290
+gaussian_noise,2,B_only_act_baseline,0.6664175802256876,0.2301196184866515,130,move_slider_left: move the door to the left side,4290
+wrist_grayout,2,B_only_act_baseline,0.6674371103108266,0.2320493489593178,130,move_slider_left: move the door to the left side,4290
+clean,2,B_only_act_baseline,0.6688895151450799,0.2584634145616969,130,move_slider_left: slide the door to the left side,4290
+brightness_dark,2,B_only_act_baseline,0.6060607562412867,0.2209224699339865,130,move_slider_left: slide the door to the left side,4290
+brightness_bright,2,B_only_act_baseline,0.6892401229886662,0.26871670257080565,130,move_slider_left: slide the door to the left side,4290
+gaussian_blur,2,B_only_act_baseline,0.6748240206505988,0.26895286425169096,130,move_slider_left: slide the door to the left side,4290
+gaussian_noise,2,B_only_act_baseline,0.646215847592095,0.24669242643174671,130,move_slider_left: slide the door to the left side,4290
+wrist_grayout,2,B_only_act_baseline,0.6792317669748109,0.2685922214479157,130,move_slider_left: slide the door to the left side,4290
+clean,3,B_only_act_baseline,0.7174276976120142,0.20601823644852954,195,turn_off_lightbulb: slide down the switch,6435
+brightness_dark,3,B_only_act_baseline,0.6887553651902636,0.20359170187563647,195,turn_off_lightbulb: slide down the switch,6435
+brightness_bright,3,B_only_act_baseline,0.7212392049010949,0.21378526242754015,195,turn_off_lightbulb: slide down the switch,6435
+gaussian_blur,3,B_only_act_baseline,0.7247139608228838,0.21332942275840072,195,turn_off_lightbulb: slide down the switch,6435
+gaussian_noise,3,B_only_act_baseline,0.712666711728916,0.21020948751373156,195,turn_off_lightbulb: slide down the switch,6435
+wrist_grayout,3,B_only_act_baseline,0.6908961889997599,0.2143742290661541,195,turn_off_lightbulb: slide down the switch,6435
+clean,3,B_only_act_baseline,0.7492728971957495,0.2735921739816054,159,turn_on_led: toggle the button to turn on the green light,4401
+brightness_dark,3,B_only_act_baseline,0.7364825942823028,0.2542856249406987,159,turn_on_led: toggle the button to turn on the green light,4401
+brightness_bright,3,B_only_act_baseline,0.7217001677077968,0.2662119289163791,159,turn_on_led: toggle the button to turn on the green light,4401
+gaussian_blur,3,B_only_act_baseline,0.7657649229861174,0.2843460990363591,159,turn_on_led: toggle the button to turn on the green light,4401
+gaussian_noise,3,B_only_act_baseline,0.7406650807596163,0.26686419487835333,159,turn_on_led: toggle the button to turn on the green light,4401
+wrist_grayout,3,B_only_act_baseline,0.7399165817549503,0.24679988528441812,159,turn_on_led: toggle the button to turn on the green light,4401
+clean,1,B_only_act_baseline,0.6203705350041906,0.2006714968930631,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+brightness_dark,1,B_only_act_baseline,0.6461738872877407,0.2345746039629697,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+brightness_bright,1,B_only_act_baseline,0.6398243836152963,0.2090280400646793,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+gaussian_blur,1,B_only_act_baseline,0.6290203156409325,0.2217009278801414,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+gaussian_noise,1,B_only_act_baseline,0.6518822777958024,0.23720179434581634,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+wrist_grayout,1,B_only_act_baseline,0.6965777406682978,0.24796837685388443,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+clean,1,B_only_act_baseline,0.6053910326409888,0.18507248198553358,65,turn_on_lightbulb: push the switch upwards,2145
+brightness_dark,1,B_only_act_baseline,0.5719577403771968,0.19829439440449992,65,turn_on_lightbulb: push the switch upwards,2145
+brightness_bright,1,B_only_act_baseline,0.6101052613406034,0.201514744576001,65,turn_on_lightbulb: push the switch upwards,2145
+gaussian_blur,1,B_only_act_baseline,0.6031543832677942,0.1967781757697081,65,turn_on_lightbulb: push the switch upwards,2145
+gaussian_noise,1,B_only_act_baseline,0.6596036390824751,0.24048333507039885,65,turn_on_lightbulb: push the switch upwards,2145
+wrist_grayout,1,B_only_act_baseline,0.5307533845082149,0.15259274325686775,65,turn_on_lightbulb: push the switch upwards,2145
+clean,1,B_only_act_baseline,0.7633491132484053,0.2601944173608984,65,turn_on_led: push down the button to turn on the led,2145
+brightness_dark,1,B_only_act_baseline,0.7623547527657483,0.2533120737129793,65,turn_on_led: push down the button to turn on the led,2145
+brightness_bright,1,B_only_act_baseline,0.7655844702706351,0.2579879209433958,65,turn_on_led: push down the button to turn on the led,2145
+gaussian_blur,1,B_only_act_baseline,0.7537808557053705,0.2557711712963931,65,turn_on_led: push down the button to turn on the led,2145
+gaussian_noise,1,B_only_act_baseline,0.7526363934273328,0.2561380109586916,65,turn_on_led: push down the button to turn on the led,2145
+wrist_grayout,1,B_only_act_baseline,0.7946075220009584,0.27198006830690225,65,turn_on_led: push down the button to turn on the led,2145
+clean,1,B_only_act_baseline,0.5647374555503294,0.15313708108145516,65,open_drawer: open the cabinet drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6508644054779957,0.17486462904301,65,open_drawer: open the cabinet drawer,2145
+brightness_bright,1,B_only_act_baseline,0.5992218061403318,0.17080294597637166,65,open_drawer: open the cabinet drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.5901257977976309,0.16024625125901523,65,open_drawer: open the cabinet drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.7296331267495018,0.2171585340560217,65,open_drawer: open the cabinet drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.7467870239095215,0.20728853172038025,65,open_drawer: open the cabinet drawer,2145
+clean,1,B_only_act_baseline,0.44663124535427545,0.10215117339090708,65,open_drawer: grasp the drawer handle and open it,2145
+brightness_dark,1,B_only_act_baseline,0.45859034957784117,0.1055876286475213,65,open_drawer: grasp the drawer handle and open it,2145
+brightness_bright,1,B_only_act_baseline,0.5106041674529795,0.1472816020538122,65,open_drawer: grasp the drawer handle and open it,2145
+gaussian_blur,1,B_only_act_baseline,0.44404310251211193,0.10561517448056908,65,open_drawer: grasp the drawer handle and open it,2145
+gaussian_noise,1,B_only_act_baseline,0.5819461372348812,0.17704032722648444,65,open_drawer: grasp the drawer handle and open it,2145
+wrist_grayout,1,B_only_act_baseline,0.5791119735081356,0.14293820949304195,65,open_drawer: grasp the drawer handle and open it,2145
+clean,1,B_only_act_baseline,0.5886069670622245,0.20530643785472238,65,turn_on_lightbulb: move up the switch,2145
+brightness_dark,1,B_only_act_baseline,0.5731303776815022,0.21028110403797048,65,turn_on_lightbulb: move up the switch,2145
+brightness_bright,1,B_only_act_baseline,0.6272399630659309,0.21962526975930868,65,turn_on_lightbulb: move up the switch,2145
+gaussian_blur,1,B_only_act_baseline,0.6013971791758047,0.22273215132080393,65,turn_on_lightbulb: move up the switch,2145
+gaussian_noise,1,B_only_act_baseline,0.6175249655009348,0.223936472509132,65,turn_on_lightbulb: move up the switch,2145
+wrist_grayout,1,B_only_act_baseline,0.5757959762812058,0.2090354846074031,65,turn_on_lightbulb: move up the switch,2145
+clean,1,B_only_act_baseline,0.3914402132069235,0.10344421078354527,65,open_drawer: pull the handle of the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.5394619648908322,0.12908527227866026,65,open_drawer: pull the handle of the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.46715366172663497,0.13087825313870446,65,open_drawer: pull the handle of the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.4038070227914836,0.10580278967286681,65,open_drawer: pull the handle of the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.657017451288539,0.19868121922829926,65,open_drawer: pull the handle of the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.7832290855201927,0.22317779236462287,65,open_drawer: pull the handle of the drawer,2145
+clean,1,B_only_act_baseline,0.603416635574915,0.21538172304094375,65,move_slider_left: move the sliding door to the left,2145
+brightness_dark,1,B_only_act_baseline,0.7117486417353094,0.2314043993319506,65,move_slider_left: move the sliding door to the left,2145
+brightness_bright,1,B_only_act_baseline,0.6423305831589066,0.23099815859780326,65,move_slider_left: move the sliding door to the left,2145
+gaussian_blur,1,B_only_act_baseline,0.6380143234660695,0.23262867825133698,65,move_slider_left: move the sliding door to the left,2145
+gaussian_noise,1,B_only_act_baseline,0.5747974834956608,0.2063956640181921,65,move_slider_left: move the sliding door to the left,2145
+wrist_grayout,1,B_only_act_baseline,0.6062085769035956,0.19713934164145688,65,move_slider_left: move the sliding door to the left,2145
+clean,2,B_only_act_baseline,0.7241302314076707,0.23813309659280946,97,place_in_drawer: put the block in the drawer,2401
+clean,1,B_only_act_baseline,0.5945694362572724,0.1593775458134298,48,turn_off_lightbulb: toggle the light switch to turn off the light bulb,1176
+brightness_dark,2,B_only_act_baseline,0.8108018369374513,0.28498741035877917,97,place_in_drawer: put the block in the drawer,2401
+brightness_dark,1,B_only_act_baseline,0.6404798668605594,0.19492856661478677,48,turn_off_lightbulb: toggle the light switch to turn off the light bulb,1176
+brightness_bright,2,B_only_act_baseline,0.6779113433784779,0.2264773398114675,97,place_in_drawer: put the block in the drawer,2401
+brightness_bright,1,B_only_act_baseline,0.5231527374483522,0.13943755927887555,48,turn_off_lightbulb: toggle the light switch to turn off the light bulb,1176
+gaussian_blur,2,B_only_act_baseline,0.7544879382502254,0.2593606974287448,97,place_in_drawer: put the block in the drawer,2401
+gaussian_blur,1,B_only_act_baseline,0.6658009650987601,0.21046834755453586,48,turn_off_lightbulb: toggle the light switch to turn off the light bulb,1176
+gaussian_noise,2,B_only_act_baseline,0.8175932554456191,0.2790407680944535,97,place_in_drawer: put the block in the drawer,2401
+gaussian_noise,1,B_only_act_baseline,0.6523922505717004,0.19244047576530798,48,turn_off_lightbulb: toggle the light switch to turn off the light bulb,1176
+wrist_grayout,2,B_only_act_baseline,0.8315337871380264,0.2765239530637574,97,place_in_drawer: put the block in the drawer,2401
+wrist_grayout,1,B_only_act_baseline,0.5909893827836877,0.15211240492536676,48,turn_off_lightbulb: toggle the light switch to turn off the light bulb,1176
+clean,1,B_only_act_baseline,0.6996726383656372,0.24381373531215794,65,move_slider_right: move the door to the right side,2145
+brightness_dark,1,B_only_act_baseline,0.5338793008755415,0.1391625555681857,65,move_slider_right: move the door to the right side,2145
+brightness_bright,1,B_only_act_baseline,0.7101060792362138,0.2540911160109244,65,move_slider_right: move the door to the right side,2145
+gaussian_blur,1,B_only_act_baseline,0.6884791100775445,0.24137776122663246,65,move_slider_right: move the door to the right side,2145
+gaussian_noise,1,B_only_act_baseline,0.6817088332924095,0.22095678385360773,65,move_slider_right: move the door to the right side,2145
+wrist_grayout,1,B_only_act_baseline,0.5914566063221954,0.18012016918355134,65,move_slider_right: move the door to the right side,2145
+clean,1,B_only_act_baseline,0.6438185601166158,0.21702914636531276,65,turn_on_lightbulb: turn on the yellow light,2145
+brightness_dark,1,B_only_act_baseline,0.5551803991550848,0.20218164184035517,65,turn_on_lightbulb: turn on the yellow light,2145
+brightness_bright,1,B_only_act_baseline,0.6394089543815458,0.22056903206345402,65,turn_on_lightbulb: turn on the yellow light,2145
+gaussian_blur,1,B_only_act_baseline,0.6437837928126663,0.22253535247984388,65,turn_on_lightbulb: turn on the yellow light,2145
+gaussian_noise,1,B_only_act_baseline,0.5880362024475565,0.19812284133611344,65,turn_on_lightbulb: turn on the yellow light,2145
+wrist_grayout,1,B_only_act_baseline,0.609717286923231,0.26323627654687587,65,turn_on_lightbulb: turn on the yellow light,2145
+clean,3,B_only_act_baseline,0.6697283073497426,0.19605786588861757,179,lift_blue_block_table: grasp the blue block and lift it up,5515
+brightness_dark,3,B_only_act_baseline,0.6531641686554014,0.18687947096254615,179,lift_blue_block_table: grasp the blue block and lift it up,5515
+brightness_bright,3,B_only_act_baseline,0.7259317594092678,0.22226739967290857,179,lift_blue_block_table: grasp the blue block and lift it up,5515
+gaussian_blur,3,B_only_act_baseline,0.6903866649677587,0.20810852707891386,179,lift_blue_block_table: grasp the blue block and lift it up,5515
+gaussian_noise,3,B_only_act_baseline,0.6915460823268073,0.20178203256678942,179,lift_blue_block_table: grasp the blue block and lift it up,5515
+wrist_grayout,3,B_only_act_baseline,0.6868843338986997,0.21351755315073875,179,lift_blue_block_table: grasp the blue block and lift it up,5515
+clean,1,B_only_act_baseline,0.6425898422370782,0.23776258407653747,65,turn_off_led: toggle the button to turn off the led light,2145
+brightness_dark,1,B_only_act_baseline,0.6329642888112661,0.22261254387301999,65,turn_off_led: toggle the button to turn off the led light,2145
+brightness_bright,1,B_only_act_baseline,0.6587975345767818,0.23775278631941382,65,turn_off_led: toggle the button to turn off the led light,2145
+gaussian_blur,1,B_only_act_baseline,0.6527727256010184,0.24661052921713092,65,turn_off_led: toggle the button to turn off the led light,2145
+gaussian_noise,1,B_only_act_baseline,0.6933337251940768,0.2606474720316254,65,turn_off_led: toggle the button to turn off the led light,2145
+wrist_grayout,1,B_only_act_baseline,0.6534499380535338,0.23693358372578097,65,turn_off_led: toggle the button to turn off the led light,2145
+clean,1,B_only_act_baseline,0.5847686248662429,0.20672090600579332,65,push_into_drawer: sweep the block into the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.609689219999107,0.21870268740099824,65,push_into_drawer: sweep the block into the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.6254843631189265,0.22395280299089845,65,push_into_drawer: sweep the block into the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.5667816623226627,0.20794152624401457,65,push_into_drawer: sweep the block into the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.5729750219441,0.2151352054628975,65,push_into_drawer: sweep the block into the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.5900548151323012,0.22221830953489413,65,push_into_drawer: sweep the block into the drawer,2145
+clean,2,B_only_act_baseline,0.717130424513485,0.23419484411364114,130,move_slider_right: push the sliding door to the right,4290
+brightness_dark,2,B_only_act_baseline,0.6121398402498914,0.17368909584614503,130,move_slider_right: push the sliding door to the right,4290
+brightness_bright,2,B_only_act_baseline,0.7129656136214555,0.23921974561947248,130,move_slider_right: push the sliding door to the right,4290
+gaussian_blur,2,B_only_act_baseline,0.681293402613698,0.21269276460091194,130,move_slider_right: push the sliding door to the right,4290
+gaussian_noise,2,B_only_act_baseline,0.7268356613187126,0.2508826892692726,130,move_slider_right: push the sliding door to the right,4290
+wrist_grayout,2,B_only_act_baseline,0.661303071319918,0.20331971183682218,130,move_slider_right: push the sliding door to the right,4290
+clean,2,B_only_act_baseline,0.776221610179473,0.2680996208400517,130,rotate_red_block_left: take the red block and rotate it left,4290
+brightness_dark,2,B_only_act_baseline,0.7632235240467858,0.2304460992743244,130,rotate_red_block_left: take the red block and rotate it left,4290
+brightness_bright,2,B_only_act_baseline,0.830802264516845,0.3040347380158586,130,rotate_red_block_left: take the red block and rotate it left,4290
+gaussian_blur,2,B_only_act_baseline,0.7523157048455644,0.24799768582527296,130,rotate_red_block_left: take the red block and rotate it left,4290
+gaussian_noise,2,B_only_act_baseline,0.7925355600905823,0.2811719985116215,130,rotate_red_block_left: take the red block and rotate it left,4290
+wrist_grayout,2,B_only_act_baseline,0.8048127228523786,0.25991996504884934,130,rotate_red_block_left: take the red block and rotate it left,4290
+clean,1,B_only_act_baseline,0.4332700400681167,0.13477843721588573,65,close_drawer: close the cabinet drawer,2145
+brightness_dark,1,B_only_act_baseline,0.5215231483791655,0.16509572332238023,65,close_drawer: close the cabinet drawer,2145
+brightness_bright,1,B_only_act_baseline,0.47280589837929504,0.17159396704141194,65,close_drawer: close the cabinet drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.45712902602298316,0.14101552545647203,65,close_drawer: close the cabinet drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.525835575122179,0.17300969880301278,65,close_drawer: close the cabinet drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.6348081793183292,0.20748834713196856,65,close_drawer: close the cabinet drawer,2145
+clean,1,B_only_act_baseline,0.6948273946791937,0.21443083148934705,65,lift_red_block_drawer: grasp the red block from the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.7804005496151798,0.25279995594824944,65,lift_red_block_drawer: grasp the red block from the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.6795124508720852,0.19443100207732433,65,lift_red_block_drawer: grasp the red block from the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.7316717137029637,0.23423565558262996,65,lift_red_block_drawer: grasp the red block from the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.757109531957707,0.23743117819458018,65,lift_red_block_drawer: grasp the red block from the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.8003663370619605,0.2447808795399242,65,lift_red_block_drawer: grasp the red block from the drawer,2145
+clean,1,B_only_act_baseline,0.6836170372452244,0.23973472317154132,42,unstack_block: remove the top block,903
+brightness_dark,1,B_only_act_baseline,0.7395820396645426,0.27526112063703156,42,unstack_block: remove the top block,903
+brightness_bright,1,B_only_act_baseline,0.6951782151578141,0.26206434167199,42,unstack_block: remove the top block,903
+gaussian_blur,1,B_only_act_baseline,0.7279263814592113,0.2898621538963674,42,unstack_block: remove the top block,903
+gaussian_noise,1,B_only_act_baseline,0.7687585530751039,0.3021160984054394,42,unstack_block: remove the top block,903
+wrist_grayout,1,B_only_act_baseline,0.6032360460803095,0.17742085928329276,42,unstack_block: remove the top block,903
+clean,1,B_only_act_baseline,0.7750356807575359,0.24780194691090515,65,turn_off_lightbulb: turn off the yellow lamp,2145
+brightness_dark,1,B_only_act_baseline,0.7432373865580424,0.2462113082071483,65,turn_off_lightbulb: turn off the yellow lamp,2145
+brightness_bright,1,B_only_act_baseline,0.7861552618600272,0.25447073341646553,65,turn_off_lightbulb: turn off the yellow lamp,2145
+gaussian_blur,1,B_only_act_baseline,0.7812606568261857,0.25402921839551135,65,turn_off_lightbulb: turn off the yellow lamp,2145
+gaussian_noise,1,B_only_act_baseline,0.7912369541354947,0.2678130380876295,65,turn_off_lightbulb: turn off the yellow lamp,2145
+wrist_grayout,1,B_only_act_baseline,0.7929336126748617,0.2688250004669606,65,turn_off_lightbulb: turn off the yellow lamp,2145
+clean,1,B_only_act_baseline,0.6524051036352004,0.19626356863872313,65,lift_red_block_slider: pick up the red block in the sliding cabinet,2145
+brightness_dark,1,B_only_act_baseline,0.6094374985366197,0.1880024860669802,65,lift_red_block_slider: pick up the red block in the sliding cabinet,2145
+brightness_bright,1,B_only_act_baseline,0.7006339654023751,0.21592336849018293,65,lift_red_block_slider: pick up the red block in the sliding cabinet,2145
+gaussian_blur,1,B_only_act_baseline,0.6061037453579339,0.1690910181044897,65,lift_red_block_slider: pick up the red block in the sliding cabinet,2145
+gaussian_noise,1,B_only_act_baseline,0.6959435182216364,0.2195954367037102,65,lift_red_block_slider: pick up the red block in the sliding cabinet,2145
+wrist_grayout,1,B_only_act_baseline,0.7324550722028825,0.27040672411809075,65,lift_red_block_slider: pick up the red block in the sliding cabinet,2145
+clean,1,B_only_act_baseline,0.7273870413516944,0.21154985901041504,65,lift_red_block_slider: grasp the red block lying in the cabinet,2145
+brightness_dark,1,B_only_act_baseline,0.7304660968609028,0.23366094888387978,65,lift_red_block_slider: grasp the red block lying in the cabinet,2145
+brightness_bright,1,B_only_act_baseline,0.8057519478913827,0.23664664510008576,65,lift_red_block_slider: grasp the red block lying in the cabinet,2145
+gaussian_blur,1,B_only_act_baseline,0.6820179692197552,0.18925638191707128,65,lift_red_block_slider: grasp the red block lying in the cabinet,2145
+gaussian_noise,1,B_only_act_baseline,0.7227271822504786,0.22506874256280118,65,lift_red_block_slider: grasp the red block lying in the cabinet,2145
+wrist_grayout,1,B_only_act_baseline,0.7522981357542705,0.24895429123730173,65,lift_red_block_slider: grasp the red block lying in the cabinet,2145
+clean,2,B_only_act_baseline,0.3730824394699259,0.10750961011542982,130,close_drawer: push the handle of the drawer,4290
+brightness_dark,2,B_only_act_baseline,0.4087439758953078,0.11688256183545509,130,close_drawer: push the handle of the drawer,4290
+brightness_bright,2,B_only_act_baseline,0.4834315902584202,0.17520474812367579,130,close_drawer: push the handle of the drawer,4290
+gaussian_blur,2,B_only_act_baseline,0.37408458655411664,0.10985397584351785,130,close_drawer: push the handle of the drawer,4290
+gaussian_noise,2,B_only_act_baseline,0.4953518116906846,0.1688166350473613,130,close_drawer: push the handle of the drawer,4290
+wrist_grayout,2,B_only_act_baseline,0.5535741580155862,0.18237973048097086,130,close_drawer: push the handle of the drawer,4290
+clean,1,B_only_act_baseline,0.7614854031866723,0.27751876471084713,65,move_slider_right: slide the door to the right,2145
+brightness_dark,1,B_only_act_baseline,0.6908994650864577,0.23521983588571513,65,move_slider_right: slide the door to the right,2145
+brightness_bright,1,B_only_act_baseline,0.7691720989200619,0.27875235199809195,65,move_slider_right: slide the door to the right,2145
+gaussian_blur,1,B_only_act_baseline,0.7559957073483513,0.27919474052977966,65,move_slider_right: slide the door to the right,2145
+gaussian_noise,1,B_only_act_baseline,0.8006078492392312,0.29849310225341624,65,move_slider_right: slide the door to the right,2145
+wrist_grayout,1,B_only_act_baseline,0.7341028766397075,0.25443486333727006,65,move_slider_right: slide the door to the right,2145
+clean,2,B_only_act_baseline,0.7137973007106241,0.24092111419210266,130,turn_on_lightbulb: move the light switch to turn on the yellow light,4290
+brightness_dark,2,B_only_act_baseline,0.6598576787230256,0.23711329205926165,130,turn_on_lightbulb: move the light switch to turn on the yellow light,4290
+brightness_bright,2,B_only_act_baseline,0.7119435433979396,0.23860512204143233,130,turn_on_lightbulb: move the light switch to turn on the yellow light,4290
+gaussian_blur,2,B_only_act_baseline,0.7230759440602123,0.24907674073299646,130,turn_on_lightbulb: move the light switch to turn on the yellow light,4290
+gaussian_noise,2,B_only_act_baseline,0.6726075073261877,0.22854907262575377,130,turn_on_lightbulb: move the light switch to turn on the yellow light,4290
+wrist_grayout,2,B_only_act_baseline,0.6298398148723733,0.21744213515903169,130,turn_on_lightbulb: move the light switch to turn on the yellow light,4290
+clean,1,B_only_act_baseline,0.5108771770666569,0.1387960437691454,65,lift_red_block_table: pick up the red block from the table,2145
+brightness_dark,1,B_only_act_baseline,0.4529272529946301,0.1178688964405498,65,lift_red_block_table: pick up the red block from the table,2145
+brightness_bright,1,B_only_act_baseline,0.5897325929863391,0.17016869243128951,65,lift_red_block_table: pick up the red block from the table,2145
+gaussian_blur,1,B_only_act_baseline,0.5352599091344066,0.14850407192955564,65,lift_red_block_table: pick up the red block from the table,2145
+gaussian_noise,1,B_only_act_baseline,0.5890829831331998,0.1577059635908017,65,lift_red_block_table: pick up the red block from the table,2145
+wrist_grayout,1,B_only_act_baseline,0.5854665816882194,0.17735357686276837,65,lift_red_block_table: pick up the red block from the table,2145
+clean,1,B_only_act_baseline,0.6109950933542165,0.18419414586795396,65,rotate_pink_block_right: rotate the pink block 90 degrees to the right,2145
+brightness_dark,1,B_only_act_baseline,0.4850901557968094,0.13353421222834122,65,rotate_pink_block_right: rotate the pink block 90 degrees to the right,2145
+brightness_bright,1,B_only_act_baseline,0.5752452094039637,0.1742129825092815,65,rotate_pink_block_right: rotate the pink block 90 degrees to the right,2145
+gaussian_blur,1,B_only_act_baseline,0.5387574927234428,0.16046159486551503,65,rotate_pink_block_right: rotate the pink block 90 degrees to the right,2145
+gaussian_noise,1,B_only_act_baseline,0.5942797293235889,0.19775735260921837,65,rotate_pink_block_right: rotate the pink block 90 degrees to the right,2145
+wrist_grayout,1,B_only_act_baseline,0.7074599185547271,0.24532190109148766,65,rotate_pink_block_right: rotate the pink block 90 degrees to the right,2145
+clean,1,B_only_act_baseline,0.6066437896235641,0.18251347477500374,65,lift_blue_block_table: lift the blue block,2145
+brightness_dark,1,B_only_act_baseline,0.6185310754067811,0.19129112599652645,65,lift_blue_block_table: lift the blue block,2145
+brightness_bright,1,B_only_act_baseline,0.6268458980899472,0.19859704488601201,65,lift_blue_block_table: lift the blue block,2145
+gaussian_blur,1,B_only_act_baseline,0.6105316656571883,0.18169609942199627,65,lift_blue_block_table: lift the blue block,2145
+gaussian_noise,1,B_only_act_baseline,0.6005374406839346,0.17899988754328353,65,lift_blue_block_table: lift the blue block,2145
+wrist_grayout,1,B_only_act_baseline,0.7165106067727337,0.2652199501202101,65,lift_blue_block_table: lift the blue block,2145
+clean,2,B_only_act_baseline,0.4195186212782934,0.12241076356047517,130,close_drawer: grasp the drawer handle and close it,4290
+brightness_dark,2,B_only_act_baseline,0.48979293376733335,0.16067295969624223,130,close_drawer: grasp the drawer handle and close it,4290
+brightness_bright,2,B_only_act_baseline,0.5258396553826499,0.18918565336640897,130,close_drawer: grasp the drawer handle and close it,4290
+gaussian_blur,2,B_only_act_baseline,0.4671687668734616,0.15051891125721253,130,close_drawer: grasp the drawer handle and close it,4290
+gaussian_noise,2,B_only_act_baseline,0.5604452339839904,0.19036684974685653,130,close_drawer: grasp the drawer handle and close it,4290
+wrist_grayout,2,B_only_act_baseline,0.6331312172499411,0.2118861275317865,130,close_drawer: grasp the drawer handle and close it,4290
+clean,1,B_only_act_baseline,0.7784464918372237,0.23676010938314768,65,rotate_pink_block_left: take the pink block and turn it left,2145
+brightness_dark,1,B_only_act_baseline,0.7833482197035244,0.22717016486378458,65,rotate_pink_block_left: take the pink block and turn it left,2145
+brightness_bright,1,B_only_act_baseline,0.7680549086152495,0.22769257197410236,65,rotate_pink_block_left: take the pink block and turn it left,2145
+gaussian_blur,1,B_only_act_baseline,0.8238845215135918,0.26287004818251003,65,rotate_pink_block_left: take the pink block and turn it left,2145
+gaussian_noise,1,B_only_act_baseline,0.8134113635375346,0.24552214524367233,65,rotate_pink_block_left: take the pink block and turn it left,2145
+wrist_grayout,1,B_only_act_baseline,0.7451841910759529,0.2206121655094834,65,rotate_pink_block_left: take the pink block and turn it left,2145
+clean,2,B_only_act_baseline,0.6758251980665521,0.2449703985022479,103,turn_on_led: toggle the button to turn on the led light,2886
+brightness_dark,2,B_only_act_baseline,0.6805072537909261,0.24035739195298444,103,turn_on_led: toggle the button to turn on the led light,2886
+brightness_bright,2,B_only_act_baseline,0.6682672883104468,0.23973603978415264,103,turn_on_led: toggle the button to turn on the led light,2886
+gaussian_blur,2,B_only_act_baseline,0.6772610840260681,0.24421945949224372,103,turn_on_led: toggle the button to turn on the led light,2886
+gaussian_noise,2,B_only_act_baseline,0.6719563168802423,0.24299496838319729,103,turn_on_led: toggle the button to turn on the led light,2886
+wrist_grayout,2,B_only_act_baseline,0.7054170031628271,0.24993055285575214,103,turn_on_led: toggle the button to turn on the led light,2886
+clean,1,B_only_act_baseline,0.5294628373869172,0.1594920277000069,65,lift_red_block_slider: grasp the red block lying in the slider,2145
+brightness_dark,1,B_only_act_baseline,0.5771343403326207,0.1772304897899037,65,lift_red_block_slider: grasp the red block lying in the slider,2145
+brightness_bright,1,B_only_act_baseline,0.5208862518414711,0.1480007271190266,65,lift_red_block_slider: grasp the red block lying in the slider,2145
+gaussian_blur,1,B_only_act_baseline,0.5139521616600055,0.14770384971753303,65,lift_red_block_slider: grasp the red block lying in the slider,2145
+gaussian_noise,1,B_only_act_baseline,0.5123527547815344,0.14976322012585955,65,lift_red_block_slider: grasp the red block lying in the slider,2145
+wrist_grayout,1,B_only_act_baseline,0.6240516230379626,0.22078932839316445,65,lift_red_block_slider: grasp the red block lying in the slider,2145
+clean,1,B_only_act_baseline,0.7796859255005351,0.2220275562682074,65,"rotate_pink_block_left: grasp the pink block, then rotate it left",2145
+brightness_dark,1,B_only_act_baseline,0.843596461833099,0.270075455721799,65,"rotate_pink_block_left: grasp the pink block, then rotate it left",2145
+brightness_bright,1,B_only_act_baseline,0.7584706722479283,0.20923973147646013,65,"rotate_pink_block_left: grasp the pink block, then rotate it left",2145
+gaussian_blur,1,B_only_act_baseline,0.8299718442060056,0.2553305518257987,65,"rotate_pink_block_left: grasp the pink block, then rotate it left",2145
+gaussian_noise,1,B_only_act_baseline,0.7600534397008377,0.22114062987285338,65,"rotate_pink_block_left: grasp the pink block, then rotate it left",2145
+wrist_grayout,1,B_only_act_baseline,0.7914115215356137,0.23731229757016156,65,"rotate_pink_block_left: grasp the pink block, then rotate it left",2145
+clean,1,B_only_act_baseline,0.7311866968582361,0.2714000162981448,65,unstack_block: take off the block that is on top of the other one,2145
+brightness_dark,1,B_only_act_baseline,0.7492538776073779,0.27349157117423795,65,unstack_block: take off the block that is on top of the other one,2145
+brightness_bright,1,B_only_act_baseline,0.752323797977332,0.2821892964772451,65,unstack_block: take off the block that is on top of the other one,2145
+gaussian_blur,1,B_only_act_baseline,0.7569870662022304,0.2799623267395751,65,unstack_block: take off the block that is on top of the other one,2145
+gaussian_noise,1,B_only_act_baseline,0.7965078481228955,0.28567124899331625,65,unstack_block: take off the block that is on top of the other one,2145
+wrist_grayout,1,B_only_act_baseline,0.7223638449436103,0.2646015089271944,65,unstack_block: take off the block that is on top of the other one,2145
+clean,1,B_only_act_baseline,0.737694531077748,0.2385766166788,65,lift_pink_block_slider: pick up the pink block from the shelf,2145
+brightness_dark,1,B_only_act_baseline,0.7814962120958062,0.2577252726534228,65,lift_pink_block_slider: pick up the pink block from the shelf,2145
+brightness_bright,1,B_only_act_baseline,0.7254567001487587,0.22572358911370102,65,lift_pink_block_slider: pick up the pink block from the shelf,2145
+gaussian_blur,1,B_only_act_baseline,0.7033700599060668,0.225867429035249,65,lift_pink_block_slider: pick up the pink block from the shelf,2145
+gaussian_noise,1,B_only_act_baseline,0.7126990729556495,0.22276489614765524,65,lift_pink_block_slider: pick up the pink block from the shelf,2145
+wrist_grayout,1,B_only_act_baseline,0.7335047742981455,0.23123106452333422,65,lift_pink_block_slider: pick up the pink block from the shelf,2145
+clean,1,B_only_act_baseline,0.6491952426722642,0.2573383108049738,34,turn_on_led: push down the button to turn on the green light,595
+clean,2,B_only_act_baseline,0.5166334124778955,0.16518295203854225,106,lift_pink_block_table: lift the pink block,3006
+brightness_dark,1,B_only_act_baseline,0.692990758095612,0.26499365558143423,34,turn_on_led: push down the button to turn on the green light,595
+brightness_dark,2,B_only_act_baseline,0.5085627968779717,0.1604113952932946,106,lift_pink_block_table: lift the pink block,3006
+brightness_bright,1,B_only_act_baseline,0.6799309423132962,0.26410973435547314,34,turn_on_led: push down the button to turn on the green light,595
+brightness_bright,2,B_only_act_baseline,0.5181746270060369,0.16310396881999087,106,lift_pink_block_table: lift the pink block,3006
+gaussian_blur,1,B_only_act_baseline,0.6522673524442125,0.2582865259655956,34,turn_on_led: push down the button to turn on the green light,595
+gaussian_blur,2,B_only_act_baseline,0.5628434876821848,0.20229734477406727,106,lift_pink_block_table: lift the pink block,3006
+gaussian_noise,1,B_only_act_baseline,0.6985185257383898,0.2676246264115387,34,turn_on_led: push down the button to turn on the green light,595
+gaussian_noise,2,B_only_act_baseline,0.5421648133153437,0.1721916969268225,106,lift_pink_block_table: lift the pink block,3006
+wrist_grayout,1,B_only_act_baseline,0.725083833668126,0.22833505412395977,34,turn_on_led: push down the button to turn on the green light,595
+wrist_grayout,2,B_only_act_baseline,0.5066529497902221,0.18102561960133318,106,lift_pink_block_table: lift the pink block,3006
+clean,1,B_only_act_baseline,0.7674077812259343,0.2762063633851939,43,unstack_block: take off the stacked block,946
+brightness_dark,1,B_only_act_baseline,0.7510977933789192,0.27684519795700346,43,unstack_block: take off the stacked block,946
+brightness_bright,1,B_only_act_baseline,0.7575054040526883,0.2709225799266178,43,unstack_block: take off the stacked block,946
+gaussian_blur,1,B_only_act_baseline,0.7985616811846218,0.28974654162552954,43,unstack_block: take off the stacked block,946
+gaussian_noise,1,B_only_act_baseline,0.8094667834264927,0.28932890352688684,43,unstack_block: take off the stacked block,946
+wrist_grayout,1,B_only_act_baseline,0.6974719944262353,0.20966826850501694,43,unstack_block: take off the stacked block,946
+clean,1,B_only_act_baseline,0.7942930855241572,0.27490878339861335,34,rotate_pink_block_right: take the pink block and turn it right,595
+brightness_dark,1,B_only_act_baseline,0.8107486918908493,0.29188772106514116,34,rotate_pink_block_right: take the pink block and turn it right,595
+brightness_bright,1,B_only_act_baseline,0.7981092556040971,0.2870031898619891,34,rotate_pink_block_right: take the pink block and turn it right,595
+gaussian_blur,1,B_only_act_baseline,0.8025554150378719,0.28549401084629716,34,rotate_pink_block_right: take the pink block and turn it right,595
+gaussian_noise,1,B_only_act_baseline,0.7830276967812272,0.27970525869229834,34,rotate_pink_block_right: take the pink block and turn it right,595
+wrist_grayout,1,B_only_act_baseline,0.808447188346469,0.2723334874854941,34,rotate_pink_block_right: take the pink block and turn it right,595
+clean,2,B_only_act_baseline,0.5958708036513556,0.1865431881212926,130,turn_on_lightbulb: slide up the switch,4290
+brightness_dark,2,B_only_act_baseline,0.5938130934794982,0.20352675345116283,130,turn_on_lightbulb: slide up the switch,4290
+brightness_bright,2,B_only_act_baseline,0.6294230904215541,0.20702018759626173,130,turn_on_lightbulb: slide up the switch,4290
+gaussian_blur,2,B_only_act_baseline,0.6301305253863771,0.2187224298646122,130,turn_on_lightbulb: slide up the switch,4290
+gaussian_noise,2,B_only_act_baseline,0.649325090680486,0.22399801907839476,130,turn_on_lightbulb: slide up the switch,4290
+wrist_grayout,2,B_only_act_baseline,0.6249341955035677,0.2115596468909915,130,turn_on_lightbulb: slide up the switch,4290
+clean,1,B_only_act_baseline,0.6414922366172442,0.19554214909439518,65,lift_blue_block_table: lift the blue block from the table,2145
+brightness_dark,1,B_only_act_baseline,0.562805665829481,0.14833177551602347,65,lift_blue_block_table: lift the blue block from the table,2145
+brightness_bright,1,B_only_act_baseline,0.6512591021719115,0.19319133823647563,65,lift_blue_block_table: lift the blue block from the table,2145
+gaussian_blur,1,B_only_act_baseline,0.6044569455819093,0.18041880068840918,65,lift_blue_block_table: lift the blue block from the table,2145
+gaussian_noise,1,B_only_act_baseline,0.6040095595570354,0.17175966722346767,65,lift_blue_block_table: lift the blue block from the table,2145
+wrist_grayout,1,B_only_act_baseline,0.7286224475114932,0.2476966086999599,65,lift_blue_block_table: lift the blue block from the table,2145
+clean,1,B_only_act_baseline,0.5492420552851079,0.1586312777671344,65,open_drawer: go open the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6696689769581005,0.20762871038981212,65,open_drawer: go open the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.6612254585776772,0.2083950429212003,65,open_drawer: go open the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.6021563083141834,0.19162382343551376,65,open_drawer: go open the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.7653353259200618,0.2592390141723714,65,open_drawer: go open the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.8183928012689113,0.2549949130256137,65,open_drawer: go open the drawer,2145
+clean,1,B_only_act_baseline,0.7012961756972682,0.2507627308944286,65,move_slider_left: move the door to the left,2145
+brightness_dark,1,B_only_act_baseline,0.6746980392095291,0.23382071309434227,65,move_slider_left: move the door to the left,2145
+brightness_bright,1,B_only_act_baseline,0.7080588424281203,0.2541818985889802,65,move_slider_left: move the door to the left,2145
+gaussian_blur,1,B_only_act_baseline,0.6774229275795209,0.24532352705379745,65,move_slider_left: move the door to the left,2145
+gaussian_noise,1,B_only_act_baseline,0.6556739129902639,0.2381732579115983,65,move_slider_left: move the door to the left,2145
+wrist_grayout,1,B_only_act_baseline,0.6508327693094462,0.22746488909065585,65,move_slider_left: move the door to the left,2145
+clean,1,B_only_act_baseline,0.5880883845336589,0.19824049787206965,65,turn_on_led: turn on the led light,2145
+brightness_dark,1,B_only_act_baseline,0.6386171498617806,0.21188996099369786,65,turn_on_led: turn on the led light,2145
+brightness_bright,1,B_only_act_baseline,0.6131919811298321,0.20272333535439882,65,turn_on_led: turn on the led light,2145
+gaussian_blur,1,B_only_act_baseline,0.5869277371671094,0.2036562947483806,65,turn_on_led: turn on the led light,2145
+gaussian_noise,1,B_only_act_baseline,0.5847621170790879,0.20493646002276278,65,turn_on_led: turn on the led light,2145
+wrist_grayout,1,B_only_act_baseline,0.634603640797374,0.2142724298216127,65,turn_on_led: turn on the led light,2145
+clean,1,B_only_act_baseline,0.5407081557955696,0.1357218922593774,65,lift_red_block_drawer: lift the red block in the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6178078799735217,0.15591462283304364,65,lift_red_block_drawer: lift the red block in the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.5689773842528626,0.15419340193212092,65,lift_red_block_drawer: lift the red block in the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.5814886107112899,0.15230936940574583,65,lift_red_block_drawer: lift the red block in the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.6239351013283947,0.17649688237990852,65,lift_red_block_drawer: lift the red block in the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.7735814171078759,0.23466821888705472,65,lift_red_block_drawer: lift the red block in the drawer,2145
+clean,1,B_only_act_baseline,0.605710465796426,0.16614682837551525,34,place_in_drawer: store the grasped object in the drawer,595
+brightness_dark,1,B_only_act_baseline,0.8376327346925403,0.28797685627748415,34,place_in_drawer: store the grasped object in the drawer,595
+brightness_bright,1,B_only_act_baseline,0.659980950120832,0.19593506437532898,34,place_in_drawer: store the grasped object in the drawer,595
+gaussian_blur,1,B_only_act_baseline,0.6452308648488387,0.1810131517206492,34,place_in_drawer: store the grasped object in the drawer,595
+gaussian_noise,1,B_only_act_baseline,0.8080527124141588,0.2432405254277004,34,place_in_drawer: store the grasped object in the drawer,595
+wrist_grayout,1,B_only_act_baseline,0.6985656417718454,0.2727218130771138,34,place_in_drawer: store the grasped object in the drawer,595
+clean,1,B_only_act_baseline,0.5995138943850339,0.22570756511453227,65,turn_on_led: turn on the led,2145
+brightness_dark,1,B_only_act_baseline,0.5483799777823292,0.2080874046086868,65,turn_on_led: turn on the led,2145
+brightness_bright,1,B_only_act_baseline,0.602272860367934,0.23618136123145297,65,turn_on_led: turn on the led,2145
+gaussian_blur,1,B_only_act_baseline,0.5874536001082861,0.2374650447002618,65,turn_on_led: turn on the led,2145
+gaussian_noise,1,B_only_act_baseline,0.60619836493488,0.2427747280010969,65,turn_on_led: turn on the led,2145
+wrist_grayout,1,B_only_act_baseline,0.5876083230638838,0.23793154351916904,65,turn_on_led: turn on the led,2145
+clean,1,B_only_act_baseline,0.5871973282148858,0.1692758827507138,34,place_in_slider: put the block in the cabinet,595
+brightness_dark,1,B_only_act_baseline,0.5906843119022511,0.17104146941369322,34,place_in_slider: put the block in the cabinet,595
+brightness_bright,1,B_only_act_baseline,0.5328971253151223,0.1485544511536304,34,place_in_slider: put the block in the cabinet,595
+gaussian_blur,1,B_only_act_baseline,0.6000249547260005,0.18536334784806563,34,place_in_slider: put the block in the cabinet,595
+gaussian_noise,1,B_only_act_baseline,0.618136626789693,0.19171503792289926,34,place_in_slider: put the block in the cabinet,595
+wrist_grayout,1,B_only_act_baseline,0.7430491020413292,0.24136502613969782,34,place_in_slider: put the block in the cabinet,595
+clean,2,B_only_act_baseline,0.7556335577028841,0.2508992077736003,112,turn_off_led: toggle the button to turn off the led,3273
+brightness_dark,2,B_only_act_baseline,0.7582007144300937,0.24592925994296622,112,turn_off_led: toggle the button to turn off the led,3273
+brightness_bright,2,B_only_act_baseline,0.7883135723498463,0.25285809778708257,112,turn_off_led: toggle the button to turn off the led,3273
+gaussian_blur,2,B_only_act_baseline,0.7552824049003048,0.2499122737428143,112,turn_off_led: toggle the button to turn off the led,3273
+gaussian_noise,2,B_only_act_baseline,0.7595031386631796,0.24926821536996177,112,turn_off_led: toggle the button to turn off the led,3273
+wrist_grayout,2,B_only_act_baseline,0.7592120920522767,0.24476828774310724,112,turn_off_led: toggle the button to turn off the led,3273
+clean,1,B_only_act_baseline,0.7232832218383576,0.23776582520364564,65,turn_off_led: toggle the button to turn off the green light,2145
+brightness_dark,1,B_only_act_baseline,0.7477160001253629,0.24398144079056575,65,turn_off_led: toggle the button to turn off the green light,2145
+brightness_bright,1,B_only_act_baseline,0.7051661776257799,0.23408001814927015,65,turn_off_led: toggle the button to turn off the green light,2145
+gaussian_blur,1,B_only_act_baseline,0.7066673350897861,0.2325500770604416,65,turn_off_led: toggle the button to turn off the green light,2145
+gaussian_noise,1,B_only_act_baseline,0.7042489239187428,0.24089702958073014,65,turn_off_led: toggle the button to turn off the green light,2145
+wrist_grayout,1,B_only_act_baseline,0.7931930022282557,0.24716651276116208,65,turn_off_led: toggle the button to turn off the green light,2145
+clean,1,B_only_act_baseline,0.6052793526308083,0.19360584503723866,65,unstack_block: go to the tower of blocks and take off the top one,2145
+brightness_dark,1,B_only_act_baseline,0.630251637451497,0.20584378063857378,65,unstack_block: go to the tower of blocks and take off the top one,2145
+brightness_bright,1,B_only_act_baseline,0.6096636692444721,0.18634247397169684,65,unstack_block: go to the tower of blocks and take off the top one,2145
+gaussian_blur,1,B_only_act_baseline,0.6030643868517804,0.1972207287967185,65,unstack_block: go to the tower of blocks and take off the top one,2145
+gaussian_noise,1,B_only_act_baseline,0.6099353707713998,0.19356364378165372,65,unstack_block: go to the tower of blocks and take off the top one,2145
+wrist_grayout,1,B_only_act_baseline,0.733626104774691,0.2705716175672574,65,unstack_block: go to the tower of blocks and take off the top one,2145
+clean,1,B_only_act_baseline,0.5852048391189093,0.17640668433624787,65,"close_drawer: grasp the handle of the drawer, then close it",2145
+brightness_dark,1,B_only_act_baseline,0.5656422552171644,0.16012367368578076,65,"close_drawer: grasp the handle of the drawer, then close it",2145
+brightness_bright,1,B_only_act_baseline,0.6546673175933716,0.2353248345149266,65,"close_drawer: grasp the handle of the drawer, then close it",2145
+gaussian_blur,1,B_only_act_baseline,0.621411269416898,0.21551147390118527,65,"close_drawer: grasp the handle of the drawer, then close it",2145
+gaussian_noise,1,B_only_act_baseline,0.7193140021015159,0.2557156737788375,65,"close_drawer: grasp the handle of the drawer, then close it",2145
+wrist_grayout,1,B_only_act_baseline,0.6588226433956261,0.20311712307251972,65,"close_drawer: grasp the handle of the drawer, then close it",2145
+clean,1,B_only_act_baseline,0.8435191348835186,0.25104694981754444,65,turn_off_lightbulb: turn off the light bulb,2145
+brightness_dark,1,B_only_act_baseline,0.7290419948208224,0.21567852347047178,65,turn_off_lightbulb: turn off the light bulb,2145
+brightness_bright,1,B_only_act_baseline,0.8569091130287457,0.2532700966883611,65,turn_off_lightbulb: turn off the light bulb,2145
+gaussian_blur,1,B_only_act_baseline,0.9070035952232378,0.28355791979220324,65,turn_off_lightbulb: turn off the light bulb,2145
+gaussian_noise,1,B_only_act_baseline,0.8930851864568639,0.27510426770914326,65,turn_off_lightbulb: turn off the light bulb,2145
+wrist_grayout,1,B_only_act_baseline,0.7230623286523861,0.24175996294507496,65,turn_off_lightbulb: turn off the light bulb,2145
+clean,1,B_only_act_baseline,0.700151186160759,0.24418679883349736,43,place_in_slider: put the grasped object in the cabinet,946
+brightness_dark,1,B_only_act_baseline,0.8182429695590245,0.31537097694289823,43,place_in_slider: put the grasped object in the cabinet,946
+brightness_bright,1,B_only_act_baseline,0.7109456158087571,0.23706111132792568,43,place_in_slider: put the grasped object in the cabinet,946
+gaussian_blur,1,B_only_act_baseline,0.6908736630027584,0.24603935922247086,43,place_in_slider: put the grasped object in the cabinet,946
+gaussian_noise,1,B_only_act_baseline,0.6679067686582685,0.2351324928019278,43,place_in_slider: put the grasped object in the cabinet,946
+wrist_grayout,1,B_only_act_baseline,0.7453540541080865,0.28356418755255375,43,place_in_slider: put the grasped object in the cabinet,946
+clean,1,B_only_act_baseline,0.5365139948539721,0.15464313710644925,65,lift_blue_block_slider: pick up the blue block from the sliding cabinet,2145
+brightness_dark,1,B_only_act_baseline,0.5381722872312014,0.14489894422975097,65,lift_blue_block_slider: pick up the blue block from the sliding cabinet,2145
+brightness_bright,1,B_only_act_baseline,0.5825524992439456,0.18134252889292105,65,lift_blue_block_slider: pick up the blue block from the sliding cabinet,2145
+gaussian_blur,1,B_only_act_baseline,0.5228833191878313,0.1555216439914354,65,lift_blue_block_slider: pick up the blue block from the sliding cabinet,2145
+gaussian_noise,1,B_only_act_baseline,0.5789182300929662,0.16976624622846737,65,lift_blue_block_slider: pick up the blue block from the sliding cabinet,2145
+wrist_grayout,1,B_only_act_baseline,0.6788801399342743,0.24444831297312664,65,lift_blue_block_slider: pick up the blue block from the sliding cabinet,2145
+clean,1,B_only_act_baseline,0.6722372233053863,0.2317453167099497,65,rotate_pink_block_left: grasp the pink block and rotate it left,2145
+brightness_dark,1,B_only_act_baseline,0.7339131916756237,0.2727152203465556,65,rotate_pink_block_left: grasp the pink block and rotate it left,2145
+brightness_bright,1,B_only_act_baseline,0.7136176298587988,0.24036893326165157,65,rotate_pink_block_left: grasp the pink block and rotate it left,2145
+gaussian_blur,1,B_only_act_baseline,0.7243227687629905,0.26225552619237963,65,rotate_pink_block_left: grasp the pink block and rotate it left,2145
+gaussian_noise,1,B_only_act_baseline,0.670882960759994,0.23874718921406046,65,rotate_pink_block_left: grasp the pink block and rotate it left,2145
+wrist_grayout,1,B_only_act_baseline,0.681265738404992,0.22332542519389967,65,rotate_pink_block_left: grasp the pink block and rotate it left,2145
+clean,2,B_only_act_baseline,0.6325474646184351,0.1820679275980799,130,"rotate_pink_block_right: grasp the pink block, then rotate it right",4290
+brightness_dark,2,B_only_act_baseline,0.6414650119148887,0.19077164128824667,130,"rotate_pink_block_right: grasp the pink block, then rotate it right",4290
+brightness_bright,2,B_only_act_baseline,0.5906322235827679,0.16256060033411412,130,"rotate_pink_block_right: grasp the pink block, then rotate it right",4290
+gaussian_blur,2,B_only_act_baseline,0.6625574747721354,0.1883615854339841,130,"rotate_pink_block_right: grasp the pink block, then rotate it right",4290
+gaussian_noise,2,B_only_act_baseline,0.62985012938569,0.18213440022625765,130,"rotate_pink_block_right: grasp the pink block, then rotate it right",4290
+wrist_grayout,2,B_only_act_baseline,0.7362916840023888,0.23201930296250356,130,"rotate_pink_block_right: grasp the pink block, then rotate it right",4290
+clean,1,B_only_act_baseline,0.6947257334416682,0.2226096695040291,65,lift_red_block_slider: lift the red block lying in the cabinet,2145
+brightness_dark,1,B_only_act_baseline,0.6310848008701098,0.1973065929812985,65,lift_red_block_slider: lift the red block lying in the cabinet,2145
+brightness_bright,1,B_only_act_baseline,0.7010283712621455,0.2231595469203902,65,lift_red_block_slider: lift the red block lying in the cabinet,2145
+gaussian_blur,1,B_only_act_baseline,0.6754364059561299,0.22342768992894974,65,lift_red_block_slider: lift the red block lying in the cabinet,2145
+gaussian_noise,1,B_only_act_baseline,0.703430367976953,0.22806053582406466,65,lift_red_block_slider: lift the red block lying in the cabinet,2145
+wrist_grayout,1,B_only_act_baseline,0.6758140686389569,0.2570221869023768,65,lift_red_block_slider: lift the red block lying in the cabinet,2145
+clean,1,B_only_act_baseline,0.7137961450196328,0.2784916586610741,65,push_into_drawer: sweep the object into the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6904729668791597,0.26971984272435073,65,push_into_drawer: sweep the object into the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.7184335165249282,0.28488430267884024,65,push_into_drawer: sweep the object into the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.6933347734101327,0.2786728967558016,65,push_into_drawer: sweep the object into the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.6919905336705836,0.2765930857612338,65,push_into_drawer: sweep the object into the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.6928228670305068,0.27023963774993265,65,push_into_drawer: sweep the object into the drawer,2145
+clean,1,B_only_act_baseline,0.6509317690239245,0.21600608510491534,65,turn_on_led: turn on the led lamp,2145
+brightness_dark,1,B_only_act_baseline,0.6326932128095801,0.19708827816165767,65,turn_on_led: turn on the led lamp,2145
+brightness_bright,1,B_only_act_baseline,0.6693884098168575,0.22155858233417228,65,turn_on_led: turn on the led lamp,2145
+gaussian_blur,1,B_only_act_baseline,0.6364413430998018,0.21760479432918053,65,turn_on_led: turn on the led lamp,2145
+gaussian_noise,1,B_only_act_baseline,0.6358189962643049,0.2190321407515011,65,turn_on_led: turn on the led lamp,2145
+wrist_grayout,1,B_only_act_baseline,0.6567868792927348,0.2199887875453893,65,turn_on_led: turn on the led lamp,2145
+clean,2,B_only_act_baseline,0.8049779876131423,0.25940955084031025,104,unstack_block: remove a block from the stack,2925
+brightness_dark,2,B_only_act_baseline,0.8149142120929573,0.2722276436802232,104,unstack_block: remove a block from the stack,2925
+brightness_bright,2,B_only_act_baseline,0.803725299893427,0.2612591866957836,104,unstack_block: remove a block from the stack,2925
+gaussian_blur,2,B_only_act_baseline,0.8279191052549779,0.2753091938009483,104,unstack_block: remove a block from the stack,2925
+gaussian_noise,2,B_only_act_baseline,0.8451693279722817,0.2808242258018335,104,unstack_block: remove a block from the stack,2925
+wrist_grayout,2,B_only_act_baseline,0.7714222312410236,0.24570989928402742,104,unstack_block: remove a block from the stack,2925
+clean,1,B_only_act_baseline,0.8571936939860676,0.3051133313339391,65,lift_pink_block_drawer: grasp the pink block lying in the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.7912576755443653,0.24891648112318335,65,lift_pink_block_drawer: grasp the pink block lying in the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.863962215286392,0.3085735415046786,65,lift_pink_block_drawer: grasp the pink block lying in the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.8788514619662767,0.3119847684155851,65,lift_pink_block_drawer: grasp the pink block lying in the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.8715955600871906,0.29220960157694836,65,lift_pink_block_drawer: grasp the pink block lying in the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.8900369818195517,0.2971180728305152,65,lift_pink_block_drawer: grasp the pink block lying in the drawer,2145
+clean,2,B_only_act_baseline,0.5943545515733735,0.1890515659814234,106,place_in_slider: place the object in the cabinet,3006
+brightness_dark,2,B_only_act_baseline,0.614429327270262,0.19585553126896688,106,place_in_slider: place the object in the cabinet,3006
+brightness_bright,2,B_only_act_baseline,0.5917158473094327,0.18499438440422403,106,place_in_slider: place the object in the cabinet,3006
+gaussian_blur,2,B_only_act_baseline,0.6103749034998704,0.20511157360154858,106,place_in_slider: place the object in the cabinet,3006
+gaussian_noise,2,B_only_act_baseline,0.6426214474528567,0.2117342369919686,106,place_in_slider: place the object in the cabinet,3006
+wrist_grayout,2,B_only_act_baseline,0.6333891029038841,0.21635942362343083,106,place_in_slider: place the object in the cabinet,3006
+clean,1,B_only_act_baseline,1.0459929189166508,0.30784514936343227,36,place_in_drawer: store the object in the drawer,666
+brightness_dark,1,B_only_act_baseline,1.0079670215256478,0.3018571323256081,36,place_in_drawer: store the object in the drawer,666
+brightness_bright,1,B_only_act_baseline,0.9285163180810707,0.2773754495195645,36,place_in_drawer: store the object in the drawer,666
+gaussian_blur,1,B_only_act_baseline,1.0143517775885387,0.299470199836983,36,place_in_drawer: store the object in the drawer,666
+gaussian_noise,1,B_only_act_baseline,1.0042573233522196,0.299254670106306,36,place_in_drawer: store the object in the drawer,666
+wrist_grayout,1,B_only_act_baseline,0.9943422474404969,0.31762539624451874,36,place_in_drawer: store the object in the drawer,666
+clean,1,B_only_act_baseline,0.6119264110421642,0.16970647549256063,65,lift_red_block_slider: in the cabinet grasp the red block,2145
+brightness_dark,1,B_only_act_baseline,0.6147607028940857,0.17247823308080265,65,lift_red_block_slider: in the cabinet grasp the red block,2145
+brightness_bright,1,B_only_act_baseline,0.6528196717197801,0.18167540449878591,65,lift_red_block_slider: in the cabinet grasp the red block,2145
+gaussian_blur,1,B_only_act_baseline,0.5900462142475597,0.15984075923701188,65,lift_red_block_slider: in the cabinet grasp the red block,2145
+gaussian_noise,1,B_only_act_baseline,0.6261513551870188,0.18170743510995432,65,lift_red_block_slider: in the cabinet grasp the red block,2145
+wrist_grayout,1,B_only_act_baseline,0.8022173168577434,0.2646276577845677,65,lift_red_block_slider: in the cabinet grasp the red block,2145
+clean,2,B_only_act_baseline,0.745841835062684,0.26542533555747494,111,place_in_drawer: move to the drawer and place the object,3226
+brightness_dark,2,B_only_act_baseline,0.7671506080854648,0.2826897785477997,111,place_in_drawer: move to the drawer and place the object,3226
+brightness_bright,2,B_only_act_baseline,0.7307116784456928,0.2629740137678455,111,place_in_drawer: move to the drawer and place the object,3226
+gaussian_blur,2,B_only_act_baseline,0.7667300580992414,0.27570055394945087,111,place_in_drawer: move to the drawer and place the object,3226
+gaussian_noise,2,B_only_act_baseline,0.7828895873063091,0.28470105878773194,111,place_in_drawer: move to the drawer and place the object,3226
+wrist_grayout,2,B_only_act_baseline,0.6473115395954846,0.21466511970984906,111,place_in_drawer: move to the drawer and place the object,3226
+clean,2,B_only_act_baseline,0.5916968411557879,0.24112498306239682,108,push_into_drawer: push the object into the drawer,3091
+brightness_dark,2,B_only_act_baseline,0.5961266367912689,0.22748163733513435,108,push_into_drawer: push the object into the drawer,3091
+brightness_bright,2,B_only_act_baseline,0.5909708445386327,0.23034107017336378,108,push_into_drawer: push the object into the drawer,3091
+gaussian_blur,2,B_only_act_baseline,0.5934733460095716,0.2507725957030922,108,push_into_drawer: push the object into the drawer,3091
+gaussian_noise,2,B_only_act_baseline,0.5596406787514064,0.23028208236242115,108,push_into_drawer: push the object into the drawer,3091
+wrist_grayout,2,B_only_act_baseline,0.5963307418548648,0.23044386887752003,108,push_into_drawer: push the object into the drawer,3091
+clean,1,B_only_act_baseline,0.38771039887821124,0.09485935614659236,65,"open_drawer: grasp the handle of the drawer, then open it",2145
+brightness_dark,1,B_only_act_baseline,0.5374618965349632,0.13645401424143738,65,"open_drawer: grasp the handle of the drawer, then open it",2145
+brightness_bright,1,B_only_act_baseline,0.4260538724276212,0.11329978978756941,65,"open_drawer: grasp the handle of the drawer, then open it",2145
+gaussian_blur,1,B_only_act_baseline,0.4148040249869302,0.1103430102278779,65,"open_drawer: grasp the handle of the drawer, then open it",2145
+gaussian_noise,1,B_only_act_baseline,0.5766712400701258,0.16695450037430018,65,"open_drawer: grasp the handle of the drawer, then open it",2145
+wrist_grayout,1,B_only_act_baseline,0.6874389579047611,0.1898758132498224,65,"open_drawer: grasp the handle of the drawer, then open it",2145
+clean,1,B_only_act_baseline,0.6236570645363141,0.20065407240108932,65,move_slider_right: move the sliding door to the right,2145
+brightness_dark,1,B_only_act_baseline,0.5227272629142403,0.15324073087919007,65,move_slider_right: move the sliding door to the right,2145
+brightness_bright,1,B_only_act_baseline,0.642071888822339,0.22467740411723489,65,move_slider_right: move the sliding door to the right,2145
+gaussian_blur,1,B_only_act_baseline,0.6365682684974276,0.21312604409394723,65,move_slider_right: move the sliding door to the right,2145
+gaussian_noise,1,B_only_act_baseline,0.6352991493789109,0.2059652713152555,65,move_slider_right: move the sliding door to the right,2145
+wrist_grayout,1,B_only_act_baseline,0.5670111865470142,0.1764510711907467,65,move_slider_right: move the sliding door to the right,2145
+clean,1,B_only_act_baseline,0.529009774443391,0.2104713062187294,65,turn_off_led: push down the button to turn off the led,2145
+brightness_dark,1,B_only_act_baseline,0.5213716520613684,0.17586961114085042,65,turn_off_led: push down the button to turn off the led,2145
+brightness_bright,1,B_only_act_baseline,0.5754432970708185,0.2209462258881662,65,turn_off_led: push down the button to turn off the led,2145
+gaussian_blur,1,B_only_act_baseline,0.5512397355807848,0.21670326915852753,65,turn_off_led: push down the button to turn off the led,2145
+gaussian_noise,1,B_only_act_baseline,0.5584103113009935,0.18774059099870008,65,turn_off_led: push down the button to turn off the led,2145
+wrist_grayout,1,B_only_act_baseline,0.5804561464936583,0.22335602407490376,65,turn_off_led: push down the button to turn off the led,2145
+clean,1,B_only_act_baseline,0.6306980779954604,0.1700293474422865,65,lift_blue_block_slider: lift the blue block on the shelf,2145
+brightness_dark,1,B_only_act_baseline,0.6152030187410551,0.161987991282196,65,lift_blue_block_slider: lift the blue block on the shelf,2145
+brightness_bright,1,B_only_act_baseline,0.6833643124097989,0.19517957922065016,65,lift_blue_block_slider: lift the blue block on the shelf,2145
+gaussian_blur,1,B_only_act_baseline,0.6099007865964196,0.16322497799124194,65,lift_blue_block_slider: lift the blue block on the shelf,2145
+gaussian_noise,1,B_only_act_baseline,0.5844497067746504,0.15368204423280069,65,lift_blue_block_slider: lift the blue block on the shelf,2145
+wrist_grayout,1,B_only_act_baseline,0.7173024373176771,0.23146334874244917,65,lift_blue_block_slider: lift the blue block on the shelf,2145
+clean,1,B_only_act_baseline,0.754508833531098,0.27137712424808924,65,rotate_red_block_right: take the red block and rotate it right,2145
+brightness_dark,1,B_only_act_baseline,0.6938825354511008,0.21811582844455044,65,rotate_red_block_right: take the red block and rotate it right,2145
+brightness_bright,1,B_only_act_baseline,0.7493081414616192,0.2604157614144253,65,rotate_red_block_right: take the red block and rotate it right,2145
+gaussian_blur,1,B_only_act_baseline,0.7766705555079025,0.28473242543913146,65,rotate_red_block_right: take the red block and rotate it right,2145
+gaussian_noise,1,B_only_act_baseline,0.7748084139752459,0.2836829136261891,65,rotate_red_block_right: take the red block and rotate it right,2145
+wrist_grayout,1,B_only_act_baseline,0.6470142480495807,0.20612759421834778,65,rotate_red_block_right: take the red block and rotate it right,2145
+clean,1,B_only_act_baseline,0.6523341236692486,0.23081687616182492,65,move_slider_left: move the door all the way to the left,2145
+brightness_dark,1,B_only_act_baseline,0.6805314826520729,0.22298465823079203,65,move_slider_left: move the door all the way to the left,2145
+brightness_bright,1,B_only_act_baseline,0.5973152682100817,0.20339591664312048,65,move_slider_left: move the door all the way to the left,2145
+gaussian_blur,1,B_only_act_baseline,0.6571306484919804,0.23201892302110122,65,move_slider_left: move the door all the way to the left,2145
+gaussian_noise,1,B_only_act_baseline,0.5856104352813223,0.1985354207413934,65,move_slider_left: move the door all the way to the left,2145
+wrist_grayout,1,B_only_act_baseline,0.6665717323740205,0.23038471609681518,65,move_slider_left: move the door all the way to the left,2145
+clean,1,B_only_act_baseline,0.5973652483819129,0.1897239030697645,65,lift_blue_block_drawer: grasp the blue block in the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6439009037646618,0.22046308571443612,65,lift_blue_block_drawer: grasp the blue block in the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.6813751253095659,0.22739020147364894,65,lift_blue_block_drawer: grasp the blue block in the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.5617837110678832,0.17895830557261394,65,lift_blue_block_drawer: grasp the blue block in the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.5897978786464695,0.18986227667176878,65,lift_blue_block_drawer: grasp the blue block in the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.7699678299707291,0.2613598292166894,65,lift_blue_block_drawer: grasp the blue block in the drawer,2145
+clean,1,B_only_act_baseline,0.5963607737591693,0.2326257652971215,65,stack_block: place the block on top of another block,2145
+brightness_dark,1,B_only_act_baseline,0.4850859505154473,0.17988452502500601,65,stack_block: place the block on top of another block,2145
+brightness_bright,1,B_only_act_baseline,0.5496260745581729,0.2168783223831451,65,stack_block: place the block on top of another block,2145
+gaussian_blur,1,B_only_act_baseline,0.5816751097743605,0.2265836203610385,65,stack_block: place the block on top of another block,2145
+gaussian_noise,1,B_only_act_baseline,0.5257734144285763,0.22017565823935129,65,stack_block: place the block on top of another block,2145
+wrist_grayout,1,B_only_act_baseline,0.4226007606996682,0.15950235083545403,65,stack_block: place the block on top of another block,2145
+clean,1,B_only_act_baseline,0.5885612725973367,0.15946646276569906,65,"lift_red_block_table: grasp the red block, then lift it up",2145
+brightness_dark,1,B_only_act_baseline,0.5725290899470453,0.1598405810542556,65,"lift_red_block_table: grasp the red block, then lift it up",2145
+brightness_bright,1,B_only_act_baseline,0.6879739104609787,0.19043109669432892,65,"lift_red_block_table: grasp the red block, then lift it up",2145
+gaussian_blur,1,B_only_act_baseline,0.5650797335179774,0.1512602577279339,65,"lift_red_block_table: grasp the red block, then lift it up",2145
+gaussian_noise,1,B_only_act_baseline,0.5847778810170187,0.15608530538383025,65,"lift_red_block_table: grasp the red block, then lift it up",2145
+wrist_grayout,1,B_only_act_baseline,0.6744579555588963,0.23508158711405783,65,"lift_red_block_table: grasp the red block, then lift it up",2145
+clean,1,B_only_act_baseline,0.43252099815543954,0.123328039156291,65,open_drawer: pull the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.4894116071395544,0.12298264083487567,65,open_drawer: pull the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.555421123415718,0.2039508897544462,65,open_drawer: pull the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.4155007461131195,0.11902368698285255,65,open_drawer: pull the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.6914476920555641,0.2269955319561166,65,open_drawer: pull the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.6218661941213287,0.16917269472832921,65,open_drawer: pull the drawer,2145
+clean,1,B_only_act_baseline,0.6951574821929475,0.23070607305247903,65,rotate_pink_block_left: rotate the pink block towards the left,2145
+brightness_dark,1,B_only_act_baseline,0.7604729149685358,0.2517877220194458,65,rotate_pink_block_left: rotate the pink block towards the left,2145
+brightness_bright,1,B_only_act_baseline,0.6903528165229749,0.2303281884807926,65,rotate_pink_block_left: rotate the pink block towards the left,2145
+gaussian_blur,1,B_only_act_baseline,0.756048247419593,0.28191319552017297,65,rotate_pink_block_left: rotate the pink block towards the left,2145
+gaussian_noise,1,B_only_act_baseline,0.7266836305637976,0.2549419832912398,65,rotate_pink_block_left: rotate the pink block towards the left,2145
+wrist_grayout,1,B_only_act_baseline,0.6616217859022386,0.20997807202321705,65,rotate_pink_block_left: rotate the pink block towards the left,2145
+clean,1,B_only_act_baseline,0.6158550406788493,0.20460818787237187,65,place_in_slider: place the grasped object in the sliding cabinet,2145
+brightness_dark,1,B_only_act_baseline,0.6320849662536865,0.21722861433521415,65,place_in_slider: place the grasped object in the sliding cabinet,2145
+brightness_bright,1,B_only_act_baseline,0.6231761598920489,0.18939705575421537,65,place_in_slider: place the grasped object in the sliding cabinet,2145
+gaussian_blur,1,B_only_act_baseline,0.6532930281413939,0.21128356398005427,65,place_in_slider: place the grasped object in the sliding cabinet,2145
+gaussian_noise,1,B_only_act_baseline,0.6482928341482228,0.1944653102647373,65,place_in_slider: place the grasped object in the sliding cabinet,2145
+wrist_grayout,1,B_only_act_baseline,0.6064498274793952,0.19972302309481493,65,place_in_slider: place the grasped object in the sliding cabinet,2145
+clean,1,B_only_act_baseline,0.7512760885085794,0.2037303936606085,40,place_in_drawer: put the object in the drawer,820
+clean,1,B_only_act_baseline,0.6207093743534832,0.20701627195223476,43,place_in_slider: place the block in the cabinet,946
+brightness_dark,1,B_only_act_baseline,0.9644786453413215,0.26012582224420555,40,place_in_drawer: put the object in the drawer,820
+brightness_dark,1,B_only_act_baseline,0.649908925787771,0.21941568708535011,43,place_in_slider: place the block in the cabinet,946
+brightness_bright,1,B_only_act_baseline,0.7620028625797312,0.20982210970506435,40,place_in_drawer: put the object in the drawer,820
+brightness_bright,1,B_only_act_baseline,0.6126978084134465,0.20814563996912094,43,place_in_slider: place the block in the cabinet,946
+gaussian_blur,1,B_only_act_baseline,0.8328269896191587,0.22556159880518498,40,place_in_drawer: put the object in the drawer,820
+gaussian_blur,1,B_only_act_baseline,0.6079534862524647,0.2042629631290764,43,place_in_slider: place the block in the cabinet,946
+gaussian_noise,1,B_only_act_baseline,0.789748530437722,0.21096251698321167,40,place_in_drawer: put the object in the drawer,820
+gaussian_noise,1,B_only_act_baseline,0.6356923050730655,0.21500406224574253,43,place_in_slider: place the block in the cabinet,946
+wrist_grayout,1,B_only_act_baseline,0.9593101975809821,0.25258169708974687,40,place_in_drawer: put the object in the drawer,820
+wrist_grayout,1,B_only_act_baseline,0.6551491525806138,0.2177549518692065,43,place_in_slider: place the block in the cabinet,946
+clean,1,B_only_act_baseline,0.4278285093558378,0.13253513601990966,65,"close_drawer: grasp the drawer handle, then close it",2145
+brightness_dark,1,B_only_act_baseline,0.4694022621665444,0.14553498359588715,65,"close_drawer: grasp the drawer handle, then close it",2145
+brightness_bright,1,B_only_act_baseline,0.47350395407789436,0.1525508403936863,65,"close_drawer: grasp the drawer handle, then close it",2145
+gaussian_blur,1,B_only_act_baseline,0.43815621075295147,0.13677565340117698,65,"close_drawer: grasp the drawer handle, then close it",2145
+gaussian_noise,1,B_only_act_baseline,0.4651437584416214,0.1486890125544596,65,"close_drawer: grasp the drawer handle, then close it",2145
+wrist_grayout,1,B_only_act_baseline,0.5597209313056328,0.18235904126416594,65,"close_drawer: grasp the drawer handle, then close it",2145
+clean,1,B_only_act_baseline,0.7614406389397713,0.24113825080693638,49,lift_blue_block_table: pick up the blue block on the table,1225
+brightness_dark,1,B_only_act_baseline,0.7723455793308447,0.23684531206292245,49,lift_blue_block_table: pick up the blue block on the table,1225
+brightness_bright,1,B_only_act_baseline,0.7956148652502121,0.25602550414838876,49,lift_blue_block_table: pick up the blue block on the table,1225
+gaussian_blur,1,B_only_act_baseline,0.7971046323748441,0.2607947509142817,49,lift_blue_block_table: pick up the blue block on the table,1225
+gaussian_noise,1,B_only_act_baseline,0.8073626397024438,0.2619997982798095,49,lift_blue_block_table: pick up the blue block on the table,1225
+wrist_grayout,1,B_only_act_baseline,0.6744728598302724,0.20164461972762127,49,lift_blue_block_table: pick up the blue block on the table,1225
+clean,1,B_only_act_baseline,0.6484308762666269,0.18686227074393502,65,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,2145
+brightness_dark,1,B_only_act_baseline,0.6844140251914224,0.2087190658221275,65,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,2145
+brightness_bright,1,B_only_act_baseline,0.6303222829645331,0.1777375652200176,65,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,2145
+gaussian_blur,1,B_only_act_baseline,0.6637966904209885,0.1968583405831636,65,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,2145
+gaussian_noise,1,B_only_act_baseline,0.6962308904309293,0.19937377071285342,65,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,2145
+wrist_grayout,1,B_only_act_baseline,0.7508397468518623,0.23195519564035055,65,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,2145
+clean,1,B_only_act_baseline,0.5171838866763221,0.16699699805333065,65,move_slider_right: slide the door all the way to the right,2145
+brightness_dark,1,B_only_act_baseline,0.4631339443313492,0.13884144974199486,65,move_slider_right: slide the door all the way to the right,2145
+brightness_bright,1,B_only_act_baseline,0.5378038849784579,0.16518277584454477,65,move_slider_right: slide the door all the way to the right,2145
+gaussian_blur,1,B_only_act_baseline,0.5134941090753068,0.14789244645125382,65,move_slider_right: slide the door all the way to the right,2145
+gaussian_noise,1,B_only_act_baseline,0.5924279041938134,0.1773841411004335,65,move_slider_right: slide the door all the way to the right,2145
+wrist_grayout,1,B_only_act_baseline,0.5431430141964715,0.1855003094061827,65,move_slider_right: slide the door all the way to the right,2145
+clean,1,B_only_act_baseline,0.5521493925716414,0.1562384245120165,65,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,2145
+brightness_dark,1,B_only_act_baseline,0.6422421523026534,0.1906081520078026,65,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,2145
+brightness_bright,1,B_only_act_baseline,0.5661201169956854,0.15978982184197638,65,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,2145
+gaussian_blur,1,B_only_act_baseline,0.55203920025211,0.15526016180887645,65,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,2145
+gaussian_noise,1,B_only_act_baseline,0.635442407108171,0.16899501934394492,65,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,2145
+wrist_grayout,1,B_only_act_baseline,0.7261905855946726,0.23712515346693508,65,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,2145
+clean,1,B_only_act_baseline,0.42849068855564704,0.11811677874821148,45,lift_pink_block_slider: in the slider grasp the pink block,1035
+clean,1,B_only_act_baseline,0.6755897018300506,0.21793419965457567,65,turn_on_lightbulb: turn on the light bulb,2145
+brightness_dark,1,B_only_act_baseline,0.5870060750580887,0.16556592528946734,45,lift_pink_block_slider: in the slider grasp the pink block,1035
+brightness_dark,1,B_only_act_baseline,0.6285091336314138,0.21009874794033023,65,turn_on_lightbulb: turn on the light bulb,2145
+brightness_bright,1,B_only_act_baseline,0.3961290252875097,0.11143445799151645,45,lift_pink_block_slider: in the slider grasp the pink block,1035
+brightness_bright,1,B_only_act_baseline,0.6603474121747952,0.2175553104062101,65,turn_on_lightbulb: turn on the light bulb,2145
+gaussian_blur,1,B_only_act_baseline,0.43803635226026577,0.11967649418703846,45,lift_pink_block_slider: in the slider grasp the pink block,1035
+gaussian_blur,1,B_only_act_baseline,0.6824751738981132,0.2320152675791895,65,turn_on_lightbulb: turn on the light bulb,2145
+gaussian_noise,1,B_only_act_baseline,0.4039151468467844,0.10926431696360649,45,lift_pink_block_slider: in the slider grasp the pink block,1035
+gaussian_noise,1,B_only_act_baseline,0.6100668124981098,0.21516799548844914,65,turn_on_lightbulb: turn on the light bulb,2145
+wrist_grayout,1,B_only_act_baseline,0.5074160543945924,0.14950790800169636,45,lift_pink_block_slider: in the slider grasp the pink block,1035
+wrist_grayout,1,B_only_act_baseline,0.6083501500127476,0.22888372796319384,65,turn_on_lightbulb: turn on the light bulb,2145
+clean,1,B_only_act_baseline,0.4400115361024728,0.11615298659730823,65,lift_blue_block_slider: grasp the blue block lying in the cabinet,2145
+brightness_dark,1,B_only_act_baseline,0.5292986044993291,0.15121855327696393,65,lift_blue_block_slider: grasp the blue block lying in the cabinet,2145
+brightness_bright,1,B_only_act_baseline,0.5439444718819795,0.17123785144362574,65,lift_blue_block_slider: grasp the blue block lying in the cabinet,2145
+gaussian_blur,1,B_only_act_baseline,0.4527145161058678,0.11888872861782789,65,lift_blue_block_slider: grasp the blue block lying in the cabinet,2145
+gaussian_noise,1,B_only_act_baseline,0.46127307595231715,0.12102012792270342,65,lift_blue_block_slider: grasp the blue block lying in the cabinet,2145
+wrist_grayout,1,B_only_act_baseline,0.5390552166657093,0.15220307563885901,65,lift_blue_block_slider: grasp the blue block lying in the cabinet,2145
+clean,1,B_only_act_baseline,0.6253349189396267,0.20990472894250017,65,place_in_slider: place the grasped object in the slider,2145
+brightness_dark,1,B_only_act_baseline,0.5417986208027774,0.17267017186660588,65,place_in_slider: place the grasped object in the slider,2145
+brightness_bright,1,B_only_act_baseline,0.5468853084476558,0.18736711780587476,65,place_in_slider: place the grasped object in the slider,2145
+gaussian_blur,1,B_only_act_baseline,0.6525024126658152,0.22579717038275599,65,place_in_slider: place the grasped object in the slider,2145
+gaussian_noise,1,B_only_act_baseline,0.5830553302120217,0.196099509829249,65,place_in_slider: place the grasped object in the slider,2145
+wrist_grayout,1,B_only_act_baseline,0.4494205521378087,0.13119570688926654,65,place_in_slider: place the grasped object in the slider,2145
+clean,1,B_only_act_baseline,0.5787475100049486,0.18242881517985088,65,lift_pink_block_drawer: grasp the pink block from the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6583646177253126,0.1944806791090227,65,lift_pink_block_drawer: grasp the pink block from the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.5653770234002854,0.1784144363759003,65,lift_pink_block_drawer: grasp the pink block from the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.5959231578942501,0.18571274724357573,65,lift_pink_block_drawer: grasp the pink block from the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.6595730558300749,0.20784102443691257,65,lift_pink_block_drawer: grasp the pink block from the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.7370104685252085,0.23403623266852064,65,lift_pink_block_drawer: grasp the pink block from the drawer,2145
+clean,1,B_only_act_baseline,0.7126624009865663,0.209273076605249,65,move_slider_right: push the door to the right side,2145
+brightness_dark,1,B_only_act_baseline,0.6415267515293646,0.1779713451088249,65,move_slider_right: push the door to the right side,2145
+brightness_bright,1,B_only_act_baseline,0.7664119526738927,0.23218593483879452,65,move_slider_right: push the door to the right side,2145
+gaussian_blur,1,B_only_act_baseline,0.7511210078920002,0.23662792712182074,65,move_slider_right: push the door to the right side,2145
+gaussian_noise,1,B_only_act_baseline,0.7596683199231798,0.22402781720880743,65,move_slider_right: push the door to the right side,2145
+wrist_grayout,1,B_only_act_baseline,0.7228403710302733,0.24695466248305528,65,move_slider_right: push the door to the right side,2145
+clean,1,B_only_act_baseline,0.5202840909853086,0.15464220510654914,65,lift_red_block_drawer: grasp the red block lying in the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.6697142440955955,0.1978290630903317,65,lift_red_block_drawer: grasp the red block lying in the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.5215067310250683,0.14876219407741204,65,lift_red_block_drawer: grasp the red block lying in the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.5102758847115002,0.15327544899888726,65,lift_red_block_drawer: grasp the red block lying in the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.6103057850530613,0.19325793989094503,65,lift_red_block_drawer: grasp the red block lying in the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.7103031343910403,0.21987567444146175,65,lift_red_block_drawer: grasp the red block lying in the drawer,2145
+clean,1,B_only_act_baseline,0.7507810845440164,0.2639377643615057,65,"move_slider_right: slide the door to the right, then let it go",2145
+brightness_dark,1,B_only_act_baseline,0.6814703417348338,0.21981533129454214,65,"move_slider_right: slide the door to the right, then let it go",2145
+brightness_bright,1,B_only_act_baseline,0.770200154751966,0.27018172874317303,65,"move_slider_right: slide the door to the right, then let it go",2145
+gaussian_blur,1,B_only_act_baseline,0.7464259328025998,0.2588842072647252,65,"move_slider_right: slide the door to the right, then let it go",2145
+gaussian_noise,1,B_only_act_baseline,0.8142886760748509,0.2906380539689904,65,"move_slider_right: slide the door to the right, then let it go",2145
+wrist_grayout,1,B_only_act_baseline,0.74367975990176,0.27969363340726505,65,"move_slider_right: slide the door to the right, then let it go",2145
+clean,1,B_only_act_baseline,0.6091542104225018,0.2406663380024872,65,push_pink_block_left: push left the pink block,2145
+brightness_dark,1,B_only_act_baseline,0.6528367740886433,0.27517934636278946,65,push_pink_block_left: push left the pink block,2145
+brightness_bright,1,B_only_act_baseline,0.5875957668125331,0.22207150694294212,65,push_pink_block_left: push left the pink block,2145
+gaussian_blur,1,B_only_act_baseline,0.6594563288566394,0.2699148788795128,65,push_pink_block_left: push left the pink block,2145
+gaussian_noise,1,B_only_act_baseline,0.6433930305572418,0.262995783837287,65,push_pink_block_left: push left the pink block,2145
+wrist_grayout,1,B_only_act_baseline,0.5681446107514414,0.20153177167985822,65,push_pink_block_left: push left the pink block,2145
+clean,1,B_only_act_baseline,0.4863552262292676,0.14479449930525157,43,lift_red_block_drawer: pick up the red block lying in the drawer,946
+brightness_dark,1,B_only_act_baseline,0.5100067022594935,0.14260613005602696,43,lift_red_block_drawer: pick up the red block lying in the drawer,946
+brightness_bright,1,B_only_act_baseline,0.5471879990213914,0.1926958496856459,43,lift_red_block_drawer: pick up the red block lying in the drawer,946
+gaussian_blur,1,B_only_act_baseline,0.5029738130111487,0.16227757117064903,43,lift_red_block_drawer: pick up the red block lying in the drawer,946
+gaussian_noise,1,B_only_act_baseline,0.5465649625967723,0.1804197245370006,43,lift_red_block_drawer: pick up the red block lying in the drawer,946
+wrist_grayout,1,B_only_act_baseline,0.6420522055140582,0.21022684125517185,43,lift_red_block_drawer: pick up the red block lying in the drawer,946
+clean,1,B_only_act_baseline,0.7046641338359821,0.19050151189485867,65,rotate_red_block_left: rotate the red block to the left,2145
+brightness_dark,1,B_only_act_baseline,0.8418140241474935,0.24324703996196573,65,rotate_red_block_left: rotate the red block to the left,2145
+brightness_bright,1,B_only_act_baseline,0.7638410450099827,0.21274395159709625,65,rotate_red_block_left: rotate the red block to the left,2145
+gaussian_blur,1,B_only_act_baseline,0.762086916779662,0.21258327771217633,65,rotate_red_block_left: rotate the red block to the left,2145
+gaussian_noise,1,B_only_act_baseline,0.7598723003160068,0.20614826440255404,65,rotate_red_block_left: rotate the red block to the left,2145
+wrist_grayout,1,B_only_act_baseline,0.8216406400148923,0.25874235092541636,65,rotate_red_block_left: rotate the red block to the left,2145
+clean,1,B_only_act_baseline,0.339961539035712,0.08881021854363796,65,close_drawer: close the drawer,2145
+brightness_dark,1,B_only_act_baseline,0.3763350655704667,0.09944882353186568,65,close_drawer: close the drawer,2145
+brightness_bright,1,B_only_act_baseline,0.43111118408111665,0.1421636893992975,65,close_drawer: close the drawer,2145
+gaussian_blur,1,B_only_act_baseline,0.3536098935307958,0.098648489954628,65,close_drawer: close the drawer,2145
+gaussian_noise,1,B_only_act_baseline,0.3998198021581639,0.12812098184109846,65,close_drawer: close the drawer,2145
+wrist_grayout,1,B_only_act_baseline,0.5410878646385657,0.15229390883024954,65,close_drawer: close the drawer,2145
+clean,1,B_only_act_baseline,0.5015554999098395,0.15540294985432962,65,move_slider_right: grasp the door handle and slide the door to the right,2145
+brightness_dark,1,B_only_act_baseline,0.4525551481561346,0.13516217931048138,65,move_slider_right: grasp the door handle and slide the door to the right,2145
+brightness_bright,1,B_only_act_baseline,0.5001465068592297,0.16832196605312716,65,move_slider_right: grasp the door handle and slide the door to the right,2145
+gaussian_blur,1,B_only_act_baseline,0.5362350716655984,0.1712182129933919,65,move_slider_right: grasp the door handle and slide the door to the right,2145
+gaussian_noise,1,B_only_act_baseline,0.5786392670808297,0.21435816825488152,65,move_slider_right: grasp the door handle and slide the door to the right,2145
+wrist_grayout,1,B_only_act_baseline,0.5316171903988143,0.18690528761653794,65,move_slider_right: grasp the door handle and slide the door to the right,2145
+clean,1,B_only_act_baseline,0.666246762833038,0.18798138379177332,65,lift_red_block_table: lift the red block,2145
+brightness_dark,1,B_only_act_baseline,0.7517311163675853,0.2063593370931132,65,lift_red_block_table: lift the red block,2145
+brightness_bright,1,B_only_act_baseline,0.6503078949757112,0.1995091370888404,65,lift_red_block_table: lift the red block,2145
+gaussian_blur,1,B_only_act_baseline,0.6891436216873286,0.19690740689650163,65,lift_red_block_table: lift the red block,2145
+gaussian_noise,1,B_only_act_baseline,0.6535456843984314,0.19057993106829338,65,lift_red_block_table: lift the red block,2145
+wrist_grayout,1,B_only_act_baseline,0.7710819787991829,0.25876275845221824,65,lift_red_block_table: lift the red block,2145

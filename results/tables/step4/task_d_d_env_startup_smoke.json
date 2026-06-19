@@ -1,0 +1,31 @@
+{
+  "dataset_path_argument": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "validation_folder": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation",
+  "obs_space": {
+    "rgb_obs": [
+      "rgb_static",
+      "rgb_gripper"
+    ],
+    "depth_obs": []
+  },
+  "operation_sequence": [
+    "get_env(dataset_path=/data/dechao/cv_final_pj2/datasets/task_D_D)",
+    "env.reset()",
+    "env.step(zero_action)"
+  ],
+  "status": "passed",
+  "get_env_ok": true,
+  "reset_ok": true,
+  "zero_step_ok": true,
+  "obs_keys": [
+    "depth_obs",
+    "rgb_obs",
+    "robot_obs",
+    "scene_obs"
+  ],
+  "rgb_keys": [
+    "rgb_gripper",
+    "rgb_static"
+  ],
+  "step_return_len": 4
+}

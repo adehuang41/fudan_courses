@@ -1,0 +1,3 @@
+episode_index,experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task,valid_action_steps
+0,B_only_act_baseline,0.6110779351327486,0.1967349872801886,65,move_slider_left: move the door to the left side,2145
+0,ABC_mixed_act_baseline,0.5672229740487073,0.18180767629212471,65,move_slider_left: move the door to the left side,2145

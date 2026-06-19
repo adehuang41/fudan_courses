@@ -1,0 +1,2 @@
+checkpoint,checkpoint_exists,checkpoint_path,checkpoint_size_mb,checkpoint_step,experiment,first_forward_shape_ok,first_predict_shape,missing_keys,policy_chunk_size,policy_image_features,task_conditioning_enabled,unexpected_keys
+best_val_action_l1.pt,True,/data/dechao/cv_final_pj2/outputs/task_conditioned/B_only_task_id_act_full/checkpoints/best_val_action_l1.pt,591.4783954620361,50000,old_B_taskid_smoke,True,"[1, 100, 7]",0,100,observation.images.image;observation.images.wrist_image,True,0

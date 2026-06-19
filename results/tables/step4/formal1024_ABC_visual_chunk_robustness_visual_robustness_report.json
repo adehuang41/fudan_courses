@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "start_time": "2026-06-17T14:15:07+00:00",
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_D_D_lerobot",
+  "runs": {
+    "ABC_mixed_act_baseline": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline"
+  },
+  "device": "cuda",
+  "max_episodes": 1024,
+  "batch_size": 64,
+  "num_workers": 8,
+  "table_cache": {
+    "enabled": true,
+    "maxsize": 1,
+    "cache_info": {
+      "hits": 1,
+      "misses": 1,
+      "maxsize": 1,
+      "currsize": 1
+    }
+  },
+  "conditions": [
+    "clean",
+    "brightness_dark",
+    "brightness_bright",
+    "gaussian_blur",
+    "gaussian_noise",
+    "wrist_grayout"
+  ],
+  "noise_seed": 20260617,
+  "noise_std": 0.06,
+  "end_time": "2026-06-17T14:34:44+00:00",
+  "dataset_episodes": 1024,
+  "dataset_frames": 62000,
+  "tables": {
+    "summary": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_visual_robustness_summary.csv",
+    "chunk_position": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_chunk_position_action_l1.csv",
+    "chunk_bin": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_chunk_bin_action_l1.csv",
+    "tail_head": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_chunk_tail_head_ratio.csv",
+    "per_action_dim": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_visual_robustness_per_action_dim.csv",
+    "per_task": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_visual_robustness_per_task_action_l1.csv",
+    "per_task_type": "/home/dechao/cv_final_pj2/results/tables/step4/formal1024_ABC_visual_chunk_robustness_visual_robustness_per_task_type_action_l1.csv"
+  },
+  "contact_sheet": "/home/dechao/cv_final_pj2/results/figures/step4/formal1024_ABC_visual_chunk_robustness_visual_shift_contact_sheet.png"
+}

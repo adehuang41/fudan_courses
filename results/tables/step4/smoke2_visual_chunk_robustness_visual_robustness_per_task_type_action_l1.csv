@@ -1,0 +1,13 @@
+condition,episode_count,experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task_type,valid_action_steps
+clean,2,B_only_act_baseline,0.6169571249793856,0.21415923848534837,130,move_slider_left,4290
+brightness_dark,2,B_only_act_baseline,0.6113333033515023,0.1889385170711107,130,move_slider_left,4290
+brightness_bright,2,B_only_act_baseline,0.6323714699143376,0.23441231659440806,130,move_slider_left,4290
+gaussian_blur,2,B_only_act_baseline,0.6300976149129979,0.22078345978692734,130,move_slider_left,4290
+gaussian_noise,2,B_only_act_baseline,0.5969142907705063,0.2036078907909133,130,move_slider_left,4290
+wrist_grayout,2,B_only_act_baseline,0.6200431150632661,0.21718024644222889,130,move_slider_left,4290
+clean,2,ABC_mixed_act_baseline,0.521807814509798,0.16350182161464558,130,move_slider_left,4290
+brightness_dark,2,ABC_mixed_act_baseline,0.5396232354970444,0.17434187454261107,130,move_slider_left,4290
+brightness_bright,2,ABC_mixed_act_baseline,0.5485966823039911,0.16834400235276759,130,move_slider_left,4290
+gaussian_blur,2,ABC_mixed_act_baseline,0.5415039680419348,0.17438238839725237,130,move_slider_left,4290
+gaussian_noise,2,ABC_mixed_act_baseline,0.6394691111920001,0.21403136209690526,130,move_slider_left,4290
+wrist_grayout,2,ABC_mixed_act_baseline,0.5718229069139733,0.19111872181033357,130,move_slider_left,4290

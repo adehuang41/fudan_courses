@@ -1,0 +1,20 @@
+name: lerobot-act
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - ffmpeg
+  - pip:
+      - lerobot
+      - huggingface_hub[cli]
+      - datasets
+      - pyarrow
+      - opencv-python-headless
+      - pillow
+      - imageio
+      - pyyaml
+      - swanlab
+      - matplotlib
+      - modelscope-hub

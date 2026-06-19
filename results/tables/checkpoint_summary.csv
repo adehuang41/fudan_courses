@@ -1,0 +1,7 @@
+checkpoint_name,error,exists,experiment,path,readable,size_mb,step
+latest,,True,B_only_act_baseline,/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/latest.pt,True,591.0736331939697,50000
+final,,True,B_only_act_baseline,/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/final.pt,True,591.0462942123413,50000
+best_val_action_l1,,True,B_only_act_baseline,/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt,True,591.0877361297607,50000
+latest,,True,ABC_mixed_act_baseline,/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/latest.pt,True,591.0736331939697,50000
+final,,True,ABC_mixed_act_baseline,/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/final.pt,True,591.0462942123413,50000
+best_val_action_l1,,True,ABC_mixed_act_baseline,/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/best_val_action_l1.pt,True,591.0877361297607,50000

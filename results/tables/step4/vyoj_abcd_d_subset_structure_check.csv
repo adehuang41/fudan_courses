@@ -1,0 +1,5 @@
+check,status,path,size_bytes
+validation/.hydra/merged_config.yaml,missing,/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation/.hydra/merged_config.yaml,0
+validation/scene_info.npy,missing,/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation/scene_info.npy,0
+validation/lang_annotations/auto_lang_ann.npy,present,/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation/lang_annotations/auto_lang_ann.npy,1811851
+validation/episode_*.npz,present,/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation,99022

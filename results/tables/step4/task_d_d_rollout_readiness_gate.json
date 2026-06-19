@@ -1,0 +1,47 @@
+{
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "raw_structure_check": "results/tables/step4/task_d_d_validation_structure_check.json",
+  "scene_info_dependency_audit": "results/tables/step4/task_d_d_scene_info_dependency_audit.json",
+  "rollout_readiness_gate": "passed_with_warning",
+  "warning": "validation/scene_info.npy is missing, but closed-loop rollout path does not read it; startup smoke already passed.",
+  "fix_applied": false,
+  "can_run_small_scale_closed_loop": true,
+  "checks": [
+    {
+      "check": "validation/.hydra/merged_config.yaml",
+      "status": "present",
+      "severity": "required",
+      "decision": "pass"
+    },
+    {
+      "check": "validation/lang_annotations/auto_lang_ann.npy",
+      "status": "present",
+      "severity": "required",
+      "decision": "pass"
+    },
+    {
+      "check": "validation/episode_*.npz",
+      "status": "present",
+      "severity": "required",
+      "decision": "pass"
+    },
+    {
+      "check": "validation/ep_lens.npy",
+      "status": "present",
+      "severity": "optional",
+      "decision": "pass"
+    },
+    {
+      "check": "validation/ep_start_end_ids.npy",
+      "status": "present",
+      "severity": "optional",
+      "decision": "pass"
+    },
+    {
+      "check": "validation/scene_info.npy",
+      "status": "missing",
+      "severity": "warning_for_rollout",
+      "decision": "warn_not_block"
+    }
+  ]
+}

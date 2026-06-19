@@ -1,0 +1,30 @@
+{
+  "repo_id": "adehuang41/cv_hw3_task2",
+  "modelscope_url": "https://modelscope.cn/models/adehuang41/cv_hw3_task2",
+  "checkpoints": [
+    {
+      "remote_path": "checkpoints/B_only_visual_ACT_best_val_action_l1.pt",
+      "local_source": "/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt",
+      "experiment": "B_only_act_baseline",
+      "kind": "visual_act_baseline"
+    },
+    {
+      "remote_path": "checkpoints/ABC_mixed_visual_ACT_best_val_action_l1.pt",
+      "local_source": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/best_val_action_l1.pt",
+      "experiment": "ABC_mixed_act_baseline",
+      "kind": "visual_act_baseline"
+    },
+    {
+      "remote_path": "checkpoints/B_only_task_id_ACT_best_val_action_l1.pt",
+      "local_source": "/data/dechao/cv_final_pj2/outputs/task_conditioned/B_only_task_id_finetune_from_visual50k_extra50k_seed20260531_retry1/checkpoints/best_val_action_l1.pt",
+      "experiment": "B_only_task_id_finetune_from_visual50k_extra50k_seed20260531_retry1",
+      "kind": "task_id_act_finetune"
+    },
+    {
+      "remote_path": "checkpoints/ABC_mixed_task_id_ACT_best_val_action_l1.pt",
+      "local_source": "/data/dechao/cv_final_pj2/outputs/task_conditioned/ABC_mixed_task_id_finetune_from_visual50k_extra50k_seed20260531_retry1/checkpoints/best_val_action_l1.pt",
+      "experiment": "ABC_mixed_task_id_finetune_from_visual50k_extra50k_seed20260531_retry1",
+      "kind": "task_id_act_finetune"
+    }
+  ]
+}

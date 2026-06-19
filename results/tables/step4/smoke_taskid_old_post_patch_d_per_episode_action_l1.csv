@@ -1,0 +1,2 @@
+episode_index,experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task,valid_action_steps
+0,old_B_taskid_smoke,0.6150917509417513,0.1853629982713616,65,move_slider_left: move the door to the left side,2145
