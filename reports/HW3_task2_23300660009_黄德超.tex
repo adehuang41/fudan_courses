@@ -740,18 +740,4 @@ task-id ablation 显示模型确实使用语言目标。ABC-mixed task-id 的 co
 \vspace{0.7em}
 SwanLab 项目中记录了四个主要实验 run：B-only visual ACT、ABC-mixed visual ACT、B-only task-id ACT 和 ABC-mixed task-id ACT。上传指标包含训练过程的 total loss、\actionlone{} loss、KL loss、learning rate，以及验证集 val loss 和 val \actionlone{}。为避免网页曲线过密，训练曲线按每 10 step 记录一个点，验证集指标保留全部 validation checkpoint。
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.86\linewidth]{../results/figures/swanlab/swanlab_training_loss_curves.png}
-\caption{由 SwanLab 上传脚本导出的训练 total loss 曲线。}
-\label{fig:swanlab_loss}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.86\linewidth]{../results/figures/swanlab/swanlab_validation_action_l1_curves.png}
-\caption{由 SwanLab 上传脚本导出的验证集 Action L1 曲线。}
-\label{fig:swanlab_val}
-\end{figure}
-
 \end{document}
