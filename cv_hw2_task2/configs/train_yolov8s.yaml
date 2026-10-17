@@ -1,0 +1,19 @@
+# YOLOv8s @ 640 fine-tune on VisDrone-DET, single GPU (CUDA 7).
+run_name: yolov8s_visdrone_640
+model: yolov8s.pt        # ImageNet/COCO pretrained checkpoint, downloaded by ultralytics
+data: configs/visdrone.yaml
+epochs: 150
+imgsz: 640
+batch: 32
+device: 7
+workers: 8
+optimizer: auto          # ultralytics picks SGD/AdamW automatically
+cos_lr: true
+patience: 30
+close_mosaic: 15
+mosaic: 1.0
+mixup: 0.1
+amp: true
+seed: 42
+project: checkpoints
+exist_ok: true

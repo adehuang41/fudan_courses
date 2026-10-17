@@ -1,0 +1,20 @@
+# Ultralytics dataset config — VisDrone-DET converted to YOLO format.
+# Layout (created by `python -m src.prepare_visdrone`):
+#   data/visdrone_yolo/{images,labels}/{train,val,test}/
+
+path: /home/dechao/cv/hw2_task2/data/VisDrone
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: pedestrian
+  1: people
+  2: bicycle
+  3: car
+  4: van
+  5: truck
+  6: tricycle
+  7: awning-tricycle
+  8: bus
+  9: motor

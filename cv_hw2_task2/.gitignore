@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+
+# Local agent / notes
+AGENTS.md
+HANDOFF.md
+CONTEXT.md
+CONTEXT_Chinese.md
+.scratch/
+docs/
+
+# Data and large artifacts
+data/
+checkpoints/
+outputs/
+release/
+submission/
+swanlog/
+runs/
+
+# Raw videos and local logs
+*.mp4
+logs_train.log
+
+# Weights / pretrained checkpoints
+*.pt
+
+# Assignment file and local helper docs
+HW2_计算机视觉.pdf
+
+# Optional presentation artifacts not needed in the public repo
+report/hw2_task2_presentation.pptx
+report/presentation_script.html
+report/HW2_Task2_submission_report.md
+report/task2_report.md
