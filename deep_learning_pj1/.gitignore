@@ -1,0 +1,56 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local agent / planning artifacts
+AGENTS.md
+CONTEXT.md
+handoff/
+plan/
+docs/
+tmp/
+modelscope_release/
+
+# Course prompt copy, not needed in the code repo
+project要求/
+
+# Dataset and trained weights must not be uploaded to GitHub
+codes/dataset/MNIST/*.gz
+full_*/
+project_outputs/**/checkpoints/
+project_outputs/**/*.pickle
+project_outputs/**/*.npy
+project_outputs/cache/
+project_outputs/mpl/
+project_outputs/part_c_extended/
+project_outputs/part_c_extended_drop_last/cache/
+project_outputs/part_c_extended_drop_last/hard10_all/
+project_outputs/part_c_extended_drop_last/hard10_conv2head/
+project_outputs/part_c_extended_drop_last/hard10_head/
+project_outputs/part_c_extended_drop_last/indices/
+project_outputs/part_c_extended_drop_last/mpl/
+project_outputs/part_c_extended_drop_last/random10_all/
+
+# Python and notebook scratch
+codes/__pycache__/
+codes/draw_tools/__pycache__/
+codes/mynn/__pycache__/
+codes/dataset_explore.ipynb
+
+# Build / cache files
+report.aux
+report.out
+report.log
+report.fdb_latexmk
+report.fls
+report.xdv
+report.pdf
+report/*.aux
+report/*.out
+report/*.log
+report/*.fdb_latexmk
+report/*.fls
+report/*.xdv
+report/*.synctex.gz
+report/*.pdf
+report/report_template.md

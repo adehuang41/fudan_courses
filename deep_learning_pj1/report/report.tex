@@ -1,0 +1,456 @@
+% !TEX program = xelatex
+% !TEX output_directory = .
+\documentclass[12pt,a4paper,fontset=fandol]{ctexart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{grffile}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+\graphicspath{
+  {../project_outputs/part_b/}
+  {../project_outputs/part_c/}
+  {project_outputs/part_b/}
+  {project_outputs/part_c/}
+}
+
+\title{Neural Network and Deep Learning Project 1\\
+\large MNIST 上的 MLP、CNN 与鲁棒性引导增强研究}
+\author{
+姓名：\underline{黄德超}\\
+学号：\underline{23300660009}
+}
+\date{\today}
+\setlength{\emergencystretch}{2em}
+
+\begin{document}
+
+\maketitle
+
+\noindent
+\textbf{Github 链接：}
+\href{https://github.com/adehuang41/deep_learning_pj1.git}
+{\texttt{adehuang41/deep\_learning\_pj1}}
+
+\noindent
+\textbf{模型权重 / Checkpoint 链接：}
+\href{https://www.modelscope.cn/adehuang41/deep_learning_pj1_mnist}{\texttt{adehuang41/deep\_learning\_pj1\_mnist}}
+
+\begin{abstract}
+本报告围绕 MNIST 手写数字分类，完成了课程项目要求的三个实验模块。Part A 建立了从零实现的 MLP baseline；Part B 在统一训练协议下比较了 MLP 与 CNN；Part C 选择 \texttt{Data Augmentation} 和 \texttt{Robustness Analysis} 两个方向，并将它们组织成一个统一问题：先诊断 \texttt{CNN-clean} 的主要脆弱扰动，再比较 target-only augmentation 与 mixed augmentation，以及 from-scratch training 与 fine-tuning 两条训练路线。结果表明：CNN 在 clean MNIST 上明显优于 MLP，且参数量更少；在 Part C 中，验证集 robustness diagnosis 选出的主要弱点是 \texttt{translation-3}；\texttt{CNN-AugScratch-target} 在 selected target 上最强，而 \texttt{CNN-AugScratch-mixed} 在 target performance 仅小幅回落的前提下取得了更强的 cross-family robustness。相比之下，基于 \texttt{CNN-clean} checkpoint 的 \texttt{CNN-RGFT-target} 与 \texttt{CNN-FT-mixed} 说明 fine-tuning 可以用较低边际成本获得明显鲁棒性提升，但整体上通常仍弱于对应的 from-scratch augmentation baseline。
+\end{abstract}
+
+\section{Introduction and Experimental Setup}
+
+本项目按实验流程组织报告。\texttt{MLP baseline}、\texttt{CNN comparison} 和 \texttt{two additional directions} 构成实验主线；\texttt{main results table}、\texttt{detailed visualization} 和 \texttt{discussion} 被整合进对应实验部分，并在最后集中总结。
+
+数据集为标准 MNIST。原始训练集共有 60{,}000 张图像，使用固定随机种子 309 将其划分为 50{,}000 张训练图像和 10{,}000 张验证图像。验证集用于 checkpoint 选择、鲁棒性诊断和 target 选择；官方 10{,}000 张测试集在最终评估之前保持不参与训练和模型选择。除训练随机性之外，鲁棒性评估还固定使用单独的评估随机种子 2026，以保证不同模型之间的 perturbation 采样一致。
+
+所有模型都使用归一化到 $[0,1]$ 的灰度输入。Part A 和 Part B 采用相同的 train/validation split、相同预处理、相同优化器类型和相同 epoch budget；Part C 在此基础上保持同一 clean baseline，再做 target-aware augmentation 或 fine-tuning。主要训练设置见表 \ref{tab:setup}.
+
+\begin{table}[H]
+  \centering
+  \small
+  \caption{Main training settings used in this project.}
+  \label{tab:setup}
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabular}{lccc}
+    \toprule
+    Experiment & Epochs & Batch size & Learning rate \\
+    \midrule
+    \texttt{MLP-clean} & 30 & 256 & 0.05 \\
+    \texttt{CNN-clean} & 30 & 256 & 0.01 \\
+    \texttt{CNN-AugScratch-target} & 30 & 64 & 0.01 \\
+    \texttt{CNN-AugScratch-mixed} & 30 & 64 & 0.01 \\
+    \texttt{CNN-RGFT-target} & 10 & 64 & 0.005 \\
+    \texttt{CNN-FT-mixed} & 10 & 64 & 0.005 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+关于 \texttt{translation-3} 的实现需要明确说明。训练阶段的 target augmentation 采用 online random translation：对每张图像在横纵两个方向分别随机采样整数位移，范围均为 $[-3, 3]$，超出边界的部分裁剪，新暴露区域用零填充。主线 validation/test 评估中的 \texttt{translation-3} 也沿用这一实现，但使用固定评估随机种子，因此比较是可复现的。为了让 perturbation 定义更直观，后文的 target visualization 还额外展示了四个确定方向的 \texttt{left/right/up/down} 平移示例；这个 deterministic four-direction view 仅用于说明 selected target 的几何含义，而不是主线 Part C 的总体测试指标。
+
+\subsection{From-Scratch Operator Implementation}
+
+MLP 和 CNN 都建立在 NumPy from-scratch computation graph 之上：参数张量由自定义层维护，前向传播显式缓存中间结果，反向传播逐层手写梯度公式，再交给自定义 SGD 更新；整个训练过程没有使用 PyTorch、TensorFlow 或 JAX 的 autograd，也没有调用这些框架内置的卷积、池化或 cross-entropy。
+
+在线性分类链路中，\texttt{Linear.forward} 直接完成 $XW+b$ 的矩阵乘加，\texttt{Linear.backward} 则显式计算对输入、权重和偏置的梯度。损失层使用手写的 multi-class softmax cross-entropy：前向先基于 logits 计算数值稳定的 softmax 概率和平均负对数似然，反向再直接给出 logits 的梯度。总的来说：Part A 的 MLP baseline 是一条 ``Linear $\rightarrow$ ReLU $\rightarrow$ Linear $\rightarrow$ softmax cross-entropy'' 实现链路。
+
+CNN 部分同样依赖自实现算子。\texttt{Conv2D.forward} 先用 \texttt{sliding\_window\_view} 提取局部窗口，再以 im2col-style 的向量化方式完成卷积核与局部感受野之间的批量乘加；\texttt{Conv2D.backward} 显式累积卷积核梯度、偏置梯度，并把梯度散射回输入特征图。这里的 \texttt{sliding\_window\_view} 是 NumPy 的张量重排技巧，用于减少 Python 层循环。池化层 \texttt{MaxPool.forward} 会记录每个窗口的 argmax 位置，\texttt{MaxPool.backward} 只把梯度传回这些最大值位置；\texttt{ReLU} 则在反向阶段按输入符号屏蔽负半轴梯度。
+
+\section{MLP Baseline}
+
+Part A 的目标是建立一个可运行、可解释的 MLP baseline，并验证线性层和 softmax cross-entropy 的前向与反向传播实现正确。模型采用单隐层结构 $784 \rightarrow 256 \rightarrow 10$，激活函数为 ReLU，训练使用 SGD。
+
+\texttt{MLP-clean} 的最终结果如下：
+\begin{itemize}
+  \item 训练准确率：0.9698
+  \item 验证准确率：0.9601
+  \item 测试准确率：0.9640
+\end{itemize}
+
+这个结果说明 Part A 的基础训练链路已经工作正常，同时为后续 MLP-vs-CNN 比较提供了一个足够强的 clean baseline，而不是一个明显欠拟合的对手。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{mlp_learning_curve.png}
+  \caption{\texttt{MLP-clean} 的训练曲线。}
+\end{figure}
+
+\section{CNN Model and MLP-vs-CNN Comparison}
+
+\subsection{Model architecture and fair comparison protocol}
+
+Part B 中，我实现了一个小型 CNN。结构按层展开如下：
+
+\begin{center}
+\begin{tabular}{ll}
+Input & $1 \times 28 \times 28$ \\
+Conv1 & $1 \to 8$, kernel $3 \times 3$, padding $=1$ \\
+ReLU + MaxPool & $2 \times 2$ \\
+Conv2 & $8 \to 16$, kernel $3 \times 3$, padding $=1$ \\
+ReLU + MaxPool & $2 \times 2$ \\
+Flatten & $16 \times 7 \times 7 = 784$ \\
+FC1 & $784 \to 128$ \\
+ReLU & -- \\
+FC2 & $128 \to 10$ \\
+\end{tabular}
+\end{center}
+
+卷积、池化、全连接和交叉熵损失都使用本项目中的 NumPy 实现。为了保证 MLP 与 CNN 的比较尽量公平，我保持了相同的 train/validation split、相同的数据预处理、相同的 batch size（256）、相同的 epoch budget（30）以及相同的优化器类型（SGD）。学习率只做最小必要调整：MLP 使用 0.05，CNN 使用 0.01，以保证两种结构都能稳定训练。
+
+\subsection{Main results of Part B}
+
+\begin{table}[H]
+  \centering
+  \caption{Part B 中 \texttt{MLP-clean} 与 \texttt{CNN-clean} 的主要结果。}
+  \begin{tabular}{lcccc}
+    \toprule
+    模型 & 参数量 & Train Acc & Val Acc & Test Acc \\
+    \midrule
+    \texttt{MLP-clean} & 203530 & 0.9698 & 0.9601 & 0.9640 \\
+    \texttt{CNN-clean} & 103018 & 0.9823 & 0.9757 & 0.9799 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\texttt{CNN-clean} 在验证集和测试集上都明显优于 \texttt{MLP-clean}，测试准确率提升约 1.59 个百分点。同时，CNN 的可训练参数量只有 103018，约为 MLP 的一半。这说明它的优势并不来自更大的模型规模，而是来自更适合图像任务的结构偏置。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.78\textwidth]{mlp_vs_cnn_learning_curve.png}
+  \caption{\texttt{MLP-clean} 与 \texttt{CNN-clean} 的对比训练曲线。}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{mlp_first_layer_weights.png}
+    \caption{MLP 第一层权重可视化}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{cnn_first_layer_kernels.png}
+    \caption{CNN 第一层卷积核可视化}
+  \end{subfigure}
+  \caption{Part B 的解释性可视化。}
+\end{figure}
+\subsection{Why the CNN is better suited to image classification}
+
+本实验结果支持以下结构性解释。第一，MLP 在输入层前就把 $28 \times 28$ 图像 flatten 成长度为 784 的向量，显式二维空间邻域被打散。第二，CNN 的 local receptive field 更契合手写数字由局部笔画构成的特点。第三，weight sharing 带来了更高的参数效率，因此相同模式出现在不同位置时不需要重复学习。第四，卷积是 translation-equivariant，而 pooling 和后续空间聚合会提高模型对小范围位移的容忍度。第五，多层卷积可以把低级边缘和笔画段逐步组合成更完整的数字部件。
+
+需要保持表述严谨：普通 CNN 并不会自动获得完美的 translation invariance，更不会天然具有 rotation invariance。事实上，Part C 之所以最终选择 \texttt{translation-3} 作为 target perturbation，正是因为它在验证集上给 \texttt{CNN-clean} 造成了最大的 accuracy drop。这说明 CNN 虽然比 MLP 更适合图像局部模式，但对更强的空间位移仍然存在明确弱点。
+
+\section{Robustness Diagnosis and Augmentation Comparison}
+
+\subsection{Robustness diagnosis and target selection}
+
+Part C 选择了两个 additional directions：
+\begin{itemize}
+  \item Direction 3: \texttt{Data Augmentation}
+  \item Direction 4: \texttt{Robustness Analysis}
+\end{itemize}
+
+这两个方向没有被拆成两个彼此独立的小实验，而是被组织成同一个研究问题：先通过 validation robustness diagnosis 找到 \texttt{CNN-clean} 的主要弱点，再围绕该弱点比较两种 target-aware 训练策略。
+
+我先在验证集上评估 \texttt{CNN-clean} 在以下扰动下的表现：
+\begin{itemize}
+  \item Gaussian noise: $\sigma = 0.05, 0.10, 0.20$
+  \item translation: severity $= 1, 2, 3$
+  \item rotation: angle $= 5^\circ, 10^\circ, 15^\circ$
+\end{itemize}
+
+图 \ref{fig:candidate_translation}、图 \ref{fig:candidate_rotation} 和图 \ref{fig:candidate_noise} 分别展示 robustness test set 中使用的三类 candidate perturbation family：translation、rotation 和 Gaussian noise。target perturbation 的选择规则很简单：只看 overall validation accuracy drop，选取掉点最大的单一设置。最终选出的 target 为 \texttt{translation-3}。因此，后续所有 target-aware 训练和目标指标都围绕这一具体设置展开。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.84\textwidth]{candidate_translation_examples.png}
+  \caption{Examples of translation perturbations used in the robustness test set.}
+  \label{fig:candidate_translation}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.84\textwidth]{candidate_rotation_examples.png}
+  \caption{Examples of rotation perturbations used in the robustness test set.}
+  \label{fig:candidate_rotation}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.84\textwidth]{candidate_gaussian_examples.png}
+  \caption{Examples of Gaussian noise perturbations used in the robustness test set.}
+  \label{fig:candidate_noise}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.74\textwidth]{validation_robustness_curve.png}
+  \caption{Validation robustness diagnosis for \texttt{CNN-clean}.}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \small
+  \caption{Validation robustness diagnosis of \texttt{CNN-clean}. Rank 1 means the largest validation accuracy drop.}
+  \label{tab:val_diagnosis_rank}
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabular}{lcccc}
+    \toprule
+    Perturbation & Severity & Val Acc & Accuracy Drop & Rank \\
+    \midrule
+    translation & 3 & 0.7035 & 0.2722 & 1 \\
+    translation & 2 & 0.8588 & 0.1169 & 2 \\
+    rotation & 15 & 0.9388 & 0.0369 & 3 \\
+    noise & 0.20 & 0.9444 & 0.0313 & 4 \\
+    translation & 1 & 0.9554 & 0.0203 & 5 \\
+    rotation & 10 & 0.9616 & 0.0141 & 6 \\
+    rotation & 5 & 0.9706 & 0.0051 & 7 \\
+    noise & 0.10 & 0.9709 & 0.0048 & 8 \\
+    noise & 0.05 & 0.9744 & 0.0013 & 9 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+表 \ref{tab:val_diagnosis_rank} 把 diagnosis curve 的排序写成了明确的数值结论。最关键的现象不是某个 family 在所有 severity 上都最差，而是 \texttt{translation-3} 的单点掉幅远大于其他 candidate settings：它的 validation accuracy drop 为 0.2722，显著高于 rank 2 的 \texttt{translation-2}（0.1169），也明显高于最强 rotation 和 noise setting。因此，后续把 \texttt{translation-3} 选为 selected target 不是主观偏好，而是由 validation diagnosis 直接支持的结果。与此同时，表中也说明 \texttt{CNN-clean} 对轻中度 noise 和小角度 rotation 已经相对稳定，真正突出的 weakness 是更强的 spatial displacement。
+
+图 \ref{fig:cnn_clean_failure_examples} 补充了 diagnosis 的 example-level 视角。这里每一行都固定使用一个具有代表性的高强度 setting：\texttt{noise-0.20}、\texttt{translation-3} 和 \texttt{rotation-15}。这些样本说明，\texttt{CNN-clean} 的失败模式并不完全相同：Gaussian noise 更多是局部笔画被污染后引发的类别混淆，translation 则经常把关键笔画推向边界导致结构截断，而 rotation 的误判通常来自整体形状变化后与相近数字的轮廓更接近。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.98\textwidth]{cnn_clean_failure_examples_by_family.png}
+  \caption{Representative \texttt{CNN-clean} failure examples under three perturbation families. Each panel shows \texttt{clean | perturbed}, together with the true label and the perturbed prediction.}
+  \label{fig:cnn_clean_failure_examples}
+\end{figure}
+
+图 \ref{fig:target_translation_def} 专门给出最终 selected target perturbation \texttt{translation-3} 的具体定义：对同一张图分别做 \texttt{left-3/right-3/up-3/down-3} 平移，并统一采用 zero padding。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\textwidth]{target_perturbation_visualization.png}
+  \caption{Target perturbation visualization for \texttt{translation-3}. Each row shows one MNIST sample under clean, left-3, right-3, up-3, and down-3 transforms. The translation uses zero padding rather than circular shift, so it preserves the label but changes spatial position and exposes the CNN's sensitivity to displacement.}
+  \label{fig:target_translation_def}
+\end{figure}
+
+\subsection{Target-only vs Mixed Augmentation under Two Training Routes}
+
+在选定 \texttt{translation-3} 之后，Part C 的主实验被组织成一个清楚的 $2 \times 2$ 比较：一条轴比较 augmentation objective（target-only vs.\ mixed），另一条轴比较 training route（from scratch vs.\ fine-tuning from the \texttt{CNN-clean} checkpoint）。
+
+\paragraph{\texttt{CNN-AugScratch-target}}
+从头训练一个新的 CNN，训练时每个 mini-batch 由 50\% clean 样本和 50\% \texttt{translation-3} 样本组成，epoch budget 为 30。这是最直接的 target-only augmentation baseline。
+
+\paragraph{\texttt{CNN-AugScratch-mixed}}
+同样从头训练一个新的 CNN，训练配置保持为 30 epochs、batch size 64、SGD、learning rate 0.01。不同之处在于，batch 中 50\% 的 perturbed samples 不再固定为 \texttt{translation-3}；而是在线随机生成，并对每个 perturbed sample 先在 \texttt{noise / translation / rotation} 三个 family 间均匀采样 perturbation type，再在该 family 的 diagnosis grid 内均匀采样 severity，即 $\sigma \in \{0.05, 0.10, 0.20\}$、translation $\in \{1,2,3\}$、rotation $\in \{5^\circ, 10^\circ, 15^\circ\}$。checkpoint selection 也不再只看单一 target，而是使用 validation mixed robustness score：
+\[
+\text{score} = \text{mean}(\text{clean val acc},\ \text{noise-0.10 val acc},\ \text{translation-2 val acc},\ \text{rotation-10 val acc}).
+\]
+
+\paragraph{\texttt{CNN-RGFT-target}}
+从 \texttt{CNN-clean} 的 best checkpoint 出发，继续做 diagnosis-guided target repair。训练同样采用 50\% clean 样本和 50\% \texttt{translation-3} 样本，但只追加 10 个 fine-tuning epochs。checkpoint selection 遵循一个显式约束：在 clean validation accuracy 相比 \texttt{CNN-clean} 下降不超过 1 个百分点的前提下，选择 target validation accuracy 最高的 checkpoint。
+
+\paragraph{\texttt{CNN-FT-mixed}}
+同样从 \texttt{CNN-clean} 的 best checkpoint 初始化，但 fine-tuning 时不再只围绕 selected target，而是使用与 \texttt{CNN-AugScratch-mixed} 相同的 mixed perturbation distribution：50\% clean 样本加 50\% mixed perturbed 样本，并在 \texttt{noise / translation / rotation} 三个 family 之间随机采样。
+
+\subsection{Clean and Robustness Results}
+
+表 \ref{tab:partc_clean_table} 先检查 augmentation 是否保住了 clean-distribution performance。可以看到，四个 Part C 主模型都没有破坏 clean MNIST accuracy；其中两种 from-scratch augmentation 的 clean test accuracy 甚至略高于 \texttt{CNN-clean}，而两种 fine-tuning 方案也基本保持了 clean baseline。
+
+\begin{table}[H]
+  \centering
+  \small
+  \caption{Clean-distribution performance in Part C.}
+  \label{tab:partc_clean_table}
+  \renewcommand{\arraystretch}{1.08}
+  \setlength{\tabcolsep}{7pt}
+  \begin{tabular}{lcccc}
+    \toprule
+    Model & Route & Clean Val & Clean Test & $\Delta$ Test \\
+    \midrule
+    \texttt{CNN-clean} & baseline & 0.9757 & 0.9799 & 0.0000 \\
+    \texttt{AugScratch-target} & from scratch & 0.9787 & 0.9815 & +0.0016 \\
+    \texttt{AugScratch-mixed} & from scratch & 0.9869 & 0.9882 & +0.0083 \\
+    \texttt{RGFT-target} & fine-tuning & 0.9763 & 0.9790 & -0.0009 \\
+    \texttt{FT-mixed} & fine-tuning & 0.9808 & 0.9830 & +0.0031 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \scriptsize
+  \caption{Part C 主结果表。Robust Avg is the mean test accuracy over the nine non-clean settings: noise-0.05/0.10/0.20, translation-1/2/3, and rotation-5/10/15.}
+  \label{tab:partc_main_2x2}
+  \renewcommand{\arraystretch}{1.20}
+  \setlength{\tabcolsep}{8pt}
+  \begin{tabular}{lccrrrr}
+    \toprule
+    Model & Route & Objective & Clean & Target & Drop & Robust Avg \\
+    \midrule
+    \texttt{MLP-clean} & scratch & none & 0.9640 & 0.5320 & 0.4320 & -- \\
+    \texttt{CNN-clean} & scratch & none & 0.9799 & 0.7069 & 0.2730 & 0.9239 \\
+    \texttt{AugScratch-target} & scratch & target & 0.9815 & 0.9568 & 0.0247 & 0.9330 \\
+    \texttt{AugScratch-mixed} & scratch & mixed & 0.9882 & 0.9527 & 0.0355 & 0.9794 \\
+    \texttt{RGFT-target} & FT & target & 0.9790 & 0.9266 & 0.0524 & 0.9489 \\
+    \texttt{FT-mixed} & FT & mixed & 0.9830 & 0.8964 & 0.0866 & 0.9631 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+表 \ref{tab:partc_main_2x2} 对应整个 Part C 的核心结论。第一，\texttt{CNN-clean} 虽然已经显著强于 \texttt{MLP-clean}，但在 selected target \texttt{translation-3} 上仍然有明显掉点。第二，\texttt{CNN-AugScratch-target} 在 selected target 上最强，说明围绕 diagnosis 发现的 weakness 做专门增强是有效的。第三，\texttt{CNN-AugScratch-mixed} 以很小的 target performance 代价（0.9527 vs.\ 0.9568）换来了显著更高的 Robust Avg（0.9794 vs.\ 0.9330），说明 broader robustness 依赖训练分布覆盖多个 perturbation family。第四，两种 fine-tuning 路线都明显优于 \texttt{CNN-clean}，但整体上仍弱于对应的 from-scratch augmentation baseline。
+
+图 \ref{fig:partc_grouped_bar} 把这个 $2 \times 2$ 比较可视化为三项指标：Clean Test、Target Test 和 Robust Avg。它把 Part C 的 trade-off 展示得更直接：target-only 方法在 selected target 上最好，而 mixed 方法在整体 robustness 上更均衡；同时，from-scratch 仍然是更强的训练路线，fine-tuning 的主要优势在于 marginal cost 更低。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.86\textwidth]{main_2x2_grouped_bar.png}
+  \caption{Grouped bar chart for the four main Part C models.}
+  \label{fig:partc_grouped_bar}
+\end{figure}
+
+\subsection{Robustness Curves across Perturbation Families}
+
+图 \ref{fig:partc_robustness_curves_main} 给出 Part C 的核心 robustness curves。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.98\textwidth]{robustness_curves_2x2_main.png}
+  \caption{Robustness curves across noise, translation, and rotation families for the five main CNN models in Part C.}
+  \label{fig:partc_robustness_curves_main}
+\end{figure}
+
+这组三族曲线支持三个直接判断。第一，\texttt{CNN-clean} 在 \texttt{translation-3} 上下降最明显，与前面的 target selection 完全一致。第二，target-only 方法主要改善 translation curve；其中 \texttt{CNN-AugScratch-target} 在 \texttt{translation-3} 上达到 0.9568，是所有模型中最高的。第三，mixed 方法在 noise、translation 和 rotation 三个 family 上都更均衡，特别是 \texttt{CNN-AugScratch-mixed} 的整体曲线最平稳，因此它更适合作为 broad robustness 的 baseline。相比之下，\texttt{CNN-FT-mixed} 也获得了明显的 cross-family 提升，但仍未超过从头训练的 mixed baseline。
+
+从 family-level 的角度看，这些曲线还有三点值得单独强调。对 \texttt{noise} 而言，\texttt{CNN-clean} 本身对轻中度 Gaussian noise 已经比较稳定，但 mixed augmentation 对强 noise 更有帮助，因此 \texttt{CNN-AugScratch-mixed} 与 \texttt{CNN-FT-mixed} 在 \texttt{noise-0.20} 上都明显优于 target-only 路线。对 \texttt{translation} 而言，\texttt{CNN-clean} 在 \texttt{translation-3} 上下降最大，而 target-only repair 对整条 translation curve 的提升最明显，这正是 diagnosis-guided target repair 的核心收益。对 \texttt{rotation} 而言，整体掉点小于 translation，但 mixed augmentation 在三个 rotation severity 上都更均衡，因此如果目标是 broad robustness，rotation family 的收益主要来自 mixed training distribution，而不是只修 selected target。
+
+\subsection{Cost and Fine-tuning Analysis}
+
+\begin{table}[H]
+  \centering
+  \scriptsize
+  \caption{Marginal-cost comparison for the four main Part C training routes.}
+  \renewcommand{\arraystretch}{1.08}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lccccp{4.2cm}}
+    \toprule
+    Model & Training route & Extra epochs & Sample updates & Wall-clock time (s) & Role \\
+    \midrule
+    \texttt{CNN-AugScratch-target} & from scratch & 30 & 1{,}500{,}000 & 697.31 & strong selected-target baseline \\
+    \texttt{CNN-AugScratch-mixed} & from scratch & 30 & 1{,}500{,}000 & 845.27 & strongest broad-robustness baseline \\
+    \texttt{CNN-RGFT-target} & fine-tuning & 10 & 500{,}000 & 198.03 & lower marginal-cost target repair \\
+    \texttt{CNN-FT-mixed} & fine-tuning & 10 & 500{,}000 & 253.45 & lower marginal-cost mixed repair \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+fine-tuning 的效率必须按 marginal cost 来解释，而不是按 total cost 来夸大。它说明的是：当 \texttt{CNN-clean} 已经存在时，追加 10 个 epochs 就可以换来明显的 target repair 或 mixed-family repair。相比之下，两种 AugScratch 方案都属于 full retraining；它们成本更高，但整体表现也更强。这正是 Part C 想强调的训练路线 trade-off。
+
+\subsection{Target-Specific Error Analysis and Visualization}
+
+本小节的目标不是比较所有模型，而是观察 selected target perturbation 下错误如何被修复。因此我重点展示 CNN-clean、CNN-AugScratch-target 和 CNN-RGFT-target。它们最清楚地对应 selected target 的 “be-
+fore /  strongest from-scratch repair / lower-cost fine-tuning repair'' 三种状态。\texttt{confusion\_shift.csv} 显示 \texttt{CNN-RGFT-target} 在多个主要混淆对上都明显优于 \texttt{CNN-clean}，例如 $1 \rightarrow 7$、$0 \rightarrow 9$、$1 \rightarrow 0$、$8 \rightarrow 3$ 和 $6 \rightarrow 4$。这说明 diagnosis-guided target repair 的收益不是随机波动，而是实实在在地减少了 target perturbation 下的系统性误判。
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{cnn_clean_target_confusion_matrix.png}
+    \caption{\texttt{CNN-clean}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{cnn_augscratch_target_target_confusion_matrix.png}
+    \caption{\texttt{CNN-AugScratch-target}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{cnn_rgft_target_target_confusion_matrix.png}
+    \caption{\texttt{CNN-RGFT-target}}
+  \end{subfigure}
+  \caption{Target perturbation 下的 confusion matrices。}
+  \label{fig:partc_confusion_mats}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.96\textwidth]{repaired_examples.png}
+  \caption{Examples repaired by \texttt{CNN-RGFT-target} under the selected target perturbation.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.96\textwidth]{new_errors.png}
+  \caption{New errors introduced by \texttt{CNN-RGFT-target} under the selected target perturbation.}
+\end{figure}
+
+\section{Main Results and Discussion}
+
+为便于总览，表 \ref{tab:main_results} 汇总了本项目最关键的模型结果。这个总表对应老师要求中的 \texttt{main results table}，而详细曲线、权重可视化、混淆矩阵和 example-level visualization 已经穿插在前述实验部分中。
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+  \caption{本项目主结果总表。}
+  \label{tab:main_results}
+  \renewcommand{\arraystretch}{1.12}
+  \setlength{\tabcolsep}{3.2pt}
+  \begin{tabular}{p{2.55cm}cccp{1.6cm}p{4.2cm}}
+    \toprule
+    模型 & Clean Test & Target Test & Target Drop & Robust Avg & 主要结论 \\
+    \midrule
+    MLP-clean & 0.9640 & 0.5320 & 0.4320 & -- & 对 selected target 很脆弱。 \\
+    CNN-clean & 0.9799 & 0.7069 & 0.2730 & 0.9239 & clean accuracy 明显强于 MLP，但 target weakness 仍然存在。 \\
+    CNN-AugScratch-target & 0.9815 & 0.9568 & 0.0247 & 0.9330 & target-only augmentation 在 selected target 上最强。 \\
+    CNN-AugScratch-mixed & 0.9882 & 0.9527 & 0.0355 & 0.9794 & mixed augmentation 取得最强的整体 cross-family robustness。 \\
+    CNN-RGFT-target & 0.9790 & 0.9266 & 0.0524 & 0.9489 & diagnosis-guided fine-tuning 以较低边际成本修复 selected target。 \\
+    CNN-FT-mixed & 0.9830 & 0.8964 & 0.0866 & 0.9631 & mixed-family fine-tuning 提升 broad robustness，但仍弱于 from-scratch mixed baseline。 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+如果直接回答pj要求中的讨论问题，可以得到以下结论。第一，CNN 比 MLP 更适合图像分类，因为它保留局部结构、共享检测器，并能更高效地构建分层特征。第二，CNN 的确同时提升了 validation 和 test accuracy，而且是在更少参数下取得的。第三，我选择的两个 additional directions 是 \texttt{Data Augmentation} 与 \texttt{Robustness Analysis}，因为它们可以组成一条很清楚的因果链：先诊断 weakness，再围绕 weakness 设计 augmentation，而不是随意堆叠变换。第四，Part C 的主结论应当按 $2 \times 2$ 主实验来理解：\texttt{CNN-AugScratch-target} 说明 diagnosis-guided target-only augmentation 可以最强地修复 selected target；\texttt{CNN-AugScratch-mixed} 说明如果目标是 broader robustness，就必须让训练分布覆盖多个 perturbation family；\texttt{CNN-RGFT-target} 与 \texttt{CNN-FT-mixed} 则说明 fine-tuning 是一条低边际成本的 repair 路线，但通常不超过对应的 from-scratch augmentation baseline。第五，当前仍然困难的样本主要包括两类：一类是本身形状接近、局部笔画容易混淆的数字对，如 $1/7$、$0/9$、$8/3$；另一类是数字主体靠近图像边缘、在平移后关键笔画被截断的样本。这与 \texttt{translation-3} 被选为主要 weakness 是一致的。
+
+\section{Conclusion}
+
+整个项目可以概括为三层递进。首先，Part A 证明了从零实现的 MLP 训练链路是正确的。其次，Part B 表明 CNN 在 clean MNIST 上以更少参数取得了更好的验证与测试性能，说明卷积结构比全连接结构更契合图像任务。最后，Part C 通过 robustness diagnosis 找到了 \texttt{CNN-clean} 的主要 weakness \texttt{translation-3}，并据此组织 target-only augmentation 与 mixed augmentation、from-scratch training 与 fine-tuning 的 $2 \times 2$ 主实验。结果表明：\texttt{CNN-AugScratch-target} 对 selected target 的修复最强；\texttt{CNN-AugScratch-mixed} 在牺牲很少 target performance 的前提下取得了更强的 broad cross-family robustness；而 \texttt{CNN-RGFT-target} 与 \texttt{CNN-FT-mixed} 则说明，基于 \texttt{CNN-clean} checkpoint 的 fine-tuning 可以提供一条较低边际成本的鲁棒性修复路线，但从头增强训练仍然是更强的 baseline。同时，targeted 的两种方法也有局限：它们能有效修复被诊断出的 \texttt{translation-3} weakness，但由于训练目标集中在单一 selected target 上，对其他 perturbation family 的提升并不一定均衡。若目标是获得更广泛的 cross-family robustness，而不只是修复一个已知弱点，训练分布仍然需要覆盖 noise、translation 和 rotation 等多类扰动。因此，targeted repair 更适合低成本、定向修复；mixed augmentation 则更适合追求整体稳定性。
+
+\end{document}

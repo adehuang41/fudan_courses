@@ -1,0 +1,4 @@
+model_name,source_checkpoint,epochs,extra_epochs,time_sec
+CNN-AugScratch-target,random_init,30,30,697.3089926242828
+CNN-AugScratch-mixed,random_init,30,30,845.2695863246918
+CNN-RGFT-target,CNN-clean,10,10,198.0307478904724

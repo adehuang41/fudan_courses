@@ -1,0 +1,16 @@
+family,severity,sample_index,true_label,prediction
+noise,0.2,282,7,2
+noise,0.2,1554,9,1
+noise,0.2,2930,5,3
+noise,0.2,5164,9,3
+noise,0.2,7580,9,4
+translation,3,90,3,0
+translation,3,1450,6,4
+translation,3,2845,9,7
+translation,3,3760,9,7
+translation,3,6210,9,5
+rotation,15,1600,3,5
+rotation,15,2375,4,2
+rotation,15,2528,9,4
+rotation,15,3850,9,4
+rotation,15,4093,9,4

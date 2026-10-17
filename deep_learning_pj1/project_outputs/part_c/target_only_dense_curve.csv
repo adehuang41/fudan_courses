@@ -1,0 +1,17 @@
+model_name,severity,accuracy
+CNN-clean,0,0.9799
+CNN-clean,1,0.9554
+CNN-clean,2,0.8654
+CNN-clean,3,0.7069
+CNN-AugScratch-target,0,0.9815
+CNN-AugScratch-target,1,0.977
+CNN-AugScratch-target,2,0.9728
+CNN-AugScratch-target,3,0.9568
+CNN-AugScratch-mixed,0,0.9882
+CNN-AugScratch-mixed,1,0.9842
+CNN-AugScratch-mixed,2,0.9749
+CNN-AugScratch-mixed,3,0.9527
+CNN-RGFT-target,0,0.979
+CNN-RGFT-target,1,0.9737
+CNN-RGFT-target,2,0.959
+CNN-RGFT-target,3,0.9266
