@@ -1,0 +1,19 @@
+project: hw2-task3
+data_root: ./data
+ckpt_root: ./checkpoints
+seed: 42
+val_ratio: 0.1
+img_size: 256
+batch_size: 64
+num_workers: 4
+base_ch: 64
+optimizer: adamw
+lr: 2.0e-3
+weight_decay: 1.0e-4
+epochs: 60
+warmup_epochs: 2
+
+run_name: E3b_ce_dice_1to2
+loss: combined
+alpha: 0.5
+beta: 1.0
