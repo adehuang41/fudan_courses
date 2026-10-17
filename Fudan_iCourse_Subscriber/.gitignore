@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+.env
+data/*
+!data/icourse.db.enc
+*.mp4
+*.wav
+tests/
+
+# ASR models (downloaded at runtime)
+sherpa-onnx-sense-voice-*/
+silero_vad.onnx
+vosk-model-*/
+
+# IDE & misc
+.vscode/
+.idea/
+.playwright-mcp/
+
+任务描述.md
+get_course_text/
+
+docs/*
+!docs/*.png
+!docs/frontend-readme.md
+
+*.mp3
+bugs.md
+
+# Local DB viewer tool
+db-viewer/
+
+.claude/
+# .github/
