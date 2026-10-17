@@ -1,0 +1,39 @@
+# macOS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# local config
+*/settings.local.json
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.mplconfig/
+.pycache/
+.venv/
+venv/
+env/
+
+# data and assignment prompt
+data/
+HW1_计算机视觉.pdf
+
+# generated model checkpoints
+models/*.pkl
+!models/final_best_model.pkl
+
+# generated search reports
+logs/report_*.txt
+!logs/report_0425_2043.txt
+
+# generated exports
+final version.html
+final version.pdf
+report.html
+report.pdf
+
+# temporary files
+*.tmp
+*.log
