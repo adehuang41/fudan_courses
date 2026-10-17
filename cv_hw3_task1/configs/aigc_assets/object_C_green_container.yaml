@@ -1,0 +1,25 @@
+object_id: object_C
+canonical_name: green_container
+pipeline: image_to_3d
+tool: threestudio_magic123
+base_config: configs/magic123-coarse-sd.yaml
+prompt: "a plain dark green cylindrical canister with a flat lid, smooth glossy surface, symmetric shape"
+negative_prompt: "handle, mug, cup, side bulge, side protrusion, spout, extra part, asymmetric shape, deformed cylinder"
+raw_image: data/raw/object_C_green_container/container_raw.jpg
+rgba_image: data/processed/object_C_green_container/container_rgba.png
+output_root: outputs/aigc_assets/object_C_image_to_3d/green_container
+source: user-captured single image
+recommended_training:
+  stage: coarse
+  max_steps: 3000
+  validation_interval: 1000
+  checkpoint_interval: 1000
+  checkpoint_video_interval: 1000
+  video_render_policy: train_first_then_render_checkpoint_videos
+acceptance:
+  - recognizable as a dark green cylindrical container
+  - flat lid is visible or plausibly represented
+  - glossy dark green surface is preserved
+  - geometry is not collapsed
+  - mesh can be exported for Blender
+  - preview and reproducible logs are present

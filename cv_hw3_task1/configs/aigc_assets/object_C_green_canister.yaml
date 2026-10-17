@@ -1,0 +1,30 @@
+object_id: object_C
+candidate_id: green_canister
+canonical_name: green_canister
+pipeline: image_to_3d
+tool: threestudio_magic123
+base_config: configs/magic123-coarse-sd.yaml
+prompt: "a plain light green cylindrical container with a flat circular lid, smooth surface, symmetric shape, single solid object"
+negative_prompt: "handle, mug, cup, side bulge, side protrusion, spout, extra part, asymmetric shape, deformed cylinder, floaters"
+raw_image: data/raw/object_C_green_canister/canister_raw.jpg
+rgba_image: data/processed/object_C_green_canister/canister_rgba.png
+output_root: outputs/aigc_assets/object_C_image_to_3d/green_canister
+source: user-captured single image
+recommended_training:
+  stage: coarse
+  max_steps: 3000
+  validation_interval: 500
+  checkpoint_interval: 500
+  checkpoint_video_interval: 500
+  n_val_views: 4
+  sd_guidance_scale: 50.0
+  zero123_guidance_scale: 5.0
+  lambda_sparsity: 0.1
+  lambda_opaque: 0.001
+  gpu_policy: CUDA 6 only
+acceptance:
+  - cylindrical container structure with flat circular lid
+  - no obvious side bulge, handle, or spout-like protrusion
+  - opacity and normal panels do not show large extra geometry
+  - single connected body across validation views
+  - four-view validation PNGs and checkpoint videos are present

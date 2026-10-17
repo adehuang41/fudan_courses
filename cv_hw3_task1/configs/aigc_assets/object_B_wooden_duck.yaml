@@ -1,0 +1,13 @@
+object_id: object_B
+canonical_name: wooden_duck
+pipeline: text_to_3d
+tool: threestudio
+base_config: configs/dreamfusion-sd.yaml
+prompt: "a small matte wooden duck toy, hand-painted yellow body and orange beak, simple smooth geometry, realistic object, clean shape, non-transparent, no fur, no thin structures"
+output_root: outputs/aigc_assets/object_B_text_to_3d
+acceptance:
+  - recognizable as a wooden duck toy or a close duck-toy result
+  - geometry is not collapsed
+  - color or texture is usable
+  - mesh can be exported for Blender
+  - preview and reproducible logs are present

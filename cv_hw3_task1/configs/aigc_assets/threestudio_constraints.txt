@@ -1,0 +1,10 @@
+# Version constraints for the local Step 3 threestudio environment.
+# Keep these aligned with threestudio README-tested CUDA 11.8 setup.
+torch==2.0.0+cu118
+torchvision==0.15.1+cu118
+xformers==0.0.19
+numpy<2
+accelerate==0.23.0
+huggingface_hub==0.19.4
+opencv-python<4.10
+opencv-python-headless<4.10

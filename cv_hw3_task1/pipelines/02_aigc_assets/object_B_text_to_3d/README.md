@@ -1,0 +1,7 @@
+# Object B Text to 3D
+
+This sub-pipeline is for generating a synthetic 3D asset from a text prompt.
+
+## Output convention
+
+Write final artifacts to `outputs/` under an `object_B`-specific subdirectory when that workflow is implemented.

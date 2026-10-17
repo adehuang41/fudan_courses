@@ -1,0 +1,35 @@
+object_id: object_C
+candidate_id: green_yoyo
+canonical_name: green_yoyo_body
+pipeline: image_to_3d
+tool: threestudio_magic123
+base_config: configs/magic123-coarse-sd.yaml
+prompt: "a bright green plastic yoyo body, side-view spool-shaped toy, two rounded disks joined by one narrow central waist groove, glossy smooth surface, single centered object"
+negative_prompt: "extra grooves, multiple grooves, grooves on outer faces, top stripe, bottom stripe, side stripe, handle, side protrusion, detached part, extra part, floaters, white rim, text, asymmetric bulge, deformed geometry"
+raw_image: data/raw/object_C_green_yoyo/yoyo_source.jpg
+rgba_image: data/processed/object_C_green_yoyo/yoyo_body_central_waist_guide_rgba.png
+rgba_image_v1_failed: data/processed/object_C_green_yoyo/yoyo_body_stringless_rgba.png
+output_root: outputs/aigc_assets/object_C_image_to_3d/green_yoyo
+source: user-provided single image URL; v1 stringless RGBA removed rope but did not constrain the central waist groove, so v2 uses a source-green geometry guide with one central groove
+recommended_training:
+  stage: coarse
+  initial_review_steps: [500, 1000, 1500]
+  planned_max_steps: 3000
+  optional_extension_steps: [4000, 5000]
+  validation_interval: 500
+  checkpoint_interval: 500
+  checkpoint_video_interval: 500
+  n_val_views: 8
+  seed: 42
+  sd_guidance_scale: 30.0
+  zero123_guidance_scale: 7.5
+  lambda_sparsity: 0.1
+  lambda_opaque: 0.001
+  gpu_policy: CUDA 7 only for this run
+acceptance:
+  - no string-like geometry in RGB, normal, or opacity validation views
+  - stable round disk-shaped body across front, side, and back views
+  - exactly one central waist groove remains visible; no top/bottom duplicate grooves
+  - no wedge-like side collapse or large side protrusion
+  - no detached geometry across validation views
+  - eight-view validation PNGs and checkpoint videos are present

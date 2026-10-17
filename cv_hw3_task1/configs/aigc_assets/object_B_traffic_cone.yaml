@@ -1,0 +1,27 @@
+object_id: object_B
+canonical_name: toy_traffic_cone
+pipeline: text_to_3d
+tool: threestudio
+base_config: configs/dreamfusion-sd.yaml
+prompt: "a small toy traffic cone with a simple orange cone body, one thick white reflective band, a simple dark base, matte plastic, clean silhouette, centered, single solid object, no text, no logo"
+negative_prompt: "animal, bird, duck, beak, face, eyes, feathers, fur, person, thin parts, extra parts, holes, dirty texture, noisy texture, floaters, transparent, deformed, melted, double object, sign, pole, road sign, party hat"
+output_root: outputs/aigc_assets/object_B_text_to_3d
+recommended_training:
+  max_steps: 3000
+  initial_seed_steps: 1500
+  validation_interval: 500
+  checkpoint_interval: 500
+  checkpoint_video_interval: 500
+  n_val_views: 4
+  seed_sweep: [0, 7, 42]
+  guidance_scale: 70.0
+  min_step_percent: 0.05
+  max_step_percent: 0.80
+  gpu_policy: CUDA 6 only
+acceptance:
+  - recognizable as a small toy traffic cone
+  - single connected object with a simple dark base allowed
+  - orange cone body and one plausible white reflective band
+  - no detached floaters or smoky density
+  - no Janus, double object, animalization, text, logo, or road-sign structure
+  - four-view validation PNGs and checkpoint videos are present

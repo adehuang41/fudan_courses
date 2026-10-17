@@ -1,0 +1,33 @@
+object_id: object_C
+candidate_id: rubiks_cube
+canonical_name: rubiks_cube
+pipeline: image_to_3d
+tool: threestudio_magic123
+base_config: configs/magic123-coarse-sd.yaml
+prompt: "a single Rubik's cube puzzle, glossy black plastic frame, colored square sticker grid on three visible faces, smooth cube with slightly rounded edges, centered object"
+negative_prompt: "extra cubes, duplicate object, detached pieces, missing stickers, melted geometry, warped cube, asymmetric bulge, floaters, text, logo, hands, background surface"
+raw_image: data/raw/object_C_rubiks_cube/rubiks_cube_source.jpg
+rgba_image: data/processed/object_C_rubiks_cube/rubiks_cube_rgba.png
+output_root: outputs/aigc_assets/object_C_image_to_3d/rubiks_cube
+source: user-provided Wikimedia Commons file URL
+recommended_training:
+  stage: coarse
+  initial_review_steps: [500, 1000, 1500]
+  planned_max_steps: 1500
+  optional_extension_steps: [2000, 2500, 3000]
+  validation_interval: 500
+  checkpoint_interval: 500
+  checkpoint_video_interval: 500
+  n_val_views: 8
+  seed: 42
+  sd_guidance_scale: 40.0
+  zero123_guidance_scale: 7.5
+  lambda_sparsity: 0.1
+  lambda_opaque: 0.001
+  gpu_policy: CUDA 6
+acceptance:
+  - cube remains a single closed object with square-like overall silhouette
+  - three visible faces remain plausible from the input view
+  - sticker grid reads as surface texture, not detached geometry
+  - no duplicated cubes, loose sticker slabs, or background floor plane
+  - validation PNGs exist at 500, 1000, and 1500 before any refine decision

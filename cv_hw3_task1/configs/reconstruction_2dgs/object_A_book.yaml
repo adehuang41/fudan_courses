@@ -1,0 +1,64 @@
+# Object A reconstruction config for Phase 2 / Step 2.
+# This file records reproducible parameters and paths. It is not a training config.
+
+project: cv_final_task1
+pipeline: reconstruction_2dgs
+object_id: object_A_book
+object_role: Object A
+
+environment:
+  name: cv-final-recon
+  manager: conda
+  required_tools:
+    - python
+    - opencv
+    - pillow
+    - pyyaml
+    - tqdm
+    - colmap
+
+paths:
+  raw_video: data/raw/object_A_book/videos/book_raw.mp4
+  images_raw: data/processed/object_A_book/images_raw
+  images_smoke: data/processed/object_A_book/images_smoke
+  images_selected: data/processed/object_A_book/images_selected
+  metadata_dir: data/processed/object_A_book/metadata
+  reconstruction_output: outputs/reconstruction_2dgs/object_A_book
+  colmap_smoke_output: outputs/reconstruction_2dgs/object_A_book/colmap_smoke
+  future_formal_colmap_output: outputs/reconstruction_2dgs/object_A_book/colmap_formal
+  future_2dgs_output: outputs/reconstruction_2dgs/object_A_book/2dgs_final
+
+frame_extraction:
+  start_time: 0
+  end_time: 180
+  interval_sec: 1
+  max_frames: 180
+  output_pattern: frame_%06d.jpg
+  role: candidate_frame_pool
+
+smoke_frame_selection:
+  source_dir: data/processed/object_A_book/images_raw
+  output_dir: data/processed/object_A_book/images_smoke
+  target_count: 18
+  max_count: 20
+  strategy: uniform_time_axis_sampling_from_candidate_pool
+  role: colmap_small_scale_smoke_input
+
+colmap_smoke_test:
+  image_dir: data/processed/object_A_book/images_smoke
+  output_dir: outputs/reconstruction_2dgs/object_A_book/colmap_smoke
+  matcher: exhaustive
+  single_camera: true
+  camera_model: SIMPLE_RADIAL
+  use_gpu: false
+  max_images: 20
+  clear_output_only_with_overwrite_or_clean_output: true
+  numeric_thresholds:
+    enter_formal_colmap_min_registered_ratio: 0.70
+    ideal_registered_ratio: 0.80
+    needs_frame_adjustment_below_ratio: 0.50
+
+role_boundaries:
+  images_raw: candidate frame pool, not COLMAP smoke input and not final selected input
+  images_smoke: 15-20 frame small-scale COLMAP sanity-check input
+  images_selected: future formal-scale COLMAP input, expected 150-180 frames after filtering

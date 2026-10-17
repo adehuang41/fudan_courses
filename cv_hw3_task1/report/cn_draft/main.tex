@@ -1,0 +1,1078 @@
+% !TeX encoding = UTF-8
+% !TeX root = main.tex
+\documentclass[UTF8,10pt,a4paper]{ctexart}
+
+\usepackage[top=1.65cm,bottom=1.85cm,left=1.85cm,right=1.85cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{float}
+
+\hypersetup{hidelinks}
+\graphicspath{
+  {/home/dechao/cv_final_pj/}
+  {/home/dechao/cv_final_pj/report/assets/}
+  {/home/dechao/cv_final_pj/report/cn_draft/generated/}
+}
+\raggedbottom
+\pagestyle{plain}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.14em plus 0.03em minus 0.02em}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.10}
+\captionsetup{font=small,labelfont=bf,skip=4pt,hypcap=false}
+\captionsetup[table]{skip=2pt}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{10pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.80}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{9pt plus 2pt minus 2pt}
+\setlength{\intextsep}{9pt plus 2pt minus 2pt}
+\let\latexcenter\center
+\let\endlatexcenter\endcenter
+\renewenvironment{center}{%
+  \setlength{\topsep}{0.35em plus 0.08em minus 0.08em}%
+  \setlength{\partopsep}{0pt}%
+  \latexcenter
+}{\endlatexcenter}
+\ctexset{
+  section = {format = \Large\bfseries, beforeskip = 0.85em, afterskip = 0.42em},
+  subsection = {format = \large\bfseries, beforeskip = 0.62em, afterskip = 0.26em}
+}
+
+\title{\vspace{-1.0em}\textbf{Task 1 实验报告草稿：异构三维资产生成与统一 Gaussian 融合}}
+\author{Computer Vision Final Project}
+\date{\vspace{-1.5em}}
+
+\begin{document}
+\maketitle
+\vspace{-1.0em}
+
+
+% ===== BEGIN 00_03.tex =====
+\begin{abstract}
+本报告围绕 Task 1 的四类三维内容展开：真实拍摄物体 A、文本生成物体 B、单图生成物体 C，以及真实背景 D。A 和 D 由多视角图像训练 2D Gaussian Splatting（2DGS）模型；B 由文本提示生成；C 由单张图像生成。经过多轮实验后，\textbf{最终方案保留 D 的 2DGS Gaussian 背景，将 A/B/C 的最终 mesh 资产采样为新的 Gaussian splats}，并追加到 D 的 Gaussian PLY 中，由同一个 2DGS renderer 输出漫游视频。报告按对象展开实验过程：A 部分讨论真实重建结果如何资产化；B 部分分析 duck、traffic cone、Rubik、apple 等文本生成路线；C 部分分析 container、cat-box、yoyo、Rubik 等单图生成路线；D 与融合部分说明为什么最终采用 mesh-to-Gaussian 的表示统一方案。
+\end{abstract}
+
+\section{任务背景与总体目标}
+
+Task 1 要求把真实重建、文本生成、单图生成和背景重建四类结果放入同一三维场景。A 和 D 可以从多视角图像训练为 2DGS Gaussian 场，B 和 C 则通常从 AIGC 流程中导出为 mesh、纹理或隐式表示。若只把某个视角下的前景渲染图叠到背景帧上，局部画面可能成立，但物体并没有真正进入 D 的三维表示，也无法自然处理视角变化、遮挡关系和统一渲染。
+
+本项目把目标拆成两部分。前半部分为 A/B/C/D 分别获得可检查的结果：A 与 D 需要稳定的 2DGS 重建，B 与 C 需要能够导出、清理和放置的三维资产。后半部分解决表示统一：A/B/C 的 mesh 在最终场景中承担采样源的角色，表面点被转成 Gaussian splats 后再与 D 的 Gaussian 背景合并。
+
+\section{数据来源、评价标准与实验日志说明}
+
+\subsection{数据与资产来源}
+
+\begin{center}
+\centering
+\captionof{table}{Task 1 四类输入及其在最终场景中的作用。}
+\label{tab:data_sources}
+\small
+\begin{tabularx}{\textwidth}{p{0.09\textwidth} p{0.22\textwidth} X X}
+\toprule
+对象 & 输入来源 & 中间结果 & 最终用途 \\
+\midrule
+A & 真实拍摄书本多视角图像 & 训练 2DGS；从重建结果中提取并清理书本 mesh & \textbf{采样为 Gaussian splats} \\
+B & 文本 prompt & DreamFusion / Magic3D text-to-3D；最终选择 \textbf{apple mesh} & \textbf{采样为 Gaussian splats} \\
+C & 单张物体图像 & Magic123 image-to-3D；最终选择 \textbf{Rubik try16 cleaned mesh} & \textbf{采样为 Gaussian splats} \\
+D & Mip-NeRF360 garden 图像序列 & 训练 2DGS 背景场 & \textbf{保留为最终场景的基础 Gaussian 背景} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+四类输入的评价方式不同。A 与 D 有真实多视角图像作为约束，可报告训练 loss、验证集 PSNR/L1 和最终 Gaussian 数量。B 与 C 的生成结果没有同等意义上的真值三维模型，单独比较 loss 并不能说明资产质量；更可靠的做法是同时检查正面、侧面、背面视图，以及 normal、opacity、mesh 导出结果。
+
+\subsection{评价标准}
+
+本文使用四类标准判断实验结果。几何准确度关注物体是否有稳定体积、是否闭合、不同视角下是否仍是同一个对象。纹理细节关注颜色、局部语义和表面结构是否与目标一致，例如 duck 的嘴部、traffic cone 的白色反光带、Rubik 的 3$\times$3 网格和贴纸颜色。可融合性关注结果能否导出、清理、缩放和放置，以及是否能转换到最终 Gaussian 表示。计算成本则包括训练步数、运行时间和人工调参成本；对于 B/C 这类生成任务，反复 prompt、seed、guidance 和导出阈值的尝试也是成本的一部分。
+
+作业要求比较多视角重建、文本生成和单图生成三种方式。该比较放在第 8 节统一展开，只有在 A/B/C 的具体实验写清楚后，几何、纹理和耗时差异才有可解释的依据。
+
+\subsection{实验日志与 SwanLab}
+
+报告中的训练曲线来自本地日志、CSV 标量和验证结果导出，包括 2DGS reconstruction loss、验证 PSNR/L1，以及 AIGC 分支中的 SDS、RGB、mask、sparsity、opacity 等标量。整理后的标量已同步到 SwanLab，用于查看训练 loss、验证 PSNR/L1 和 AIGC 优化曲线。
+\noindent SwanLab 链接：\url{https://swanlab.cn/@ade/cv_hw3_task1}；run 链接：\url{https://swanlab.cn/@ade/cv_hw3_task1/runs/73kg544xsz8mgejbk87d6}。
+
+\section{总体技术路线：异构资产到统一 Gaussian 场景}
+
+最终 pipeline 采用“先资产化，再统一表示”的路线。A 从真实多视角图像开始，先训练为 2DGS，再从重建结果中提取并清理出书本 mesh。B 从文本 prompt 出发，通过 text-to-3D 得到可导出的 \textbf{apple mesh}。C 从单张图像出发，通过 Magic123 生成和后处理得到 \textbf{Rubik try16 mesh}。D 保留为 2DGS 背景场，作为合并后场景的空间基底。
+
+总流程如下：A/B/C 的 mesh 作为表面采样源，采样点根据桌面坐标系放置到 D 场景中，并写成与 D 相同格式的 Gaussian 点。这样得到的 A/B/C splats 可以追加到 D 的 Gaussian PLY 中，最终视频由同一个 2DGS renderer 渲染，避免退回到前景图和背景图的二维叠加。
+
+\begin{center}
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{ccc}
+\fbox{\begin{minipage}{0.27\textwidth}\centering
+A：真实多视角图像\\
+$\downarrow$\\
+2DGS 重建\\
+$\downarrow$\\
+mesh 提取与清理
+\end{minipage}}
+&
+\fbox{\begin{minipage}{0.27\textwidth}\centering
+B：文本 prompt\\
+$\downarrow$\\
+text-to-3D 生成\\
+$\downarrow$\\
+apple mesh
+\end{minipage}}
+&
+\fbox{\begin{minipage}{0.27\textwidth}\centering
+C：单张图像\\
+$\downarrow$\\
+image-to-3D 生成\\
+$\downarrow$\\
+Rubik mesh
+\end{minipage}}
+\\[1.0em]
+\multicolumn{3}{c}{mesh surface sampling $\rightarrow$ Gaussian splats} \\
+\\[-0.1em]
+\multicolumn{3}{c}{
+\fbox{\begin{minipage}{0.70\textwidth}\centering
+D：garden 图像序列 $\rightarrow$ 2DGS Gaussian 背景\\
+A/B/C splats + D splats $\rightarrow$ merged Gaussian scene $\rightarrow$ 2DGS renderer
+\end{minipage}}}
+\end{tabular}
+\captionof{figure}{总体技术路线。}
+\label{fig:overall_pipeline_clean}
+\end{center}
+% ===== END 00_03.tex =====
+
+
+% ===== BEGIN 04_object_a.tex =====
+\section{物体 A：真实书本的 2DGS 重建与资产化}
+
+\subsection{图像采集与 2DGS 重建}
+
+物体 A 是自行拍摄的真实书本。原始素材为一段手机环绕视频，分辨率为 1080$\times$1920，时长约 222 秒。我们先从视频中抽取 180 帧候选图像，再用 18 帧做 COLMAP smoke test。该小规模测试注册 13/18 张图像，注册率为 72.22\%，稀疏点数为 3473，说明相机轨迹和特征匹配足以进入正式重建。
+
+正式流程中，我们人工剔除 30 张模糊、重复或视角过偏的帧，保留 150 张图像。COLMAP 正式运行注册 150/150 张图像，得到 41278 个稀疏点。由于原始 COLMAP 相机模型为 SIMPLE\_RADIAL，而 2DGS 训练需要 PINHOLE 或 SIMPLE\_PINHOLE 输入，我们在不改动原始 COLMAP 输出的前提下，另行运行 image undistorter，生成 150 张 undistorted 图像和 PINHOLE COLMAP 模型。最终 2DGS 训练使用 resolution scale 4，训练 30000 次迭代。
+
+\begin{table}[H]
+\centering
+\caption{Object A 的重建设置与主要指标。}
+\label{tab:object_a_recon_metrics}
+\small
+\begin{tabularx}{\textwidth}{p{0.22\textwidth} X}
+\toprule
+项目 & 数值或设置 \\
+\midrule
+输入 & 手机环绕视频；180 帧候选图像；正式训练使用 150 张筛选图像 \\
+COLMAP & 150/150 张注册，注册率 100\%，稀疏点 41278 个 \\
+2DGS 输入 & COLMAP undistorted PINHOLE 模型，图像尺寸 1051$\times$1870 \\
+训练设置 & 2DGS，resolution scale 4，30000 iterations，SH degree 3 \\
+7000 iter 评估 & L1 = 0.03496，PSNR = 26.38 dB \\
+30000 iter 评估 & L1 = 0.02429，PSNR = 28.57 dB \\
+最终规模 & loss = 0.03195，normal = 0.00522，226409 个 Gaussian points \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+从数值上看，A 在 7000 到 30000 次迭代之间仍有明显收益：PSNR 从 26.38 dB 提升到 28.57 dB，L1 从 0.03496 降到 0.02429。后续 mesh 提取使用 30000 次迭代 checkpoint。图 \ref{fig:object_a_2dgs_views} 展示了该 checkpoint 的多视角渲染结果，书本封面、书脊、纸页和厚度在不同视角下均可辨认。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{object_A_2dgs_8view.jpg}
+\caption{Object A 的孤立 2DGS 多视角渲染。}
+\label{fig:object_a_2dgs_views}
+\end{figure}
+
+\subsection{渲染质量与资产质量的差距}
+
+A 孤立 2DGS 渲染已经能够展示封面、侧面和纸页，去背景渲染也能得到较清晰的物体外观，如图 \ref{fig:object_a_nobg_views} 所示。问题出在下游任务：Task 1 需要把 A 放进 D 的三维场景，参与相机运动、尺度调整和遮挡关系。单纯拥有干净外观还不够，A 必须进一步变成可检查、可放置、可采样的三维资产。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.78\textwidth]{object_A_nobg_8view.jpg}
+\caption{Object A 的去背景多视角渲染。}
+\label{fig:object_a_nobg_views}
+\end{figure}
+
+实际融合中还暴露出一个表示问题。2DGS 训练得到的 \path{point_cloud.ply} 是 Gaussian splat 文件，内部包含位置、opacity、scale、rotation 和球谐颜色系数；Blender 不能把它当作普通三角 mesh 直接渲染。基于这个限制，我们早期尝试过人工 upright open-book proxy 路线，用手工几何替代真实 2DGS 资产来检查姿态和尺度。这个替代方案能控制摆放，但是不像是真实物体，最终画面更像手工制作的红色书板。
+
+\subsection{路线对比}
+
+我们尝试了两条路线，每条路线分为两个阶段。路线一是人工几何代理：先手工建一个 open-book proxy，再把 A 的局部渲染裁成封面、书背和纸页纹理。路线二是真实 mesh 提取：直接从 2DGS 导出的 mesh 中取书本区域，再对漂浮片和白色噪声做 targeted cleanup。两条路线的核心差别是证据来源：前者强调可控姿态，后者保留真实重建。
+
+路线一尝试用人工 proxy book mesh 解决姿态、厚度和放置控制，之后又加入封面、书背和纸页的 texture crop。图 \ref{fig:object_a_failed_proxy} 展示了这条路线的典型问题：几何可以站起来，纹理也能贴上去，但书页、封面和内页结构明显带有手工模型痕迹，真实 2DGS 重建的自然形变和局部细节被削弱。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{object_A_failed_proxy_v015.png}
+\caption{路线一：proxy book mesh / texture-cropped proxy 的失败代表。该路线能控制书本姿态和厚度，但页面和封面结构过于人工，视觉上更接近手工模型。}
+\label{fig:object_a_failed_proxy}
+\end{figure}
+
+\begin{samepage}
+\begin{center}
+\captionof{table}{Object A 的两条主线与四个阶段。}
+\label{tab:object_a_route_comparison}
+\scriptsize
+\begin{tabularx}{\textwidth}{p{0.12\textwidth} p{0.19\textwidth} p{0.22\textwidth} X p{0.18\textwidth}}
+\toprule
+主线 & 阶段 & 做法 & 观察与问题 & 决定 \\
+\midrule
+I 人工几何 & 阶段 1：Proxy book mesh & 在 Blender 中手工构造封面、纸页块和书脊 & 姿态、尺度和站立状态可控；形状过于规整，真实重建感弱 & 保留为早期构图检查 \\
+I 人工几何 & 阶段 2：Texture-cropped proxy & 从 A 渲染中裁剪封面、背面、纸页贴到 proxy 上 & 局部外观比纯 proxy 更接近书本；裁剪受背景污染和透视影响，页面结构仍偏人工 & 放弃作为最终 A \\
+II 真实 mesh & 阶段 3：Raw 2DGS mesh extraction & 从 2DGS 导出的 mesh 中提取书本区域 & 保留真实颜色和几何来源，可检查、可放置；顶部漂浮薄片、白色 blob 和噪声 component 明显 & 保留该方向，进入清理 \\
+II 真实 mesh & 阶段 4：Cleaned extracted mesh & 对 raw extracted mesh 做 targeted cleanup & 真实感与可控性达到较好平衡，厚度和书页仍可见；仍需转为 Gaussian 才能和 D 统一 & 选为最终 A 中间资产 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{samepage}
+
+\subsection{Mesh 提取与 targeted cleanup}
+
+mesh 提取从 2DGS 渲染阶段得到的 \path{fuse_post.ply} 开始。初始筛选使用颜色和连通分量：红色面片筛出 219071 个 face，最大红色连通分量包含 172857 个 triangle。随后根据最大分量的包围盒扩展 0.12 的 margin，裁出书本区域；该区域最大连通分量包含 128846 个 vertex 和 256970 个 triangle。
+
+颜色清理保留红色封面、米色纸页和深红区域后，mesh 降到 113440 个 vertex 和 225556 个 triangle。这个版本已经比完整 \path{fuse_post.ply} 更接近书本，但顶部仍有薄片伪影，局部还有白色块状噪声。我们继续做 targeted cleanup，分别测试 top clipping、high-z dark-red removal、white-blob removal 及组合策略。最终版本 \path{book_A_clip075_combo_top_z88_white_y18.ply} 同时处理顶部薄片和白色 blob，共移除 20897 个 face，占候选 mesh 的 10.35\%，保留 180919 个 face。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{object_A_raw_extracted_mesh_clip075.jpg}
+\caption{Object A 的 raw extracted mesh 候选。该结果已经保留真实书本的厚度、封面颜色和纸页结构，但顶部薄片和局部白色噪声仍会在融合画面中被放大。}
+\label{fig:object_a_raw_mesh}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{object_A_cleaned_mesh_combo.jpg}
+\caption{Object A 的最终 cleaned extracted mesh。targeted cleanup 去除了最明显的顶部漂浮片和白色 blob，同时保留了书本的真实重建外观。}
+\label{fig:object_a_clean_mesh}
+\end{figure}
+
+\subsection{A 进入最终融合的形式}
+
+\textbf{最终选择的 A 文件}为 \path{book_A_clip075_combo_top_z88_white_y18.ply}。它是带 vertex color 的三角 mesh，用于后续表面采样。
+
+最终融合时，我们将 A 的 cleaned mesh \textbf{采样为与 D 相同格式的 Gaussian 点}，并追加到背景点云中，由同一个 2DGS 渲染器输出结果。
+% ===== END 04_object_a.tex =====
+
+
+% ===== BEGIN 05_object_b.tex =====
+\section{物体 B：文本生成 3D 资产}
+
+\subsection{任务约束与实验记录}
+
+物体 B 从文本 prompt 生成。我们最初选择 duck，因为它同时包含身体轮廓、嘴、眼睛等局部部件；duck 失败后改做 traffic conee；cone 的主体较稳定，但白色反光带仍难以绑定到正确位置。Rubik 随后成为主要压力测试，它同时要求平面几何、直角边、grid、sticker 和多视角一致性。Rubik 经过 DreamFusion、Magic3D、白方块计划、DMTet refine、fixed scaffold 和 trainable cube initialization 多轮尝试后，仍没有得到合格的 prompt-only cube mesh。最终 B 选择 apple：主体几何更符合 Magic3D 的体积先验，并且能保留 stem、dimple 和红色纹理。
+
+\scriptsize
+\begin{longtable}{p{0.09\textwidth} p{0.15\textwidth} p{0.22\textwidth} p{0.23\textwidth} p{0.12\textwidth}}
+\caption{Object B 的主要 text-to-3D 实验设置与结论。}
+\label{tab:object_b_settings}\\
+\toprule
+目标 & 实验 & 关键设置 & 现象 & 后续处理 \\
+\midrule
+\endfirsthead
+\toprule
+目标 & 实验 & 关键设置 & 现象 & 后续处理 \\
+\midrule
+\endhead
+duck & wooden formal & DreamFusion-SD；wooden-duck prompt；10000 step & 单视角像鸭子，但嘴、头部和身体比例漂移，orbit 不稳定 & 改成 rubber duck 并加强局部语义 \\
+duck & rubber formal & DreamFusion-SD；rubber-duck prompt；目标 10000 step，实际保留到 7000 step & 红/橙色嘴部漂成横向带状纹理，底部 fog 明显 & 不再依赖长训练修正局部语义 \\
+duck & seed 0 & DreamFusion-SD；guidance 70；3000 step & 粉紫色主体，duck 语义弱 & seed sweep 继续 \\
+duck & seed 7 & DreamFusion-SD；guidance 70；3000 step；step 2000 最像 duck & 有黄色轮廓，但嘴和眼睛没有稳定绑定 & 作为弱 fallback 记录，不作为最终物体 \\
+duck & seed 42 & DreamFusion-SD；guidance 70；1000 step 即停止 & 早期分裂成两个黄色团块 & 提前终止严重偏离语义的 run \\
+cone & seed 0 & DreamFusion-SD；guidance 70；1500 step screening & smoky density，疑似双主体 & 淘汰 \\
+cone & seed 7 & DreamFusion-SD；guidance 70；1500 step 后 resume 到 3000 step & 单锥体主体稳定，白色 reflective band 弱 & 作为早期 B 候选和导出测试 \\
+cone & seed 42 & DreamFusion-SD；guidance 70；1500 step & 比 seed 7 更噪，局部 band 仍不稳定 & 淘汰 \\
+cone & white-ring prompt & DreamFusion-SD；只强化 white painted ring；seed 7 & 500 step 退化成绿色模糊体 & 不再把局部 prompt 当作后期补丁 \\
+Rubik & Try1 1000 & DreamFusion-SD；solved Rubik prompt；guidance 70；seed 42 & 1000 step 开始出现色块和 cube mass，但边界碎 & resume 观察后期是否变硬 \\
+Rubik & Try1 resume & 同一 checkpoint 续训到 3000 step；validation interval 500 & Rubik 语义更明显，侧/后视仍软、碎、非平面 & 改为 geometry-first prompt \\
+Rubik & Try2 geometry-first & DreamFusion-SD；\textbf{flat faces / sharp edges / solid cube}；guidance 70 & 颜色语义保留，侧面仍不平整，grid 像纹理噪声 & 调低 guidance 比较语义与噪声 \\
+Rubik & Try3 lower guidance & DreamFusion-SD；geometry-first；\textbf{guidance 50} & 黑色噪声减少，grid/sticker 变弱，主体更像 rounded wedge & guidance 调整呈非单调 \\
+Rubik & Try4A harden & DreamFusion-SD；\textbf{max step percent 0.65；grad clipping；opacity 0.05；sparsity 0.5}；guidance 60 & 物体变小且半透明，没有形成 hard cube & 继续测试更强 guidance \\
+Rubik & Try4B harden g70 & DreamFusion-SD；max step percent 0.7；opacity 0.05；\textbf{sparsity 0.75；guidance 70} & 1500 step 接近 fog collapse & DreamFusion 分支停止 \\
+Rubik & B0e white cube & Magic3D coarse SD；blank dice-shaped white cube；seed 42；\textbf{ambient-only 默认 2001} & 2000 step 仍是白柱体，2500 step 后 RGB 变黑 & 审计 shading 设置 \\
+Rubik & B0f/B0g white cube & Magic3D coarse SD；改 seed 123/17；sharp white cube prompt & 仍在柱体、尖形体、底部 haze 之间摆动 & 换 DeepFloyd IF \\
+Rubik & B0IF white cube & Magic3D coarse IF；DeepFloyd IF；seed 7/17/42；ambient-only override & 比 SD 更紧凑，但仍是 chamfered/rounded block & 尝试 cube density prior \\
+Rubik & B0h white cube prior & Magic3D coarse IF；\textbf{\texttt{cube\_magic3d}}；白方块 prompt；seed 7/17 & s7 接近短柱，s17 有 cap 和 floor density & 继续调 prompt 与相机 \\
+Rubik & B0j white cube prior & Magic3D coarse IF；cube prior；\textbf{anti-cylinder negative；farther eval camera} & 正面更像方块，但 normal/opacity 显示底部雾和非平面 & 转向 direct Rubik prior 对照 \\
+Rubik & B0k cube prior & Magic3D coarse IF；\textbf{cube prior；direct Rubik prompt；guidance 20} & sticker/grid 更强，floating fog 减少，侧面变成 wedge & 几何先验有帮助但不充分 \\
+Rubik & B0k strict blob prior & Magic3D coarse IF；官方 \texttt{blob\_magic3d}；同 prompt & 语义出现，但更薄、更噪、更 wedge-like & 保留为 cube prior 对照 \\
+Rubik & B0l equal-axis & Magic3D coarse IF；cube prior；\textbf{equal-axis prompt；anti-prism negative；关闭 view-dependent prompting；sparsity 0.15} & 长方体倾向减弱，但出现 rounded faceted toy 和三角孔 & 配置继续收紧仍不能得到 cube \\
+Rubik & B1 refine & Magic3D refine SD；从 coarse checkpoint 转 DMTet & floor/base/cylinder 密度被硬化成破碎地形或柱体 & threshold sweep 继续验证 \\
+Rubik & B1 threshold sweep & DMTet threshold 0.003/0.006/0.010/0.020 & 阈值可减少碎片，不能把错误主体变成 cube & 放弃 B1 路线 \\
+Rubik & B2 fixed scaffold & Magic3D refine IF；\textbf{固定 \path{cube_unit.obj}} & 在固定 cube 上能学到 grid 和 sticker & 作为上限参照，不作为 prompt-only 结果 \\
+Rubik & B2tIF trainable init & Magic3D refine IF；cube initialization；\textbf{\texttt{fix\_geometry=false}} & 1000 step 接近 cube；继续优化后重新变圆 & 几何先验有效但仍不稳定 \\
+apple & A0 apple & Magic3D coarse IF；seed 7；3000 step & 红色主体和顶部 dimple 稳定，stem 弱 & 加强 stem prompt \\
+apple & A1stem & Magic3D coarse IF；加强 stem；改 density envelope 与视角 & 500 step 就被裁切，物体撑满画面 & 恢复更稳的密度与相机设置 \\
+apple & A1b & Magic3D coarse IF；\textbf{camera distance 2.4--3.2；guidance 22；sparsity 0.25} & 1000 step 有 stem 和完整主体；3000 step 底部 fog 更重 & \textbf{选择 step1000 threshold-10} \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Duck 与 traffic cone：从局部语义失败转向更简单几何}
+
+duck 的早期结果暴露了两个问题。wooden duck 长训到 10000 step 后，单张 RGB 看起来接近鸭子，但嘴、头部和身体比例在 orbit 中不稳定。rubber duck 的 seed sweep 更清楚：seed 0 偏粉紫，seed 7 在 2000 step 有最像鸭子的轮廓，seed 42 在 1000 step 已经分裂成两个黄色团块。
+
+wooden duck 长训到 10000 step 后，单张保存图容易显得成功；测试视频的正面帧暴露得更清楚：嘴部变成横向红带，脚和底部密度连在一起，normal/opacity 里的边界也很脏。
+\begin{center}
+\includegraphics[width=0.82\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/wooden_duck_formal_10000steps@20260531-144954/save/it10000-test/80.png}
+\captionof{figure}{Wooden duck 10000 step 的测试视频正面帧：嘴部、脚部和底部密度暴露出三维失败。}
+\label{fig:b_duck_wooden}
+\end{center}
+
+rubber duck seed 0 没有稳定到黄色鸭子，主体偏粉紫，并且几何像堆叠小团块。
+\begin{center}
+\includegraphics[width=0.68\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubber_duck_simple_seed0_g70_3000steps@20260531-181724/save/it3000-0.png}
+\captionof{figure}{Rubber duck seed 0：颜色和主体语义偏离目标。}
+\label{fig:b_duck_seed0}
+\end{center}
+
+seed 7 是 duck 分支里最接近目标的弱 fallback。它有黄色身体和大致轮廓，但嘴和眼睛没有稳定绑定到正确位置。
+\begin{center}
+\includegraphics[width=0.68\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubber_duck_simple_seed7_g70_3000steps@20260531-184143/save/it2000-0.png}
+\captionof{figure}{Rubber duck seed 7：轮廓较好，局部语义仍失败。}
+\label{fig:b_duck_seed7}
+\end{center}
+
+seed 42 在 1000 step 已经分裂成两个黄色团块，继续训练价值很低，因此提前停止。
+\begin{center}
+\includegraphics[width=0.68\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubber_duck_simple_seed42_g70_3000steps@20260531-190238/save/it1000-0.png}
+\captionof{figure}{Rubber duck seed 42：早期出现双主体分裂。}
+\label{fig:b_duck_seed42}
+\end{center}
+
+把训练拉长也没有把局部语义拉回正确位置。rubber formal 到 7000 step 后，RGB 中仍有红色带状错误，normal 和 opacity 也显示出软边界和底部密度。后续实验中，如果较早 checkpoint 已经分裂、错色或长出额外主体，我们直接提前停止，不再把长训练当作主要修复手段。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubber_duck_formal_10000steps@20260531-171926/save/it7000-0.png}
+\captionof{figure}{Duck formal run 到 7000 step 后仍未修复嘴部和脸部语义。}
+\label{fig:b_duck_long}
+\end{center}
+
+traffic cone 是 duck 失败后的简化目标。seed 7 resume 到 3000 step 后，单锥体主体比 duck 稳定，DreamFusion-SD 可以形成简单全局形状；白色 reflective band 仍弱。我们随后只强化 white-ring prompt，500 step 就退化成绿色模糊体。局部 prompt 不能当作后期补丁随意叠加，白环语义加强反而破坏了已经形成的锥体主体。
+
+seed 7 resume 到 3000 step 后，主体已经稳定成单个锥体，但白色 reflective band 仍弱。
+\begin{center}
+\includegraphics[width=0.68\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/traffic_cone_seed7_g70_resume1500_to_3000steps@20260602-180305/save/it3000-0.png}
+\captionof{figure}{Traffic cone seed 7：全局锥体稳定，局部白环不足。}
+\label{fig:b_cone_seed7}
+\end{center}
+
+只强化 white-ring prompt 后，500 step 已经退化成绿色模糊体，连原本稳定的锥体主体也被破坏。
+\begin{center}
+\includegraphics[width=0.68\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/traffic_cone_seed7_white_painted_ring_targeted_1000steps@20260603-0920/save/it500-0.png}
+\captionof{figure}{Traffic cone white-ring prompt：局部语义强化导致主体崩坏。}
+\label{fig:b_cone_whitering}
+\end{center}
+
+\subsection{Rubik DreamFusion：prompt、guidance 与正则的非单调影响}
+
+Rubik 对文本生成更苛刻：可用结果需要六个近似平面、直角边、稳定 3$\times$3 grid、彩色 sticker 和黑色分隔线。Try1 先用 \textbf{direct solved-Rubik prompt} 跑 1000 step，再从该 checkpoint 续训到 3000 step。200 step 只有小块彩色密度，1000 step 出现 Rubik-like 色块；2501--3000 step 语义更强，但 opacity 仍是软边界，侧视图离平面六面体还有明显距离。
+
+Try1 的 200 step 只有小块彩色密度，Rubik 语义还没有形成。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try1_text_baseline_solved_g70_1000steps@20260612-201910/save/it200-0.png}
+\captionof{figure}{Rubik Try1 200 step：语义尚未成形。}
+\label{fig:b_rubik_try1_200}
+\end{center}
+
+到 1000 step，direct solved prompt 已经带出彩色块和 cube mass，但边界仍碎。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try1_text_baseline_solved_g70_1000steps@20260612-201910/save/it1000-0.png}
+\captionof{figure}{Rubik Try1 1000 step：出现 Rubik-like 色块，几何仍软。}
+\label{fig:b_rubik_try1_1000}
+\end{center}
+
+续训到 2501 step 后，正面语义更清楚，opacity 仍保留破碎软边界。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try1_resume1000_to3000_solved_g70_val500@20260612-202637/save/it2501-0.png}
+\captionof{figure}{Rubik Try1 2501 step：颜色语义增强，边界仍不硬。}
+\label{fig:b_rubik_try1_2501}
+\end{center}
+
+3000 step 的侧视图显示 grid 更像贴在软体上的纹理，几何没有锁定成平面六面体。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try1_resume1000_to3000_solved_g70_val500@20260612-202637/save/it3000-5.png}
+\captionof{figure}{Rubik Try1 3000 step 侧视：Rubik 语义存在，侧面几何仍软。}
+\label{fig:b_rubik_try1_3000_side}
+\end{center}
+
+Try2 改成 \textbf{geometry-first prompt}，强调 flat faces、sharp edges 和 solid cube，并保留 guidance 70。颜色语义仍能保住，侧面还是碎、软、非平面。Try3 把 \textbf{guidance 从 70 降到 50} 后，黑色噪声减少一些，grid 和 sticker 同时变弱，主体更像 rounded wedge。guidance 调整呈非单调：语义强度、噪声和几何硬度会互相牵制。
+
+Try2 保留 guidance 70，并把 prompt 改成 geometry-first。正面颜色还在，但边缘和侧面仍碎。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try2_geometry_first_clean_cube_g70_3000steps@20260612-214444/save/it3000-0.png}
+\captionof{figure}{Rubik Try2：geometry-first prompt 保住颜色，几何没有变硬。}
+\label{fig:b_rubik_try2_front}
+\end{center}
+
+Try2 的侧视图显示主体仍是软边界，grid 没有稳定贴到平面上。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try2_geometry_first_clean_cube_g70_3000steps@20260612-214444/save/it3000-5.png}
+\captionof{figure}{Rubik Try2 侧视：geometry-first prompt 没有解决侧面平面性。}
+\label{fig:b_rubik_try2_side}
+\end{center}
+
+Try3 把 guidance 降到 50，黑色噪声有所减少，但 sticker 和 grid 语义也变弱。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try3_geometry_first_clean_cube_g50_darkness_control_3000steps@20260612-214444/save/it3000-0.png}
+\captionof{figure}{Rubik Try3：低 guidance 降低部分噪声，也削弱了 Rubik 细节。}
+\label{fig:b_rubik_try3_front}
+\end{center}
+
+Try3 侧视更接近 rounded wedge，说明 guidance 降低没有带来更硬的 cube geometry。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try3_geometry_first_clean_cube_g50_darkness_control_3000steps@20260612-214444/save/it3000-5.png}
+\captionof{figure}{Rubik Try3 侧视：噪声下降后，主体仍偏 rounded wedge。}
+\label{fig:b_rubik_try3_side}
+\end{center}
+
+Try4A/4B 从优化和正则层面继续压 soft density。Try4A 把 \textbf{max step percent 降到 0.65}，加入 \textbf{grad clipping、opacity loss}，并把 \textbf{sparsity 改到 0.5}；Try4B 把 \textbf{guidance 提到 70}，并把 \textbf{sparsity 改到 0.75}。Try4A 得到更小的半透明体，Try4B 在 1500 step 已经接近 fog collapse。正则项改变了密度分布，却没有把隐式体推成平面六面体。
+
+Try4A 加入 hardening 配置后，主体变小且半透明，hard cube 没有形成。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try4A_combined_hardened_g60_3000steps@20260612-224539/save/it2000-0.png}
+\captionof{figure}{Rubik Try4A：hardening 配置让密度变小，仍未得到硬表面。}
+\label{fig:b_rubik_try4a_front}
+\end{center}
+
+Try4A 的侧视仍能看到软体轮廓，正则没有把隐式体压成平面。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try4A_combined_hardened_g60_3000steps@20260612-224539/save/it2000-5.png}
+\captionof{figure}{Rubik Try4A 侧视：软边界仍存在。}
+\label{fig:b_rubik_try4a_side}
+\end{center}
+
+Try4B 提高 guidance 后，1500 step 已经接近 fog collapse。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/dreamfusion-sd/rubiks_cube_try4B_combined_hardened_g70_3000steps@20260612-224539/save/it1500-0.png}
+\captionof{figure}{Rubik Try4B：更高 guidance 引发明显密度坍缩。}
+\label{fig:b_rubik_try4b_front}
+\end{center}
+
+\subsection{Magic3D Rubik：白方块、shading 切换与 refine 失败}
+
+DreamFusion 分支失败后，我们把 Rubik 拆成“先白方块、再贴 Rubik 纹理”。B0e/B0f/B0g 用 Magic3D coarse SD 生成白方块；B0IF 换成 \textbf{DeepFloyd IF}；B0h/B0j 在白方块上加入 \textbf{cube density prior}。B0e 先暴露出一个日志陷阱：500--2000 step 仍是浅色验证图，2500 和 3000 step 明显变黑。配置审计发现 Magic3D coarse 默认 \textbf{\texttt{system.material.ambient\_only\_steps=2001}}，2001 step 后 validation shading 从 ambient/albedo-only 切到 diffuse/mixed。后续 shape-only 比较把该项覆盖到 \textbf{999999}，避免把渲染状态变化误读为几何变化。
+
+B0e 到 2000 step 仍是浅色白柱体，已经偏离六面 cube。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-sd/B0_s42@20260613-B0e/save/it2000-0.png}
+\captionof{figure}{B0e 2000 step：白方块 prompt 仍生成柱体状密度。}
+\label{fig:b_b0e_2000}
+\end{center}
+
+2500 step 后 RGB 明显变黑，后续审计确认这与 validation shading 切换有关。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-sd/B0_s42@20260613-B0e/save/it2500-0.png}
+\captionof{figure}{B0e 2500 step：后期变黑暴露出 material/shading 记录问题。}
+\label{fig:b_b0e_2500}
+\end{center}
+
+B0f/B0g 改 seed 和白方块 prompt 后，SD 分支仍在柱体、尖形体和底部 haze 之间摆动。B0IF 使用 DeepFloyd IF 后，白方块更紧凑，但 view 5 仍是 chamfered/rounded block，opacity 底部有 haze。B0h/B0j 加入 cube density prior 后，正面更接近方块，normal/opacity 仍显示 cap、floor density 和非平面侧面。
+
+B0g 换 seed 17 和 sharp white cube prompt 后，最终仍变成尖形体。
+\begin{samepage}
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-sd/B0_s17@20260613-B0g/save/it3000-0.png}
+\captionof{figure}{B0g：Magic3D-SD 白方块仍偏尖形体。}
+\label{fig:b_b0g_sd}
+\end{center}
+\end{samepage}
+
+B0h 使用 cube density prior 后，正面更像短方块，但 normal/opacity 中仍有 cap 和底部密度。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0h_s7@20260613-B0h/save/it1000-0.png}
+\captionof{figure}{B0h：cube density prior 改善正面轮廓，但没有解决底部密度。}
+\label{fig:b_b0h_prior}
+\end{center}
+
+B0j 继续调相机和 anti-cylinder prompt，正面更接近白方块，侧向和平面性仍不足。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0j_s42@20260613-B0j2r1500/save/it1500-0.png}
+\captionof{figure}{B0j：调 prompt 和相机后正面更方，三维表面仍不可靠。}
+\label{fig:b_b0j_prior}
+\end{center}
+
+B0IF s7 使用 DeepFloyd IF 后更紧凑，但仍是 rounded/chamfered block。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0if_s7@20260613-B0if/save/it3000-0.png}
+\captionof{figure}{B0IF seed 7：IF 提升紧凑性，仍未形成六个平面。}
+\label{fig:b_b0if_s7}
+\end{center}
+
+B0IF s17 的侧视也保留 chamfered/rounded 形态，seed 没有改变主要失败模式。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0if_s17@20260613-B0if/save/it3000-5.png}
+\captionof{figure}{B0IF seed 17 侧视：形体仍偏 chamfered block。}
+\label{fig:b_b0if_s17_side}
+\end{center}
+
+B0k 把 \textbf{cube density prior} 用到 direct Rubik prompt 上。RGB 中 sticker/grid 语义更强，floating fog 减少；侧视图却变成 wedge。B0k-strict 使用官方 blob prior，语义也能出现，但整体更薄、更噪。B0l 继续加入 \textbf{equal-axis prompt、anti-prism negative、关闭 view-dependent prompting}，并把 \textbf{sparsity 降到 0.15}；长方体倾向有所减弱，但结果变成 rounded faceted toy，局部还出现三角孔。
+
+B0k 使用 cube prior 直接生成 Rubik，RGB 中 sticker/grid 更强，侧视仍是 wedge。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0k_s7@20260613-B0k-cubeprior-s7/save/it2000-0.png}
+\captionof{figure}{B0k cube prior：Rubik 语义增强，几何仍偏 wedge。}
+\label{fig:b_b0k_prior}
+\end{center}
+
+B0k strict 换回官方 blob prior 后，语义还在，但整体更薄、更噪。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0k_s7@20260613-B0k-strict-s7/save/it2000-0.png}
+\captionof{figure}{B0k strict：官方 blob prior 下结果更薄、更噪。}
+\label{fig:b_b0k_strict}
+\end{center}
+
+B0l 加 equal-axis、anti-prism 和关闭 view-dependent prompting 后，长方体倾向减弱，但出现 rounded faceted toy 和局部孔洞。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if/B0l_s7@20260613-B0l-eqaxes-novd-s7/save/it2000-0.png}
+\captionof{figure}{B0l：收紧配置后仍没有得到 hard-surface cube。}
+\label{fig:b_b0l_front}
+\end{center}
+
+B1 refine 没有修复 coarse 几何，反而把 floor、base 和 cylinder 密度硬化成真实 mesh surface。threshold sweep 能减少碎片，却不能把错误主体变成六面体。B2 \textbf{fixed scaffold} 证明 IF 可以在固定 cube 上学到 grid 和 sticker；B2tIF 使用 \textbf{可训练 cube initialization}，1000 step 接近 cube，继续到 1501 step 后顶部重新变圆。几何先验确实有帮助；允许几何继续训练后，扩散先验仍会把硬平面拉回圆润体。
+
+B1 refine 把 coarse 阶段的错误 floor/base 硬化成 mesh surface，threshold 只能减少碎片。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-refine-sd/B1_s7@20260613-B1t_t010/save/it100-0.png}
+\captionof{figure}{B1 threshold 0.010：refine 硬化了错误底座。}
+\label{fig:b_b1_t010}
+\end{center}
+
+B2 fixed scaffold 在固定 cube 上可以学到 Rubik-like grid 和 sticker，说明纹理本身可学。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-refine-cube-scaffold-if/B2if_s7@20260613-B2if/save/it1000-0.png}
+\captionof{figure}{B2 fixed scaffold：固定几何后可以学到 Rubik 纹理。}
+\label{fig:b_b2_fixed}
+\end{center}
+
+B2tIF 允许 cube initialization 继续训练，1000 step 是 trainable 分支中最接近 cube 的结果。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-refine-cube-init-trainable-if/B2tif_s7@20260613-B2tif3/save/it1000-0.png}
+\captionof{figure}{B2tIF 1000 step：trainable cube initialization 接近 cube，但表面仍粗糙。}
+\label{fig:b_b2tif_1000}
+\end{center}
+
+继续到 1501 step 后，顶部重新变圆，几何先验没有稳定保住硬平面。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-refine-cube-init-trainable-if/B2tif_s7@20260613-B2tif3r2000/save/it1501-0.png}
+\captionof{figure}{B2tIF 1501 step：继续训练后顶部又变圆。}
+\label{fig:b_b2tif_1501}
+\end{center}
+
+\subsection{Apple：最终文本生成资产}
+
+Rubik 没有产生合格的 prompt-only cube mesh 后，B 切换到 apple。这个目标仍由文本生成，主体几何更接近 Magic3D 的 blob prior，同时保留可检查的局部语义：红色表皮、顶部凹陷、短棕色 stem 和高光纹理。
+
+A0 apple 到 3000 step 已有稳定红色主体和顶部 dimple，stem 弱。A1stem 加强 stem prompt，同时扩大 density envelope、降低 sparsity 并改变视角，500 step 就把苹果撑满画面，物体边界被裁掉。A1b 恢复 A0-like density/sparsity，并把相机拉远；1000 step 已有清楚 stem，3000 step 仍可见 stem，但底部 fog/base 更明显。\textbf{最终导出选择 A1b step1000，并把 isosurface threshold 提高到 10}。该导出保留 body 和 stem，同时把底部 cap 收紧；低 12\% 高度范围内的 vertex 占比从 17.1\% 降到 12.6\%，低 6\% 范围从 13.3\% 降到 8.1\%。
+
+A0 apple 到 3000 step 已有稳定主体和顶部凹陷，但 stem 仍弱。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if-apple/A0apple_s7@20260613-A0apple-if-s7/save/it3000-0.png}
+\captionof{figure}{Apple A0：主体稳定，stem 不明显。}
+\label{fig:b_apple_a0}
+\end{center}
+
+A1stem 加强 stem prompt 后，500 step 就明显撑满视野，边界被裁切。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if-apple/A1appleStem_s7@20260614-A1appleStem-s7/save/it500-0.png}
+\captionof{figure}{Apple A1stem：stem prompt 更强，但物体被放大裁切。}
+\label{fig:b_apple_a1stem}
+\end{center}
+
+A1b 把相机拉远并恢复更稳的 density/sparsity 设置，1000 step 保留 stem 和完整主体。
+\begin{center}
+\includegraphics[width=0.66\textwidth]{outputs/aigc_assets/object_B_text_to_3d/final/magic3d-coarse-if-apple/A1bappleStem_s7@20260614-A1bappleStem-farcam-s7/save/it1000-0.png}
+\captionof{figure}{Apple A1b 1000 step：stem 可见，主体完整。}
+\label{fig:b_apple_a1b1000}
+\end{center}
+
+\textbf{最终 textured mesh 使用 A1b step1000 threshold-10 导出}，纹理加载正常后呈深红色。
+\begin{center}
+\includegraphics[width=0.98\textwidth]{report/cn_draft/generated/object_B_apple_textured_views_row.png}
+\captionof{figure}{Object B 最终 apple textured mesh 的多视角检查。A1b step1000 threshold-10 导出后，红色纹理、主体轮廓和 stem 在不同视角下仍可辨认。}
+\label{fig:b_apple_mesh_views}
+\end{center}
+
+早期 mesh probe 一度显示偏粉色苹果，原因在于 probe 脚本没有正确加载 MTL/texture，实际使用了 fallback material。修复后从 \path{mesh_probe_textured/} 读取的结果显示为深红色纹理，如图 \ref{fig:b_apple_mesh_views} 所示。最终文件名为 \path{object_B_apple_A1b_step1000_thr10.obj}，同时保留对应 \path{.mtl} 和 \path{texture_kd.jpg}。
+
+\begin{center}
+\captionof{table}{Object B 最终 apple 分支的选择依据。}
+\label{tab:object_b_apple_selection}
+\small
+\begin{tabularx}{\textwidth}{p{0.23\textwidth} X X}
+\toprule
+候选 & 结果 & 处理 \\
+\midrule
+A0 apple & 主体和顶部凹陷稳定，stem 弱 & 作为 apple baseline \\
+A1stem & stem prompt 更强，但 500 step 已明显裁切 & 放弃该配置 \\
+A1b step1000 & stem 可见，主体完整，底部 fog 尚可控制 & 进入 mesh 导出 \\
+A1b step3000 & stem 保留，但底部 white fog/base 更重 & 不作为最终导出 \\
+step1000 threshold-10 & body/stem 保留，底部 cap 收紧 & 选为最终 B 资产 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{B 进入最终融合的形式}
+
+\textbf{最终 Object B 是带纹理的 OBJ mesh}。融合时，我们从该 mesh 表面采样位置和纹理颜色，写成与 D 相同格式的 Gaussian 点，再追加到 garden 背景点云中。B 与 A、C 一样通过最终 2DGS renderer 输出。
+% ===== END 05_object_b.tex =====
+
+
+% ===== BEGIN 06_object_c.tex =====
+\section{物体 C：单图生成 3D 资产}
+
+\subsection{任务约束与验收方式}
+
+物体 C 使用 Magic123 从单张 RGBA 图像生成 3D 资产。输入图像给了颜色、轮廓和局部纹理，但没有给出隐藏面、厚度和拓扑；这些部分主要由 Zero123 视角外推、Stable Diffusion 外观先验和体密度正则共同决定。C 的每个候选都按固定视角检查 RGB、normal 和 opacity：RGB 看外观，normal 看表面方向，opacity 看体积是否闭合。
+
+\subsection{早期目标：简单轮廓、局部语义与拓扑线索}
+
+绿色 canister 是第一组简化目标。输入图中物体接近圆柱体，局部语义很少；如果单图生成只受复杂语义干扰，这一目标理应更稳定。图 \ref{fig:c_canister_inputs} 给出原始照片和分割后的 RGBA 输入。
+
+\begin{center}
+\includegraphics[width=0.58\textwidth]{report/cn_draft/generated/object_C_canister_inputs_clean.png}
+\captionof{figure}{Green canister 输入图。(a) 原始照片；(b) RGBA 输入。}
+\label{fig:c_canister_inputs}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.74\textwidth]{report/cn_draft/generated/object_C_canister_front_side_clean.png}
+\captionof{figure}{Green canister 结果。(a) view 0 正面仍可读；(b) view 3 中侧面体积收缩为 wedge-like 形状。}
+\label{fig:c_canister_front_side}
+\end{center}
+
+正面视角仍像圆柱体；侧视 RGB、normal 和 opacity 收成楔形，白色 opacity 轮廓没有支撑真实圆柱体体积。C 候选不能只凭正面 RGB 接受。
+
+随后我们换成更深色、更正面的 green container 输入，并在 prompt 中加入 no-bulge 约束。view 0 的圆柱形更清楚，view 3 仍出现后侧鼓包。换输入和加负向 prompt 改变了失败形态，没有稳定解决隐藏面体积推断。
+
+\begin{center}
+\includegraphics[width=0.62\textwidth]{report/cn_draft/generated/object_C_container_inputs_clean.png}
+\captionof{figure}{Green container 调整后的输入。(a) 原始照片；(b) RGBA 输入。}
+\label{fig:c_container_inputs}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_container_adjustment_clean.png}
+\captionof{figure}{Green container 调整结果。(a) view 0 的圆柱形更稳定；(b) view 3 仍出现后侧 bulge。}
+\label{fig:c_container_adjustment}
+\end{center}
+
+cat box 分支检验局部语义能否保留。输入中猫脸、耳朵和盒盖 seam 都很清楚；seed 42 生成了较完整的单体，脸部纹理和耳朵很快弱化，侧面更接近普通圆形容器。局部身份细节没有稳定贴到正确表面。
+
+\begin{center}
+\includegraphics[width=0.52\textwidth]{report/cn_draft/generated/object_C_catbox_inputs_clean.png}
+\captionof{figure}{Cat box 输入图。(a) 原始照片；(b) RGBA 输入。}
+\label{fig:c_catbox_inputs}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.72\textwidth]{report/cn_draft/generated/object_C_catbox_seed42_clean.png}
+\captionof{figure}{Cat box seed 42。(a) view 0 是单体，但脸和耳朵已弱化；(b) view 3 中身份细节继续消失。}
+\label{fig:c_catbox_seed42}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.72\textwidth]{report/cn_draft/generated/object_C_catbox_detail_clean.png}
+\captionof{figure}{Cat box 细节保留尝试。(a) detail-preserve 的 view 0 中耳朵和脸仍弱；(b) staged validation 的 view 5 仍偏 rounded fallback。}
+\label{fig:c_catbox_detail}
+\end{center}
+
+cat box 随后进入 detail-preserve 分支：larger crop、较低 sparsity，并在 prompt 中强调 ears、closed eyes、nose、mouth 和 lid seam。结果仍没有把脸和耳朵稳定恢复出来；继续做 staged validation 后，侧面轮廓仍像 rounded fallback。小尺度身份细节一旦在 coarse 阶段丢失，后续 prompt 强化很难把它重新长回正确位置。
+
+yoyo 分支用来检查“图像暗线”是否会变成真实几何凹槽。我们保留了原图作为来源，先做 stringless RGBA 去掉绳子，再做 waist-guide RGBA，把中央收腰画得更明确。
+
+\begin{center}
+\includegraphics[width=0.86\textwidth]{report/cn_draft/generated/object_C_yoyo_inputs_clean.png}
+\captionof{figure}{Yoyo 输入图。(a) 原始图片；(b) 去绳 RGBA；(c) 强化中央收腰的 guide RGBA。}
+\label{fig:c_yoyo_inputs}
+\end{center}
+
+stringless v1 的 RGB 和 normal 中已经出现中央暗线，但 opacity 仍接近连续胶囊体；waist guide 让中央线更明显，侧视出现 notch 和横向 normal 断层。表面线条可以由颜色或法线伪装出来，不能直接当作真实三维结构。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_yoyo_v1_clean.png}
+\captionof{figure}{Yoyo stringless v1。(a) view 0 有 groove-like 暗线；(b) view 5 的 opacity 仍近似胶囊体。}
+\label{fig:c_yoyo_v1}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.88\textwidth]{report/cn_draft/generated/object_C_yoyo_waist_guide_selected.png}
+\captionof{figure}{Yoyo waist guide 的失败侧视图。RGB 和 normal 出现横向收腰线，opacity 仍接近胶囊体轮廓。}
+\label{fig:c_yoyo_guide}
+\end{center}
+
+\subsection{Rubik：正面可识别与三维一致性分离}
+
+Rubik 被选为 C 的主压力测试。它同样是单体物体，但要求平面、直角、闭合体积、黑色 3x3 grid 和多色 sticker 同时成立。图 \ref{fig:c_rubik_inputs} 显示四类输入：原始来源、普通 RGBA、geometry guide 和 solid-alpha 版本；这些输入之后分别用于排查纹理、几何 guide 和 alpha 对结果的影响。
+
+\begin{center}
+\includegraphics[width=0.92\textwidth]{report/cn_draft/generated/object_C_rubik_inputs_clean.png}
+\captionof{figure}{Rubik 输入与预处理。(a) 原始来源图；(b) 普通 RGBA；(c) geometry guide；(d) solid-alpha 输入。}
+\label{fig:c_rubik_inputs}
+\end{center}
+
+baseline seed 42 的 view 0 已经能看出魔方颜色和 grid；切到 view 5 后，侧面变成不可靠的绿色面，normal 与 opacity 也没有形成干净六面体。此后 C 的 Rubik 分支固定检查 view 0、view 5 和 view 7：view 0 看正面错觉，view 5 看侧后一致性，view 7 看孔洞和缺面。
+
+\begin{center}
+\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\linewidth]{report/cn_draft/generated/object_C_rubik_baseline_view0_row.png}
+\end{minipage}\hfill
+\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\linewidth]{report/cn_draft/generated/object_C_rubik_baseline_view5_row.png}
+\end{minipage}
+\vspace{0.25em}
+\includegraphics[width=0.78\textwidth]{report/cn_draft/generated/object_C_rubik_baseline_yellow_distorted.png}
+\vspace{0.25em}
+\includegraphics[width=0.78\textwidth]{report/cn_draft/generated/object_C_rubik_try16_view0_row_clean.png}
+\captionof{figure}{Rubik baseline 与 try16 对照。baseline 在 view 0 可识别；view 5 和另一个失败视角暴露侧面坍缩、normal 扭曲和不规则 opacity。try16 正面 grid 更清楚，但仍保留 rounded body 和 normal dents。}
+\label{fig:c_rubik_baseline}
+\end{center}
+
+相机假设和 prompt 影响很大。try2 使用 \textbf{elevation 15、azimuth 45、fovy 30}，并采用 \textbf{SD/Zero123 guidance 30/10}，前侧深度比 baseline 更合理；try4 缩短 hard-cube prompt 并强调可见颜色面，view 7 仍保留孔洞、软边和不完整后侧。相机配置被保留为 recipe 成分，长训练坏 checkpoint 没有继续作为主要修复手段。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_rubik_pose_prompt_clean.png}
+\captionof{figure}{Rubik 相机和 prompt 调整。(a) try2 的 view 0 深度解释更合理；(b) try4 的 view 7 仍有孔洞和软边。}
+\label{fig:c_rubik_pose_prompt}
+\end{center}
+
+单独加强文字约束没有稳定收益。try5 从头加入 \textbf{single-face、anti-hole、anti-twist} 约束，颜色和 grid 反而变差；try6 换用 \textbf{geometry guide}，并把 SD/Zero123 改为 \textbf{22/15}，结果更像被压出的绿色块，Rubik 纹理线索明显丢失。guide 图保住了部分轮廓，真实纹理线索损失更大。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_rubik_prompt_guide_clean.png}
+\captionof{figure}{Rubik prompt 与 guide 对比。(a) try5 的强 prompt 分支颜色和 grid 退化；(b) try6 的 geometry guide 分支丢失自然纹理。}
+\label{fig:c_rubik_prompt_guide}
+\end{center}
+
+\subsection{Rubik 后期迭代：seed、closure、alpha 与 resume}
+
+seed sweep 改变了优化盆地。try10 seed 0 没有突破 rounded/noisy 形态；try11 \textbf{seed 7} 的正面 grid 和主体轮廓更好。后续实验沿用 seed 7，并把它和 closure 设置组合。
+
+\begin{samepage}
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_rubik_seed_clean.png}
+\captionof{figure}{Rubik seed sweep。(a) try10 seed 0 仍有圆角、噪声和 normal 凹陷；(b) try11 seed 7 的正面 grid 更清楚。}
+\label{fig:c_rubik_seed}
+\end{center}
+\end{samepage}
+
+\textbf{closure 设置}带来清晰取舍。try12 把 \textbf{fovy 降到 25，sparsity 降到 0.008，opacity 提到 0.004}；view 5 的孔洞减少，但 sticker 和 grid 变软。try14 继续加重 closure，\textbf{fovy 22、sparsity 0.005、opacity 0.006、normal smoothness 1600}，侧面 dents 和 soft silhouette 更明显。更强闭合不会单调改善结果。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_rubik_closure_clean.png}
+\captionof{figure}{Rubik closure ablation。(a) try12 减少孔洞但软化 grid；(b) try14 过强 closure 产生 dents 和更软轮廓。}
+\label{fig:c_rubik_closure}
+\end{center}
+
+try15 使用 \textbf{solid-alpha 输入}，保留真实照片 RGB，同时让 alpha envelope 更闭合；view 5 的大洞减少，但后侧 normal dents 仍在。我们还测试了 Keqs scrambled Rubik 来源图，用来排查旧图是否造成 holes 和 twist；该分支的颜色可读性较好，但白色 sticker 在预处理中被当成背景或缺块，生成结果出现 black-fill 和 notch-like artifact。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_rubik_alpha_source_clean.png}
+\captionof{figure}{Rubik alpha 与来源图对比。(a) try15 solid alpha 改善闭合但保留后侧 dent；(b) Keqs 来源图暴露 white-sticker segmentation 带来的黑填充和缺口伪影。}
+\label{fig:c_rubik_alpha_source}
+\end{center}
+
+\textbf{最终提交的 C 资产选择 try16}。它从 try13 的 \textbf{1000-step checkpoint resume 到 2000 step}；try13 已经有较好的闭合度，这次 resume 只用于收紧边界和 grid，不承担修复明显坏几何的任务。try16 后侧大洞少于 try13 起点；主要残留问题集中在两侧绿色面的 sticker/color 分布、顶面轻微鼓包、圆角、grid 弯曲和 normal dents。背面两个绿色面没有完全修复，黑色 grid 和多色 sticker 没有稳定覆盖到隐藏面。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/object_C_rubik_resume_clean.png}
+\captionof{figure}{Rubik try13 到 try16 的 resume 对比。(a) try13 view 7 是 resume 起点；(b) try16 view 7 后侧更闭合，但仍有软边和顶面不平整。}
+\label{fig:c_rubik_resume}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.98\textwidth]{report/cn_draft/generated/object_C_rubik_try16_views_0_3_grid2x2.png}
+\captionof{figure}{Object C \textbf{最终提交资产 try16} 的验证视角 0--3。正面 grid 和 sticker 可读，opacity 基本闭合；黄色面和绿色面的局部 color/sticker 分布仍有噪声。}
+\label{fig:c_rubik_final}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.98\textwidth]{report/cn_draft/generated/object_C_rubik_try16_views_4_7_grid2x2.png}
+\captionof{figure}{Object C \textbf{最终提交资产 try16} 的验证视角 4--7。两侧绿色面、顶面轻微鼓包、圆角、grid 弯曲和局部 normal dents 是主要残留问题。}
+\label{fig:c_rubik_final_rear}
+\end{center}
+
+\textbf{最终导出}使用 try16 step2000，并清理成主组件 OBJ。清理后的 mesh 包含 49,982 个顶点和 99,960 个面，保留 \path{rubiks_cube_try16_step2000_main_component.obj}、对应 \path{.mtl} 和 \path{texture_kd.jpg}。
+
+\begin{center}
+\captionof{table}{Object C try16 最终分支的关键设置。}
+\label{tab:object_c_final_settings}
+\small
+\begin{tabularx}{\textwidth}{p{0.24\textwidth} X}
+\toprule
+项目 & 取值 \\
+\midrule
+输入 & \path{rubiks_cube_rgba.png}；参考相机 elevation 15、azimuth 45、fovy 25 \\
+训练 & \textbf{resume try13 step1000，继续到 step2000}；validation interval 200 \\
+guidance & SD guidance 30；Zero123 guidance 10 \\
+loss weights & RGB 1000；mask 100；SD 0.025；3D-SD 1；\textbf{normal smoothness 1200；sparsity 0.008；opacity 0.004}；z variance 50 \\
+最终日志 & step 1998：RGB 0.0128；mask 0.00758；SD 920.43；3D-SD 280.96；sparsity 0.641；opacity 0.0222 \\
+导出 & \textbf{最终提交} cleaned main-component OBJ：49,982 vertices，99,960 faces \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{C 进入最终融合的形式}
+
+最终 Object C 是带纹理的 Rubik OBJ mesh。融合时从 mesh 表面采样位置和纹理颜色，写入与 D 兼容的 Gaussian 点记录，再和 A、B、D 一起由最终 2DGS renderer 输出。try16 的残留缺陷会进入最终场景；单图生成结果没有被当作二维贴片叠到背景上。
+% ===== END 06_object_c.tex =====
+
+
+% ===== BEGIN 07_fusion.tex =====
+\section{背景 D 与最终 Gaussian 融合}
+
+\subsection{D：garden 背景的 2DGS 重建}
+
+背景 D 使用 Mip-NeRF360 garden 图像序列训练 2DGS。D 的角色和 A 不同：A 后续要被提取成前景资产，D 则保留为最终场景的背景 Gaussian field。训练使用 185 张数据集图像，迭代到 30000 step；最终背景包含 2,217,492 个 Gaussian points。
+
+我们也训练过 Mip-NeRF360 counter 背景：240 张图像，30k checkpoint 含 525,815 个 Gaussian points，final PSNR 为 29.95、L1 为 0.01684。counter 的室内台面、餐具和植物遮挡更杂，画面主体更拥挤；最终 D 选 garden，桌面位置、相机环绕和 A/B/C 物体摆放更清楚。
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{report/cn_draft/generated/background_counter_three_renders.png}
+\captionof{figure}{Mip-NeRF360 counter 的 2DGS render 证据。该分支完成 240 张输入图像、30k 训练和 train-view render；最终未采用是因为画面主体更拥挤，遮挡关系更杂。}
+\label{fig:d_counter_evidence}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\textwidth]{report/cn_draft/generated/curves_2dgs_loss_clean.png}
+\captionof{figure}{A 与 D 的 2DGS 训练 loss。D 场景更大，Gaussian 数量约为 A 的 9.8 倍；loss 绝对值主要反映场景复杂度。}
+\label{fig:d_2dgs_loss_clean}
+\end{center}
+
+\begin{center}
+\captionof{table}{A 与 D 的 2DGS 重建指标。}
+\label{tab:d_2dgs_metrics}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}p{0.13\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.11\textwidth} p{0.13\textwidth} X@{}}
+\toprule
+对象 & 输入 & Gaussian 数量 & Final loss & PSNR 7k/30k & L1 7k/30k \\
+\midrule
+A book & 150 frames & 226,409 & 0.03195 & 26.4/28.6 & 0.035/0.024 \\
+D garden & 185 images & 2,217,492 & 0.04311 & 26.7/28.9 & 0.030/0.023 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+D 的 30k checkpoint 仍比 7k checkpoint 提升约 2.16 dB PSNR，L1 从 0.03018 降到 0.02337。曲线中几个尖峰来自 2DGS 训练中的 densification 和 opacity reset：代码默认每 100 step 统计并增密，每 3000 step 重置 opacity；garden 细结构多，短期扰动更明显。最终融合沿用 D 的 30000-step 模型、相机路径和 renderer 配置。
+
+\subsection{融合路线的筛选}
+
+早期我们先用 Blender 前景 alpha 做快速预览。该路线能检查相机对齐、桌面位置和大致尺度，但它只是在 D 的 RGB 渲染图上覆盖 A/B/C 前景 RGBA。桌面、花瓶和背景物体无法在同一个 2DGS 场景中参与遮挡，接触关系也只能靠视觉摆放近似。
+
+\begin{center}
+\includegraphics[width=0.98\textwidth]{report/cn_draft/generated/fusion_blender_alpha_keyframes_large_pair.png}
+\captionof{figure}{Blender foreground-alpha 预览。该结果适合检查构图和尺度，但仍是图像级叠加。}
+\label{fig:fusion_alpha_preview}
+\end{center}
+
+\begin{center}
+\captionof{table}{最终融合前尝试过的路线。}
+\label{tab:fusion_route_selection}
+\small
+\begin{tabularx}{\textwidth}{p{0.24\textwidth} X X p{0.18\textwidth}}
+\toprule
+路线 & 测试目的 & 暴露的问题 & 处理 \\
+\midrule
+Blender foreground-alpha & 快速检查相机、桌面位置、物体尺度 & 仍是 RGB/RGBA 叠加，无法形成一个 3D scene & 只保留为诊断预览 \\
+Depth-aware compositing fallback & 尝试用深度图修补遮挡 & 对深度尺度和对齐很敏感，仍没有统一表示 & 放弃 \\
+D garden mesh extraction & 把背景转成 mesh 后统一渲染 & garden 有植物、桌面细条、反光球和大范围背景，mesh 清理风险高 & 放弃 \\
+普通 colored points 追加 & 检查 PLY 追加能否被 renderer 读取 & 2DGS PLY 需要 opacity、scale、rotation 和 SH 字段 & 改为按 2DGS schema 编码 \\
+Mesh-to-Gaussian merge & 保留 D 的 2DGS 表示，把 A/B/C 转成 splats & 需要处理 schema、法向、尺度、朝向和位置 & 作为最终路线 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Mesh 到 2DGS Gaussian record 的编码}
+
+最终融合保留 D 的原生 2DGS 表示。A 的 cleaned book mesh、B 的 apple OBJ 和 C 的 Rubik OBJ 只作为表面采样源：在 mesh 表面采样带颜色的点，按桌面 placement metadata 变换到 D 的坐标系，再写成 D renderer 可读取的 Gaussian records。
+
+\begin{center}
+\captionof{table}{A/B/C 采样为 Gaussian records 时使用的字段。}
+\label{tab:gaussian_encoding}
+\small
+\begin{tabularx}{\textwidth}{p{0.22\textwidth} X}
+\toprule
+字段 & 编码方式 \\
+\midrule
+位置 & mesh surface sample 经过物体尺度、朝向和桌面坐标变换后写入 \path{x,y,z} \\
+颜色 & RGB 转为 DC 球谐系数：\(\mathrm{f\_dc}=(\mathrm{rgb}-0.5)/0.28209479177387814\) \\
+不透明度 & 以 \(\mathrm{logit}(\alpha)\) 存储，对应 renderer 内部 sigmoid activation \\
+二维尺度 & 以 \(\log(r)\) 存储，对应 renderer 内部 exp activation \\
+旋转 & 由源三角面的切向和法向构造 WXYZ quaternion \\
+高阶 SH & \path{f_rest_*} 置零，插入物体使用 view-independent color \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+合并时读取 D 的 \path{point_cloud.ply}，追加 A/B/C 的新 Gaussian records，并保留 D 的 \path{cameras.json}、\path{cfg_args} 和 2DGS renderer 路径。最终输出来自同一个 Gaussian scene，避免多个 renderer 后期合成。
+
+\subsection{固定关键帧诊断循环}
+
+在插入真实物体前，我们先加入 synthetic magenta Gaussian cube。它的颜色、尺度和位置都很容易识别，用来确认新增 records 的 schema、颜色编码、opacity、scale 和 rotation 能被 D renderer 正确解释。
+
+\begin{center}
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\includegraphics[width=\textwidth]{report/cn_draft/generated/fusion_synthetic_cube_frame_00040_square.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\includegraphics[width=\textwidth]{report/cn_draft/generated/fusion_synthetic_cube_frame_00120_square.png}
+\end{minipage}
+\captionof{figure}{Synthetic magenta cube sanity check，固定关键帧 00040 与 00120。粉色 splats 稳定出现，Gaussian append 与 renderer 路径可用。}
+\label{fig:fusion_synthetic_cube}
+\end{center}
+
+真实 A/B/C 合并后，每轮都渲染同一组关键帧 \([0,40,80,120,160,200,239]\)。v001 暴露出桌面法向和 placement 方向问题，部分物体落到桌面背侧或被遮挡。v004 锁定整体尺度和 Rubik yaw；v005 翻转 A 的 front/back 方向，让书本封面朝外，成为最终版本。
+
+\begin{center}
+\includegraphics[width=0.98\textwidth]{report/cn_draft/generated/fusion_v005_keyframes_0_3_large.png}
+\captionof{figure}{Fusion v005 \textbf{最终提交关键帧} 00000--00120。A/B/C 与 D 由同一个 2DGS renderer 输出。}
+\label{fig:fusion_v005}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.98\textwidth]{report/cn_draft/generated/fusion_v005_keyframes_4_6_large.png}
+\captionof{figure}{Fusion v005 \textbf{最终提交关键帧} 00160--00239。书本正面朝外，apple 和 Rubik 的尺度与朝向保持稳定。}
+\label{fig:fusion_v005_late}
+\end{center}
+
+\begin{center}
+\captionof{table}{最终 Gaussian merge 的版本诊断。}
+\label{tab:fusion_versions}
+\small
+\begin{tabularx}{\textwidth}{p{0.19\textwidth} X X X}
+\toprule
+版本 & 观察 & 修改 & 结果 \\
+\midrule
+Synthetic cube & 需要确认新增 Gaussian records 可见 & 插入高饱和 magenta cube & schema 与 renderer 路径确认可用 \\
+v001 & 物体出现在桌面背侧或被遮挡 & 修正桌面法向方向和 placement side & 物体移动到可见桌面侧 \\
+v002 & Rubik 方向不理想 & 加入 C yaw delta 控制 & 朝向可独立调节 \\
+v004 & 整体尺度与 Rubik 朝向已稳定 & 保持 A \(0.42\times0.70\times0.22\)、B height 0.36、C side 0.30、C yaw \(-90^\circ\) & 锁定整体构图 \\
+v005 & 书本正面朝内 & 翻转 A local front direction & 选为最终融合版本 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{最终输出与限制}
+
+最终选择的 run 位于 \path{outputs/gaussian_fusion/}，名称为 \path{task1_abc_mesh_gaussians_v005_a_front_out_c_yaw_m90}。它把 125,000 个前景 splats 追加到 D 的 2,217,492 个背景 splats 中，得到 2,342,492 个 Gaussian records；其中 A book 50,000，B apple 35,000，C Rubik 40,000。\textbf{最终提交视频}为 240 帧，分辨率 \(1296\times840\)，60 fps，使用 D 的 2DGS render path。
+
+\begin{center}
+\includegraphics[width=0.90\textwidth]{report/cn_draft/generated/fusion_v005_representative_frame_00120.png}
+\captionof{figure}{\textbf{最终提交场景}的代表帧 00120。书本、apple 和 Rubik 已写入同一个 merged Gaussian scene，并与 garden 背景沿同一路径渲染。}
+\label{fig:fusion_v005_representative}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.90\textwidth]{report/cn_draft/generated/fusion_v005_final_closeup.png}
+\captionof{figure}{\textbf{最终提交场景}的桌面近景，来自 frame 00080。三类前景资产在同一 Gaussian scene 中渲染，未使用图像级 alpha overlay。}
+\label{fig:fusion_v005_closeup}
+\end{center}
+
+\begin{center}
+\captionof{table}{最终合并场景的 Gaussian 数量。}
+\label{tab:fusion_accounting}
+\small
+\begin{tabularx}{\textwidth}{p{0.22\textwidth} p{0.20\textwidth} X}
+\toprule
+组成 & Gaussian 数量 & 来源 \\
+\midrule
+D garden background & 2,217,492 & 2DGS 30000-step \path{point_cloud.ply} \\
+A book & 50,000 & cleaned 2DGS-extracted mesh sampling \\
+B apple & 35,000 & textured OBJ mesh sampling \\
+C Rubik & 40,000 & cleaned Magic123 OBJ mesh sampling \\
+\midrule
+合计 & 2,342,492 & one merged Gaussian scene \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+当前融合仍有边界：A/B/C 插入 splats 使用 DC color，没有重新优化高阶视角相关颜色；接触阴影和局部光照没有做物理级重优化；B/C 的 AIGC 几何缺陷会被保留到最终场景中。报告保留这些限制。
+% ===== END 07_fusion.tex =====
+
+
+% ===== BEGIN 08_comparison.tex =====
+
+\section{三种生成方式的质量评估}
+
+本项目的三类资产来自三种不同约束：多视角重建使用真实相机和多张图像，文本生成只使用 prompt，单图生成使用一张参考图加扩散先验。质量差异集中在三个维度：几何是否可环绕检查，纹理是否稳定绑定到表面，训练和筛选是否可控。图 \ref{fig:method_quality_visual} 给出最终可用结果的横向参照。
+
+\begin{samepage}
+\begin{center}
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\textbf{多视角重建：A cleaned mesh}\\[0.3em]
+\includegraphics[width=\textwidth]{report/assets/object_A_cleaned_mesh_combo.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\textbf{文本生成：B apple textured mesh}\\[0.3em]
+\includegraphics[width=\textwidth]{report/cn_draft/generated/object_B_apple_textured_views_row.png}
+\end{minipage}
+
+\vspace{0.6em}
+\begin{minipage}[t]{0.78\textwidth}
+\centering
+\textbf{单图生成：C Rubik try16 隐藏面检查}\\[0.3em]
+\includegraphics[width=\textwidth]{report/cn_draft/generated/object_C_rubik_try16_views_4_7_grid2x2.png}
+\end{minipage}
+\captionof{figure}{三种方式的代表结果。多视角重建保留真实物体证据；文本生成的 apple 几何最稳定；单图 Rubik 的正面可读，但隐藏面仍有绿色面、圆角和 normal dents。}
+\label{fig:method_quality_visual}
+\end{center}
+\end{samepage}
+
+多视角重建在几何约束上最强。A 和 D 都有相机位姿与多视角图像监督，训练到 30k 后 PSNR 仍上升：A 从 26.38 dB 到 28.57 dB，D 从 26.72 dB 到 28.88 dB。代价是重建后处理重：A 的 raw mesh 有漂浮薄片和白色噪声，D 的 garden 背景包含 2.22M Gaussians，计算和存储成本最高。
+
+文本生成最依赖先验。duck、cone 和 Rubik 反复更换 prompt、seed、guidance、density prior 和 refine 设置；局部语义经常漂移，Rubik 的 hard cube 约束尤其不稳定。apple 最终被采用，主要因为它的圆润主体、stem 和 dimple 更符合 Magic3D-IF 的体积先验。
+
+单图生成的正面外观最容易继承输入。canister、cat box、yoyo 和 Rubik 都能在部分视角保留输入轮廓或纹理，但隐藏面、厚度和拓扑仍要靠先验补全。Rubik try16 是最终 C 资产；它的正面 grid 可读，背面两个绿色面和顶面瑕疵仍没有完全修复。
+
+\begin{center}
+\captionof{table}{多视角重建、文本生成与单图生成的实验对比。}
+\label{tab:method_comparison}
+\scriptsize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{p{0.14\textwidth} p{0.17\textwidth} X X X}
+\toprule
+方式 & 本项目对象 & 几何准确度 & 纹理细节 & 计算与调参成本 \\
+\midrule
+多视角重建 & A book，D garden & 几何最可靠。A 保留书本厚度、封面和纸页；D 保留 garden 的桌面和大场景布局。raw extraction 仍会产生 floaters、薄片和噪声 component。 & 纹理来自真实图像，封面、桌面和植物细节稳定。反光、细枝叶、薄结构会增加噪声。 & 单次训练最长，A/D 均训练 30k step；目标明确，调参分支少于 B/C。D 的 Gaussian 数量最大，最终渲染和存储成本最高。 \\
+文本生成 & B duck/cone/Rubik/apple & 几何稳定性最低。duck 局部部件漂移，cone 主体稳定但白环不稳，Rubik 难以形成硬 cube；apple 的圆润主体最适合该路线。 & 颜色和局部语义可以很鲜明，但表面绑定弱。Rubik grid 容易变成贴图噪声，duck 嘴部会漂成横向色带。 & 单次 run 步数较少，但总成本高。prompt、seed、guidance、cube prior、DMTet refine 和 fixed scaffold 都做过分支筛选。 \\
+单图生成 & C canister/cat/yoyo/Rubik & 正面几何最容易成功，隐藏面最容易出问题。Rubik try16 可导出、可融合，但背面两个绿色面、圆角和 top bulge 仍保留。 & 输入图能带来较高正面保真度。cat face、yoyo groove、Rubik sticker 都出现过“正面像、环绕不稳”的情况。 & 单次训练介于 A/D 与 B 之间；真实成本来自输入裁剪、alpha、camera、seed、closure 和 resume 多轮排查。 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+最终融合采用统一的 Gaussian 表示。D 保持原生 2DGS 背景；A 从真实重建 mesh 清理后采样；B/C 从 textured mesh 采样。文本生成和单图生成都没有直接覆盖到背景 RGB 上，所有前景都进入同一个 Gaussian scene。
+
+\section{提交链接与占位}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.26\textwidth} X}
+\toprule
+项目 & 链接 \\
+\midrule
+GitHub 仓库 & \url{https://github.com/adehuang41/cv_hw3_task1} \\
+模型权重与最终视频 & \url{https://modelscope.cn/models/adehuang41/cv_hw3_task1} \\
+SwanLab 实验可视化 & \url{https://swanlab.cn/@ade/cv_hw3_task1} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+% ===== END 08_comparison.tex =====
+
+
+\end{document}

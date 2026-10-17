@@ -1,0 +1,57 @@
+# Background reconstruction config for Task 1 garden replacement background.
+# This records reproducible parameters and paths. It is not a training config.
+
+project: cv_final_task1
+pipeline: reconstruction_2dgs
+scene_id: background_garden
+scene_role: host_background
+
+dataset:
+  name: Mip-NeRF 360
+  selected_scene: garden
+  source_page: https://jonbarron.info/mipnerf360/
+  source_zip:
+    url: http://storage.googleapis.com/gresearch/refraw360/360_v2.zip
+    bytes_from_http_head_2026_06_10: 12535427936
+    size_note: about 11.67 GiB
+  garden_scene:
+    status: selective_http_range_extract_from_360_v2_zip
+    expected_image_count: 185
+    expected_sparse_entry_count: 5
+    compressed_bytes_from_dry_run_2026_06_10: 2986390020
+    uncompressed_bytes_from_dry_run_2026_06_10: 3010471936
+
+environment:
+  training_env: cv-final-2dgs
+  two_dgs_repo: third_party/2d-gaussian-splatting
+  gpu_selection_rule: run nvidia-smi first, then set CUDA_VISIBLE_DEVICES to one idle GPU
+
+paths:
+  raw_scene: data/raw/background_mipnerf360/garden
+  processed_scene: data/processed/background_garden
+  metadata_dir: data/processed/background_garden/metadata
+  reconstruction_output: outputs/reconstruction_2dgs/background_garden
+  smoke_output: outputs/reconstruction_2dgs/background_garden/2dgs_smoke_test
+  formal_output: outputs/reconstruction_2dgs/background_garden/2dgs_final_r4_30k
+
+expected_input_structure:
+  images_dir: data/raw/background_mipnerf360/garden/images
+  sparse_model_dir: data/raw/background_mipnerf360/garden/sparse/0
+
+planned_commands:
+  selective_garden_extract: >-
+    python3 scripts/reconstruction/extract_mipnerf360_scene_http.py
+    --url http://storage.googleapis.com/gresearch/refraw360/360_v2.zip
+    --scene garden
+    --output_dir data/raw/background_mipnerf360
+    --summary_path data/processed/background_garden/metadata/dataset_extraction_summary.json
+  formal_train_template: >-
+    CUDA_VISIBLE_DEVICES=<idle_gpu> conda run -n cv-final-2dgs python train.py
+    -s /home/dechao/cv_final_pj/data/raw/background_mipnerf360/garden
+    -m /home/dechao/cv_final_pj/outputs/reconstruction_2dgs/background_garden/2dgs_final_r4_30k
+    -r 4
+  render_path_template: >-
+    CUDA_VISIBLE_DEVICES=<same_or_idle_gpu> conda run --no-capture-output -n cv-final-2dgs python render.py
+    -s /home/dechao/cv_final_pj/data/raw/background_mipnerf360/garden
+    -m /home/dechao/cv_final_pj/outputs/reconstruction_2dgs/background_garden/2dgs_final_r4_30k
+    --iteration 30000 -r 4 --skip_train --skip_test --skip_mesh --render_path

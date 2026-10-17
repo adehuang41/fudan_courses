@@ -1,0 +1,75 @@
+{
+  "scene_id": "task1_blender_fusion_locked_layout",
+  "status": "placeholder_static_backplate_not_final",
+  "background": {
+    "type": "counter_backplate_plus_textured_floor",
+    "color": [0.025, 0.027, 0.03],
+    "floor_color": [0.18, 0.16, 0.13],
+    "floor_size": 7.0,
+    "floor_texture_image": "outputs/renders/blender_fusion/task1_scene_preparation/textures/counter_floor_granite_texture.png",
+    "backplate_image": "outputs/renders/blender_fusion/task1_scene_preparation/textures/counter_backplate_render_00120.png",
+    "backplate_distance": 7.0
+  },
+  "object_A": {
+    "label": "Object A book reconstruction",
+    "asset_path": "outputs/reconstruction_2dgs/object_A_book/2dgs_final_r4_30k/point_cloud/iteration_30000/point_cloud.ply",
+    "cover_texture_image": "outputs/renders/blender_fusion/task1_scene_preparation/textures/object_A_book_cover_render_00085_crop.png",
+    "location": [-0.05, -0.22, 0.0],
+    "rotation_euler": [0.0, 0.0, 0.08],
+    "scale": [1.0, 1.0, 1.0],
+    "visible_proxy_dimensions": [0.76, 1.28, 0.18],
+    "ground_z": 0.02
+  },
+  "object_B_anchor": {
+    "label": "Object_B_anchor",
+    "final_decision": "traffic_cone_seed7_step3000",
+    "preferred_asset": "outputs/aigc_assets/final_candidates/object_B_traffic_cone_seed7_step3000/assets/object_B_traffic_cone_seed7_step3000.obj",
+    "proxy_shape": "cone",
+    "location": [-0.98, 0.24, 0.25],
+    "rotation_euler": [0.0, 0.0, 0.0],
+    "scale": [0.58, 0.58, 0.82],
+    "ground_z": 0.02
+  },
+  "object_C_anchor": {
+    "label": "Object_C_anchor",
+    "current_main": "cat_box_seed42_step1500",
+    "preferred_asset": "outputs/aigc_assets/final_candidates/object_C_cat_box_seed42_step1500/assets/object_C_cat_box_seed42_step1500.obj",
+    "proxy_shape": "rounded_box_with_ears",
+    "location": [0.95, 0.18, 0.3],
+    "rotation_euler": [0.0, 0.0, -0.12],
+    "scale": [0.42, 0.38, 0.36],
+    "ground_z": 0.02
+  },
+  "camera": {
+    "name": "Camera_locked_orbit_preview",
+    "focal_length_mm": 35,
+    "resolution": [640, 360],
+    "fps": 12,
+    "frame_start": 1,
+    "frame_end": 96,
+    "orbit_radius": 4.0,
+    "height": 2.0,
+    "look_at": [0.0, 0.0, 0.35]
+  },
+  "lights": [
+    {
+      "name": "Key_Area",
+      "type": "AREA",
+      "location": [-2.5, -3.0, 4.0],
+      "power": 450,
+      "size": 4.0
+    },
+    {
+      "name": "Fill_Area",
+      "type": "AREA",
+      "location": [3.0, 2.0, 2.5],
+      "power": 80,
+      "size": 5.0
+    }
+  ],
+  "render_outputs": {
+    "blend": "outputs/renders/blender_fusion/task1_scene_preparation/task1_locked_layout.blend",
+    "preview_video": "outputs/renders/blender_fusion/task1_scene_preparation/task1_locked_layout_preview_lowres.mp4",
+    "preview_frames": "outputs/renders/blender_fusion/task1_scene_preparation/preview_frames"
+  }
+}

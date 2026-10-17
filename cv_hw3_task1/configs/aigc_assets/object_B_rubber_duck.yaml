@@ -1,0 +1,24 @@
+object_id: object_B
+canonical_name: rubber_duck
+pipeline: text_to_3d
+tool: threestudio
+base_config: configs/dreamfusion-sd.yaml
+prompt: "a simple yellow rubber duck bath toy, smooth rounded body, small orange beak, black dot eyes, glossy plastic"
+negative_prompt: "red stripe, orange band, ring around body, scarf, oversized beak, wide mouth, two beaks, extra parts, extra limbs, feathers, realistic bird, noisy texture, dirty surface, floaters, artifacts"
+output_root: outputs/aigc_assets/object_B_text_to_3d
+recommended_training:
+  max_steps: 3000
+  validation_interval: 1000
+  checkpoint_interval: 1000
+  checkpoint_video_interval: 1000
+  seed_sweep: [0, 7, 42]
+  guidance_scale: 70.0
+  min_step_percent: 0.05
+  max_step_percent: 0.80
+acceptance:
+  - recognizable as a small yellow rubber duck toy
+  - single short rounded orange beak with closed beak appearance
+  - black dot eyes are visible from the preview views
+  - geometry is not collapsed
+  - surface is simple, smooth, and usable for Blender fusion
+  - preview videos and reproducible logs are present

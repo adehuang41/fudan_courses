@@ -1,0 +1,96 @@
+# Background reconstruction config for Phase 2 / Step 2.
+# This file records reproducible parameters and paths. It is not a training config.
+
+project: cv_final_task1
+pipeline: reconstruction_2dgs
+scene_id: background_counter
+scene_role: host_background
+
+dataset:
+  name: Mip-NeRF 360
+  selected_scene: counter
+  source_page: https://jonbarron.info/mipnerf360/
+  download_candidates:
+    - url: http://storage.googleapis.com/gresearch/refraw360/360_v2.zip
+      bytes_from_http_head_2026_05_30: 12535427936
+      size_note: about 11.67 GiB
+    - url: http://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
+      bytes_from_http_head_2026_05_30: 4488140217
+      size_note: about 4.17 GiB
+  counter_package_status: verified_in_360_v2_zip_by_http_range_central_directory
+  counter_scene:
+    file_count: 964
+    image_count: 240
+    sparse_entry_count: 5
+    compressed_bytes: 1212076580
+    uncompressed_bytes: 1241388712
+
+environment:
+  reconstruction_env: cv-final-recon
+  training_env: cv-final-2dgs
+  two_dgs_repo: third_party/2d-gaussian-splatting
+  gpu_selection_rule: run nvidia-smi first, then set CUDA_VISIBLE_DEVICES to one idle GPU
+
+paths:
+  raw_scene: data/raw/background_mipnerf360/counter
+  processed_scene: data/processed/background_counter
+  metadata_dir: data/processed/background_counter/metadata
+  reconstruction_output: outputs/reconstruction_2dgs/background_counter
+  smoke_output: outputs/reconstruction_2dgs/background_counter/2dgs_smoke_test
+  formal_output: outputs/reconstruction_2dgs/background_counter/2dgs_final_r4_30k
+
+expected_input_structure:
+  images_dir: data/raw/background_mipnerf360/counter/images
+  sparse_model_dir: data/raw/background_mipnerf360/counter/sparse/0
+
+resource_status_2026_05_30:
+  filesystem_available_before_counter_extract: about 9.4 GiB
+  filesystem_available_after_counter_extract_and_smoke: about 8.5 GiB
+  status: enough_for_selective_counter_extract_and_smoke_but_still_disk_constrained
+  action: avoid_full_mipnerf360_download_on_this_filesystem
+
+smoke_test_policy:
+  max_iterations: 200
+  resolution: -r 4
+  purpose:
+    - verify scene loader reads Mip-NeRF 360 COLMAP data
+    - verify CUDA extensions run
+    - verify output directory is generated
+  non_goals:
+    - final quality evaluation
+    - formal training
+
+planned_commands:
+  selective_counter_extract: >-
+    python3 scripts/reconstruction/extract_mipnerf360_scene_http.py
+    --url http://storage.googleapis.com/gresearch/refraw360/360_v2.zip
+    --scene counter
+    --output_dir data/raw/background_mipnerf360
+    --summary_path data/processed/background_counter/metadata/dataset_extraction_summary.json
+  smoke_train_template: >-
+    CUDA_VISIBLE_DEVICES=<idle_gpu> CV_FINAL_2DGS_LOG_INTERVAL=50 conda run -n cv-final-2dgs python train.py
+    -s /home/dechao/cv_final_pj/data/raw/background_mipnerf360/counter
+    -m /home/dechao/cv_final_pj/outputs/reconstruction_2dgs/background_counter/2dgs_smoke_test
+    --iterations 200 -r 4 --save_iterations 200
+  formal_train_template: >-
+    CUDA_VISIBLE_DEVICES=<idle_gpu> conda run -n cv-final-2dgs python train.py
+    -s /home/dechao/cv_final_pj/data/raw/background_mipnerf360/counter
+    -m /home/dechao/cv_final_pj/outputs/reconstruction_2dgs/background_counter/2dgs_final_r4_30k
+    -r 4
+
+formal_run_r4_30k:
+  status: completed
+  gpu: 6
+  start_time: "2026-05-30T12:17:04+00:00"
+  end_time: "2026-05-30T12:29:40+00:00"
+  wall_time: about 12 minutes 36 seconds
+  iterations: 30000
+  resolution: -r 4
+  output: outputs/reconstruction_2dgs/background_counter/2dgs_final_r4_30k
+  final_loss: 0.02551
+  final_distort: 0.00000
+  final_normal: 0.00476
+  final_points: 525815
+  train_eval_l1: 0.016841717809438706
+  train_eval_psnr: 29.945239257812503
+  recommendation: enter_background_render_acceptance

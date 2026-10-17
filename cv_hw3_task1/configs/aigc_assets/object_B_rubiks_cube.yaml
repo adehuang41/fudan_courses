@@ -1,0 +1,39 @@
+object_id: object_B
+canonical_name: rubiks_cube
+pipeline: text_to_3d
+tool: threestudio
+base_config: configs/dreamfusion-sd.yaml
+
+comparison_target:
+  object_C_source: data/raw/object_C_rubiks_cube/rubiks_cube_source.jpg
+  purpose: "Compare text-only SDS generation against Object C image-conditioned Rubik's cube experiments."
+
+try1_baseline:
+  hypothesis: "A simple solved-cube prompt can reveal whether DreamFusion first fails at cube geometry, grid texture, or hidden-view consistency."
+  prompt: "a solved Rubik's cube, true solid cube, equal width height depth, black plastic 3x3 grid, red top face, blue left face, yellow right face, square colored stickers"
+  negative_prompt: "rounded blob, sphere, wedge, thin slab, twisted cube, hollow, holes, missing face, open shell, floating stickers, detached parts, noisy texture, text, logo, duplicate object"
+  seed: 42
+  guidance_scale: 70.0
+  min_step_percent: 0.05
+  max_step_percent: 0.80
+  initial_max_steps: 1000
+  resumed_max_steps: 3000
+  validation_interval: 500
+  checkpoint_interval: 500
+  n_val_views: 8
+  planned_cuda_device: 4
+
+diagnostic_views:
+  view_0: "Front-like view: check whether the object is only a 2D illusion."
+  view_5: "Side/back view: check cube depth, hidden-face consistency, and missing faces."
+  view_7: "Rear/side view: check holes, rounded collapse, and floating sticker artifacts."
+
+stop_or_branch_policy:
+  stop_early_if:
+    - "After step 1000 the result is still not recognizably cube-like."
+    - "Geometry collapses into a blob, slab, wedge, or hollow shell."
+    - "Most color appears as detached noise rather than face stickers."
+  continue_if:
+    - "The object is a coherent solid-ish cube."
+    - "At least one view shows a plausible 3x3 black grid."
+    - "Side/rear views remain connected enough to justify a targeted branch."

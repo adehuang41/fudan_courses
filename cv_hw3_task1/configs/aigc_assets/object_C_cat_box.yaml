@@ -1,0 +1,31 @@
+object_id: object_C
+candidate_id: cat_box
+canonical_name: cat_box
+pipeline: image_to_3d
+tool: threestudio_magic123
+base_config: configs/magic123-coarse-sd.yaml
+prompt: "a light green cat-shaped container with a rounded body, two small ears, a simple cat face, smooth matte surface, single solid object"
+negative_prompt: "deformed face, extra ears, extra parts, asymmetry, broken lid, detached pieces, floaters, noisy geometry"
+raw_image: data/raw/object_C_cat_box/cat_box_raw.jpg
+rgba_image: data/processed/object_C_cat_box/cat_box_rgba.png
+output_root: outputs/aigc_assets/object_C_image_to_3d/cat_box
+source: user-captured single image
+recommended_training:
+  stage: coarse
+  max_steps: 3000
+  validation_interval: 500
+  checkpoint_interval: 500
+  checkpoint_video_interval: 500
+  n_val_views: 4
+  sd_guidance_scale: 50.0
+  zero123_guidance_scale: 5.0
+  lambda_sparsity: 0.1
+  lambda_opaque: 0.001
+  gpu_policy: CUDA 6 only
+acceptance:
+  - complete rounded cat-shaped container silhouette
+  - two ears remain clear
+  - face placement is plausible and not severely drifting
+  - lid/body relationship remains plausible
+  - no large detached geometry across validation views
+  - four-view validation PNGs and checkpoint videos are present
