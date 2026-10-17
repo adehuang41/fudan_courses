@@ -1,0 +1,9 @@
+item,status,detail
+dataset_root,ok,/data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D
+large_paths_ok,True,
+sample_table,True,/data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/calvin_task_ABC_D_lerobot_0_4/data/chunk-004/episode_004350.parquet
+video_decode,True,/data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/calvin_task_ABC_D_lerobot_0_4/videos/chunk-004/observation.images.image/episode_004098.mp4
+calvin_task_ABC_D_lerobot_0_4,True,"{""exists"": true, ""data_exists"": true, ""meta_exists"": true, ""videos_exists"": true, ""parquet_count"": 4468, ""video_count"": 8936}"
+calvin_task_ABC_D_lerobot_1_4,True,"{""exists"": true, ""data_exists"": true, ""meta_exists"": true, ""videos_exists"": true, ""parquet_count"": 4468, ""video_count"": 8936}"
+calvin_task_ABC_D_lerobot_2_4,True,"{""exists"": true, ""data_exists"": true, ""meta_exists"": true, ""videos_exists"": true, ""parquet_count"": 4467, ""video_count"": 8934}"
+calvin_task_ABC_D_lerobot_3_4,True,"{""exists"": true, ""data_exists"": true, ""meta_exists"": true, ""videos_exists"": true, ""parquet_count"": 4467, ""video_count"": 8934}"

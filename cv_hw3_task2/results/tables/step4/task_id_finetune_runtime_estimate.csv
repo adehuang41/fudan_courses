@@ -1,0 +1,4 @@
+run,source,mean_step_seconds,train_50k_minutes,mean_validation_seconds,validation_runs,total_validation_minutes,estimated_wall_minutes,notes
+B_only_task_id_finetune,projected_from_B_taskid_history,0.0735-0.0737,61.3-61.4,101.5-103.7,10,16.9-17.3,80-90,"50k additional fine-tune steps from visual checkpoint"
+ABC_mixed_task_id_finetune,projected_from_ABC_visual_and_B_taskid_history,0.0735-0.0737,61.3-61.4,283-330,10,47-55,110-130,"ABC validation set is much larger; estimate includes validation overhead"
+parallel_cuda3_cuda4,combined_projection,,,,"",,120-150,"two GPUs; wall time dominated by ABC-mixed and possible CPU/I/O contention"

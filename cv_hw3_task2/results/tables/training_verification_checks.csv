@@ -1,0 +1,19 @@
+check,detail,experiment,passed
+training_completed,,B_only_act_baseline,True
+gate_check_passed,,B_only_act_baseline,True
+scalars_finite,checked 400060 numeric values,B_only_act_baseline,True
+checkpoint_readable,,B_only_act_baseline,True
+final_pt_exists,,B_only_act_baseline,True
+best_val_action_l1_pt_exists,,B_only_act_baseline,True
+single_gpu,5,B_only_act_baseline,True
+allowed_environments,B,B_only_act_baseline,True
+training_completed,,ABC_mixed_act_baseline,True
+gate_check_passed,,ABC_mixed_act_baseline,True
+scalars_finite,checked 400080 numeric values,ABC_mixed_act_baseline,True
+checkpoint_readable,,ABC_mixed_act_baseline,True
+final_pt_exists,,ABC_mixed_act_baseline,True
+best_val_action_l1_pt_exists,,ABC_mixed_act_baseline,True
+single_gpu,5,ABC_mixed_act_baseline,True
+allowed_environments,A;B;C,ABC_mixed_act_baseline,True
+act_and_optimizer_hyperparams_match_between_runs,,B_only_act_baseline,True
+act_and_optimizer_hyperparams_match_between_runs,,ABC_mixed_act_baseline,True

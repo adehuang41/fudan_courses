@@ -1,0 +1,48 @@
+{
+  "status": "ok",
+  "start_time": "2026-06-17T15:20:03+00:00",
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_D_D_lerobot",
+  "runs": {
+    "ABC_mixed_act_baseline": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline"
+  },
+  "device": "cuda",
+  "max_episodes": 1024,
+  "batch_size": 8,
+  "num_workers": 8,
+  "table_cache": {
+    "enabled": true,
+    "maxsize": 8,
+    "cache_info": {
+      "hits": 1,
+      "misses": 1,
+      "maxsize": 8,
+      "currsize": 1
+    }
+  },
+  "conditions": [
+    "clean",
+    "brightness_dark",
+    "brightness_bright",
+    "gaussian_blur",
+    "gaussian_noise",
+    "static_grayout",
+    "wrist_grayout",
+    "both_camera_grayout"
+  ],
+  "noise_seed": 20260617,
+  "noise_std": 0.06,
+  "end_time": "2026-06-17T15:48:43+00:00",
+  "dataset_episodes": 1024,
+  "dataset_frames": 62000,
+  "tables": {
+    "summary": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_visual_robustness_summary.csv",
+    "chunk_position": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_chunk_position_action_l1.csv",
+    "chunk_bin": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_chunk_bin_action_l1.csv",
+    "tail_head": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_chunk_tail_head_ratio.csv",
+    "per_action_dim": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_visual_robustness_per_action_dim.csv",
+    "per_episode": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_visual_robustness_per_episode_action_l1.csv",
+    "per_task": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_visual_robustness_per_task_action_l1.csv",
+    "per_task_type": "/home/dechao/cv_final_pj2/results/tables/track2_extra/extra1024_ABC_visual_full_robustness_visual_robustness_per_task_type_action_l1.csv"
+  },
+  "contact_sheet": "/home/dechao/cv_final_pj2/figures/track2_extra/extra1024_ABC_visual_full_robustness_visual_shift_contact_sheet.png"
+}

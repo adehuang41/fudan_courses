@@ -1,0 +1,7 @@
+check,status,severity,decision
+validation/.hydra/merged_config.yaml,present,required,pass
+validation/lang_annotations/auto_lang_ann.npy,present,required,pass
+validation/episode_*.npz,present,required,pass
+validation/ep_lens.npy,present,optional,pass
+validation/ep_start_end_ids.npy,present,optional,pass
+validation/scene_info.npy,missing,warning_for_rollout,warn_not_block

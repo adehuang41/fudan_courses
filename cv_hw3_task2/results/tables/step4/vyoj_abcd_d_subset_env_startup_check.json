@@ -1,0 +1,24 @@
+{
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000",
+  "validation_folder": "/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation",
+  "status": "failed",
+  "obs_space": {
+    "rgb_obs": [
+      "rgb_static",
+      "rgb_gripper"
+    ],
+    "depth_obs": []
+  },
+  "error_type": "FileNotFoundError",
+  "error_message": "[Errno 2] No such file or directory: '/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation/.hydra/merged_config.yaml'",
+  "traceback_tail": [
+    "Traceback (most recent call last):",
+    "  File \"/home/dechao/cv_final_pj2/scripts/eval/check_calvin_env_startup.py\", line 46, in main",
+    "    env = get_env(val_folder, obs_space=obs_space, show_gui=False)",
+    "  File \"/data/dechao/cv_final_pj2/external/calvin/calvin_env/calvin_env/envs/play_table_env.py\", line 275, in get_env",
+    "    render_conf = OmegaConf.load(Path(dataset_path) / \".hydra\" / \"merged_config.yaml\")",
+    "  File \"/data/dechao/cv_final_pj2/envs/calvin/lib/python3.8/site-packages/omegaconf/omegaconf.py\", line 189, in load",
+    "    with io.open(os.path.abspath(file_), \"r\", encoding=\"utf-8\") as f:",
+    "FileNotFoundError: [Errno 2] No such file or directory: '/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000/validation/.hydra/merged_config.yaml'"
+  ]
+}

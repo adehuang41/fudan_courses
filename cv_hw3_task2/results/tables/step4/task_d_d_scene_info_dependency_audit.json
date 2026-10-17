@@ -1,0 +1,54 @@
+{
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "missing_file": "/data/dechao/cv_final_pj2/datasets/task_D_D/validation/scene_info.npy",
+  "scene_info_needed_for_closed_loop_rollout": false,
+  "fix_applied": false,
+  "fix_source": null,
+  "decision": "downgrade_missing_validation_scene_info_to_warning_for_closed_loop_rollout",
+  "reason": "official evaluate_policy/get_env/rollout path does not read validation/scene_info.npy; task success checks use live simulator env.get_info()[scene_info].",
+  "official_fix_note": "CALVIN README documents task_D_D_scene_info.zip for wrong D scene_info.npy, but this gate did not apply it because the closed-loop rollout path inspected here does not read validation/scene_info.npy. Do not copy training/scene_info.npy into validation.",
+  "source_checks": [
+    {
+      "component": "evaluate_policy.make_env",
+      "path": "/data/dechao/cv_final_pj2/external/calvin/calvin_models/calvin_agent/evaluation/evaluate_policy.py",
+      "lines": "48-50",
+      "finding": "constructs dataset_path/validation and calls get_env; no scene_info.npy file read",
+      "rollout_dependency": "no"
+    },
+    {
+      "component": "evaluate_policy.rollout",
+      "path": "/data/dechao/cv_final_pj2/external/calvin/calvin_models/calvin_agent/evaluation/evaluate_policy.py",
+      "lines": "94-101,124-160",
+      "finding": "loads task oracle and validation language yaml; uses env.get_info/current_info for success checks; no scene_info.npy file read",
+      "rollout_dependency": "no"
+    },
+    {
+      "component": "calvin_env.get_env",
+      "path": "/data/dechao/cv_final_pj2/external/calvin/calvin_env/calvin_env/envs/play_table_env.py",
+      "lines": "274-289",
+      "finding": "loads validation/.hydra/merged_config.yaml and instantiates env with use_scene_info=True; does not load dataset scene_info.npy",
+      "rollout_dependency": "no"
+    },
+    {
+      "component": "PlayTableSimEnv.get_info",
+      "path": "/data/dechao/cv_final_pj2/external/calvin/calvin_env/calvin_env/envs/play_table_env.py",
+      "lines": "218-223",
+      "finding": "scene_info in rollout is computed live from self.scene.get_info()",
+      "rollout_dependency": "live_simulator_only"
+    },
+    {
+      "component": "CalvinEnvWrapper",
+      "path": "/data/dechao/cv_final_pj2/external/calvin/calvin_models/calvin_agent/wrappers/calvin_env_wrapper.py",
+      "lines": "12-24",
+      "finding": "passes dataset_loader.abs_datasets_dir to get_env; no direct scene_info.npy file read",
+      "rollout_dependency": "no"
+    },
+    {
+      "component": "automatic_lang_annotator_mp",
+      "path": "/data/dechao/cv_final_pj2/external/calvin/calvin_models/calvin_agent/utils/automatic_lang_annotator_mp.py",
+      "lines": "95-100",
+      "finding": "loads train_dataset.abs_datasets_dir/scene_info.npy, but this is language annotation/data preprocessing, not evaluate_policy rollout",
+      "rollout_dependency": "not_rollout_path"
+    }
+  ]
+}

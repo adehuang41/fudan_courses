@@ -1,0 +1,779 @@
+experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task,valid_action_steps
+B_only_act_baseline,0.48686208945491705,0.14101302307295235,1402,close_drawer: close the cabinet drawer,45748
+B_only_act_baseline,0.4514870297480522,0.13611900514022368,1078,close_drawer: close the drawer,35061
+B_only_act_baseline,0.44801326177932405,0.13449528051026058,1300,close_drawer: go close the drawer,42900
+B_only_act_baseline,0.462350500641307,0.13750742947851413,1105,close_drawer: grasp the drawer handle and close it,36465
+B_only_act_baseline,0.5143905238304002,0.15535416012916067,991,"close_drawer: grasp the drawer handle, then close it",31731
+B_only_act_baseline,0.4222930406326489,0.12429586591625065,845,close_drawer: grasp the handle of the drawer and close it,27885
+B_only_act_baseline,0.461147277454453,0.1433509899418719,1664,"close_drawer: grasp the handle of the drawer, then close it",54405
+B_only_act_baseline,0.45245546310294243,0.13522458780249852,1597,close_drawer: push the drawer,52183
+B_only_act_baseline,0.46165411905749637,0.14419821950970957,1517,close_drawer: push the handle of the drawer,49128
+B_only_act_baseline,0.6036714800089487,0.17686708485281383,1170,lift_blue_block_drawer: go towards the blue block in the drawer and grasp it,38610
+B_only_act_baseline,0.6260744900357931,0.18353361421422318,1189,lift_blue_block_drawer: go towards the blue block in the drawer and lift it,37179
+B_only_act_baseline,0.6188512376880494,0.18409578642713934,957,lift_blue_block_drawer: go towards the blue block in the drawer and pick it up,31158
+B_only_act_baseline,0.6448730759783763,0.1904713721956072,910,lift_blue_block_drawer: grasp the blue block from the drawer,30030
+B_only_act_baseline,0.6856237769314102,0.20128584269581534,1347,lift_blue_block_drawer: grasp the blue block in the drawer,44028
+B_only_act_baseline,0.5969955884448245,0.17583270116944386,1167,lift_blue_block_drawer: grasp the blue block lying in the drawer,37088
+B_only_act_baseline,0.6722163744475981,0.20097432883581381,820,lift_blue_block_drawer: lift the blue block in the drawer,26560
+B_only_act_baseline,0.5878916983896804,0.17378838492219634,1272,lift_blue_block_drawer: lift the blue block lying in the drawer,41458
+B_only_act_baseline,0.5556452329067358,0.16256991303135934,845,lift_blue_block_drawer: pick up the blue block from the drawer,27885
+B_only_act_baseline,0.6039642562907496,0.1816877311728138,650,lift_blue_block_drawer: pick up the blue block in the drawer,21450
+B_only_act_baseline,0.6221191840046367,0.1900649784683653,1019,lift_blue_block_drawer: pick up the blue block lying in the drawer,32065
+B_only_act_baseline,0.5313700375395847,0.1604264195953044,1076,lift_blue_block_slider: grasp the blue block lying in the cabinet,34986
+B_only_act_baseline,0.5819895508898582,0.16995220720313517,490,lift_blue_block_slider: grasp the blue block lying in the slider,15645
+B_only_act_baseline,0.6122547109485109,0.17950975490153623,390,lift_blue_block_slider: grasp the blue block lying in the sliding cabinet,12870
+B_only_act_baseline,0.5632001932962235,0.1643628743748406,650,lift_blue_block_slider: grasp the blue block lying on the shelf,21450
+B_only_act_baseline,0.6109686213959454,0.18193134392324634,429,lift_blue_block_slider: in the cabinet grasp the blue block,13650
+B_only_act_baseline,0.6245732393433084,0.1836987189797215,650,lift_blue_block_slider: in the cabinet pick up the blue block,21450
+B_only_act_baseline,0.5759032512401844,0.1593781534687821,585,lift_blue_block_slider: in the slider grasp the blue block,19305
+B_only_act_baseline,0.5922649028775218,0.18551551068857278,520,lift_blue_block_slider: in the slider pick up the blue block,17160
+B_only_act_baseline,0.5782269638836545,0.16676663626010885,585,lift_blue_block_slider: in the sliding cabinet grasp the blue block,19305
+B_only_act_baseline,0.5986430985188678,0.17846812136898813,569,lift_blue_block_slider: lift the blue block lying in the cabinet,18385
+B_only_act_baseline,0.576149492272428,0.16909438483689948,1040,lift_blue_block_slider: lift the blue block lying in the slider,34320
+B_only_act_baseline,0.6091870954142835,0.17865028056998883,975,lift_blue_block_slider: lift the blue block lying in the sliding cabinet,32175
+B_only_act_baseline,0.601499051220378,0.17631653558958713,692,lift_blue_block_slider: lift the blue block lying on the shelf,22353
+B_only_act_baseline,0.5287052843489131,0.15161862315954586,985,lift_blue_block_slider: lift the blue block on the shelf,31480
+B_only_act_baseline,0.5989717814746618,0.17215184657566437,824,lift_blue_block_slider: pick up the blue block from the shelf,26730
+B_only_act_baseline,0.5712132228064712,0.1660463994789649,693,lift_blue_block_slider: pick up the blue block from the sliding cabinet,22396
+B_only_act_baseline,0.6310896885859502,0.1896547557665156,520,lift_blue_block_slider: pick up the blue block in the sliding cabinet,17160
+B_only_act_baseline,0.5968747247649514,0.177400816070287,1366,lift_blue_block_table: grasp the blue block and lift it up,43706
+B_only_act_baseline,0.6557125352284839,0.2116039383125284,761,lift_blue_block_table: grasp the blue block on the table and lift it up,23284
+B_only_act_baseline,0.6306475238221005,0.18834912348288466,780,"lift_blue_block_table: grasp the blue block on the table, then lift it up",25740
+B_only_act_baseline,0.6255841592655762,0.19565008239403053,946,"lift_blue_block_table: grasp the blue block, then lift it up",29270
+B_only_act_baseline,0.6503331591712008,0.2079250654055151,978,lift_blue_block_table: lift the blue block,29786
+B_only_act_baseline,0.6222755966373533,0.19369609659341508,1115,lift_blue_block_table: lift the blue block from the table,35770
+B_only_act_baseline,0.681886468628224,0.21286361406622795,1187,lift_blue_block_table: lift the blue block up,38203
+B_only_act_baseline,0.6741830965688218,0.2069892067108067,1253,lift_blue_block_table: pick up the blue block,38983
+B_only_act_baseline,0.6624037066069052,0.20531692296797951,1028,lift_blue_block_table: pick up the blue block from the table,32432
+B_only_act_baseline,0.6458683616517181,0.20327580785054922,1600,lift_blue_block_table: pick up the blue block on the table,49572
+B_only_act_baseline,0.6331889756828495,0.1812193782747453,1045,lift_pink_block_drawer: go towards the pink block in the drawer and grasp it,33436
+B_only_act_baseline,0.6165331888639791,0.17942431502179895,845,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,27885
+B_only_act_baseline,0.6807141212622495,0.19957158935275457,623,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,20046
+B_only_act_baseline,0.6181939643420976,0.18012385087790506,1040,lift_pink_block_drawer: grasp the pink block from the drawer,34320
+B_only_act_baseline,0.6236223407281908,0.17944156515241744,1282,lift_pink_block_drawer: grasp the pink block in the drawer,41883
+B_only_act_baseline,0.6221554230986338,0.18846331190148383,1514,lift_pink_block_drawer: grasp the pink block lying in the drawer,48996
+B_only_act_baseline,0.6370782550703333,0.18399112410227653,877,lift_pink_block_drawer: lift the pink block in the drawer,26993
+B_only_act_baseline,0.6558989505990535,0.18637130895797435,1025,lift_pink_block_drawer: lift the pink block lying in the drawer,30929
+B_only_act_baseline,0.6404341855211866,0.18165909445887182,1209,lift_pink_block_drawer: pick up the pink block from the drawer,39390
+B_only_act_baseline,0.6047401232079527,0.172662134293767,862,lift_pink_block_drawer: pick up the pink block in the drawer,27511
+B_only_act_baseline,0.6514388811925852,0.18458182399633186,886,lift_pink_block_drawer: pick up the pink block lying in the drawer,28746
+B_only_act_baseline,0.6201631956793042,0.17446197317562845,752,lift_pink_block_slider: grasp the pink block lying in the cabinet,24298
+B_only_act_baseline,0.7011358772227655,0.21119058107797836,650,lift_pink_block_slider: grasp the pink block lying in the slider,21450
+B_only_act_baseline,0.5672150101752768,0.174262846730564,715,lift_pink_block_slider: grasp the pink block lying in the sliding cabinet,23595
+B_only_act_baseline,0.6008840006868835,0.18019213621365784,845,lift_pink_block_slider: grasp the pink block lying on the shelf,27885
+B_only_act_baseline,0.5837230043912756,0.16501618110755562,496,lift_pink_block_slider: in the cabinet grasp the pink block,15876
+B_only_act_baseline,0.6121411842317503,0.17969199990323756,780,lift_pink_block_slider: in the cabinet pick up the pink block,25740
+B_only_act_baseline,0.5946610393956909,0.17358642498432883,994,lift_pink_block_slider: in the slider grasp the pink block,31845
+B_only_act_baseline,0.5922005048749579,0.16985086819472606,715,lift_pink_block_slider: in the slider pick up the pink block,23595
+B_only_act_baseline,0.5699664380250719,0.16868693869867366,585,lift_pink_block_slider: in the sliding cabinet grasp the pink block,19305
+B_only_act_baseline,0.5915007795275534,0.17209617063570187,780,lift_pink_block_slider: lift the pink block lying in the cabinet,25740
+B_only_act_baseline,0.6295963412654049,0.17798564767327643,585,lift_pink_block_slider: lift the pink block lying in the slider,19305
+B_only_act_baseline,0.6522936265666287,0.18127936641256134,260,lift_pink_block_slider: lift the pink block lying in the sliding cabinet,8580
+B_only_act_baseline,0.7272847860334626,0.21199770811546415,621,lift_pink_block_slider: lift the pink block lying on the shelf,19971
+B_only_act_baseline,0.6727712317858312,0.20137702481502157,980,lift_pink_block_slider: lift the pink block on the shelf,30997
+B_only_act_baseline,0.6028133115365467,0.17978047290264526,585,lift_pink_block_slider: pick up the pink block from the shelf,19305
+B_only_act_baseline,0.6613571429014444,0.18046326720234238,650,lift_pink_block_slider: pick up the pink block from the sliding cabinet,21450
+B_only_act_baseline,0.6098867119199981,0.18439247222447153,632,lift_pink_block_slider: pick up the pink block in the sliding cabinet,20433
+B_only_act_baseline,0.6832352182464904,0.20414637808845337,1056,lift_pink_block_table: grasp the pink block and lift it up,31421
+B_only_act_baseline,0.6574741165723832,0.19370336387367407,673,lift_pink_block_table: grasp the pink block on the table and lift it up,21286
+B_only_act_baseline,0.6055230969960081,0.18134187538976884,1303,"lift_pink_block_table: grasp the pink block on the table, then lift it up",40513
+B_only_act_baseline,0.6349656553048231,0.19155462837408704,733,"lift_pink_block_table: grasp the pink block, then lift it up",23226
+B_only_act_baseline,0.6132198295643878,0.18345335625303097,1490,lift_pink_block_table: lift the pink block,46349
+B_only_act_baseline,0.6121216624125266,0.17839449796848794,1103,lift_pink_block_table: lift the pink block from the table,34994
+B_only_act_baseline,0.6214575918417742,0.1808083594007099,1146,lift_pink_block_table: lift the pink block up,35959
+B_only_act_baseline,0.6466329105053711,0.19438488051252364,1528,lift_pink_block_table: pick up the pink block,48461
+B_only_act_baseline,0.6287979820183089,0.1860861075091441,1041,lift_pink_block_table: pick up the pink block from the table,32964
+B_only_act_baseline,0.6697084339370722,0.20248002617341854,690,lift_pink_block_table: pick up the pink block on the table,20879
+B_only_act_baseline,0.6069722784613722,0.1728835941369812,770,lift_red_block_drawer: go towards the red block in the drawer and grasp it,23938
+B_only_act_baseline,0.6025138624215863,0.17307113479803565,816,lift_red_block_drawer: go towards the red block in the drawer and lift it,26406
+B_only_act_baseline,0.5964038164606665,0.1705878379352862,1084,lift_red_block_drawer: go towards the red block in the drawer and pick it up,33923
+B_only_act_baseline,0.6240655030913107,0.17680964451634723,1298,lift_red_block_drawer: grasp the red block from the drawer,41431
+B_only_act_baseline,0.5839310859979537,0.16540485051509238,684,lift_red_block_drawer: grasp the red block in the drawer,22045
+B_only_act_baseline,0.5849244268916411,0.16624564953382712,715,lift_red_block_drawer: grasp the red block lying in the drawer,23595
+B_only_act_baseline,0.5945514544346102,0.17089730791834407,975,lift_red_block_drawer: lift the red block in the drawer,32175
+B_only_act_baseline,0.6021796989600474,0.17315602227354315,1352,lift_red_block_drawer: lift the red block lying in the drawer,43120
+B_only_act_baseline,0.6276556737522341,0.1821122995268411,1363,lift_red_block_drawer: pick up the red block from the drawer,43566
+B_only_act_baseline,0.5328513945787404,0.14758051209581996,982,lift_red_block_drawer: pick up the red block in the drawer,31106
+B_only_act_baseline,0.635840290996831,0.18601619140157,1249,lift_red_block_drawer: pick up the red block lying in the drawer,40222
+B_only_act_baseline,0.5753392742346592,0.16919653795395154,1219,lift_red_block_slider: grasp the red block lying in the cabinet,39835
+B_only_act_baseline,0.5979086756655199,0.17177720843234326,910,lift_red_block_slider: grasp the red block lying in the slider,30030
+B_only_act_baseline,0.5687148359895836,0.16934598738014922,455,lift_red_block_slider: grasp the red block lying in the sliding cabinet,15015
+B_only_act_baseline,0.591883785249073,0.17702618401666878,715,lift_red_block_slider: grasp the red block lying on the shelf,23595
+B_only_act_baseline,0.5832892052509211,0.16807422233528985,520,lift_red_block_slider: in the cabinet grasp the red block,17160
+B_only_act_baseline,0.5574845326763983,0.1594443068872055,697,lift_red_block_slider: in the cabinet pick up the red block,22578
+B_only_act_baseline,0.6000532176717921,0.16416641360747872,455,lift_red_block_slider: in the slider grasp the red block,15015
+B_only_act_baseline,0.5524746378203802,0.17181971281028358,817,lift_red_block_slider: in the slider pick up the red block,26443
+B_only_act_baseline,0.556659794450093,0.16399927037746806,585,lift_red_block_slider: in the sliding cabinet grasp the red block,19305
+B_only_act_baseline,0.55313546691106,0.16939188274708422,520,lift_red_block_slider: lift the red block lying in the cabinet,17160
+B_only_act_baseline,0.5812513040416526,0.16617517544950916,520,lift_red_block_slider: lift the red block lying in the slider,17160
+B_only_act_baseline,0.5345780106969091,0.1594693347996399,585,lift_red_block_slider: lift the red block lying in the sliding cabinet,19305
+B_only_act_baseline,0.5750186302666319,0.15648657370632152,455,lift_red_block_slider: lift the red block lying on the shelf,15015
+B_only_act_baseline,0.5306291265569996,0.15577182901324257,845,lift_red_block_slider: lift the red block on the shelf,27885
+B_only_act_baseline,0.6308260326712687,0.18298327916954446,567,lift_red_block_slider: pick up the red block from the shelf,18288
+B_only_act_baseline,0.630387759251053,0.17759235176128452,823,lift_red_block_slider: pick up the red block from the sliding cabinet,26686
+B_only_act_baseline,0.5400950720821619,0.15606603628277615,910,lift_red_block_slider: pick up the red block in the sliding cabinet,30030
+B_only_act_baseline,0.5694247397341269,0.1691072772196266,1209,lift_red_block_table: grasp the red block and lift it up,39390
+B_only_act_baseline,0.5663113843966158,0.16454716267658834,1029,lift_red_block_table: grasp the red block on the table and lift it up,32476
+B_only_act_baseline,0.5506577487536463,0.16319311142754722,1180,"lift_red_block_table: grasp the red block on the table, then lift it up",36529
+B_only_act_baseline,0.6021813412378166,0.17772743624781842,1082,"lift_red_block_table: grasp the red block, then lift it up",33851
+B_only_act_baseline,0.6526072771044549,0.18821993271179246,805,lift_red_block_table: lift the red block,24557
+B_only_act_baseline,0.6052083550668631,0.17978534557467482,1172,lift_red_block_table: lift the red block from the table,35915
+B_only_act_baseline,0.5432474657412416,0.16135236359826077,827,lift_red_block_table: lift the red block up,26868
+B_only_act_baseline,0.5697545276902789,0.16755312661451882,1445,lift_red_block_table: pick up the red block,46701
+B_only_act_baseline,0.5958877226412918,0.17854858469287285,1221,lift_red_block_table: pick up the red block from the table,38798
+B_only_act_baseline,0.593211679043563,0.17804496075292142,951,lift_red_block_table: pick up the red block on the table,30891
+B_only_act_baseline,0.6731811594923377,0.23013587399796173,650,move_slider_left: grasp the door handle and move the door to the left,21450
+B_only_act_baseline,0.7076379964594485,0.2401024503545923,455,move_slider_left: grasp the door handle and slide the door to the left,15015
+B_only_act_baseline,0.6695548844634106,0.23603339277243263,715,"move_slider_left: grasp the door handle, then move the door to the left",23595
+B_only_act_baseline,0.7021015200017349,0.2649254319734735,1042,"move_slider_left: grasp the door handle, then slide the door to the left",33027
+B_only_act_baseline,0.6865518573893279,0.24480784218939994,455,move_slider_left: move the door all the way to the left,15015
+B_only_act_baseline,0.6865083080476576,0.2468105271717647,975,move_slider_left: move the door all the way to the left and let go,32175
+B_only_act_baseline,0.7267079714202288,0.25643840849004806,585,move_slider_left: move the door to the left,19305
+B_only_act_baseline,0.6888981299961906,0.24225125413264376,975,move_slider_left: move the door to the left side,32175
+B_only_act_baseline,0.7088655399723076,0.2468215373062852,975,move_slider_left: move the sliding door to the left,32175
+B_only_act_baseline,0.6777383739528802,0.23586055393677124,945,move_slider_left: push the door to the left,30660
+B_only_act_baseline,0.7185744555768893,0.25187846460195534,697,move_slider_left: push the door to the left side,22578
+B_only_act_baseline,0.6696200297443935,0.23744102517499718,814,move_slider_left: push the sliding door to the left,26335
+B_only_act_baseline,0.755288370516499,0.26184777606802573,390,move_slider_left: slide the door all the way to the left,12870
+B_only_act_baseline,0.6958864716555146,0.24536763776326526,780,move_slider_left: slide the door to the left,25740
+B_only_act_baseline,0.6576704824245471,0.2300098186720148,664,move_slider_left: slide the door to the left side,20925
+B_only_act_baseline,0.7162402698914695,0.2521151544867854,562,"move_slider_left: slide the door to the left, then let it go",18063
+B_only_act_baseline,0.6368720830582116,0.20670531542421783,715,move_slider_right: grasp the door handle and move the door to the right,23595
+B_only_act_baseline,0.6450048516605588,0.22387532803415025,1105,move_slider_right: grasp the door handle and slide the door to the right,36465
+B_only_act_baseline,0.6620655849838988,0.21889288949541674,520,"move_slider_right: grasp the door handle, then move the door to the right",17160
+B_only_act_baseline,0.6792795927655207,0.22236817945970874,1217,"move_slider_right: grasp the door handle, then slide the door to the right",39738
+B_only_act_baseline,0.7179427437737106,0.23906769778918813,715,move_slider_right: move the door all the way to the right,23595
+B_only_act_baseline,0.6554281380011405,0.2075431113545989,520,move_slider_right: move the door all the way to the right and let go,17160
+B_only_act_baseline,0.6684837596437686,0.22098070253282187,751,move_slider_right: move the door to the right,24261
+B_only_act_baseline,0.7029793994114134,0.23616072823081574,715,move_slider_right: move the door to the right side,23595
+B_only_act_baseline,0.6638445548581712,0.22411038891260043,520,move_slider_right: move the sliding door to the right,17160
+B_only_act_baseline,0.6702697469677641,0.23596527609527143,195,move_slider_right: push the door to the right,6435
+B_only_act_baseline,0.716236603543475,0.23352573062751913,650,move_slider_right: push the door to the right side,21450
+B_only_act_baseline,0.7056451158226804,0.23691425278540804,1170,move_slider_right: push the sliding door to the right,38610
+B_only_act_baseline,0.6530404222277534,0.21315949066707596,780,move_slider_right: slide the door all the way to the right,25740
+B_only_act_baseline,0.655407172346363,0.2278404177186394,845,move_slider_right: slide the door to the right,27885
+B_only_act_baseline,0.6940731504173466,0.23971369786636457,520,move_slider_right: slide the door to the right side,17160
+B_only_act_baseline,0.6694612383432269,0.21476005000522416,780,"move_slider_right: slide the door to the right, then let it go",25740
+B_only_act_baseline,0.44171246468709885,0.12261029961556676,975,open_drawer: go open the drawer,32175
+B_only_act_baseline,0.4764287284485834,0.13982189546149282,1365,open_drawer: grasp the drawer handle and open it,45045
+B_only_act_baseline,0.46522578050113966,0.13543689714118706,1170,"open_drawer: grasp the drawer handle, then open it",38610
+B_only_act_baseline,0.4453500538595324,0.1282680750001693,1950,open_drawer: grasp the handle of the drawer and open it,64350
+B_only_act_baseline,0.5292769829655914,0.1541654929356755,1430,"open_drawer: grasp the handle of the drawer, then open it",47190
+B_only_act_baseline,0.4984716838799287,0.14687558889498678,1365,open_drawer: open the cabinet drawer,45045
+B_only_act_baseline,0.458027364018358,0.13070447355101913,1040,open_drawer: open the drawer,34320
+B_only_act_baseline,0.46108420566263436,0.13431685351006065,1430,open_drawer: pull the drawer,47190
+B_only_act_baseline,0.4425939203599966,0.12502310103374056,1105,open_drawer: pull the handle of the drawer,36465
+B_only_act_baseline,0.7549193550690589,0.22894227253382746,601,place_in_drawer: go towards the drawer and place the object,13849
+B_only_act_baseline,0.7514029714509985,0.24307280071277335,345,place_in_drawer: go towards the drawer and store the object,7918
+B_only_act_baseline,0.7177545737069243,0.22323648403291474,375,place_in_drawer: move to the drawer and place the object,8345
+B_only_act_baseline,0.7934546921370009,0.23683066964394864,417,place_in_drawer: move to the drawer and store the object,10410
+B_only_act_baseline,0.7136656908452698,0.20739280196733395,487,"place_in_drawer: move to the drawer, then place the object",10208
+B_only_act_baseline,0.7125458807267692,0.21695215496936313,666,"place_in_drawer: move to the drawer, then store the object",15738
+B_only_act_baseline,0.7806518875747172,0.23105606913617147,880,place_in_drawer: place the block in the drawer,21895
+B_only_act_baseline,0.7528316897588345,0.23247956868166095,505,place_in_drawer: place the grasped object in the drawer,12660
+B_only_act_baseline,0.8558105373502779,0.2512896714010158,581,place_in_drawer: place the object in the drawer,12750
+B_only_act_baseline,0.7541773177558619,0.22610352224582597,499,place_in_drawer: put the block in the drawer,11844
+B_only_act_baseline,0.7888098896751632,0.24406434300217536,533,place_in_drawer: put the grasped object in the drawer,12696
+B_only_act_baseline,0.8165137502166434,0.24580020281362924,340,place_in_drawer: put the object in the drawer,8618
+B_only_act_baseline,0.7391878635758937,0.2285364964602602,630,place_in_drawer: store the block in the drawer,15344
+B_only_act_baseline,0.7622060207430872,0.21964092312097577,534,place_in_drawer: store the grasped object in the drawer,11393
+B_only_act_baseline,0.7538873458950088,0.24082731017269168,584,place_in_drawer: store the object in the drawer,14030
+B_only_act_baseline,0.6866927980786417,0.2089227395987267,551,place_in_slider: place in slider,13734
+B_only_act_baseline,0.7261336055561186,0.23754549022198582,562,place_in_slider: place the block in the cabinet,16670
+B_only_act_baseline,0.6389977858922454,0.2031920381968074,560,place_in_slider: place the block in the slider,12770
+B_only_act_baseline,0.6434329614986,0.2051782937824989,483,place_in_slider: place the block in the sliding cabinet,11466
+B_only_act_baseline,0.6511898119757635,0.2198071415981102,390,place_in_slider: place the grasped object in the cabinet,9284
+B_only_act_baseline,0.6496255576974941,0.21059118413385944,530,place_in_slider: place the grasped object in the slider,13694
+B_only_act_baseline,0.6419542630924924,0.21456002421619033,652,place_in_slider: place the grasped object in the sliding cabinet,19041
+B_only_act_baseline,0.6057486045122016,0.19146521907373804,599,place_in_slider: place the object in the cabinet,14899
+B_only_act_baseline,0.6773761972254333,0.214492157384393,292,place_in_slider: place the object in the slider,7694
+B_only_act_baseline,0.5912145200425959,0.1936588937414834,411,place_in_slider: place the object in the sliding cabinet,10130
+B_only_act_baseline,0.5911364329803425,0.19235448595799634,374,place_in_slider: put it in the slider,8309
+B_only_act_baseline,0.6628091695630473,0.21896404728716468,520,place_in_slider: put the block in the cabinet,13254
+B_only_act_baseline,0.6281544147305116,0.19801779329705857,401,place_in_slider: put the block in the slider,9727
+B_only_act_baseline,0.6394891604903868,0.2064541060667707,290,place_in_slider: put the block in the sliding cabinet,6505
+B_only_act_baseline,0.5899818370387679,0.19515758823058665,418,place_in_slider: put the grasped object in the cabinet,9335
+B_only_act_baseline,0.5369258829777854,0.17176481352603354,238,place_in_slider: put the grasped object in the slider,6007
+B_only_act_baseline,0.5934988549708404,0.185202627261361,425,place_in_slider: put the grasped object in the sliding cabinet,9374
+B_only_act_baseline,0.63873337048731,0.21200513889706285,398,place_in_slider: put the object in the cabinet,10664
+B_only_act_baseline,0.6432771788521373,0.2065222416515839,72,place_in_slider: put the object in the slider,1333
+B_only_act_baseline,0.6073785820876989,0.19169594627661005,179,place_in_slider: put the object in the sliding cabinet,4377
+B_only_act_baseline,0.6619290923570366,0.21648143396370573,1258,push_blue_block_left: go push the blue block to the left,37609
+B_only_act_baseline,0.6330724166336672,0.2096795072204992,1833,push_blue_block_left: go slide the blue block to the left,56264
+B_only_act_baseline,0.6211498274940253,0.2136099296296715,1333,push_blue_block_left: push left the blue block,43205
+B_only_act_baseline,0.6487427482765779,0.21333827097654295,983,push_blue_block_left: push the blue block to the left,29773
+B_only_act_baseline,0.7168572125004288,0.24024504735295646,774,push_blue_block_left: push the blue block towards the left,23871
+B_only_act_baseline,0.6305650576911471,0.20636758188372992,1107,push_blue_block_left: slide left the blue block,33586
+B_only_act_baseline,0.6117272696401338,0.20157646682220087,1029,push_blue_block_left: slide the blue block to the left,30855
+B_only_act_baseline,0.6382621249575359,0.21329237607414067,1175,push_blue_block_left: slide the blue block towards the left,36043
+B_only_act_baseline,0.6247906660655602,0.2064876365914261,1133,push_blue_block_left: sweep the blue block to the left,36535
+B_only_act_baseline,0.6249276042472541,0.22147881854212637,909,push_blue_block_right: go push the blue block to the right,26139
+B_only_act_baseline,0.5533443107931287,0.20300051133381303,1101,push_blue_block_right: go slide the blue block to the right,33556
+B_only_act_baseline,0.6610940857045047,0.23318124386010353,1640,push_blue_block_right: push right the blue block,51536
+B_only_act_baseline,0.6527552869040864,0.2206709889607037,1249,push_blue_block_right: push the blue block to the right,37499
+B_only_act_baseline,0.6396395611799416,0.21854752492600896,1029,push_blue_block_right: push the blue block towards the right,29556
+B_only_act_baseline,0.625775265497624,0.22045527700134285,1402,push_blue_block_right: slide right the blue block,41454
+B_only_act_baseline,0.652166077323312,0.2252156481394079,916,push_blue_block_right: slide the blue block to the right,27308
+B_only_act_baseline,0.6159934854216941,0.22847761351296425,624,push_blue_block_right: slide the blue block towards the right,18712
+B_only_act_baseline,0.654985160887683,0.23214115188161397,1212,push_blue_block_right: sweep the blue block to the right,33784
+B_only_act_baseline,0.731372067508169,0.24757561031326195,1591,push_into_drawer: push the block into the drawer,49124
+B_only_act_baseline,0.7263436663449444,0.25527022090648027,1787,push_into_drawer: push the object into the drawer,56765
+B_only_act_baseline,0.7197144590874031,0.24676728302673062,1450,push_into_drawer: push the object that it falls into the drawer,44388
+B_only_act_baseline,0.6875415233393082,0.2396937960127681,876,push_into_drawer: slide the block into the drawer,25598
+B_only_act_baseline,0.7123946157423515,0.2394720205615085,1876,push_into_drawer: slide the object into the drawer,56563
+B_only_act_baseline,0.7351079680032715,0.2537098848278675,1392,push_into_drawer: sweep the block into the drawer,43697
+B_only_act_baseline,0.7186163442421066,0.24629887405829792,1685,push_into_drawer: sweep the object into the drawer,54169
+B_only_act_baseline,0.6399996085596703,0.2172163227649872,983,push_pink_block_left: go push the pink block to the left,29998
+B_only_act_baseline,0.6047216123274656,0.2017061004610735,1303,push_pink_block_left: go slide the pink block to the left,41647
+B_only_act_baseline,0.6136060439336093,0.20731946193009504,1366,push_pink_block_left: push left the pink block,42352
+B_only_act_baseline,0.5920988442618969,0.1948333519556958,1263,push_pink_block_left: push the pink block to the left,38333
+B_only_act_baseline,0.6022686239683662,0.21292050217235162,1146,push_pink_block_left: push the pink block towards the left,33438
+B_only_act_baseline,0.6050553476205596,0.19835418724250367,1149,push_pink_block_left: slide left the pink block,33575
+B_only_act_baseline,0.6118344031828451,0.2088457729298859,1200,push_pink_block_left: slide the pink block to the left,38771
+B_only_act_baseline,0.659292646288692,0.22552652978050647,946,push_pink_block_left: slide the pink block towards the left,27668
+B_only_act_baseline,0.5967602252814672,0.20159320897048322,1062,push_pink_block_left: sweep the pink block to the left,32765
+B_only_act_baseline,0.5634092886057205,0.20785771787282512,990,push_pink_block_right: go push the pink block to the right,29163
+B_only_act_baseline,0.6260945930779456,0.2098568540362672,1389,push_pink_block_right: go slide the pink block to the right,40808
+B_only_act_baseline,0.5378599522592208,0.19202700514047152,851,push_pink_block_right: push right the pink block,24547
+B_only_act_baseline,0.625269228482843,0.2204347464522499,1210,push_pink_block_right: push the pink block to the right,35319
+B_only_act_baseline,0.5532243881011637,0.1986938220373867,752,push_pink_block_right: push the pink block towards the right,21536
+B_only_act_baseline,0.5760479211999102,0.19707056221864336,1379,push_pink_block_right: slide right the pink block,41720
+B_only_act_baseline,0.5683291330812731,0.19755315133445162,845,push_pink_block_right: slide the pink block to the right,25103
+B_only_act_baseline,0.5935006239018943,0.2154483929741558,1636,push_pink_block_right: slide the pink block towards the right,50210
+B_only_act_baseline,0.5989700792850677,0.22164443092236072,1001,push_pink_block_right: sweep the pink block to the right,30794
+B_only_act_baseline,0.6587442588642946,0.22936425277655073,969,push_red_block_left: go push the red block to the left,30302
+B_only_act_baseline,0.5890943075605198,0.19876124776098505,1423,push_red_block_left: go slide the red block to the left,45284
+B_only_act_baseline,0.6143169435318732,0.2038448606956485,1236,push_red_block_left: push left the red block,39397
+B_only_act_baseline,0.6159943910738276,0.21280193095699335,1064,push_red_block_left: push the red block to the left,34212
+B_only_act_baseline,0.7065264060765268,0.23602001819440716,1285,push_red_block_left: push the red block towards the left,40620
+B_only_act_baseline,0.6483362623807536,0.21509293382675376,1200,push_red_block_left: slide left the red block,37372
+B_only_act_baseline,0.5976526506967043,0.1978682037925875,1577,push_red_block_left: slide the red block to the left,49703
+B_only_act_baseline,0.5932948849237988,0.20316006136782122,975,push_red_block_left: slide the red block towards the left,32175
+B_only_act_baseline,0.6127716457709781,0.20121954622509608,1358,push_red_block_left: sweep the red block to the left,43134
+B_only_act_baseline,0.6014327032695485,0.20838681488593397,843,push_red_block_right: go push the red block to the right,26450
+B_only_act_baseline,0.6525087346702261,0.23095507394100334,860,push_red_block_right: go slide the red block to the right,25756
+B_only_act_baseline,0.5328464376579053,0.18190994434355806,1462,push_red_block_right: push right the red block,46280
+B_only_act_baseline,0.6101564783462672,0.22261320523878353,1474,push_red_block_right: push the red block to the right,48180
+B_only_act_baseline,0.6357237565324144,0.23775221931465315,1263,push_red_block_right: push the red block towards the right,40821
+B_only_act_baseline,0.6151680219573896,0.20965275261730026,1292,push_red_block_right: slide right the red block,39791
+B_only_act_baseline,0.6239181617864397,0.21600071336346668,1347,push_red_block_right: slide the red block to the right,42621
+B_only_act_baseline,0.6455131579432549,0.22213326955464294,1343,push_red_block_right: slide the red block towards the right,42468
+B_only_act_baseline,0.5487498202677683,0.18490314667500088,1042,push_red_block_right: sweep the red block to the right,33021
+B_only_act_baseline,0.7300741159870044,0.23412083907785464,948,rotate_blue_block_left: grasp the blue block and rotate it left,30771
+B_only_act_baseline,0.7345201576536113,0.24484003891004172,1040,rotate_blue_block_left: grasp the blue block and turn it left,34320
+B_only_act_baseline,0.7453035760533696,0.23970957566986492,1231,"rotate_blue_block_left: grasp the blue block, then rotate it left",39195
+B_only_act_baseline,0.7040641500170783,0.23144731673174818,838,"rotate_blue_block_left: grasp the blue block, then turn it left",26185
+B_only_act_baseline,0.7506888273060858,0.24799037949197164,760,rotate_blue_block_left: rotate left the blue block,24630
+B_only_act_baseline,0.7442984318350142,0.251184974512308,1040,rotate_blue_block_left: rotate the blue block 90 degrees to the left,34320
+B_only_act_baseline,0.7067684448083841,0.2405817398186385,845,rotate_blue_block_left: rotate the blue block to the left,27885
+B_only_act_baseline,0.7486583744396855,0.25222599012414354,1040,rotate_blue_block_left: rotate the blue block towards the left,34320
+B_only_act_baseline,0.7534702577259642,0.2588676850188243,1226,rotate_blue_block_left: take the blue block and rotate it left,38976
+B_only_act_baseline,0.7514654896597789,0.2447375338399618,975,rotate_blue_block_left: take the blue block and turn it left,32175
+B_only_act_baseline,0.7523956653613016,0.2475882030103846,1400,rotate_blue_block_left: turn the blue block left,45675
+B_only_act_baseline,0.7336481321493759,0.24093944182342492,761,rotate_blue_block_right: grasp the blue block and rotate it right,24676
+B_only_act_baseline,0.7424530544485256,0.24241395157811804,1235,rotate_blue_block_right: grasp the blue block and turn it right,40755
+B_only_act_baseline,0.7549738130682555,0.24499223217196756,1056,"rotate_blue_block_right: grasp the blue block, then rotate it right",33862
+B_only_act_baseline,0.7704208831504936,0.2510774316670794,1116,"rotate_blue_block_right: grasp the blue block, then turn it right",35806
+B_only_act_baseline,0.7741902827336953,0.2551923005698459,965,rotate_blue_block_right: rotate right the blue block,30358
+B_only_act_baseline,0.8068813849606181,0.275435243788906,898,rotate_blue_block_right: rotate the blue block 90 degrees to the right,28120
+B_only_act_baseline,0.7859671830660157,0.2677153568107742,1118,rotate_blue_block_right: rotate the blue block to the right,35881
+B_only_act_baseline,0.7656241187677556,0.2502891227260574,1040,rotate_blue_block_right: rotate the blue block towards the right,34320
+B_only_act_baseline,0.747603972202571,0.23715777445204106,743,rotate_blue_block_right: take the blue block and rotate it right,22549
+B_only_act_baseline,0.7541456020523557,0.25284375315338947,1139,rotate_blue_block_right: take the blue block and turn it right,37060
+B_only_act_baseline,0.7724405874862921,0.2587755827639321,1105,rotate_blue_block_right: turn the blue block right,36465
+B_only_act_baseline,0.7473302389908391,0.25212230450411804,1365,rotate_pink_block_left: grasp the pink block and rotate it left,45045
+B_only_act_baseline,0.7533596699391053,0.24830605196976638,1625,rotate_pink_block_left: grasp the pink block and turn it left,53625
+B_only_act_baseline,0.7398939072342055,0.2422074047886929,1105,"rotate_pink_block_left: grasp the pink block, then rotate it left",36465
+B_only_act_baseline,0.7718370132572525,0.26909984280338217,520,"rotate_pink_block_left: grasp the pink block, then turn it left",17160
+B_only_act_baseline,0.7449083738820457,0.25472605528084785,1040,rotate_pink_block_left: rotate left the pink block,34320
+B_only_act_baseline,0.7302077690352742,0.24395278978141355,975,rotate_pink_block_left: rotate the pink block 90 degrees to the left,32175
+B_only_act_baseline,0.7334935657535308,0.24048658275243007,780,rotate_pink_block_left: rotate the pink block to the left,25740
+B_only_act_baseline,0.734729916124474,0.2426485204736352,1300,rotate_pink_block_left: rotate the pink block towards the left,42900
+B_only_act_baseline,0.7853926360465155,0.26198987821388287,845,rotate_pink_block_left: take the pink block and rotate it left,27885
+B_only_act_baseline,0.7775905731759739,0.25530454435684685,1365,rotate_pink_block_left: take the pink block and turn it left,45045
+B_only_act_baseline,0.7746276678427937,0.2758247449443295,780,rotate_pink_block_left: turn the pink block left,25740
+B_only_act_baseline,0.7277588397772141,0.24040519922598425,845,rotate_pink_block_right: grasp the pink block and rotate it right,27885
+B_only_act_baseline,0.707348376860568,0.23684689144201704,1062,rotate_pink_block_right: grasp the pink block and turn it right,34117
+B_only_act_baseline,0.6557852935792028,0.20246425661007442,1252,"rotate_pink_block_right: grasp the pink block, then rotate it right",40368
+B_only_act_baseline,0.693097739917093,0.22909705851571774,1170,"rotate_pink_block_right: grasp the pink block, then turn it right",38610
+B_only_act_baseline,0.7629151360662728,0.24428536206604498,1235,rotate_pink_block_right: rotate right the pink block,40755
+B_only_act_baseline,0.7128371297532341,0.22391122796786694,1204,rotate_pink_block_right: rotate the pink block 90 degrees to the right,39205
+B_only_act_baseline,0.7402397775127791,0.24359522379520454,585,rotate_pink_block_right: rotate the pink block to the right,19305
+B_only_act_baseline,0.6784932148862886,0.21870594054240317,1151,rotate_pink_block_right: rotate the pink block towards the right,37546
+B_only_act_baseline,0.724480226837355,0.2405207194787529,1440,rotate_pink_block_right: take the pink block and rotate it right,46491
+B_only_act_baseline,0.7230306757778989,0.23365957167493548,921,rotate_pink_block_right: take the pink block and turn it right,29383
+B_only_act_baseline,0.6416511303374535,0.20433812678647578,585,rotate_pink_block_right: turn the pink block right,19305
+B_only_act_baseline,0.7539638170208094,0.2490746871501018,951,rotate_red_block_left: grasp the red block and rotate it left,30891
+B_only_act_baseline,0.7273362440831496,0.24035669154488482,1040,rotate_red_block_left: grasp the red block and turn it left,34320
+B_only_act_baseline,0.7378546159663922,0.23386249174561127,1609,"rotate_red_block_left: grasp the red block, then rotate it left",52705
+B_only_act_baseline,0.765599747608106,0.2529377235771251,1010,"rotate_red_block_left: grasp the red block, then turn it left",32805
+B_only_act_baseline,0.7271546753464828,0.235064449301786,715,rotate_red_block_left: rotate left the red block,23595
+B_only_act_baseline,0.7650411719243057,0.2599918397240228,753,rotate_red_block_left: rotate the red block 90 degrees to the left,24336
+B_only_act_baseline,0.7418795892874683,0.24385351064894892,1495,rotate_red_block_left: rotate the red block to the left,49335
+B_only_act_baseline,0.7513569298363748,0.25775047391206474,1040,rotate_red_block_left: rotate the red block towards the left,34320
+B_only_act_baseline,0.7706807483311182,0.26072909058254695,1365,rotate_red_block_left: take the red block and rotate it left,45045
+B_only_act_baseline,0.7810799047961264,0.26120838218373893,892,rotate_red_block_left: take the red block and turn it left,29013
+B_only_act_baseline,0.7611893279898653,0.25271847491643945,728,rotate_red_block_left: turn the red block left,23011
+B_only_act_baseline,0.7544796775972408,0.24858644669994187,1211,rotate_red_block_right: grasp the red block and rotate it right,39471
+B_only_act_baseline,0.7679213134382789,0.27127517540089585,861,rotate_red_block_right: grasp the red block and turn it right,27463
+B_only_act_baseline,0.7772062021429871,0.2607399927420021,816,"rotate_red_block_right: grasp the red block, then rotate it right",26406
+B_only_act_baseline,0.7491036752697221,0.25811363017160543,1151,"rotate_red_block_right: grasp the red block, then turn it right",37546
+B_only_act_baseline,0.7504179517703433,0.24387096567750105,1011,rotate_red_block_right: rotate right the red block,32841
+B_only_act_baseline,0.78814444149163,0.2737286515940468,1012,rotate_red_block_right: rotate the red block 90 degrees to the right,32878
+B_only_act_baseline,0.7739300706120337,0.27189456429521375,1474,rotate_red_block_right: rotate the red block to the right,48180
+B_only_act_baseline,0.7878413712361675,0.25754649546995184,1184,rotate_red_block_right: rotate the red block towards the right,38095
+B_only_act_baseline,0.7589397880617591,0.27436353216592846,815,rotate_red_block_right: take the red block and rotate it right,26370
+B_only_act_baseline,0.7643777777821628,0.24370174880732506,1215,rotate_red_block_right: take the red block and turn it right,39645
+B_only_act_baseline,0.7051826809156878,0.236141338942652,629,rotate_red_block_right: turn the red block right,20295
+B_only_act_baseline,0.633885516680684,0.2158945648928915,965,stack_block: place the block on top of another block,26456
+B_only_act_baseline,0.6165689353878453,0.21351441794019524,1087,stack_block: place the grasped block on top of another block,30476
+B_only_act_baseline,0.6334738108035198,0.20989122863063767,1105,stack_block: put the block on top of another block,32572
+B_only_act_baseline,0.6859222140657911,0.22607082512822171,1842,stack_block: put the grasped block on top of a block,53565
+B_only_act_baseline,0.5703780979119849,0.19272611345520413,1340,stack_block: stack blocks on top of each other,37052
+B_only_act_baseline,0.6184431013046621,0.20234776298214113,1061,stack_block: stack the block on top of another block,28838
+B_only_act_baseline,0.6341598959513864,0.2126457064011817,1082,stack_block: stack the blocks,31342
+B_only_act_baseline,0.5824333071855569,0.2002035688665111,988,stack_block: stack the object on top of another object,27477
+B_only_act_baseline,0.6683384656589574,0.23532923954641866,1048,turn_off_led: push down the button to turn off the green light,32171
+B_only_act_baseline,0.6135399708975108,0.22693011511340502,338,turn_off_led: push down the button to turn off the led,10144
+B_only_act_baseline,0.7078664581866871,0.2492317243847923,525,turn_off_led: push down the button to turn off the led light,14859
+B_only_act_baseline,0.6551860897878643,0.23019290322926977,747,turn_off_led: push the button to turn off the green light,22695
+B_only_act_baseline,0.735591456836543,0.2542262436558675,667,turn_off_led: push the button to turn off the led,19636
+B_only_act_baseline,0.7168727430835274,0.2550947628517592,835,turn_off_led: push the button to turn off the led light,24728
+B_only_act_baseline,0.7212359957955431,0.253304742014685,909,turn_off_led: toggle the button to turn off the green light,26424
+B_only_act_baseline,0.7304296418087207,0.25479311191859005,673,turn_off_led: toggle the button to turn off the led,19896
+B_only_act_baseline,0.6701062850244414,0.23863489346594394,1139,turn_off_led: toggle the button to turn off the led light,32881
+B_only_act_baseline,0.7101682957306327,0.24638672785233065,657,turn_off_led: turn off the green lamp,19231
+B_only_act_baseline,0.6602241662459355,0.22925938913992422,583,turn_off_led: turn off the green light,16715
+B_only_act_baseline,0.7199044613316362,0.2355649276260768,707,turn_off_led: turn off the led,21877
+B_only_act_baseline,0.6538206210225247,0.22790599047957524,495,turn_off_led: turn off the led lamp,15835
+B_only_act_baseline,0.6767454592522558,0.24801319145403103,876,turn_off_led: turn off the led light,26978
+B_only_act_baseline,0.7280802511454953,0.22608429075108832,845,turn_off_lightbulb: move down the switch,27885
+B_only_act_baseline,0.7143362435070308,0.21300768439536724,1040,turn_off_lightbulb: move the light switch to turn off the light bulb,34320
+B_only_act_baseline,0.6901364164408522,0.20985428690553068,975,turn_off_lightbulb: move the light switch to turn off the yellow light,32175
+B_only_act_baseline,0.7366678012289399,0.2198920128384447,1210,turn_off_lightbulb: push the switch downwards,39430
+B_only_act_baseline,0.6883664362528503,0.21066771162752237,1078,turn_off_lightbulb: slide down the switch,35061
+B_only_act_baseline,0.664512019903586,0.20175256705850683,872,turn_off_lightbulb: toggle the light switch to turn off the light bulb,27906
+B_only_act_baseline,0.6503007095660612,0.20266289984057562,1742,turn_off_lightbulb: toggle the light switch to turn off the yellow light,55725
+B_only_act_baseline,0.708319939886511,0.21288822258374318,1495,turn_off_lightbulb: turn off the light bulb,49335
+B_only_act_baseline,0.6951207463291631,0.2103422003834159,1283,turn_off_lightbulb: turn off the yellow lamp,41931
+B_only_act_baseline,0.6998488190336818,0.20977799127544042,938,turn_off_lightbulb: turn off the yellow light,28966
+B_only_act_baseline,0.6479529155553311,0.23276249071665447,878,turn_on_led: push down the button to turn on the green light,27044
+B_only_act_baseline,0.6956065248270363,0.23897308573102796,646,turn_on_led: push down the button to turn on the led,19872
+B_only_act_baseline,0.6778026612303389,0.23500426221501186,959,turn_on_led: push down the button to turn on the led light,29841
+B_only_act_baseline,0.6789560678969676,0.24230143339901591,358,turn_on_led: push the button to turn on the green light,9861
+B_only_act_baseline,0.7010923156272266,0.23721712537104608,504,turn_on_led: push the button to turn on the led,16240
+B_only_act_baseline,0.6607285123340172,0.2343027255998171,1138,turn_on_led: push the button to turn on the led light,35621
+B_only_act_baseline,0.68734816146126,0.244881929047899,721,turn_on_led: toggle the button to turn on the green light,21082
+B_only_act_baseline,0.6871634926944531,0.22849016814975912,778,turn_on_led: toggle the button to turn on the led,24259
+B_only_act_baseline,0.69268830309644,0.2501918959930872,749,turn_on_led: toggle the button to turn on the led light,21365
+B_only_act_baseline,0.6853317020625924,0.2501140947324942,500,turn_on_led: turn on the green lamp,16050
+B_only_act_baseline,0.669506916599546,0.22779960142122208,364,turn_on_led: turn on the green light,10097
+B_only_act_baseline,0.6932362984178472,0.24081778522440453,547,turn_on_led: turn on the led,17181
+B_only_act_baseline,0.6876781941690202,0.2463710014231618,984,turn_on_led: turn on the led lamp,30017
+B_only_act_baseline,0.6703817062000981,0.23714114359102195,1319,turn_on_led: turn on the led light,41199
+B_only_act_baseline,0.6787491154438074,0.22489477882682887,1409,turn_on_lightbulb: move the light switch to turn on the light bulb,44639
+B_only_act_baseline,0.6467714369728456,0.21713847891779955,1452,turn_on_lightbulb: move the light switch to turn on the yellow light,45868
+B_only_act_baseline,0.6233690712044117,0.2052169193672623,975,turn_on_lightbulb: move up the switch,32175
+B_only_act_baseline,0.6842619231111482,0.2282277792210916,1003,turn_on_lightbulb: push the switch upwards,32245
+B_only_act_baseline,0.6529314087931971,0.20759506203805275,694,turn_on_lightbulb: slide up the switch,22440
+B_only_act_baseline,0.6775732438239747,0.22096217480985914,1088,turn_on_lightbulb: toggle the light switch to turn on the light bulb,35496
+B_only_act_baseline,0.6926672185333065,0.22584862266607275,715,turn_on_lightbulb: toggle the light switch to turn on the yellow light,23595
+B_only_act_baseline,0.6510342790554912,0.21353421190151628,1279,turn_on_lightbulb: turn on the light bulb,41745
+B_only_act_baseline,0.6599250396474937,0.2165687752446078,1612,turn_on_lightbulb: turn on the yellow lamp,49191
+B_only_act_baseline,0.6536479885421926,0.20877768106640882,1170,turn_on_lightbulb: turn on the yellow light,38610
+B_only_act_baseline,0.7357238667802956,0.24365221753144725,1201,unstack_block: collapse the stacked blocks,33524
+B_only_act_baseline,0.6915757264363845,0.23263537941646467,1582,unstack_block: go to the tower of blocks and take off the top one,44893
+B_only_act_baseline,0.6895652436034317,0.23355021109561955,1479,unstack_block: remove a block from the stack,45903
+B_only_act_baseline,0.6477898802071338,0.21559344370234523,1061,unstack_block: remove the top block,28808
+B_only_act_baseline,0.6746352747005574,0.22655382855672887,1827,unstack_block: take off the block that is on top of the other one,51772
+B_only_act_baseline,0.6383842324796063,0.2038892507335012,924,unstack_block: take off the stacked block,24207
+B_only_act_baseline,0.7184888958731008,0.23422864948989078,1452,unstack_block: unstack the blocks,41987
+ABC_mixed_act_baseline,0.4603525862285915,0.12212494472561602,1402,close_drawer: close the cabinet drawer,45748
+ABC_mixed_act_baseline,0.41264679341988714,0.11230996663544943,1078,close_drawer: close the drawer,35061
+ABC_mixed_act_baseline,0.4235464084104741,0.1167535888616776,1300,close_drawer: go close the drawer,42900
+ABC_mixed_act_baseline,0.43785316963643767,0.11712636199278363,1105,close_drawer: grasp the drawer handle and close it,36465
+ABC_mixed_act_baseline,0.49265890648989125,0.13754734101684662,991,"close_drawer: grasp the drawer handle, then close it",31731
+ABC_mixed_act_baseline,0.414123040792068,0.11236445575577701,845,close_drawer: grasp the handle of the drawer and close it,27885
+ABC_mixed_act_baseline,0.42751069257535046,0.12003522738457315,1664,"close_drawer: grasp the handle of the drawer, then close it",54405
+ABC_mixed_act_baseline,0.44543957599372536,0.12351183844713252,1597,close_drawer: push the drawer,52183
+ABC_mixed_act_baseline,0.42569594394249144,0.11967471208742549,1517,close_drawer: push the handle of the drawer,49128
+ABC_mixed_act_baseline,0.5898956348122646,0.16283244122215737,1170,lift_blue_block_drawer: go towards the blue block in the drawer and grasp it,38610
+ABC_mixed_act_baseline,0.5582545823003944,0.15086449143099204,1189,lift_blue_block_drawer: go towards the blue block in the drawer and lift it,37179
+ABC_mixed_act_baseline,0.5616612545995951,0.1538880717097064,957,lift_blue_block_drawer: go towards the blue block in the drawer and pick it up,31158
+ABC_mixed_act_baseline,0.5880801970546657,0.16383436121488523,910,lift_blue_block_drawer: grasp the blue block from the drawer,30030
+ABC_mixed_act_baseline,0.614373018396461,0.1683089575353149,1347,lift_blue_block_drawer: grasp the blue block in the drawer,44028
+ABC_mixed_act_baseline,0.592099998003492,0.16449062602862424,1167,lift_blue_block_drawer: grasp the blue block lying in the drawer,37088
+ABC_mixed_act_baseline,0.6274934899465865,0.17346337892999952,820,lift_blue_block_drawer: lift the blue block in the drawer,26560
+ABC_mixed_act_baseline,0.5249929532963158,0.14171407155224652,1272,lift_blue_block_drawer: lift the blue block lying in the drawer,41458
+ABC_mixed_act_baseline,0.5101612169798343,0.13873096221190576,845,lift_blue_block_drawer: pick up the blue block from the drawer,27885
+ABC_mixed_act_baseline,0.58721504536939,0.16001621339228247,650,lift_blue_block_drawer: pick up the blue block in the drawer,21450
+ABC_mixed_act_baseline,0.5585301731225017,0.15369440518203925,1019,lift_blue_block_drawer: pick up the blue block lying in the drawer,32065
+ABC_mixed_act_baseline,0.4630921250303751,0.12909092785028975,1076,lift_blue_block_slider: grasp the blue block lying in the cabinet,34986
+ABC_mixed_act_baseline,0.5375174829340827,0.1492291426128521,490,lift_blue_block_slider: grasp the blue block lying in the slider,15645
+ABC_mixed_act_baseline,0.5501886380236162,0.16011949089526442,390,lift_blue_block_slider: grasp the blue block lying in the sliding cabinet,12870
+ABC_mixed_act_baseline,0.5144846809811485,0.14908009358417817,650,lift_blue_block_slider: grasp the blue block lying on the shelf,21450
+ABC_mixed_act_baseline,0.5679697681409036,0.16580451538274577,429,lift_blue_block_slider: in the cabinet grasp the blue block,13650
+ABC_mixed_act_baseline,0.5313909280312049,0.15038937171379646,650,lift_blue_block_slider: in the cabinet pick up the blue block,21450
+ABC_mixed_act_baseline,0.49535744388611513,0.13044964813844703,585,lift_blue_block_slider: in the slider grasp the blue block,19305
+ABC_mixed_act_baseline,0.5249872755694699,0.15593238323579578,520,lift_blue_block_slider: in the slider pick up the blue block,17160
+ABC_mixed_act_baseline,0.534659365391711,0.14742718078577854,585,lift_blue_block_slider: in the sliding cabinet grasp the blue block,19305
+ABC_mixed_act_baseline,0.510536561778683,0.14617748874167222,569,lift_blue_block_slider: lift the blue block lying in the cabinet,18385
+ABC_mixed_act_baseline,0.5184316605309666,0.14489701799440496,1040,lift_blue_block_slider: lift the blue block lying in the slider,34320
+ABC_mixed_act_baseline,0.520981399829571,0.14669408860726896,975,lift_blue_block_slider: lift the blue block lying in the sliding cabinet,32175
+ABC_mixed_act_baseline,0.5778233908796923,0.17082709101942622,692,lift_blue_block_slider: lift the blue block lying on the shelf,22353
+ABC_mixed_act_baseline,0.5243762958512849,0.1475280368646188,985,lift_blue_block_slider: lift the blue block on the shelf,31480
+ABC_mixed_act_baseline,0.5423882425720156,0.15565922941607785,824,lift_blue_block_slider: pick up the blue block from the shelf,26730
+ABC_mixed_act_baseline,0.5480838875493419,0.16110088741323392,693,lift_blue_block_slider: pick up the blue block from the sliding cabinet,22396
+ABC_mixed_act_baseline,0.6088435467951623,0.17712483655560862,520,lift_blue_block_slider: pick up the blue block in the sliding cabinet,17160
+ABC_mixed_act_baseline,0.5593057434218988,0.1546582006009934,1366,lift_blue_block_table: grasp the blue block and lift it up,43706
+ABC_mixed_act_baseline,0.5916519758701149,0.17314589848169523,761,lift_blue_block_table: grasp the blue block on the table and lift it up,23284
+ABC_mixed_act_baseline,0.581438663911179,0.16408671300251643,780,"lift_blue_block_table: grasp the blue block on the table, then lift it up",25740
+ABC_mixed_act_baseline,0.6173965629468208,0.17765179645369927,946,"lift_blue_block_table: grasp the blue block, then lift it up",29270
+ABC_mixed_act_baseline,0.5540620905859172,0.16242065768478767,978,lift_blue_block_table: lift the blue block,29786
+ABC_mixed_act_baseline,0.5969728672950525,0.1727950304635936,1115,lift_blue_block_table: lift the blue block from the table,35770
+ABC_mixed_act_baseline,0.6204603018497264,0.1789430119290448,1187,lift_blue_block_table: lift the blue block up,38203
+ABC_mixed_act_baseline,0.615882360116677,0.17662914935081347,1253,lift_blue_block_table: pick up the blue block,38983
+ABC_mixed_act_baseline,0.5998594611431581,0.16833390632039255,1028,lift_blue_block_table: pick up the blue block from the table,32432
+ABC_mixed_act_baseline,0.592832190019113,0.173036145770039,1600,lift_blue_block_table: pick up the blue block on the table,49572
+ABC_mixed_act_baseline,0.5806718435834779,0.16457208177806346,1045,lift_pink_block_drawer: go towards the pink block in the drawer and grasp it,33436
+ABC_mixed_act_baseline,0.5436874975242431,0.15352483284718013,845,lift_pink_block_drawer: go towards the pink block in the drawer and lift it,27885
+ABC_mixed_act_baseline,0.59211084439014,0.16507968944164425,623,lift_pink_block_drawer: go towards the pink block in the drawer and pick it up,20046
+ABC_mixed_act_baseline,0.5199280260723113,0.14447462788640045,1040,lift_pink_block_drawer: grasp the pink block from the drawer,34320
+ABC_mixed_act_baseline,0.58536715538507,0.1640303256648056,1282,lift_pink_block_drawer: grasp the pink block in the drawer,41883
+ABC_mixed_act_baseline,0.5675765748556086,0.1550414947500901,1514,lift_pink_block_drawer: grasp the pink block lying in the drawer,48996
+ABC_mixed_act_baseline,0.5809078392599224,0.16268142736679028,877,lift_pink_block_drawer: lift the pink block in the drawer,26993
+ABC_mixed_act_baseline,0.5680726280764249,0.15788423609298707,1025,lift_pink_block_drawer: lift the pink block lying in the drawer,30929
+ABC_mixed_act_baseline,0.6095872311218041,0.171139126680355,1209,lift_pink_block_drawer: pick up the pink block from the drawer,39390
+ABC_mixed_act_baseline,0.5710301445434717,0.15897195855479132,862,lift_pink_block_drawer: pick up the pink block in the drawer,27511
+ABC_mixed_act_baseline,0.5912474521322986,0.1614303824730038,886,lift_pink_block_drawer: pick up the pink block lying in the drawer,28746
+ABC_mixed_act_baseline,0.5770119597237507,0.1630416489290305,752,lift_pink_block_slider: grasp the pink block lying in the cabinet,24298
+ABC_mixed_act_baseline,0.6217923753991192,0.17601191715681272,650,lift_pink_block_slider: grasp the pink block lying in the slider,21450
+ABC_mixed_act_baseline,0.5379089239207845,0.15887383561409618,715,lift_pink_block_slider: grasp the pink block lying in the sliding cabinet,23595
+ABC_mixed_act_baseline,0.5726091720013623,0.1650149187453809,845,lift_pink_block_slider: grasp the pink block lying on the shelf,27885
+ABC_mixed_act_baseline,0.5058482726517975,0.1410414337708549,496,lift_pink_block_slider: in the cabinet grasp the pink block,15876
+ABC_mixed_act_baseline,0.5834556920505388,0.1651585647468099,780,lift_pink_block_slider: in the cabinet pick up the pink block,25740
+ABC_mixed_act_baseline,0.5476267959624331,0.15749445839380427,994,lift_pink_block_slider: in the slider grasp the pink block,31845
+ABC_mixed_act_baseline,0.5752757539801978,0.16449284337144549,715,lift_pink_block_slider: in the slider pick up the pink block,23595
+ABC_mixed_act_baseline,0.5661620727022758,0.1635577433010571,585,lift_pink_block_slider: in the sliding cabinet grasp the pink block,19305
+ABC_mixed_act_baseline,0.5638455233704648,0.1674959305501405,780,lift_pink_block_slider: lift the pink block lying in the cabinet,25740
+ABC_mixed_act_baseline,0.615385688655485,0.17242339505566015,585,lift_pink_block_slider: lift the pink block lying in the slider,19305
+ABC_mixed_act_baseline,0.5853528306121394,0.16000243235023429,260,lift_pink_block_slider: lift the pink block lying in the sliding cabinet,8580
+ABC_mixed_act_baseline,0.6461886525170316,0.17784816073289392,621,lift_pink_block_slider: lift the pink block lying on the shelf,19971
+ABC_mixed_act_baseline,0.6440386387066996,0.18329037491693606,980,lift_pink_block_slider: lift the pink block on the shelf,30997
+ABC_mixed_act_baseline,0.5751019260659,0.16797983844347197,585,lift_pink_block_slider: pick up the pink block from the shelf,19305
+ABC_mixed_act_baseline,0.6419318224055506,0.17460945750251436,650,lift_pink_block_slider: pick up the pink block from the sliding cabinet,21450
+ABC_mixed_act_baseline,0.5914133711719527,0.1717589600684913,632,lift_pink_block_slider: pick up the pink block in the sliding cabinet,20433
+ABC_mixed_act_baseline,0.6281022241761223,0.17585078311083455,1056,lift_pink_block_table: grasp the pink block and lift it up,31421
+ABC_mixed_act_baseline,0.6436326371441128,0.18639113746523558,673,lift_pink_block_table: grasp the pink block on the table and lift it up,21286
+ABC_mixed_act_baseline,0.5950757087952758,0.17032779113262844,1303,"lift_pink_block_table: grasp the pink block on the table, then lift it up",40513
+ABC_mixed_act_baseline,0.6497932908599263,0.1924071207290057,733,"lift_pink_block_table: grasp the pink block, then lift it up",23226
+ABC_mixed_act_baseline,0.6073099955060436,0.17863603290803268,1490,lift_pink_block_table: lift the pink block,46349
+ABC_mixed_act_baseline,0.6029812179852017,0.16998603642544063,1103,lift_pink_block_table: lift the pink block from the table,34994
+ABC_mixed_act_baseline,0.5884303720164877,0.16489979001749655,1146,lift_pink_block_table: lift the pink block up,35959
+ABC_mixed_act_baseline,0.6373134034814054,0.18483596048115664,1528,lift_pink_block_table: pick up the pink block,48461
+ABC_mixed_act_baseline,0.6228292045325114,0.17807997977528822,1041,lift_pink_block_table: pick up the pink block from the table,32964
+ABC_mixed_act_baseline,0.6310036429756744,0.1823233029623343,690,lift_pink_block_table: pick up the pink block on the table,20879
+ABC_mixed_act_baseline,0.5859820253433591,0.16798058537893482,770,lift_red_block_drawer: go towards the red block in the drawer and grasp it,23938
+ABC_mixed_act_baseline,0.5933323161355736,0.16748458505304975,816,lift_red_block_drawer: go towards the red block in the drawer and lift it,26406
+ABC_mixed_act_baseline,0.6020312331163087,0.16790195003660624,1084,lift_red_block_drawer: go towards the red block in the drawer and pick it up,33923
+ABC_mixed_act_baseline,0.6056646821284446,0.16781335465635128,1298,lift_red_block_drawer: grasp the red block from the drawer,41431
+ABC_mixed_act_baseline,0.6063712968445603,0.16936261817903206,684,lift_red_block_drawer: grasp the red block in the drawer,22045
+ABC_mixed_act_baseline,0.5863303423873361,0.1635126124970599,715,lift_red_block_drawer: grasp the red block lying in the drawer,23595
+ABC_mixed_act_baseline,0.5575819385074222,0.1553659599144142,975,lift_red_block_drawer: lift the red block in the drawer,32175
+ABC_mixed_act_baseline,0.5873892755382674,0.1630104556541496,1352,lift_red_block_drawer: lift the red block lying in the drawer,43120
+ABC_mixed_act_baseline,0.6178756455156268,0.17057131587575192,1363,lift_red_block_drawer: pick up the red block from the drawer,43566
+ABC_mixed_act_baseline,0.5509155039823601,0.15452144294956657,982,lift_red_block_drawer: pick up the red block in the drawer,31106
+ABC_mixed_act_baseline,0.5953508391076108,0.16965662652837843,1249,lift_red_block_drawer: pick up the red block lying in the drawer,40222
+ABC_mixed_act_baseline,0.5123842036431887,0.14822107317047128,1219,lift_red_block_slider: grasp the red block lying in the cabinet,39835
+ABC_mixed_act_baseline,0.558992070384112,0.1589447943123428,910,lift_red_block_slider: grasp the red block lying in the slider,30030
+ABC_mixed_act_baseline,0.5471429634874563,0.15514835958379666,455,lift_red_block_slider: grasp the red block lying in the sliding cabinet,15015
+ABC_mixed_act_baseline,0.5610707622376565,0.1611283212592512,715,lift_red_block_slider: grasp the red block lying on the shelf,23595
+ABC_mixed_act_baseline,0.5366913698571466,0.15052483468860775,520,lift_red_block_slider: in the cabinet grasp the red block,17160
+ABC_mixed_act_baseline,0.5398887956793964,0.1494154316425933,697,lift_red_block_slider: in the cabinet pick up the red block,22578
+ABC_mixed_act_baseline,0.5436372275153087,0.14631010144417306,455,lift_red_block_slider: in the slider grasp the red block,15015
+ABC_mixed_act_baseline,0.5392816063599112,0.16340287051116706,817,lift_red_block_slider: in the slider pick up the red block,26443
+ABC_mixed_act_baseline,0.4937216430144935,0.13906330398763947,585,lift_red_block_slider: in the sliding cabinet grasp the red block,19305
+ABC_mixed_act_baseline,0.47797820140749386,0.13965516169389566,520,lift_red_block_slider: lift the red block lying in the cabinet,17160
+ABC_mixed_act_baseline,0.5776541823809678,0.17019311412350163,520,lift_red_block_slider: lift the red block lying in the slider,17160
+ABC_mixed_act_baseline,0.5042780958587729,0.14707579056360165,585,lift_red_block_slider: lift the red block lying in the sliding cabinet,19305
+ABC_mixed_act_baseline,0.5081525515979207,0.13653371130715236,455,lift_red_block_slider: lift the red block lying on the shelf,15015
+ABC_mixed_act_baseline,0.47898752697484137,0.1330900342619753,845,lift_red_block_slider: lift the red block on the shelf,27885
+ABC_mixed_act_baseline,0.5730634088621126,0.16194761201595906,567,lift_red_block_slider: pick up the red block from the shelf,18288
+ABC_mixed_act_baseline,0.5882150157409425,0.16253430361530818,823,lift_red_block_slider: pick up the red block from the sliding cabinet,26686
+ABC_mixed_act_baseline,0.5063039123805003,0.14012592933162182,910,lift_red_block_slider: pick up the red block in the sliding cabinet,30030
+ABC_mixed_act_baseline,0.5597134018196823,0.15721437747488948,1209,lift_red_block_table: grasp the red block and lift it up,39390
+ABC_mixed_act_baseline,0.5832918386334086,0.1669799187329033,1029,lift_red_block_table: grasp the red block on the table and lift it up,32476
+ABC_mixed_act_baseline,0.5625598807511367,0.16130535122092315,1180,"lift_red_block_table: grasp the red block on the table, then lift it up",36529
+ABC_mixed_act_baseline,0.6103400611572372,0.1706944748528417,1082,"lift_red_block_table: grasp the red block, then lift it up",33851
+ABC_mixed_act_baseline,0.6083608377899319,0.16979801575619746,805,lift_red_block_table: lift the red block,24557
+ABC_mixed_act_baseline,0.593317618395377,0.17092816786531717,1172,lift_red_block_table: lift the red block from the table,35915
+ABC_mixed_act_baseline,0.5339239904079305,0.15917163726769767,827,lift_red_block_table: lift the red block up,26868
+ABC_mixed_act_baseline,0.5947612216840952,0.1670863770666107,1445,lift_red_block_table: pick up the red block,46701
+ABC_mixed_act_baseline,0.5868086531660316,0.17120239824201694,1221,lift_red_block_table: pick up the red block from the table,38798
+ABC_mixed_act_baseline,0.5442559246597111,0.15509884672194862,951,lift_red_block_table: pick up the red block on the table,30891
+ABC_mixed_act_baseline,0.5205795503782107,0.1544344061237949,650,move_slider_left: grasp the door handle and move the door to the left,21450
+ABC_mixed_act_baseline,0.5981311555446587,0.18818281226536734,455,move_slider_left: grasp the door handle and slide the door to the left,15015
+ABC_mixed_act_baseline,0.5774783083128965,0.18417981535090747,715,"move_slider_left: grasp the door handle, then move the door to the left",23595
+ABC_mixed_act_baseline,0.5385282532641575,0.1753611492968032,1042,"move_slider_left: grasp the door handle, then slide the door to the left",33027
+ABC_mixed_act_baseline,0.5445921830789363,0.17220721777769007,455,move_slider_left: move the door all the way to the left,15015
+ABC_mixed_act_baseline,0.5524807941414749,0.17432165580685574,975,move_slider_left: move the door all the way to the left and let go,32175
+ABC_mixed_act_baseline,0.6222455565106455,0.20065999147334215,585,move_slider_left: move the door to the left,19305
+ABC_mixed_act_baseline,0.5563795691090136,0.17032909419510392,975,move_slider_left: move the door to the left side,32175
+ABC_mixed_act_baseline,0.5408431229012856,0.16923318448004784,975,move_slider_left: move the sliding door to the left,32175
+ABC_mixed_act_baseline,0.5363107241740843,0.16476246819792983,945,move_slider_left: push the door to the left,30660
+ABC_mixed_act_baseline,0.5580770421791156,0.1690795458167331,697,move_slider_left: push the door to the left side,22578
+ABC_mixed_act_baseline,0.5270430552257488,0.16304017887662814,814,move_slider_left: push the sliding door to the left,26335
+ABC_mixed_act_baseline,0.5845250915192197,0.18288673311190753,390,move_slider_left: slide the door all the way to the left,12870
+ABC_mixed_act_baseline,0.5436633713410266,0.16142132729109973,780,move_slider_left: slide the door to the left,25740
+ABC_mixed_act_baseline,0.4824914419994885,0.14959227372485434,664,move_slider_left: slide the door to the left side,20925
+ABC_mixed_act_baseline,0.5419073530139172,0.1731768664786051,562,"move_slider_left: slide the door to the left, then let it go",18063
+ABC_mixed_act_baseline,0.5083482273902554,0.15109015480935675,715,move_slider_right: grasp the door handle and move the door to the right,23595
+ABC_mixed_act_baseline,0.5296901211855621,0.16355864478709034,1105,move_slider_right: grasp the door handle and slide the door to the right,36465
+ABC_mixed_act_baseline,0.5712151606659313,0.17287252773612966,520,"move_slider_right: grasp the door handle, then move the door to the right",17160
+ABC_mixed_act_baseline,0.583172064720005,0.1718421240290648,1217,"move_slider_right: grasp the door handle, then slide the door to the right",39738
+ABC_mixed_act_baseline,0.649643599756428,0.1960505058693741,715,move_slider_right: move the door all the way to the right,23595
+ABC_mixed_act_baseline,0.5463287110373135,0.15828869591305506,520,move_slider_right: move the door all the way to the right and let go,17160
+ABC_mixed_act_baseline,0.5592001179518896,0.16789353604619306,751,move_slider_right: move the door to the right,24261
+ABC_mixed_act_baseline,0.5779007255791052,0.17488458597147255,715,move_slider_right: move the door to the right side,23595
+ABC_mixed_act_baseline,0.5787049438093569,0.17479262731887482,520,move_slider_right: move the sliding door to the right,17160
+ABC_mixed_act_baseline,0.5836546535324688,0.18678522543473677,195,move_slider_right: push the door to the right,6435
+ABC_mixed_act_baseline,0.5609939825634063,0.16537634316897576,650,move_slider_right: push the door to the right side,21450
+ABC_mixed_act_baseline,0.5478396213557041,0.16297461303559455,1170,move_slider_right: push the sliding door to the right,38610
+ABC_mixed_act_baseline,0.5358971715079308,0.1539319897812153,780,move_slider_right: slide the door all the way to the right,25740
+ABC_mixed_act_baseline,0.5612074172076316,0.17426031644863624,845,move_slider_right: slide the door to the right,27885
+ABC_mixed_act_baseline,0.5291626265316537,0.1554747237678452,520,move_slider_right: slide the door to the right side,17160
+ABC_mixed_act_baseline,0.5710359962471636,0.1734466069248014,780,"move_slider_right: slide the door to the right, then let it go",25740
+ABC_mixed_act_baseline,0.41741534338527786,0.1136308071311352,975,open_drawer: go open the drawer,32175
+ABC_mixed_act_baseline,0.4450391358113218,0.12625220032738488,1365,open_drawer: grasp the drawer handle and open it,45045
+ABC_mixed_act_baseline,0.4241617363795203,0.12086814492031187,1170,"open_drawer: grasp the drawer handle, then open it",38610
+ABC_mixed_act_baseline,0.43394242600762684,0.12212651488174674,1950,open_drawer: grasp the handle of the drawer and open it,64350
+ABC_mixed_act_baseline,0.5003961233800689,0.14106145110611146,1430,"open_drawer: grasp the handle of the drawer, then open it",47190
+ABC_mixed_act_baseline,0.45792446973811035,0.13098226994143253,1365,open_drawer: open the cabinet drawer,45045
+ABC_mixed_act_baseline,0.4457039985087487,0.1278321723584886,1040,open_drawer: open the drawer,34320
+ABC_mixed_act_baseline,0.45081593112162016,0.12823935802216802,1430,open_drawer: pull the drawer,47190
+ABC_mixed_act_baseline,0.4469979152597995,0.12350531153477048,1105,open_drawer: pull the handle of the drawer,36465
+ABC_mixed_act_baseline,0.6268877595570537,0.18701499631253551,601,place_in_drawer: go towards the drawer and place the object,13849
+ABC_mixed_act_baseline,0.6276633723039454,0.19639070687736035,345,place_in_drawer: go towards the drawer and store the object,7918
+ABC_mixed_act_baseline,0.5948995047865344,0.1864999026516718,375,place_in_drawer: move to the drawer and place the object,8345
+ABC_mixed_act_baseline,0.6269215053273307,0.19176382388992697,417,place_in_drawer: move to the drawer and store the object,10410
+ABC_mixed_act_baseline,0.5996530621349678,0.17874871058897537,487,"place_in_drawer: move to the drawer, then place the object",10208
+ABC_mixed_act_baseline,0.5816339952434142,0.17641317449537014,666,"place_in_drawer: move to the drawer, then store the object",15738
+ABC_mixed_act_baseline,0.6279355516994665,0.18888183950277285,880,place_in_drawer: place the block in the drawer,21895
+ABC_mixed_act_baseline,0.7046903139835716,0.21857724211415597,505,place_in_drawer: place the grasped object in the drawer,12660
+ABC_mixed_act_baseline,0.6417360723052038,0.1837264820587735,581,place_in_drawer: place the object in the drawer,12750
+ABC_mixed_act_baseline,0.6712551643958616,0.20023824278422142,499,place_in_drawer: put the block in the drawer,11844
+ABC_mixed_act_baseline,0.6627774134496939,0.21072838654161005,533,place_in_drawer: put the grasped object in the drawer,12696
+ABC_mixed_act_baseline,0.6713556292929439,0.19919440068945038,340,place_in_drawer: put the object in the drawer,8618
+ABC_mixed_act_baseline,0.6579918262767805,0.20504365234781302,630,place_in_drawer: store the block in the drawer,15344
+ABC_mixed_act_baseline,0.6225678798503674,0.18011455047637462,534,place_in_drawer: store the grasped object in the drawer,11393
+ABC_mixed_act_baseline,0.6085271557775004,0.19056320151951583,584,place_in_drawer: store the object in the drawer,14030
+ABC_mixed_act_baseline,0.6858294633327184,0.21076572558762252,551,place_in_slider: place in slider,13734
+ABC_mixed_act_baseline,0.7093417861159453,0.22325246382397115,562,place_in_slider: place the block in the cabinet,16670
+ABC_mixed_act_baseline,0.6551160851291982,0.1957401086065457,560,place_in_slider: place the block in the slider,12770
+ABC_mixed_act_baseline,0.6177123481775036,0.1885382670488933,483,place_in_slider: place the block in the sliding cabinet,11466
+ABC_mixed_act_baseline,0.6194651017572327,0.2031255240344103,390,place_in_slider: place the grasped object in the cabinet,9284
+ABC_mixed_act_baseline,0.6143454151659562,0.19164673404687235,530,place_in_slider: place the grasped object in the slider,13694
+ABC_mixed_act_baseline,0.6014149335870522,0.19181407457715002,652,place_in_slider: place the grasped object in the sliding cabinet,19041
+ABC_mixed_act_baseline,0.571234176530456,0.1802397809722166,599,place_in_slider: place the object in the cabinet,14899
+ABC_mixed_act_baseline,0.6241428292091135,0.18704106955652386,292,place_in_slider: place the object in the slider,7694
+ABC_mixed_act_baseline,0.5051102313045857,0.15637417002333487,411,place_in_slider: place the object in the sliding cabinet,10130
+ABC_mixed_act_baseline,0.5733860167430933,0.17922195553781653,374,place_in_slider: put it in the slider,8309
+ABC_mixed_act_baseline,0.6296810539960784,0.20149753765792722,520,place_in_slider: put the block in the cabinet,13254
+ABC_mixed_act_baseline,0.6559006378456643,0.19965598116952024,401,place_in_slider: put the block in the slider,9727
+ABC_mixed_act_baseline,0.5913068630410769,0.18922890721737154,290,place_in_slider: put the block in the sliding cabinet,6505
+ABC_mixed_act_baseline,0.6349849991630929,0.19889317269496376,418,place_in_slider: put the grasped object in the cabinet,9335
+ABC_mixed_act_baseline,0.5603758786254163,0.1764081199488551,238,place_in_slider: put the grasped object in the slider,6007
+ABC_mixed_act_baseline,0.602140614898418,0.19198722115067018,425,place_in_slider: put the grasped object in the sliding cabinet,9374
+ABC_mixed_act_baseline,0.5618632845927914,0.1751827121774249,398,place_in_slider: put the object in the cabinet,10664
+ABC_mixed_act_baseline,0.435918804355123,0.13774484567812895,72,place_in_slider: put the object in the slider,1333
+ABC_mixed_act_baseline,0.661693436688825,0.19938875231000033,179,place_in_slider: put the object in the sliding cabinet,4377
+ABC_mixed_act_baseline,0.597223249229637,0.17713916734889595,1258,push_blue_block_left: go push the blue block to the left,37609
+ABC_mixed_act_baseline,0.5419461666800365,0.16519613392789254,1833,push_blue_block_left: go slide the blue block to the left,56264
+ABC_mixed_act_baseline,0.4925674541448225,0.14666744448858113,1333,push_blue_block_left: push left the blue block,43205
+ABC_mixed_act_baseline,0.5738291049737924,0.17152255893605295,983,push_blue_block_left: push the blue block to the left,29773
+ABC_mixed_act_baseline,0.6331200535077933,0.19470571168497183,774,push_blue_block_left: push the blue block towards the left,23871
+ABC_mixed_act_baseline,0.5610178982605791,0.1680293561372782,1107,push_blue_block_left: slide left the blue block,33586
+ABC_mixed_act_baseline,0.542481843323598,0.16610594428567768,1029,push_blue_block_left: slide the blue block to the left,30855
+ABC_mixed_act_baseline,0.5790942505505635,0.17863587125477945,1175,push_blue_block_left: slide the blue block towards the left,36043
+ABC_mixed_act_baseline,0.5142859046784414,0.14777619821631097,1133,push_blue_block_left: sweep the blue block to the left,36535
+ABC_mixed_act_baseline,0.5029140090922577,0.1555490903357839,909,push_blue_block_right: go push the blue block to the right,26139
+ABC_mixed_act_baseline,0.41697306225609737,0.13062600883642927,1101,push_blue_block_right: go slide the blue block to the right,33556
+ABC_mixed_act_baseline,0.5220175757888532,0.1585316343976742,1640,push_blue_block_right: push right the blue block,51536
+ABC_mixed_act_baseline,0.4541752497722696,0.13280732390633468,1249,push_blue_block_right: push the blue block to the right,37499
+ABC_mixed_act_baseline,0.5155042760497495,0.15164289131215808,1029,push_blue_block_right: push the blue block towards the right,29556
+ABC_mixed_act_baseline,0.4981006756866016,0.15515200367697832,1402,push_blue_block_right: slide right the blue block,41454
+ABC_mixed_act_baseline,0.5446015906093454,0.16491332887161395,916,push_blue_block_right: slide the blue block to the right,27308
+ABC_mixed_act_baseline,0.4324962114130854,0.12602951648796237,624,push_blue_block_right: slide the blue block towards the right,18712
+ABC_mixed_act_baseline,0.5232771896190062,0.16315065724244965,1212,push_blue_block_right: sweep the blue block to the right,33784
+ABC_mixed_act_baseline,0.633259407094243,0.1938493876613799,1591,push_into_drawer: push the block into the drawer,49124
+ABC_mixed_act_baseline,0.6129315958475362,0.1938604846029892,1787,push_into_drawer: push the object into the drawer,56765
+ABC_mixed_act_baseline,0.6076205371697749,0.1870866110036071,1450,push_into_drawer: push the object that it falls into the drawer,44388
+ABC_mixed_act_baseline,0.5748966434891725,0.17872998842660243,876,push_into_drawer: slide the block into the drawer,25598
+ABC_mixed_act_baseline,0.6051898698410713,0.18678798103301447,1876,push_into_drawer: slide the object into the drawer,56563
+ABC_mixed_act_baseline,0.6426927651674306,0.2012518719565776,1392,push_into_drawer: sweep the block into the drawer,43697
+ABC_mixed_act_baseline,0.5941219053609401,0.18181213002281063,1685,push_into_drawer: sweep the object into the drawer,54169
+ABC_mixed_act_baseline,0.4594305590652767,0.12994802679323014,983,push_pink_block_left: go push the pink block to the left,29998
+ABC_mixed_act_baseline,0.4570818790225984,0.13059081840889863,1303,push_pink_block_left: go slide the pink block to the left,41647
+ABC_mixed_act_baseline,0.45485878085860404,0.13331193560070417,1366,push_pink_block_left: push left the pink block,42352
+ABC_mixed_act_baseline,0.4566764165256464,0.13490195357714366,1263,push_pink_block_left: push the pink block to the left,38333
+ABC_mixed_act_baseline,0.4015811435328808,0.11308685476125815,1146,push_pink_block_left: push the pink block towards the left,33438
+ABC_mixed_act_baseline,0.48153361497109476,0.13956335554781296,1149,push_pink_block_left: slide left the pink block,33575
+ABC_mixed_act_baseline,0.4457942544995592,0.13001759424702145,1200,push_pink_block_left: slide the pink block to the left,38771
+ABC_mixed_act_baseline,0.493382774549936,0.14372041138326538,946,push_pink_block_left: slide the pink block towards the left,27668
+ABC_mixed_act_baseline,0.4354525087340808,0.12623957060854882,1062,push_pink_block_left: sweep the pink block to the left,32765
+ABC_mixed_act_baseline,0.466487171136157,0.14515972666573382,990,push_pink_block_right: go push the pink block to the right,29163
+ABC_mixed_act_baseline,0.529341286961332,0.16136234678995953,1389,push_pink_block_right: go slide the pink block to the right,40808
+ABC_mixed_act_baseline,0.4410395666904262,0.13150251739029792,851,push_pink_block_right: push right the pink block,24547
+ABC_mixed_act_baseline,0.5347916810698942,0.16430911155965425,1210,push_pink_block_right: push the pink block to the right,35319
+ABC_mixed_act_baseline,0.4180965662742719,0.12454380697488304,752,push_pink_block_right: push the pink block towards the right,21536
+ABC_mixed_act_baseline,0.4559595471391154,0.13458462601580892,1379,push_pink_block_right: slide right the pink block,41720
+ABC_mixed_act_baseline,0.4802951870245403,0.14631222640974648,845,push_pink_block_right: slide the pink block to the right,25103
+ABC_mixed_act_baseline,0.4817015002468258,0.14429891533433356,1636,push_pink_block_right: slide the pink block towards the right,50210
+ABC_mixed_act_baseline,0.4912174344079396,0.15508231967028122,1001,push_pink_block_right: sweep the pink block to the right,30794
+ABC_mixed_act_baseline,0.462265407300505,0.1345544440946359,969,push_red_block_left: go push the red block to the left,30302
+ABC_mixed_act_baseline,0.467399982412072,0.13976990423358268,1423,push_red_block_left: go slide the red block to the left,45284
+ABC_mixed_act_baseline,0.44867822638188365,0.13010576529704113,1236,push_red_block_left: push left the red block,39397
+ABC_mixed_act_baseline,0.49178474339011463,0.15338315095186444,1064,push_red_block_left: push the red block to the left,34212
+ABC_mixed_act_baseline,0.5228434457418041,0.152671831467236,1285,push_red_block_left: push the red block towards the left,40620
+ABC_mixed_act_baseline,0.5245801628085263,0.15499846020956415,1200,push_red_block_left: slide left the red block,37372
+ABC_mixed_act_baseline,0.45229545199614535,0.1354473657692402,1577,push_red_block_left: slide the red block to the left,49703
+ABC_mixed_act_baseline,0.39696257780733296,0.11423107001926754,975,push_red_block_left: slide the red block towards the left,32175
+ABC_mixed_act_baseline,0.4744570595261602,0.13616637373270007,1358,push_red_block_left: sweep the red block to the left,43134
+ABC_mixed_act_baseline,0.5583137041312631,0.1787497344121333,843,push_red_block_right: go push the red block to the right,26450
+ABC_mixed_act_baseline,0.5437429606487384,0.1693130456985777,860,push_red_block_right: go slide the red block to the right,25756
+ABC_mixed_act_baseline,0.4401879258322295,0.13219438668923225,1462,push_red_block_right: push right the red block,46280
+ABC_mixed_act_baseline,0.5061747093645482,0.16499920035641452,1474,push_red_block_right: push the red block to the right,48180
+ABC_mixed_act_baseline,0.4900186819057788,0.15339468945512302,1263,push_red_block_right: push the red block towards the right,40821
+ABC_mixed_act_baseline,0.5386008961748182,0.16590836686275562,1292,push_red_block_right: slide right the red block,39791
+ABC_mixed_act_baseline,0.5461447922531437,0.17026073902991923,1347,push_red_block_right: slide the red block to the right,42621
+ABC_mixed_act_baseline,0.5432787587371622,0.16449002616155484,1343,push_red_block_right: slide the red block towards the right,42468
+ABC_mixed_act_baseline,0.46429505704399193,0.14355004300041646,1042,push_red_block_right: sweep the red block to the right,33021
+ABC_mixed_act_baseline,0.5904352715432295,0.18094689277146897,948,rotate_blue_block_left: grasp the blue block and rotate it left,30771
+ABC_mixed_act_baseline,0.605656133495368,0.18038967225478564,1040,rotate_blue_block_left: grasp the blue block and turn it left,34320
+ABC_mixed_act_baseline,0.5954147841508802,0.17210221692482253,1231,"rotate_blue_block_left: grasp the blue block, then rotate it left",39195
+ABC_mixed_act_baseline,0.5555653661911413,0.16150491623796662,838,"rotate_blue_block_left: grasp the blue block, then turn it left",26185
+ABC_mixed_act_baseline,0.5629761357697677,0.16449152625400154,760,rotate_blue_block_left: rotate left the blue block,24630
+ABC_mixed_act_baseline,0.5870264763171935,0.1778474904956557,1040,rotate_blue_block_left: rotate the blue block 90 degrees to the left,34320
+ABC_mixed_act_baseline,0.5609549689920116,0.16958002065390196,845,rotate_blue_block_left: rotate the blue block to the left,27885
+ABC_mixed_act_baseline,0.5792665824944124,0.17272109342909558,1040,rotate_blue_block_left: rotate the blue block towards the left,34320
+ABC_mixed_act_baseline,0.6646219390258106,0.20419276127761696,1226,rotate_blue_block_left: take the blue block and rotate it left,38976
+ABC_mixed_act_baseline,0.6559256260391609,0.19774667346050107,975,rotate_blue_block_left: take the blue block and turn it left,32175
+ABC_mixed_act_baseline,0.6350533232516274,0.19045383143270256,1400,rotate_blue_block_left: turn the blue block left,45675
+ABC_mixed_act_baseline,0.6692603727577433,0.20098193881107707,761,rotate_blue_block_right: grasp the blue block and rotate it right,24676
+ABC_mixed_act_baseline,0.6441964268916299,0.19623143775611404,1235,rotate_blue_block_right: grasp the blue block and turn it right,40755
+ABC_mixed_act_baseline,0.5546965235901069,0.15577446254210583,1056,"rotate_blue_block_right: grasp the blue block, then rotate it right",33862
+ABC_mixed_act_baseline,0.6007357301857651,0.1730437931577774,1116,"rotate_blue_block_right: grasp the blue block, then turn it right",35806
+ABC_mixed_act_baseline,0.6071199635784482,0.1799590140445096,965,rotate_blue_block_right: rotate right the blue block,30358
+ABC_mixed_act_baseline,0.5905942910402148,0.17391291347988444,898,rotate_blue_block_right: rotate the blue block 90 degrees to the right,28120
+ABC_mixed_act_baseline,0.6005806901758712,0.18168304802207497,1118,rotate_blue_block_right: rotate the blue block to the right,35881
+ABC_mixed_act_baseline,0.6161380280763199,0.17998825274395458,1040,rotate_blue_block_right: rotate the blue block towards the right,34320
+ABC_mixed_act_baseline,0.5527264639856722,0.15647643181666282,743,rotate_blue_block_right: take the blue block and rotate it right,22549
+ABC_mixed_act_baseline,0.6066287225796864,0.18162737446378682,1139,rotate_blue_block_right: take the blue block and turn it right,37060
+ABC_mixed_act_baseline,0.5488479384820035,0.16216785752134166,1105,rotate_blue_block_right: turn the blue block right,36465
+ABC_mixed_act_baseline,0.6491276144533378,0.203896419183437,1365,rotate_pink_block_left: grasp the pink block and rotate it left,45045
+ABC_mixed_act_baseline,0.6051861296506711,0.18317972641677172,1625,rotate_pink_block_left: grasp the pink block and turn it left,53625
+ABC_mixed_act_baseline,0.6612326916474973,0.20393404352244862,1105,"rotate_pink_block_left: grasp the pink block, then rotate it left",36465
+ABC_mixed_act_baseline,0.6526865852542055,0.2063242551052209,520,"rotate_pink_block_left: grasp the pink block, then turn it left",17160
+ABC_mixed_act_baseline,0.6831989681635385,0.22139944247442447,1040,rotate_pink_block_left: rotate left the pink block,34320
+ABC_mixed_act_baseline,0.6405328738584888,0.1953853917516208,975,rotate_pink_block_left: rotate the pink block 90 degrees to the left,32175
+ABC_mixed_act_baseline,0.6533268205478303,0.2051657615325628,780,rotate_pink_block_left: rotate the pink block to the left,25740
+ABC_mixed_act_baseline,0.6553579312449807,0.20334136063045077,1300,rotate_pink_block_left: rotate the pink block towards the left,42900
+ABC_mixed_act_baseline,0.7368111846211193,0.23271373182679453,845,rotate_pink_block_left: take the pink block and rotate it left,27885
+ABC_mixed_act_baseline,0.6804908614379949,0.21018686676967527,1365,rotate_pink_block_left: take the pink block and turn it left,45045
+ABC_mixed_act_baseline,0.6919648658727776,0.22189770784001198,780,rotate_pink_block_left: turn the pink block left,25740
+ABC_mixed_act_baseline,0.6015341117253249,0.18502323702834644,845,rotate_pink_block_right: grasp the pink block and rotate it right,27885
+ABC_mixed_act_baseline,0.5868551248530105,0.1803185880054142,1062,rotate_pink_block_right: grasp the pink block and turn it right,34117
+ABC_mixed_act_baseline,0.5465389233438799,0.16034789767014426,1252,"rotate_pink_block_right: grasp the pink block, then rotate it right",40368
+ABC_mixed_act_baseline,0.6124885187035427,0.19314777621745835,1170,"rotate_pink_block_right: grasp the pink block, then turn it right",38610
+ABC_mixed_act_baseline,0.6153234256680904,0.18049587570706035,1235,rotate_pink_block_right: rotate right the pink block,40755
+ABC_mixed_act_baseline,0.5890855985663686,0.17065485519287066,1204,rotate_pink_block_right: rotate the pink block 90 degrees to the right,39205
+ABC_mixed_act_baseline,0.5791087667830984,0.16651909686212873,585,rotate_pink_block_right: rotate the pink block to the right,19305
+ABC_mixed_act_baseline,0.5743209143868075,0.17971748402921853,1151,rotate_pink_block_right: rotate the pink block towards the right,37546
+ABC_mixed_act_baseline,0.6167730782524379,0.19234417245919885,1440,rotate_pink_block_right: take the pink block and rotate it right,46491
+ABC_mixed_act_baseline,0.6080628618806707,0.18157859021078976,921,rotate_pink_block_right: take the pink block and turn it right,29383
+ABC_mixed_act_baseline,0.547166211576755,0.1651149454235735,585,rotate_pink_block_right: turn the pink block right,19305
+ABC_mixed_act_baseline,0.6508844195290018,0.19321681842414434,951,rotate_red_block_left: grasp the red block and rotate it left,30891
+ABC_mixed_act_baseline,0.6400224652055737,0.18987352704847013,1040,rotate_red_block_left: grasp the red block and turn it left,34320
+ABC_mixed_act_baseline,0.6352131761139665,0.18920722364779952,1609,"rotate_red_block_left: grasp the red block, then rotate it left",52705
+ABC_mixed_act_baseline,0.6334862741345373,0.1926711430264518,1010,"rotate_red_block_left: grasp the red block, then turn it left",32805
+ABC_mixed_act_baseline,0.6559647334461746,0.20259772833363762,715,rotate_red_block_left: rotate left the red block,23595
+ABC_mixed_act_baseline,0.689592511381321,0.2109063419875454,753,rotate_red_block_left: rotate the red block 90 degrees to the left,24336
+ABC_mixed_act_baseline,0.6379843086660548,0.19408908793921026,1495,rotate_red_block_left: rotate the red block to the left,49335
+ABC_mixed_act_baseline,0.5957992154778619,0.18069404158151986,1040,rotate_red_block_left: rotate the red block towards the left,34320
+ABC_mixed_act_baseline,0.6273577187246296,0.18516850848388708,1365,rotate_red_block_left: take the red block and rotate it left,45045
+ABC_mixed_act_baseline,0.5827665733422707,0.1755382766329937,892,rotate_red_block_left: take the red block and turn it left,29013
+ABC_mixed_act_baseline,0.6915996798515658,0.21035872815702172,728,rotate_red_block_left: turn the red block left,23011
+ABC_mixed_act_baseline,0.5986973804862813,0.17884942678782936,1211,rotate_red_block_right: grasp the red block and rotate it right,39471
+ABC_mixed_act_baseline,0.6020956236162702,0.1797358231695031,861,rotate_red_block_right: grasp the red block and turn it right,27463
+ABC_mixed_act_baseline,0.5927928885978533,0.17035987334446895,816,"rotate_red_block_right: grasp the red block, then rotate it right",26406
+ABC_mixed_act_baseline,0.642720943111901,0.19590549484061878,1151,"rotate_red_block_right: grasp the red block, then turn it right",37546
+ABC_mixed_act_baseline,0.5880180545776386,0.16830567856605577,1011,rotate_red_block_right: rotate right the red block,32841
+ABC_mixed_act_baseline,0.6174897288722514,0.1891162847827823,1012,rotate_red_block_right: rotate the red block 90 degrees to the right,32878
+ABC_mixed_act_baseline,0.6017965437678378,0.17867763451478563,1474,rotate_red_block_right: rotate the red block to the right,48180
+ABC_mixed_act_baseline,0.5882740723083832,0.16956784859479312,1184,rotate_red_block_right: rotate the red block towards the right,38095
+ABC_mixed_act_baseline,0.6109895686628217,0.18522140093010925,815,rotate_red_block_right: take the red block and rotate it right,26370
+ABC_mixed_act_baseline,0.6450494982372663,0.18789612809496975,1215,rotate_red_block_right: take the red block and turn it right,39645
+ABC_mixed_act_baseline,0.5871889709448758,0.17099498726895102,629,rotate_red_block_right: turn the red block right,20295
+ABC_mixed_act_baseline,0.5570111701754114,0.17592940350099795,965,stack_block: place the block on top of another block,26456
+ABC_mixed_act_baseline,0.5276000921449466,0.17015880362503333,1087,stack_block: place the grasped block on top of another block,30476
+ABC_mixed_act_baseline,0.5577277485760607,0.17660626284499054,1105,stack_block: put the block on top of another block,32572
+ABC_mixed_act_baseline,0.6340125701339425,0.2016525469177797,1842,stack_block: put the grasped block on top of a block,53565
+ABC_mixed_act_baseline,0.5394210206936687,0.1780202273821265,1340,stack_block: stack blocks on top of each other,37052
+ABC_mixed_act_baseline,0.5484830665718061,0.17215726329352618,1061,stack_block: stack the block on top of another block,28838
+ABC_mixed_act_baseline,0.5400378832047945,0.17088202890154885,1082,stack_block: stack the blocks,31342
+ABC_mixed_act_baseline,0.5006061548481116,0.16391778218966768,988,stack_block: stack the object on top of another object,27477
+ABC_mixed_act_baseline,0.6521627880031761,0.21609265559612034,1048,turn_off_led: push down the button to turn off the green light,32171
+ABC_mixed_act_baseline,0.5750196983835459,0.18734695940014476,338,turn_off_led: push down the button to turn off the led,10144
+ABC_mixed_act_baseline,0.6478393460051739,0.2124280512442369,525,turn_off_led: push down the button to turn off the led light,14859
+ABC_mixed_act_baseline,0.5656163517710613,0.18081657901362672,747,turn_off_led: push the button to turn off the green light,22695
+ABC_mixed_act_baseline,0.7223524920939636,0.2282785959612264,667,turn_off_led: push the button to turn off the led,19636
+ABC_mixed_act_baseline,0.6787079473120748,0.21904178369095945,835,turn_off_led: push the button to turn off the led light,24728
+ABC_mixed_act_baseline,0.6536071063329293,0.22523765378017738,909,turn_off_led: toggle the button to turn off the green light,26424
+ABC_mixed_act_baseline,0.686147652914375,0.22094475231549873,673,turn_off_led: toggle the button to turn off the led,19896
+ABC_mixed_act_baseline,0.6836697916245852,0.23269641353961504,1139,turn_off_led: toggle the button to turn off the led light,32881
+ABC_mixed_act_baseline,0.6309726966734728,0.20467635932713574,657,turn_off_led: turn off the green lamp,19231
+ABC_mixed_act_baseline,0.6305379268598477,0.20441153887056762,583,turn_off_led: turn off the green light,16715
+ABC_mixed_act_baseline,0.6797338819860932,0.2162919443117403,707,turn_off_led: turn off the led,21877
+ABC_mixed_act_baseline,0.6400795280812391,0.20926569715996568,495,turn_off_led: turn off the led lamp,15835
+ABC_mixed_act_baseline,0.6682928062814201,0.22704685534013674,876,turn_off_led: turn off the led light,26978
+ABC_mixed_act_baseline,0.5715658168298775,0.16890845927441198,845,turn_off_lightbulb: move down the switch,27885
+ABC_mixed_act_baseline,0.5667326793099419,0.15957313750411842,1040,turn_off_lightbulb: move the light switch to turn off the light bulb,34320
+ABC_mixed_act_baseline,0.546968577713426,0.15382199019964427,975,turn_off_lightbulb: move the light switch to turn off the yellow light,32175
+ABC_mixed_act_baseline,0.5872875006171846,0.16653629764690464,1210,turn_off_lightbulb: push the switch downwards,39430
+ABC_mixed_act_baseline,0.5793513358029104,0.16890052009335182,1078,turn_off_lightbulb: slide down the switch,35061
+ABC_mixed_act_baseline,0.5545777473729352,0.16213713885952516,872,turn_off_lightbulb: toggle the light switch to turn off the light bulb,27906
+ABC_mixed_act_baseline,0.5289580604650038,0.1515119885016976,1742,turn_off_lightbulb: toggle the light switch to turn off the yellow light,55725
+ABC_mixed_act_baseline,0.6013974627844544,0.17379315874016638,1495,turn_off_lightbulb: turn off the light bulb,49335
+ABC_mixed_act_baseline,0.5710897643339415,0.1610655807281786,1283,turn_off_lightbulb: turn off the yellow lamp,41931
+ABC_mixed_act_baseline,0.5494546171094512,0.1533656345358815,938,turn_off_lightbulb: turn off the yellow light,28966
+ABC_mixed_act_baseline,0.6018203424843692,0.2008636916513957,878,turn_on_led: push down the button to turn on the green light,27044
+ABC_mixed_act_baseline,0.6155764824968523,0.20042707620577235,646,turn_on_led: push down the button to turn on the led,19872
+ABC_mixed_act_baseline,0.6375186377733987,0.21371747193194524,959,turn_on_led: push down the button to turn on the led light,29841
+ABC_mixed_act_baseline,0.6315121139505256,0.2228985781937439,358,turn_on_led: push the button to turn on the green light,9861
+ABC_mixed_act_baseline,0.6382521398150527,0.20497878588563032,504,turn_on_led: push the button to turn on the led,16240
+ABC_mixed_act_baseline,0.619477358379833,0.20846928426984526,1138,turn_on_led: push the button to turn on the led light,35621
+ABC_mixed_act_baseline,0.6447954203851234,0.2238945658770747,721,turn_on_led: toggle the button to turn on the green light,21082
+ABC_mixed_act_baseline,0.6680300055249198,0.21442071398020873,778,turn_on_led: toggle the button to turn on the led,24259
+ABC_mixed_act_baseline,0.60714346579135,0.21147107016593483,749,turn_on_led: toggle the button to turn on the led light,21365
+ABC_mixed_act_baseline,0.6318155218030168,0.21540484607511487,500,turn_on_led: turn on the green lamp,16050
+ABC_mixed_act_baseline,0.6633527398499047,0.20871233022766703,364,turn_on_led: turn on the green light,10097
+ABC_mixed_act_baseline,0.6670563141413732,0.23168319039444424,547,turn_on_led: turn on the led,17181
+ABC_mixed_act_baseline,0.6815226552853139,0.23667357786872553,984,turn_on_led: turn on the led lamp,30017
+ABC_mixed_act_baseline,0.6166533506179532,0.20350853810464778,1319,turn_on_led: turn on the led light,41199
+ABC_mixed_act_baseline,0.5820767517142461,0.17588807956813315,1409,turn_on_lightbulb: move the light switch to turn on the light bulb,44639
+ABC_mixed_act_baseline,0.5386979686178619,0.16410107019726727,1452,turn_on_lightbulb: move the light switch to turn on the yellow light,45868
+ABC_mixed_act_baseline,0.5409397703249746,0.15855994525184933,975,turn_on_lightbulb: move up the switch,32175
+ABC_mixed_act_baseline,0.5931121518804521,0.17400742603431543,1003,turn_on_lightbulb: push the switch upwards,32245
+ABC_mixed_act_baseline,0.5749811758908844,0.16855351452931272,694,turn_on_lightbulb: slide up the switch,22440
+ABC_mixed_act_baseline,0.5828773857531327,0.1715704549726836,1088,turn_on_lightbulb: toggle the light switch to turn on the light bulb,35496
+ABC_mixed_act_baseline,0.6113909472743045,0.18188514697419284,715,turn_on_lightbulb: toggle the light switch to turn on the yellow light,23595
+ABC_mixed_act_baseline,0.5574133420234086,0.16626000882598418,1279,turn_on_lightbulb: turn on the light bulb,41745
+ABC_mixed_act_baseline,0.5736481429227197,0.1662937256764058,1612,turn_on_lightbulb: turn on the yellow lamp,49191
+ABC_mixed_act_baseline,0.5936064599237559,0.18292960431470182,1170,turn_on_lightbulb: turn on the yellow light,38610
+ABC_mixed_act_baseline,0.6375204163810984,0.18581221188787225,1201,unstack_block: collapse the stacked blocks,33524
+ABC_mixed_act_baseline,0.5878541268684675,0.17908373886710627,1582,unstack_block: go to the tower of blocks and take off the top one,44893
+ABC_mixed_act_baseline,0.6167239535636618,0.1896323252139612,1479,unstack_block: remove a block from the stack,45903
+ABC_mixed_act_baseline,0.5880377794154346,0.17774961447909185,1061,unstack_block: remove the top block,28808
+ABC_mixed_act_baseline,0.6071336539497878,0.1831109062773196,1827,unstack_block: take off the block that is on top of the other one,51772
+ABC_mixed_act_baseline,0.5763490588127709,0.16988799545665573,924,unstack_block: take off the stacked block,24207
+ABC_mixed_act_baseline,0.5934558454833992,0.16735864055230568,1452,unstack_block: unstack the blocks,41987

@@ -1,0 +1,6 @@
+check,passed,detail
+state_dim_matches_policy,True,15
+action_dim_matches_policy,True,7
+image_key_mapping,True,"{""observation.images.image"": ""observation.images.top"", ""observation.images.wrist_image"": ""observation.images.wrist""}"
+image_resize_to_policy_shape,True,"{""observation.state"": [1, 15], ""action"": [1, 100, 7], ""action_is_pad"": [1, 100], ""episode_index"": [1], ""frame_index"": [1], ""index"": [1], ""task_index"": [1], ""environment"": ""list[1]"", ""task"": ""list[1]"", ""observation.images.image"": [1, 3, 256, 256], ""observation.images.wrist_image"": [1, 3, 256, 256]}"
+dataset_records,True,"episodes=6135, frames=369493"

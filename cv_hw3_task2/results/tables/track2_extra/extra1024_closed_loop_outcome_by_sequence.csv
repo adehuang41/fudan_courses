@@ -1,0 +1,251 @@
+policy,n_action_steps,sequence_index,successful_subtasks,eval_sequence
+B visual,,0,0,push_red_block_left|turn_on_led|lift_pink_block_table|place_in_slider|open_drawer
+B visual,,1,0,open_drawer|lift_red_block_slider|place_in_drawer|move_slider_left|push_pink_block_right
+B visual,,2,0,open_drawer|push_blue_block_left|move_slider_left|turn_on_lightbulb|lift_pink_block_slider
+B visual,,3,0,push_red_block_left|move_slider_right|lift_blue_block_slider|place_in_slider|turn_on_led
+B visual,,4,0,turn_on_led|push_pink_block_left|lift_pink_block_table|stack_block|move_slider_left
+B visual,,5,0,open_drawer|lift_blue_block_slider|place_in_slider|turn_on_lightbulb|push_red_block_left
+B visual,,6,0,lift_blue_block_slider|place_in_drawer|rotate_red_block_left|turn_on_lightbulb|lift_red_block_table
+B visual,,7,0,open_drawer|turn_on_led|rotate_blue_block_left|lift_red_block_slider|place_in_drawer
+B visual,,8,0,lift_red_block_slider|place_in_drawer|move_slider_left|turn_on_led|close_drawer
+B visual,,9,0,move_slider_left|open_drawer|turn_on_lightbulb|rotate_red_block_right|lift_pink_block_table
+B visual,,10,0,turn_on_led|open_drawer|push_pink_block_left|lift_blue_block_table|place_in_drawer
+B visual,,11,0,turn_on_lightbulb|move_slider_right|open_drawer|lift_red_block_slider|place_in_slider
+B visual,,12,0,lift_blue_block_slider|place_in_slider|turn_on_lightbulb|open_drawer|push_pink_block_left
+B visual,,13,0,push_blue_block_right|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+B visual,,14,0,close_drawer|move_slider_left|rotate_pink_block_left|turn_on_led|lift_red_block_slider
+B visual,,15,0,push_blue_block_left|lift_blue_block_table|place_in_slider|open_drawer|move_slider_left
+B visual,,16,0,push_pink_block_left|move_slider_left|lift_blue_block_slider|place_in_drawer|close_drawer
+B visual,,17,0,turn_on_lightbulb|move_slider_right|push_pink_block_left|lift_blue_block_table|place_in_drawer
+B visual,,18,0,rotate_blue_block_right|turn_off_lightbulb|open_drawer|move_slider_left|lift_blue_block_table
+B visual,,19,0,move_slider_right|turn_on_led|lift_blue_block_slider|place_in_slider|push_red_block_left
+B visual,,20,0,close_drawer|rotate_red_block_left|lift_red_block_table|place_in_slider|lift_pink_block_slider
+B visual,,21,0,rotate_blue_block_left|open_drawer|lift_pink_block_table|place_in_drawer|turn_on_led
+B visual,,22,1,push_pink_block_right|lift_pink_block_table|place_in_slider|move_slider_right|open_drawer
+B visual,,23,0,turn_on_led|rotate_pink_block_right|close_drawer|lift_pink_block_table|stack_block
+B visual,,24,0,move_slider_right|turn_on_lightbulb|push_pink_block_left|lift_blue_block_table|place_in_slider
+B visual,,25,0,rotate_pink_block_right|move_slider_left|turn_on_lightbulb|close_drawer|lift_red_block_slider
+B visual,,26,0,lift_red_block_slider|place_in_drawer|turn_on_led|move_slider_right|lift_red_block_drawer
+B visual,,27,0,lift_blue_block_slider|place_in_slider|turn_on_led|open_drawer|rotate_pink_block_right
+B visual,,28,0,move_slider_left|push_blue_block_right|turn_on_lightbulb|lift_blue_block_table|place_in_slider
+B visual,,29,0,rotate_blue_block_left|open_drawer|turn_on_lightbulb|lift_red_block_table|stack_block
+B visual,,30,0,open_drawer|turn_on_led|rotate_red_block_left|lift_blue_block_slider|place_in_drawer
+B visual,,31,0,turn_on_led|move_slider_left|rotate_red_block_right|lift_pink_block_slider|place_in_slider
+B visual,,32,0,rotate_red_block_left|move_slider_right|turn_on_lightbulb|lift_pink_block_table|place_in_slider
+B visual,,33,0,push_red_block_left|lift_blue_block_table|stack_block|unstack_block|turn_off_lightbulb
+B visual,,34,0,push_blue_block_right|open_drawer|turn_on_led|lift_blue_block_table|place_in_drawer
+B visual,,35,0,lift_red_block_table|place_in_slider|move_slider_left|turn_on_led|rotate_blue_block_right
+B visual,,36,0,close_drawer|rotate_red_block_left|lift_blue_block_table|place_in_slider|turn_on_lightbulb
+B visual,,37,0,push_red_block_left|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+B visual,,38,0,rotate_blue_block_right|lift_blue_block_table|place_in_slider|turn_on_lightbulb|open_drawer
+B visual,,39,0,turn_on_lightbulb|close_drawer|rotate_pink_block_right|lift_red_block_slider|place_in_slider
+B visual,,40,0,lift_blue_block_table|place_in_drawer|push_red_block_right|move_slider_right|turn_on_lightbulb
+B visual,,41,0,rotate_pink_block_right|turn_on_lightbulb|close_drawer|lift_red_block_slider|place_in_slider
+B visual,,42,0,rotate_blue_block_right|lift_pink_block_slider|place_in_slider|push_into_drawer|close_drawer
+B visual,,43,0,lift_blue_block_table|place_in_slider|turn_on_lightbulb|push_pink_block_right|open_drawer
+B visual,,44,0,turn_on_led|push_into_drawer|close_drawer|lift_blue_block_slider|place_in_slider
+B visual,,45,0,push_blue_block_left|push_into_drawer|lift_blue_block_drawer|place_in_slider|move_slider_right
+B visual,,46,0,push_red_block_left|open_drawer|lift_pink_block_slider|place_in_drawer|lift_red_block_table
+B visual,,47,0,open_drawer|turn_on_lightbulb|move_slider_left|rotate_red_block_left|lift_red_block_table
+B visual,,48,0,push_into_drawer|lift_blue_block_slider|place_in_slider|move_slider_right|turn_on_lightbulb
+B visual,,49,0,push_pink_block_left|turn_on_led|move_slider_right|push_into_drawer|lift_blue_block_slider
+ABC visual,,0,0,push_red_block_left|turn_on_led|lift_pink_block_table|place_in_slider|open_drawer
+ABC visual,,1,0,open_drawer|lift_red_block_slider|place_in_drawer|move_slider_left|push_pink_block_right
+ABC visual,,2,0,open_drawer|push_blue_block_left|move_slider_left|turn_on_lightbulb|lift_pink_block_slider
+ABC visual,,3,0,push_red_block_left|move_slider_right|lift_blue_block_slider|place_in_slider|turn_on_led
+ABC visual,,4,0,turn_on_led|push_pink_block_left|lift_pink_block_table|stack_block|move_slider_left
+ABC visual,,5,0,open_drawer|lift_blue_block_slider|place_in_slider|turn_on_lightbulb|push_red_block_left
+ABC visual,,6,0,lift_blue_block_slider|place_in_drawer|rotate_red_block_left|turn_on_lightbulb|lift_red_block_table
+ABC visual,,7,0,open_drawer|turn_on_led|rotate_blue_block_left|lift_red_block_slider|place_in_drawer
+ABC visual,,8,0,lift_red_block_slider|place_in_drawer|move_slider_left|turn_on_led|close_drawer
+ABC visual,,9,1,move_slider_left|open_drawer|turn_on_lightbulb|rotate_red_block_right|lift_pink_block_table
+ABC visual,,10,0,turn_on_led|open_drawer|push_pink_block_left|lift_blue_block_table|place_in_drawer
+ABC visual,,11,0,turn_on_lightbulb|move_slider_right|open_drawer|lift_red_block_slider|place_in_slider
+ABC visual,,12,0,lift_blue_block_slider|place_in_slider|turn_on_lightbulb|open_drawer|push_pink_block_left
+ABC visual,,13,0,push_blue_block_right|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+ABC visual,,14,0,close_drawer|move_slider_left|rotate_pink_block_left|turn_on_led|lift_red_block_slider
+ABC visual,,15,0,push_blue_block_left|lift_blue_block_table|place_in_slider|open_drawer|move_slider_left
+ABC visual,,16,0,push_pink_block_left|move_slider_left|lift_blue_block_slider|place_in_drawer|close_drawer
+ABC visual,,17,0,turn_on_lightbulb|move_slider_right|push_pink_block_left|lift_blue_block_table|place_in_drawer
+ABC visual,,18,0,rotate_blue_block_right|turn_off_lightbulb|open_drawer|move_slider_left|lift_blue_block_table
+ABC visual,,19,0,move_slider_right|turn_on_led|lift_blue_block_slider|place_in_slider|push_red_block_left
+ABC visual,,20,0,close_drawer|rotate_red_block_left|lift_red_block_table|place_in_slider|lift_pink_block_slider
+ABC visual,,21,0,rotate_blue_block_left|open_drawer|lift_pink_block_table|place_in_drawer|turn_on_led
+ABC visual,,22,0,push_pink_block_right|lift_pink_block_table|place_in_slider|move_slider_right|open_drawer
+ABC visual,,23,0,turn_on_led|rotate_pink_block_right|close_drawer|lift_pink_block_table|stack_block
+ABC visual,,24,0,move_slider_right|turn_on_lightbulb|push_pink_block_left|lift_blue_block_table|place_in_slider
+ABC visual,,25,0,rotate_pink_block_right|move_slider_left|turn_on_lightbulb|close_drawer|lift_red_block_slider
+ABC visual,,26,0,lift_red_block_slider|place_in_drawer|turn_on_led|move_slider_right|lift_red_block_drawer
+ABC visual,,27,0,lift_blue_block_slider|place_in_slider|turn_on_led|open_drawer|rotate_pink_block_right
+ABC visual,,28,0,move_slider_left|push_blue_block_right|turn_on_lightbulb|lift_blue_block_table|place_in_slider
+ABC visual,,29,0,rotate_blue_block_left|open_drawer|turn_on_lightbulb|lift_red_block_table|stack_block
+ABC visual,,30,0,open_drawer|turn_on_led|rotate_red_block_left|lift_blue_block_slider|place_in_drawer
+ABC visual,,31,0,turn_on_led|move_slider_left|rotate_red_block_right|lift_pink_block_slider|place_in_slider
+ABC visual,,32,0,rotate_red_block_left|move_slider_right|turn_on_lightbulb|lift_pink_block_table|place_in_slider
+ABC visual,,33,0,push_red_block_left|lift_blue_block_table|stack_block|unstack_block|turn_off_lightbulb
+ABC visual,,34,0,push_blue_block_right|open_drawer|turn_on_led|lift_blue_block_table|place_in_drawer
+ABC visual,,35,0,lift_red_block_table|place_in_slider|move_slider_left|turn_on_led|rotate_blue_block_right
+ABC visual,,36,0,close_drawer|rotate_red_block_left|lift_blue_block_table|place_in_slider|turn_on_lightbulb
+ABC visual,,37,0,push_red_block_left|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+ABC visual,,38,0,rotate_blue_block_right|lift_blue_block_table|place_in_slider|turn_on_lightbulb|open_drawer
+ABC visual,,39,0,turn_on_lightbulb|close_drawer|rotate_pink_block_right|lift_red_block_slider|place_in_slider
+ABC visual,,40,0,lift_blue_block_table|place_in_drawer|push_red_block_right|move_slider_right|turn_on_lightbulb
+ABC visual,,41,0,rotate_pink_block_right|turn_on_lightbulb|close_drawer|lift_red_block_slider|place_in_slider
+ABC visual,,42,0,rotate_blue_block_right|lift_pink_block_slider|place_in_slider|push_into_drawer|close_drawer
+ABC visual,,43,0,lift_blue_block_table|place_in_slider|turn_on_lightbulb|push_pink_block_right|open_drawer
+ABC visual,,44,0,turn_on_led|push_into_drawer|close_drawer|lift_blue_block_slider|place_in_slider
+ABC visual,,45,0,push_blue_block_left|push_into_drawer|lift_blue_block_drawer|place_in_slider|move_slider_right
+ABC visual,,46,0,push_red_block_left|open_drawer|lift_pink_block_slider|place_in_drawer|lift_red_block_table
+ABC visual,,47,0,open_drawer|turn_on_lightbulb|move_slider_left|rotate_red_block_left|lift_red_block_table
+ABC visual,,48,0,push_into_drawer|lift_blue_block_slider|place_in_slider|move_slider_right|turn_on_lightbulb
+ABC visual,,49,0,push_pink_block_left|turn_on_led|move_slider_right|push_into_drawer|lift_blue_block_slider
+B task-id n=100,100.0,0,0,push_red_block_left|turn_on_led|lift_pink_block_table|place_in_slider|open_drawer
+B task-id n=100,100.0,1,1,open_drawer|lift_red_block_slider|place_in_drawer|move_slider_left|push_pink_block_right
+B task-id n=100,100.0,2,1,open_drawer|push_blue_block_left|move_slider_left|turn_on_lightbulb|lift_pink_block_slider
+B task-id n=100,100.0,3,0,push_red_block_left|move_slider_right|lift_blue_block_slider|place_in_slider|turn_on_led
+B task-id n=100,100.0,4,0,turn_on_led|push_pink_block_left|lift_pink_block_table|stack_block|move_slider_left
+B task-id n=100,100.0,5,1,open_drawer|lift_blue_block_slider|place_in_slider|turn_on_lightbulb|push_red_block_left
+B task-id n=100,100.0,6,0,lift_blue_block_slider|place_in_drawer|rotate_red_block_left|turn_on_lightbulb|lift_red_block_table
+B task-id n=100,100.0,7,1,open_drawer|turn_on_led|rotate_blue_block_left|lift_red_block_slider|place_in_drawer
+B task-id n=100,100.0,8,0,lift_red_block_slider|place_in_drawer|move_slider_left|turn_on_led|close_drawer
+B task-id n=100,100.0,9,1,move_slider_left|open_drawer|turn_on_lightbulb|rotate_red_block_right|lift_pink_block_table
+B task-id n=100,100.0,10,0,turn_on_led|open_drawer|push_pink_block_left|lift_blue_block_table|place_in_drawer
+B task-id n=100,100.0,11,0,turn_on_lightbulb|move_slider_right|open_drawer|lift_red_block_slider|place_in_slider
+B task-id n=100,100.0,12,0,lift_blue_block_slider|place_in_slider|turn_on_lightbulb|open_drawer|push_pink_block_left
+B task-id n=100,100.0,13,0,push_blue_block_right|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+B task-id n=100,100.0,14,2,close_drawer|move_slider_left|rotate_pink_block_left|turn_on_led|lift_red_block_slider
+B task-id n=100,100.0,15,0,push_blue_block_left|lift_blue_block_table|place_in_slider|open_drawer|move_slider_left
+B task-id n=100,100.0,16,0,push_pink_block_left|move_slider_left|lift_blue_block_slider|place_in_drawer|close_drawer
+B task-id n=100,100.0,17,0,turn_on_lightbulb|move_slider_right|push_pink_block_left|lift_blue_block_table|place_in_drawer
+B task-id n=100,100.0,18,0,rotate_blue_block_right|turn_off_lightbulb|open_drawer|move_slider_left|lift_blue_block_table
+B task-id n=100,100.0,19,0,move_slider_right|turn_on_led|lift_blue_block_slider|place_in_slider|push_red_block_left
+B task-id n=100,100.0,20,0,close_drawer|rotate_red_block_left|lift_red_block_table|place_in_slider|lift_pink_block_slider
+B task-id n=100,100.0,21,0,rotate_blue_block_left|open_drawer|lift_pink_block_table|place_in_drawer|turn_on_led
+B task-id n=100,100.0,22,1,push_pink_block_right|lift_pink_block_table|place_in_slider|move_slider_right|open_drawer
+B task-id n=100,100.0,23,0,turn_on_led|rotate_pink_block_right|close_drawer|lift_pink_block_table|stack_block
+B task-id n=100,100.0,24,0,move_slider_right|turn_on_lightbulb|push_pink_block_left|lift_blue_block_table|place_in_slider
+B task-id n=100,100.0,25,0,rotate_pink_block_right|move_slider_left|turn_on_lightbulb|close_drawer|lift_red_block_slider
+B task-id n=100,100.0,26,0,lift_red_block_slider|place_in_drawer|turn_on_led|move_slider_right|lift_red_block_drawer
+B task-id n=100,100.0,27,0,lift_blue_block_slider|place_in_slider|turn_on_led|open_drawer|rotate_pink_block_right
+B task-id n=100,100.0,28,1,move_slider_left|push_blue_block_right|turn_on_lightbulb|lift_blue_block_table|place_in_slider
+B task-id n=100,100.0,29,0,rotate_blue_block_left|open_drawer|turn_on_lightbulb|lift_red_block_table|stack_block
+B task-id n=100,100.0,30,0,open_drawer|turn_on_led|rotate_red_block_left|lift_blue_block_slider|place_in_drawer
+B task-id n=100,100.0,31,0,turn_on_led|move_slider_left|rotate_red_block_right|lift_pink_block_slider|place_in_slider
+B task-id n=100,100.0,32,0,rotate_red_block_left|move_slider_right|turn_on_lightbulb|lift_pink_block_table|place_in_slider
+B task-id n=100,100.0,33,0,push_red_block_left|lift_blue_block_table|stack_block|unstack_block|turn_off_lightbulb
+B task-id n=100,100.0,34,0,push_blue_block_right|open_drawer|turn_on_led|lift_blue_block_table|place_in_drawer
+B task-id n=100,100.0,35,0,lift_red_block_table|place_in_slider|move_slider_left|turn_on_led|rotate_blue_block_right
+B task-id n=100,100.0,36,0,close_drawer|rotate_red_block_left|lift_blue_block_table|place_in_slider|turn_on_lightbulb
+B task-id n=100,100.0,37,0,push_red_block_left|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+B task-id n=100,100.0,38,0,rotate_blue_block_right|lift_blue_block_table|place_in_slider|turn_on_lightbulb|open_drawer
+B task-id n=100,100.0,39,0,turn_on_lightbulb|close_drawer|rotate_pink_block_right|lift_red_block_slider|place_in_slider
+B task-id n=100,100.0,40,2,lift_blue_block_table|place_in_drawer|push_red_block_right|move_slider_right|turn_on_lightbulb
+B task-id n=100,100.0,41,0,rotate_pink_block_right|turn_on_lightbulb|close_drawer|lift_red_block_slider|place_in_slider
+B task-id n=100,100.0,42,0,rotate_blue_block_right|lift_pink_block_slider|place_in_slider|push_into_drawer|close_drawer
+B task-id n=100,100.0,43,0,lift_blue_block_table|place_in_slider|turn_on_lightbulb|push_pink_block_right|open_drawer
+B task-id n=100,100.0,44,0,turn_on_led|push_into_drawer|close_drawer|lift_blue_block_slider|place_in_slider
+B task-id n=100,100.0,45,0,push_blue_block_left|push_into_drawer|lift_blue_block_drawer|place_in_slider|move_slider_right
+B task-id n=100,100.0,46,0,push_red_block_left|open_drawer|lift_pink_block_slider|place_in_drawer|lift_red_block_table
+B task-id n=100,100.0,47,3,open_drawer|turn_on_lightbulb|move_slider_left|rotate_red_block_left|lift_red_block_table
+B task-id n=100,100.0,48,0,push_into_drawer|lift_blue_block_slider|place_in_slider|move_slider_right|turn_on_lightbulb
+B task-id n=100,100.0,49,0,push_pink_block_left|turn_on_led|move_slider_right|push_into_drawer|lift_blue_block_slider
+ABC task-id n=100,100.0,0,0,push_red_block_left|turn_on_led|lift_pink_block_table|place_in_slider|open_drawer
+ABC task-id n=100,100.0,1,1,open_drawer|lift_red_block_slider|place_in_drawer|move_slider_left|push_pink_block_right
+ABC task-id n=100,100.0,2,3,open_drawer|push_blue_block_left|move_slider_left|turn_on_lightbulb|lift_pink_block_slider
+ABC task-id n=100,100.0,3,0,push_red_block_left|move_slider_right|lift_blue_block_slider|place_in_slider|turn_on_led
+ABC task-id n=100,100.0,4,0,turn_on_led|push_pink_block_left|lift_pink_block_table|stack_block|move_slider_left
+ABC task-id n=100,100.0,5,1,open_drawer|lift_blue_block_slider|place_in_slider|turn_on_lightbulb|push_red_block_left
+ABC task-id n=100,100.0,6,0,lift_blue_block_slider|place_in_drawer|rotate_red_block_left|turn_on_lightbulb|lift_red_block_table
+ABC task-id n=100,100.0,7,2,open_drawer|turn_on_led|rotate_blue_block_left|lift_red_block_slider|place_in_drawer
+ABC task-id n=100,100.0,8,0,lift_red_block_slider|place_in_drawer|move_slider_left|turn_on_led|close_drawer
+ABC task-id n=100,100.0,9,3,move_slider_left|open_drawer|turn_on_lightbulb|rotate_red_block_right|lift_pink_block_table
+ABC task-id n=100,100.0,10,2,turn_on_led|open_drawer|push_pink_block_left|lift_blue_block_table|place_in_drawer
+ABC task-id n=100,100.0,11,3,turn_on_lightbulb|move_slider_right|open_drawer|lift_red_block_slider|place_in_slider
+ABC task-id n=100,100.0,12,0,lift_blue_block_slider|place_in_slider|turn_on_lightbulb|open_drawer|push_pink_block_left
+ABC task-id n=100,100.0,13,0,push_blue_block_right|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+ABC task-id n=100,100.0,14,2,close_drawer|move_slider_left|rotate_pink_block_left|turn_on_led|lift_red_block_slider
+ABC task-id n=100,100.0,15,1,push_blue_block_left|lift_blue_block_table|place_in_slider|open_drawer|move_slider_left
+ABC task-id n=100,100.0,16,0,push_pink_block_left|move_slider_left|lift_blue_block_slider|place_in_drawer|close_drawer
+ABC task-id n=100,100.0,17,0,turn_on_lightbulb|move_slider_right|push_pink_block_left|lift_blue_block_table|place_in_drawer
+ABC task-id n=100,100.0,18,0,rotate_blue_block_right|turn_off_lightbulb|open_drawer|move_slider_left|lift_blue_block_table
+ABC task-id n=100,100.0,19,1,move_slider_right|turn_on_led|lift_blue_block_slider|place_in_slider|push_red_block_left
+ABC task-id n=100,100.0,20,1,close_drawer|rotate_red_block_left|lift_red_block_table|place_in_slider|lift_pink_block_slider
+ABC task-id n=100,100.0,21,0,rotate_blue_block_left|open_drawer|lift_pink_block_table|place_in_drawer|turn_on_led
+ABC task-id n=100,100.0,22,1,push_pink_block_right|lift_pink_block_table|place_in_slider|move_slider_right|open_drawer
+ABC task-id n=100,100.0,23,0,turn_on_led|rotate_pink_block_right|close_drawer|lift_pink_block_table|stack_block
+ABC task-id n=100,100.0,24,1,move_slider_right|turn_on_lightbulb|push_pink_block_left|lift_blue_block_table|place_in_slider
+ABC task-id n=100,100.0,25,0,rotate_pink_block_right|move_slider_left|turn_on_lightbulb|close_drawer|lift_red_block_slider
+ABC task-id n=100,100.0,26,2,lift_red_block_slider|place_in_drawer|turn_on_led|move_slider_right|lift_red_block_drawer
+ABC task-id n=100,100.0,27,0,lift_blue_block_slider|place_in_slider|turn_on_led|open_drawer|rotate_pink_block_right
+ABC task-id n=100,100.0,28,1,move_slider_left|push_blue_block_right|turn_on_lightbulb|lift_blue_block_table|place_in_slider
+ABC task-id n=100,100.0,29,0,rotate_blue_block_left|open_drawer|turn_on_lightbulb|lift_red_block_table|stack_block
+ABC task-id n=100,100.0,30,1,open_drawer|turn_on_led|rotate_red_block_left|lift_blue_block_slider|place_in_drawer
+ABC task-id n=100,100.0,31,0,turn_on_led|move_slider_left|rotate_red_block_right|lift_pink_block_slider|place_in_slider
+ABC task-id n=100,100.0,32,0,rotate_red_block_left|move_slider_right|turn_on_lightbulb|lift_pink_block_table|place_in_slider
+ABC task-id n=100,100.0,33,0,push_red_block_left|lift_blue_block_table|stack_block|unstack_block|turn_off_lightbulb
+ABC task-id n=100,100.0,34,0,push_blue_block_right|open_drawer|turn_on_led|lift_blue_block_table|place_in_drawer
+ABC task-id n=100,100.0,35,0,lift_red_block_table|place_in_slider|move_slider_left|turn_on_led|rotate_blue_block_right
+ABC task-id n=100,100.0,36,1,close_drawer|rotate_red_block_left|lift_blue_block_table|place_in_slider|turn_on_lightbulb
+ABC task-id n=100,100.0,37,0,push_red_block_left|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+ABC task-id n=100,100.0,38,0,rotate_blue_block_right|lift_blue_block_table|place_in_slider|turn_on_lightbulb|open_drawer
+ABC task-id n=100,100.0,39,0,turn_on_lightbulb|close_drawer|rotate_pink_block_right|lift_red_block_slider|place_in_slider
+ABC task-id n=100,100.0,40,0,lift_blue_block_table|place_in_drawer|push_red_block_right|move_slider_right|turn_on_lightbulb
+ABC task-id n=100,100.0,41,0,rotate_pink_block_right|turn_on_lightbulb|close_drawer|lift_red_block_slider|place_in_slider
+ABC task-id n=100,100.0,42,0,rotate_blue_block_right|lift_pink_block_slider|place_in_slider|push_into_drawer|close_drawer
+ABC task-id n=100,100.0,43,0,lift_blue_block_table|place_in_slider|turn_on_lightbulb|push_pink_block_right|open_drawer
+ABC task-id n=100,100.0,44,0,turn_on_led|push_into_drawer|close_drawer|lift_blue_block_slider|place_in_slider
+ABC task-id n=100,100.0,45,1,push_blue_block_left|push_into_drawer|lift_blue_block_drawer|place_in_slider|move_slider_right
+ABC task-id n=100,100.0,46,2,push_red_block_left|open_drawer|lift_pink_block_slider|place_in_drawer|lift_red_block_table
+ABC task-id n=100,100.0,47,3,open_drawer|turn_on_lightbulb|move_slider_left|rotate_red_block_left|lift_red_block_table
+ABC task-id n=100,100.0,48,1,push_into_drawer|lift_blue_block_slider|place_in_slider|move_slider_right|turn_on_lightbulb
+ABC task-id n=100,100.0,49,0,push_pink_block_left|turn_on_led|move_slider_right|push_into_drawer|lift_blue_block_slider
+ABC task-id n=20,20.0,0,1,push_red_block_left|turn_on_led|lift_pink_block_table|place_in_slider|open_drawer
+ABC task-id n=20,20.0,1,1,open_drawer|lift_red_block_slider|place_in_drawer|move_slider_left|push_pink_block_right
+ABC task-id n=20,20.0,2,1,open_drawer|push_blue_block_left|move_slider_left|turn_on_lightbulb|lift_pink_block_slider
+ABC task-id n=20,20.0,3,2,push_red_block_left|move_slider_right|lift_blue_block_slider|place_in_slider|turn_on_led
+ABC task-id n=20,20.0,4,1,turn_on_led|push_pink_block_left|lift_pink_block_table|stack_block|move_slider_left
+ABC task-id n=20,20.0,5,3,open_drawer|lift_blue_block_slider|place_in_slider|turn_on_lightbulb|push_red_block_left
+ABC task-id n=20,20.0,6,2,lift_blue_block_slider|place_in_drawer|rotate_red_block_left|turn_on_lightbulb|lift_red_block_table
+ABC task-id n=20,20.0,7,5,open_drawer|turn_on_led|rotate_blue_block_left|lift_red_block_slider|place_in_drawer
+ABC task-id n=20,20.0,8,5,lift_red_block_slider|place_in_drawer|move_slider_left|turn_on_led|close_drawer
+ABC task-id n=20,20.0,9,3,move_slider_left|open_drawer|turn_on_lightbulb|rotate_red_block_right|lift_pink_block_table
+ABC task-id n=20,20.0,10,0,turn_on_led|open_drawer|push_pink_block_left|lift_blue_block_table|place_in_drawer
+ABC task-id n=20,20.0,11,3,turn_on_lightbulb|move_slider_right|open_drawer|lift_red_block_slider|place_in_slider
+ABC task-id n=20,20.0,12,0,lift_blue_block_slider|place_in_slider|turn_on_lightbulb|open_drawer|push_pink_block_left
+ABC task-id n=20,20.0,13,0,push_blue_block_right|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+ABC task-id n=20,20.0,14,1,close_drawer|move_slider_left|rotate_pink_block_left|turn_on_led|lift_red_block_slider
+ABC task-id n=20,20.0,15,2,push_blue_block_left|lift_blue_block_table|place_in_slider|open_drawer|move_slider_left
+ABC task-id n=20,20.0,16,0,push_pink_block_left|move_slider_left|lift_blue_block_slider|place_in_drawer|close_drawer
+ABC task-id n=20,20.0,17,2,turn_on_lightbulb|move_slider_right|push_pink_block_left|lift_blue_block_table|place_in_drawer
+ABC task-id n=20,20.0,18,0,rotate_blue_block_right|turn_off_lightbulb|open_drawer|move_slider_left|lift_blue_block_table
+ABC task-id n=20,20.0,19,0,move_slider_right|turn_on_led|lift_blue_block_slider|place_in_slider|push_red_block_left
+ABC task-id n=20,20.0,20,1,close_drawer|rotate_red_block_left|lift_red_block_table|place_in_slider|lift_pink_block_slider
+ABC task-id n=20,20.0,21,0,rotate_blue_block_left|open_drawer|lift_pink_block_table|place_in_drawer|turn_on_led
+ABC task-id n=20,20.0,22,5,push_pink_block_right|lift_pink_block_table|place_in_slider|move_slider_right|open_drawer
+ABC task-id n=20,20.0,23,1,turn_on_led|rotate_pink_block_right|close_drawer|lift_pink_block_table|stack_block
+ABC task-id n=20,20.0,24,3,move_slider_right|turn_on_lightbulb|push_pink_block_left|lift_blue_block_table|place_in_slider
+ABC task-id n=20,20.0,25,2,rotate_pink_block_right|move_slider_left|turn_on_lightbulb|close_drawer|lift_red_block_slider
+ABC task-id n=20,20.0,26,0,lift_red_block_slider|place_in_drawer|turn_on_led|move_slider_right|lift_red_block_drawer
+ABC task-id n=20,20.0,27,0,lift_blue_block_slider|place_in_slider|turn_on_led|open_drawer|rotate_pink_block_right
+ABC task-id n=20,20.0,28,1,move_slider_left|push_blue_block_right|turn_on_lightbulb|lift_blue_block_table|place_in_slider
+ABC task-id n=20,20.0,29,0,rotate_blue_block_left|open_drawer|turn_on_lightbulb|lift_red_block_table|stack_block
+ABC task-id n=20,20.0,30,1,open_drawer|turn_on_led|rotate_red_block_left|lift_blue_block_slider|place_in_drawer
+ABC task-id n=20,20.0,31,1,turn_on_led|move_slider_left|rotate_red_block_right|lift_pink_block_slider|place_in_slider
+ABC task-id n=20,20.0,32,0,rotate_red_block_left|move_slider_right|turn_on_lightbulb|lift_pink_block_table|place_in_slider
+ABC task-id n=20,20.0,33,2,push_red_block_left|lift_blue_block_table|stack_block|unstack_block|turn_off_lightbulb
+ABC task-id n=20,20.0,34,0,push_blue_block_right|open_drawer|turn_on_led|lift_blue_block_table|place_in_drawer
+ABC task-id n=20,20.0,35,0,lift_red_block_table|place_in_slider|move_slider_left|turn_on_led|rotate_blue_block_right
+ABC task-id n=20,20.0,36,1,close_drawer|rotate_red_block_left|lift_blue_block_table|place_in_slider|turn_on_lightbulb
+ABC task-id n=20,20.0,37,1,push_red_block_left|turn_on_lightbulb|open_drawer|lift_blue_block_table|place_in_drawer
+ABC task-id n=20,20.0,38,0,rotate_blue_block_right|lift_blue_block_table|place_in_slider|turn_on_lightbulb|open_drawer
+ABC task-id n=20,20.0,39,2,turn_on_lightbulb|close_drawer|rotate_pink_block_right|lift_red_block_slider|place_in_slider
+ABC task-id n=20,20.0,40,2,lift_blue_block_table|place_in_drawer|push_red_block_right|move_slider_right|turn_on_lightbulb
+ABC task-id n=20,20.0,41,0,rotate_pink_block_right|turn_on_lightbulb|close_drawer|lift_red_block_slider|place_in_slider
+ABC task-id n=20,20.0,42,1,rotate_blue_block_right|lift_pink_block_slider|place_in_slider|push_into_drawer|close_drawer
+ABC task-id n=20,20.0,43,0,lift_blue_block_table|place_in_slider|turn_on_lightbulb|push_pink_block_right|open_drawer
+ABC task-id n=20,20.0,44,5,turn_on_led|push_into_drawer|close_drawer|lift_blue_block_slider|place_in_slider
+ABC task-id n=20,20.0,45,0,push_blue_block_left|push_into_drawer|lift_blue_block_drawer|place_in_slider|move_slider_right
+ABC task-id n=20,20.0,46,2,push_red_block_left|open_drawer|lift_pink_block_slider|place_in_drawer|lift_red_block_table
+ABC task-id n=20,20.0,47,2,open_drawer|turn_on_lightbulb|move_slider_left|rotate_red_block_left|lift_red_block_table
+ABC task-id n=20,20.0,48,3,push_into_drawer|lift_blue_block_slider|place_in_slider|move_slider_right|turn_on_lightbulb
+ABC task-id n=20,20.0,49,0,push_pink_block_left|turn_on_led|move_slider_right|push_into_drawer|lift_blue_block_slider

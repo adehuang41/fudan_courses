@@ -1,0 +1,31 @@
+policy,depth,surviving_sequences,survival_rate
+B visual,0,50,1.0
+B visual,1,1,0.02
+B visual,2,0,0.0
+B visual,3,0,0.0
+B visual,4,0,0.0
+B visual,5,0,0.0
+ABC visual,0,50,1.0
+ABC visual,1,1,0.02
+ABC visual,2,0,0.0
+ABC visual,3,0,0.0
+ABC visual,4,0,0.0
+ABC visual,5,0,0.0
+B task-id n=100,0,50,1.0
+B task-id n=100,1,10,0.2
+B task-id n=100,2,3,0.06
+B task-id n=100,3,1,0.02
+B task-id n=100,4,0,0.0
+B task-id n=100,5,0,0.0
+ABC task-id n=100,0,50,1.0
+ABC task-id n=100,1,21,0.42
+ABC task-id n=100,2,9,0.18
+ABC task-id n=100,3,4,0.08
+ABC task-id n=100,4,0,0.0
+ABC task-id n=100,5,0,0.0
+ABC task-id n=20,0,50,1.0
+ABC task-id n=20,1,32,0.64
+ABC task-id n=20,2,19,0.38
+ABC task-id n=20,3,9,0.18
+ABC task-id n=20,4,4,0.08
+ABC task-id n=20,5,4,0.08

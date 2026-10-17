@@ -1,0 +1,18 @@
+check,passed,detail
+run_status_ok,True,status=ok steps=100
+cuda4_used,True,CUDA_VISIBLE_DEVICES=4 physical_gpu=4
+task_conditioning_enabled,True,"{""enabled"": true, ""num_tasks"": 34, ""embedding_dim"": 32, ""task_id_key"": ""canonical_task_id"", ""vocab_path"": ""/home/dechao/cv_final_pj2/results/tables/step4/task_text_canonical_vocab.json"", ""init_from_visual_checkpoint"": ""/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt""}"
+batch_has_task_id_shape,True,"{""observation.state"": [8, 15], ""action"": [8, 100, 7], ""action_is_pad"": [8, 100], ""episode_index"": [8], ""frame_index"": [8], ""index"": [8], ""task_index"": [8], ""original_frame_idx"": [8], ""environment"": ""list[8]"", ""shard"": ""list[8]"", ""task"": ""list[8]"", ""canonical_task"": ""list[8]"", ""canonical_task_id"": [8], ""observation.images.image"": [8, 3, 256, 256], ""observation.images.wrist_image"": [8, 3, 256, 256]}"
+external_state_shape_unchanged,True,"[8, 15]"
+internal_state_shape_augmented,True,[47]
+image_shapes_unchanged,True,"image=[8, 3, 256, 256] wrist=[8, 3, 256, 256]"
+action_chunk_shape_unchanged,True,"batch_action=[8, 100, 7] chunk=100 n_action_steps=100"
+losses_finite,True,"{""losses"": [0.1287759244441986, 0.12859857082366943, 0.163503497838974, 0.1633366271853447, 0.1633366271853447]}"
+checkpoint_readable_summary,True,True
+checkpoint_strict_loads,True,missing=[] unexpected=[]
+task_embedding_shape,True,"[34, 32]"
+action_head_shape_unchanged,True,"weight=[7, 512] bias=[7]"
+state_projection_expanded_only,True,"encoder=[512, 47] vae=[512, 47]"
+visual_checkpoint_partial_load_clean,True,"{""checkpoint_path"": ""/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt"", ""checkpoint_exists"": true, ""checkpoint_step"": 50000, ""attempted"": true, ""used_for_initialization"": true, ""clean"": true, ""exact_loaded"": 232, ""expanded_loaded"": 2, ""skipped"": 0, ""missing_after_load"": 1, ""unexpected_after_load"": 0, ""expanded_keys"": [""act.model.vae_encoder_robot_state_input_proj.weight"", ""act.model.encoder_robot_state_input_proj.weight""], ""skipped_examples"": [], ""missing_examples"": [""task_embedding.weight""], ""unexpected_examples"": [], ""note"": ""clean partial load""}"
+validation_was_capped_for_smoke,True,val_action_l1=0.1633366271853447
+diagnosis_overall,True,no process/result issues found

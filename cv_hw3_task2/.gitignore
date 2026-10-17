@@ -1,0 +1,88 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Virtual environments and local secrets
+.venv/
+venv/
+env/
+envs/
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Local planning, handoff, and grading prompt materials
+AGENTS.md
+CONTEXT.md
+notes/
+plan/
+docs/handoff/
+docs/agents/
+docs/adr/
+.scratch/
+要求文件/
+repo_structure.md
+hw3_report.pdf
+黄德超_23300660009_Project2.pdf.pdf
+reports/.gitkeep
+reports/task2_final_report.*
+reports/task2_results_brief.md
+
+# Experiment tracking logs
+wandb/
+swanlog/
+runs/
+logs/
+
+# External datasets and large artifacts
+/data
+/data/
+datasets/
+calvin/
+calvin_data/
+checkpoints/
+rollouts/
+hf_cache/
+external/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.pkl
+
+# Training outputs: keep directory skeleton, ignore generated contents
+outputs/**
+!outputs/**/
+!outputs/**/.gitkeep
+
+# Large media generated during evaluation
+results/failure_cases/
+results/failure_cases/**/*.mp4
+results/failure_cases/**/*.avi
+results/failure_cases/**/*.mov
+
+# Internal report drafting helper
+scripts/results/build_gpt_pro_step3_pdf.py
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# LaTeX build intermediates
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.xdv
+*.synctex.gz

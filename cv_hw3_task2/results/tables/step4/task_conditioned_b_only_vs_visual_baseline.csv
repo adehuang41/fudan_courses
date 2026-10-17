@@ -1,0 +1,2 @@
+metric,task_conditioned_B_only,visual_only_B_baseline,delta_task_minus_visual,relative_delta_percent,comparison_note
+best_val_action_l1_loss,0.11310708649828621,0.14857006908390313,-0.03546298258561692,-23.86953361756171,sanity reference only; validation split seed differs from the old baseline

@@ -1,0 +1,41 @@
+{
+  "dataset_path": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+  "scene_info_needed_for_closed_loop_rollout": false,
+  "scene_info_fix_applied": false,
+  "rollout_readiness_gate": "passed_with_warning",
+  "is_official_benchmark": false,
+  "results": [
+    {
+      "checkpoint_label": "B_only",
+      "dataset_path": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+      "num_sequences": 5,
+      "ep_len": 120,
+      "is_official_benchmark": false,
+      "avg_successful_subtasks": 0.0,
+      "sr_at_1": 0.0,
+      "sr_at_2": 0.0,
+      "sr_at_3": 0.0,
+      "sr_at_4": 0.0,
+      "sr_at_5": 0.0,
+      "elapsed_sec": 10.455,
+      "source_note": "task_D_D validation small-scale closed-loop evaluation; not official 1000-sequence benchmark; validation_scene_info_missing_warning_not_rollout_dependency",
+      "result_json": "results/tables/step4/task_d_d_small_scale_closed_loop_b_only.json"
+    },
+    {
+      "checkpoint_label": "ABC_mixed",
+      "dataset_path": "/data/dechao/cv_final_pj2/datasets/task_D_D",
+      "num_sequences": 5,
+      "ep_len": 120,
+      "is_official_benchmark": false,
+      "avg_successful_subtasks": 0.0,
+      "sr_at_1": 0.0,
+      "sr_at_2": 0.0,
+      "sr_at_3": 0.0,
+      "sr_at_4": 0.0,
+      "sr_at_5": 0.0,
+      "elapsed_sec": 11.218,
+      "source_note": "task_D_D validation small-scale closed-loop evaluation; not official 1000-sequence benchmark; validation_scene_info_missing_warning_not_rollout_dependency",
+      "result_json": "results/tables/step4/task_d_d_small_scale_closed_loop_abc_mixed.json"
+    }
+  ]
+}

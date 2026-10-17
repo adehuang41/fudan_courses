@@ -1,0 +1,11 @@
+repo_id: fywang/calvin-task-D-D-lerobot
+repo_type: dataset
+hf_endpoint: https://hf-mirror.com
+manifest_source: dataset_info
+status: ok
+file_or_directory_count: 6140
+summed_file_size_bytes: 0
+used_storage_bytes: 18011917322
+total_size_bytes: 18011917322
+total_size_gib: 16.775
+max_download_gib: 25.000

@@ -1,0 +1,3 @@
+split_name,status,allowed_environments,num_episodes,num_frames,by_environment,dataloader_sampled_frames,dataloader_sampled_environment_counts,problems
+B_only,ok,B,6115,367096,"{""B"": {""num_episodes"": 6115, ""num_frames"": 367096}}",512,"{""B"": 512}",
+ABC_mixed,ok,A;B;C,17870,1071743,"{""A"": {""num_episodes"": 6089, ""num_frames"": 366693}, ""B"": {""num_episodes"": 6115, ""num_frames"": 367096}, ""C"": {""num_episodes"": 5666, ""num_frames"": 337954}}",512,"{""A"": 192, ""B"": 160, ""C"": 160}",

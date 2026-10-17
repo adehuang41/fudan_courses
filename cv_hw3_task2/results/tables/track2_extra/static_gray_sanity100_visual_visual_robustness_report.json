@@ -1,0 +1,43 @@
+{
+  "status": "ok",
+  "start_time": "2026-06-17T16:42:10+00:00",
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_D_D_lerobot",
+  "runs": {
+    "B_only_act_baseline": "/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline",
+    "ABC_mixed_act_baseline": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline"
+  },
+  "device": "cuda",
+  "max_episodes": 100,
+  "batch_size": 8,
+  "num_workers": 4,
+  "table_cache": {
+    "enabled": true,
+    "maxsize": 4,
+    "cache_info": {
+      "hits": 1,
+      "misses": 1,
+      "maxsize": 4,
+      "currsize": 1
+    }
+  },
+  "conditions": [
+    "clean",
+    "static_grayout"
+  ],
+  "noise_seed": 20260617,
+  "noise_std": 0.06,
+  "end_time": "2026-06-17T16:43:23+00:00",
+  "dataset_episodes": 100,
+  "dataset_frames": 6036,
+  "tables": {
+    "summary": "results/tables/track2_extra/static_gray_sanity100_visual_visual_robustness_summary.csv",
+    "chunk_position": "results/tables/track2_extra/static_gray_sanity100_visual_chunk_position_action_l1.csv",
+    "chunk_bin": "results/tables/track2_extra/static_gray_sanity100_visual_chunk_bin_action_l1.csv",
+    "tail_head": "results/tables/track2_extra/static_gray_sanity100_visual_chunk_tail_head_ratio.csv",
+    "per_action_dim": "results/tables/track2_extra/static_gray_sanity100_visual_visual_robustness_per_action_dim.csv",
+    "per_episode": "results/tables/track2_extra/static_gray_sanity100_visual_visual_robustness_per_episode_action_l1.csv",
+    "per_task": "results/tables/track2_extra/static_gray_sanity100_visual_visual_robustness_per_task_action_l1.csv",
+    "per_task_type": "results/tables/track2_extra/static_gray_sanity100_visual_visual_robustness_per_task_type_action_l1.csv"
+  },
+  "contact_sheet": "figures/track2_extra/static_gray_sanity100_visual_visual_shift_contact_sheet.png"
+}

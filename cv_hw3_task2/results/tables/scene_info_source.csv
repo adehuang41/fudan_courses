@@ -1,0 +1,8 @@
+item,value
+local_scene_info_path,/data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/scene_info/task_ABC_D/training/scene_info.npy
+source_url,http://calvin.cs.uni-freiburg.de/scene_info_fix/task_ABC_D_scene_info.zip
+source_archive_sha256,3c13651947dc4927b1df3b700143e1d47605db0958f296a0a691b911876d2a64
+scene_info_sha256,cd254dd8c94abe8c9c360b079f8839eac1811c306a35248d8a5afe7a5820be67
+logical_path,task_ABC_D/training/scene_info.npy
+corrected_scene_info_check,passed
+not_old_scene_info_reason,downloaded from official scene_info_fix archive and hash/ranges match expected task_ABC_D/training corrected ranges

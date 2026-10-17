@@ -1,0 +1,33 @@
+experiment,normalized_action_l1_valid_mean,raw_action_l1_valid_mean,sample_frames,task,valid_action_steps
+B_only_act_baseline,0.6111070104809233,0.19675144675251963,65,move_slider_left: move the door to the left side,2145
+B_only_act_baseline,0.6230896912611924,0.23177707970956146,65,move_slider_left: slide the door to the left side,2145
+B_only_act_baseline,0.5647435168286303,0.15313580711801728,65,open_drawer: open the cabinet drawer,2145
+B_only_act_baseline,0.7245461283863841,0.2072514282319294,65,turn_off_lightbulb: slide down the switch,2145
+B_only_act_baseline,0.7633424480240066,0.26019252390612213,65,turn_on_led: push down the button to turn on the led,2145
+B_only_act_baseline,0.7309308825037776,0.25570639184106403,65,turn_on_led: toggle the button to turn on the green light,2145
+B_only_act_baseline,0.6053895420604176,0.18507122483763186,65,turn_on_lightbulb: push the switch upwards,2145
+B_only_act_baseline,0.6203792716358806,0.20067618002781978,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+ABC_mixed_act_baseline,0.5672461285815015,0.18181621379706212,65,move_slider_left: move the door to the left side,2145
+ABC_mixed_act_baseline,0.4764038003050721,0.1451815324825245,65,move_slider_left: slide the door to the left side,2145
+ABC_mixed_act_baseline,0.5541915759538516,0.15253328945173886,65,open_drawer: open the cabinet drawer,2145
+ABC_mixed_act_baseline,0.5970549931496014,0.17043489106210358,65,turn_off_lightbulb: slide down the switch,2145
+ABC_mixed_act_baseline,0.6763304219101415,0.2287552804816694,65,turn_on_led: push down the button to turn on the led,2145
+ABC_mixed_act_baseline,0.7456411107000096,0.2683811367490948,65,turn_on_led: toggle the button to turn on the green light,2145
+ABC_mixed_act_baseline,0.4901081115692169,0.14327867826619944,65,turn_on_lightbulb: push the switch upwards,2145
+ABC_mixed_act_baseline,0.5442157869850284,0.16513762980590374,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+B_only_task_id_finetune,0.656445286204884,0.22805878606352295,65,move_slider_left: move the door to the left side,2145
+B_only_task_id_finetune,0.646903429736386,0.2365674619789009,65,move_slider_left: slide the door to the left side,2145
+B_only_task_id_finetune,0.5218512443951515,0.14903337279836457,65,open_drawer: open the cabinet drawer,2145
+B_only_task_id_finetune,0.7670446903198272,0.22310304683008236,65,turn_off_lightbulb: slide down the switch,2145
+B_only_task_id_finetune,0.8455427431163095,0.27045737289405847,65,turn_on_led: push down the button to turn on the led,2145
+B_only_task_id_finetune,0.7178446115670981,0.24841257396079364,65,turn_on_led: toggle the button to turn on the green light,2145
+B_only_task_id_finetune,0.863704694925131,0.30508967665406495,65,turn_on_lightbulb: push the switch upwards,2145
+B_only_task_id_finetune,0.786983993567112,0.25423976421911954,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145
+ABC_mixed_task_id_finetune,0.5155391625789575,0.16177718043128847,65,move_slider_left: move the door to the left side,2145
+ABC_mixed_task_id_finetune,0.34881961176564524,0.10271421545868988,65,move_slider_left: slide the door to the left side,2145
+ABC_mixed_task_id_finetune,0.4648483714936695,0.12514412969182104,65,open_drawer: open the cabinet drawer,2145
+ABC_mixed_task_id_finetune,0.4042467974759006,0.10980422651612913,65,turn_off_lightbulb: slide down the switch,2145
+ABC_mixed_task_id_finetune,0.6897787963633453,0.22132145276357046,65,turn_on_led: push down the button to turn on the led,2145
+ABC_mixed_task_id_finetune,0.7508701094221839,0.23171501767027985,65,turn_on_led: toggle the button to turn on the green light,2145
+ABC_mixed_task_id_finetune,0.49217370265410654,0.1554523132024429,65,turn_on_lightbulb: push the switch upwards,2145
+ABC_mixed_task_id_finetune,0.3834174080130024,0.11424665516152448,65,turn_on_lightbulb: toggle the light switch to turn on the yellow light,2145

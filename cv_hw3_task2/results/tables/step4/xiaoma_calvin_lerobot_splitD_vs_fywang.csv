@@ -1,0 +1,2 @@
+comparison,xiaoma_episodes,fywang_episodes,episode_delta_xiaoma_minus_fywang,xiaoma_frames,fywang_frames,frame_delta_xiaoma_minus_fywang,xiaoma_tasks,fywang_tasks,xiaoma_schema_mode,fywang_note
+splitD_vs_fywang_calvin-task-D-D-lerobot,5124,6135,-1011,308918,369493,-60575,389,389,short_keys_need_adapter,current local D evaluator was built for fywang keys observation.state/action/observation.images.top/observation.images.wrist

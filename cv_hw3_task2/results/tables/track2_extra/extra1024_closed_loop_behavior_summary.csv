@@ -1,0 +1,10 @@
+metric_group,policy,avg_completed,num_sequences,num_zero_completed,num_full_5
+outcome,ABC task-id n=100,0.68,50,29,0
+outcome,ABC task-id n=20,1.36,50,18,4
+outcome,ABC visual,0.02,50,49,0
+outcome,B task-id n=100,0.28,50,40,0
+outcome,B visual,0.02,50,49,0
+rescue,ABC task-id n20_minus_n100,0.68,50,22,21
+success_step,ABC task-id n=100,100.70588235294117,34,10,24
+success_step,ABC task-id n=20,93.01470588235294,68,12,56
+success_step,B task-id n=100,131.78571428571428,14,6,8

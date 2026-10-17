@@ -1,0 +1,10 @@
+{
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_ABCD_D_validation_subset/subset_validation_000",
+  "source_note": "VyoJ/calvin-ABCD-D-subsets validation/subset_validation_000.zip; task_ABCD_D validation subset, not full task_ABC_D 517GB validation",
+  "all_required_present": false,
+  "episode_count": 99022,
+  "lang_annotation_keys": [
+    "info",
+    "language"
+  ]
+}

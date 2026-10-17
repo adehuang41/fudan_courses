@@ -1,0 +1,65 @@
+{
+  "status": "ok",
+  "start_time": "2026-06-03T08:17:06+00:00",
+  "dataset_root": "/data/dechao/cv_final_pj2/datasets/calvin_D_D_lerobot",
+  "device": "cuda",
+  "batch_size": 64,
+  "num_workers": 16,
+  "max_episodes": null,
+  "end_time": "2026-06-03T08:31:02+00:00",
+  "tables": {
+    "d_dataset_sanity_summary": "/home/dechao/cv_final_pj2/results/tables/step4/d_dataset_sanity_summary.csv",
+    "d_adapter_check_summary": "/home/dechao/cv_final_pj2/results/tables/step4/d_adapter_check_summary.csv",
+    "d_checkpoint_load_summary": "/home/dechao/cv_final_pj2/results/tables/step4/d_checkpoint_load_summary.csv",
+    "d_evaluation_summary": "/home/dechao/cv_final_pj2/results/tables/step4/d_evaluation_summary.csv",
+    "d_per_task_action_l1": "/home/dechao/cv_final_pj2/results/tables/step4/d_per_task_action_l1.csv",
+    "d_per_action_dim_error": "/home/dechao/cv_final_pj2/results/tables/step4/d_per_action_dim_error.csv",
+    "d_per_episode_action_l1": "/home/dechao/cv_final_pj2/results/tables/step4/d_per_episode_action_l1.csv"
+  },
+  "figures": {
+    "d_action_l1": "/home/dechao/cv_final_pj2/results/figures/step4/d_action_l1_B_only_vs_ABC.png",
+    "d_per_task": "/home/dechao/cv_final_pj2/results/figures/step4/d_per_task_action_l1.png",
+    "d_per_action_dim": "/home/dechao/cv_final_pj2/results/figures/step4/d_per_action_dim_error.png",
+    "source_vs_d": "/home/dechao/cv_final_pj2/results/figures/step4/source_vs_d_action_l1_comparison.png"
+  },
+  "summary": [
+    {
+      "experiment": "B_only_act_baseline",
+      "checkpoint": "best_val_action_l1.pt",
+      "checkpoint_path": "/data/dechao/cv_final_pj2/outputs/baseline/B_only_act_baseline/checkpoints/best_val_action_l1.pt",
+      "dataset": "fywang/calvin-task-D-D-lerobot",
+      "environment": "D",
+      "protocol": "offline_open_loop_predict_action_chunk",
+      "metric_primary": "normalized_action_l1_valid_mean",
+      "normalization_stats_source": "source_training_split",
+      "d_episodes": 6135,
+      "d_frames": 369493,
+      "eval_batches": 5774,
+      "eval_sample_frames": 369493,
+      "valid_action_steps": 11597627,
+      "normalized_action_l1_valid_mean": 0.6497835109429586,
+      "raw_action_l1_valid_mean": 0.20968473674130472,
+      "runtime_seconds": 418.04503976300475,
+      "source_best_val_action_l1_loss_reference": 0.14857006908390313
+    },
+    {
+      "experiment": "ABC_mixed_act_baseline",
+      "checkpoint": "best_val_action_l1.pt",
+      "checkpoint_path": "/data/dechao/cv_final_pj2/outputs/baseline/ABC_mixed_act_baseline/checkpoints/best_val_action_l1.pt",
+      "dataset": "fywang/calvin-task-D-D-lerobot",
+      "environment": "D",
+      "protocol": "offline_open_loop_predict_action_chunk",
+      "metric_primary": "normalized_action_l1_valid_mean",
+      "normalization_stats_source": "source_training_split",
+      "d_episodes": 6135,
+      "d_frames": 369493,
+      "eval_batches": 5774,
+      "eval_sample_frames": 369493,
+      "valid_action_steps": 11597627,
+      "normalized_action_l1_valid_mean": 0.5657384472561505,
+      "raw_action_l1_valid_mean": 0.16817613812142074,
+      "runtime_seconds": 411.0900569590158,
+      "source_best_val_action_l1_loss_reference": 0.15044141875894163
+    }
+  ]
+}

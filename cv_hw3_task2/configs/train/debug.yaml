@@ -1,0 +1,36 @@
+experiment:
+  name: debug_B_act_smoke
+  stage: debug
+  output_dir: /data/dechao/cv_final_pj2/outputs/debug/debug_B_act_smoke
+dataset:
+  split_name: B_only
+  split_manifest: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D/_download_logs/environment_episode_map.csv
+  dataset_root: /data/dechao/cv_final_pj2/datasets/calvin_task_ABC_D
+  max_episodes: 64
+  image_keys:
+    - observation.images.image
+    - observation.images.wrist_image
+train:
+  steps: 100
+  batch_size: 4
+  num_workers: 0
+  seed: 20260531
+  log_interval: 10
+  checkpoint_interval: 100
+  grad_clip_norm: 10.0
+  device: cuda
+  physical_gpu_priority: [6, 5, 4, 3, 2, 1, 0]
+  min_free_memory_mb: 20000
+debug_policy_overrides:
+  chunk_size: 10
+  n_action_steps: 10
+  dim_model: 256
+  n_heads: 4
+  dim_feedforward: 1024
+  n_encoder_layers: 2
+  n_decoder_layers: 1
+  n_vae_encoder_layers: 2
+logging:
+  local_only: true
+  wandb: false
+  swanlab: false

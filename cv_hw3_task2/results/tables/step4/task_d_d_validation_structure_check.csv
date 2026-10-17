@@ -1,0 +1,7 @@
+check,required,status,path,size_bytes_or_count
+validation/.hydra/merged_config.yaml,true,present,/data/dechao/cv_final_pj2/datasets/task_D_D/validation/.hydra/merged_config.yaml,7287
+validation/scene_info.npy,true,missing,/data/dechao/cv_final_pj2/datasets/task_D_D/validation/scene_info.npy,0
+validation/lang_annotations/auto_lang_ann.npy,true,present,/data/dechao/cv_final_pj2/datasets/task_D_D/validation/lang_annotations/auto_lang_ann.npy,1617294
+validation/episode_*.npz,true,present,/data/dechao/cv_final_pj2/datasets/task_D_D/validation,99022
+validation/ep_lens.npy,false,present,/data/dechao/cv_final_pj2/datasets/task_D_D/validation/ep_lens.npy,160
+validation/ep_start_end_ids.npy,false,present,/data/dechao/cv_final_pj2/datasets/task_D_D/validation/ep_start_end_ids.npy,192
